@@ -1,0 +1,9 @@
+﻿HOW JOBS ARE LOADED
+
+* A job must be a zip archive and contain a uniquely named configuration assembly
+  (or C# code file) whose name ends with ".jobconfig.dll" or ".jobconfig.s".
+* The purpose of that configuration assembly is to perform the initial registration and 
+  configuration of the job, so that it becomes available to the Quartz scheduler.
+* The zip archive must be copied to the Jobs directory (as configured in the Quartz service).
+* The Quartz service will unzip the archive and compile the configuration file (if necessary).
+  Then, when successful, the job will be loaded by executing the compiled configuration code.

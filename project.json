@@ -1,0 +1,26 @@
+{
+    "version": "1.0.0-*",
+    "description": "KdSoft Quartz Jobs Class Library",
+    "authors": [ "Karl Waclawek" ],
+
+    "dependencies": {
+        "Common.Logging": "3.3.1",
+        "KdSoft.CodeConfig": "2.0.3",
+        "KdSoft.Utils": "2.0.3",
+        "NETStandard.Library": "1.6.1",
+        "Quartz": "2.4.1"
+    },
+    "frameworks": {
+        "net451": {
+            "frameworkAssemblies": {
+                "System.IO.Compression.FileSystem": ""
+            }
+        }
+    },
+    "buildOptions": {
+        "compile": {
+            "includeFiles": [ "../SharedAssemblyInfo.cs" ]
+        },
+        "xmlDoc": true
+    }
+}
