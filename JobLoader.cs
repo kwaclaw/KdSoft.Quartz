@@ -14,7 +14,8 @@ namespace KdSoft.Quartz.Jobs
     public class JobLoader: IDisposable
     {
         IScheduler scheduler;
-        FileChangeDetector fileDetector;
+        FileChangeDetector jobDetector;
+        FileChangeDetector codeUpdateDetector;
         ILog log;
         HashSet<string> assemblyDirectories;
 
@@ -25,9 +26,13 @@ namespace KdSoft.Quartz.Jobs
 
             AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
 
-            var notifyFilters = NotifyFilters.LastWrite | NotifyFilters.FileName;
-            fileDetector = new FileChangeDetector(baseDirectory, "*.zip", false, notifyFilters, settleTime);
-            fileDetector.FileChanged += fileDetector_FileChanged;
+            var jobNotifyFilters = NotifyFilters.LastWrite | NotifyFilters.FileName;
+            jobDetector = new FileChangeDetector(baseDirectory, "*.zip", false, jobNotifyFilters, settleTime);
+            jobDetector.FileChanged += JobDetector_FileChanged;
+
+            var codeNotifyFilters = NotifyFilters.LastWrite | NotifyFilters.FileName;
+            codeUpdateDetector = new FileChangeDetector(baseDirectory, "*.cs", true, codeNotifyFilters, settleTime);
+            codeUpdateDetector.FileChanged += CodeUpdateDetector_FileChanged;
 
             ExtractExistingZipFiles();
             // we consider all sub-directories as job assembly locations
@@ -68,16 +73,12 @@ namespace KdSoft.Quartz.Jobs
             return result;
         }
 
-        void fileDetector_FileChanged(object sender, FileSystemEventArgs e) {
-            string extractDir = ExtractZipFile(e.FullPath);
-            if (extractDir == null)
-                return;
-
+        void LoadJobDirectory(string jobDir) {
             // for AssemblyResolve event to work
-            assemblyDirectories.Add(extractDir);
+            assemblyDirectories.Add(jobDir);
 
             try {
-                var cfg = LoadJobConfigurator(extractDir);
+                var cfg = LoadJobConfigurator(jobDir);
                 if (cfg != null)
                     cfg.Configure(scheduler);
             }
@@ -85,6 +86,19 @@ namespace KdSoft.Quartz.Jobs
                 log.Error(m => m("Failure loading job." + Environment.NewLine + ex.Message));
                 return;
             }
+        }
+
+        void JobDetector_FileChanged(object sender, FileSystemEventArgs e) {
+            string extractDir = ExtractZipFile(e.FullPath);
+            if (extractDir == null)
+                return;
+            LoadJobDirectory(extractDir);
+        }
+
+        void CodeUpdateDetector_FileChanged(object sender, FileSystemEventArgs e) {
+            string jobDir = Path.GetDirectoryName(e.FullPath);
+            assemblyDirectories.Add(jobDir);
+            LoadJobDirectory(jobDir);
         }
 
         // all configuration assembly files must have unique names
@@ -112,7 +126,7 @@ namespace KdSoft.Quartz.Jobs
         }
 
         string ExtractZipFile(string zipFilePath) {
-            string extractDir = Path.Combine(fileDetector.BaseDirectory, Path.GetFileNameWithoutExtension(zipFilePath));
+            string extractDir = Path.Combine(jobDetector.BaseDirectory, Path.GetFileNameWithoutExtension(zipFilePath));
             if (Directory.Exists(extractDir))
                 return null;
             try {
@@ -126,7 +140,7 @@ namespace KdSoft.Quartz.Jobs
         }
 
         void ExtractExistingZipFiles() {
-            var zipFiles = Directory.EnumerateFiles(fileDetector.BaseDirectory, "*.zip", SearchOption.TopDirectoryOnly);
+            var zipFiles = Directory.EnumerateFiles(jobDetector.BaseDirectory, "*.zip", SearchOption.TopDirectoryOnly);
             foreach (var zipFile in zipFiles)
                 ExtractZipFile(zipFile);
         }
@@ -138,7 +152,7 @@ namespace KdSoft.Quartz.Jobs
         /// to resolve the existing job assemblies before the scheduler tries to load them.</remarks>
         /// <param name="scheduler"><see cref="IScheduler" /> instance to be used by this job loader.</param>
         public void Start(IScheduler scheduler, ILog log) {
-            if (fileDetector == null)
+            if (jobDetector == null || codeUpdateDetector == null)
                 throw new ObjectDisposedException("JobLoader");
 
             this.scheduler = scheduler;
@@ -155,16 +169,23 @@ namespace KdSoft.Quartz.Jobs
                 }
             }
 
-            fileDetector.Start(true);
+            jobDetector.Start(true);
+            codeUpdateDetector.Start(false);
         }
 
         public void Dispose() {
             AppDomain.CurrentDomain.AssemblyResolve -= CurrentDomain_AssemblyResolve;
 
-            var fd = fileDetector;
-            if (fd != null) {
-                fd.Dispose();
-                fd = null;
+            var jd = jobDetector;
+            if (jd != null) {
+                jd.Dispose();
+                jd = null;
+            }
+
+            var cud = codeUpdateDetector;
+            if (cud != null) {
+                cud.Dispose();
+                cud = null;
             }
             GC.SuppressFinalize(this);
         }
