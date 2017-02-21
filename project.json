@@ -1,5 +1,5 @@
 {
-    "version": "1.1.0-*",
+    "version": "1.1.1",
     "description": "KdSoft Quartz Jobs Class Library",
     "authors": [ "Karl Waclawek" ],
 
@@ -7,7 +7,7 @@
         "KdSoft.CodeConfig": "2.0.3",
         "KdSoft.Utils": "2.0.3",
         "NETStandard.Library": "1.6.1",
-        "Quartz": "2.4.1"
+        "Quartz": "2.5.0"
     },
     "frameworks": {
         "net451": {
