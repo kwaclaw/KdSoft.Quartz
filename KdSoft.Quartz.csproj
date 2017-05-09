@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>KdSoft Quartz Class Library</Description>
+    <Authors>Karl Waclawek</Authors>
+    <TargetFramework>net451</TargetFramework>
+    <AssemblyName>KdSoft.Quartz</AssemblyName>
+    <PackageId>KdSoft.Quartz</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <CodeAnalysisRuleSet>..\..\Solution.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+    <PackageReference Include="Quartz" Version="2.5.0" />
+  </ItemGroup>
+
+</Project>
