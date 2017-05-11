@@ -7,7 +7,7 @@ namespace KdSoft.Quartz
     {
         public string QualifiedTypeName { get; set; }
 
-        public IList<object> JobConfigs { get; set; }  // assumed to be JObject instances
+        public IList<object> JobDataItems { get; set; }  // assumed to be JObject instances
 
         public string CronSchedule { get; set; }
 

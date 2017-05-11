@@ -114,11 +114,11 @@ namespace KdSoft.Quartz
                 .StoreDurably(request.Persistent)
                 .RequestRecovery(request.RequestRecovery);
 
-            for (int indx = 0; indx < request.JobConfigs.Count; indx++) {
+            for (int indx = 0; indx < request.JobDataItems.Count; indx++) {
                 var trbuilder = triggerBuilder.WithIdentity(triggerBaseName + "-" + indx, groupName);
                 var jobKey = new JobKey(jobBaseName + "-" + indx, groupName);
                 try {
-                    var jobConfig = (JObject)request.JobConfigs[indx];
+                    var jobConfig = (JObject)request.JobDataItems[indx];
                     var jobResult = ScheduleJob(
                         scheduler,
                         jobKey,
