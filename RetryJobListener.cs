@@ -12,7 +12,7 @@ namespace KdSoft.Quartz
     /// <typeparam name="T">Type of retry trigger to use.</typeparam>
     public class RetryJobListener<T>: JobListenerSupport where T: RetryTrigger<T>, new()
     {
-        Action<T> applyFallbackSettings;
+        readonly Action<T> applyFallbackSettings;
 
         public RetryJobListener(Action<T> applyFallbackSettings = null) {
             this.applyFallbackSettings = applyFallbackSettings;

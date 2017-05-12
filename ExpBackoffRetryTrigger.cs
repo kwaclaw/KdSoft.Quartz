@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using KdSoft.Models.Shared.Scheduling;
+using Newtonsoft.Json;
 using Quartz;
 using System;
 using System.Diagnostics;
@@ -66,11 +67,7 @@ namespace KdSoft.Quartz
             TimeSpan backoffBaseInterval
         ) : this(name, null, maxRetries, backoffBaseInterval, SystemTime.UtcNow(), 2.0) { }
 
-        TimeSpan backoffBaseInterval;
-        public TimeSpan BackoffBaseInterval {
-            get { return backoffBaseInterval; }
-            set { backoffBaseInterval = value; }
-        }
+        public TimeSpan BackoffBaseInterval { get; set; }
 
         double powerBase;
         double baseLog;
@@ -82,20 +79,13 @@ namespace KdSoft.Quartz
             }
         }
 
-        int maxRetries;
-        public int MaxRetries {
-            get { return maxRetries; }
-            set { maxRetries = value; }
-        }
+        public int MaxRetries { get; set; }
 
         /// <summary>
         /// Get or set the number of times the <see cref="ISimpleTrigger" /> has already
         /// fired.
         /// </summary>
-        public virtual int TimesTriggered {
-            get { return timesTriggered; }
-            set { timesTriggered = value; }
-        }
+        public virtual int TimesTriggered { get; set; }
 
         public override void ApplyDefaultSettings() {
             MaxRetries = 4;
@@ -146,7 +136,7 @@ namespace KdSoft.Quartz
         /// </summary>
         public override DateTimeOffset? FinalFireTimeUtc {
             get {
-                if (maxRetries == RetryIndefinitely) {
+                if (MaxRetries == RetryIndefinitely) {
                     if (EndTimeUtc.HasValue)
                         return GetFireTimeBefore(EndTimeUtc);
                     else
@@ -386,7 +376,7 @@ namespace KdSoft.Quartz
         /// time, <see langword="null" /> will be returned. Checks MaxRetries.
         /// </summary>
         public override DateTimeOffset? GetFireTimeAfter(DateTimeOffset? afterTimeUtc) {
-            if ((timesTriggered > maxRetries) && (maxRetries != RetryIndefinitely)) {
+            if ((timesTriggered > MaxRetries) && (MaxRetries != RetryIndefinitely)) {
                 return null;
             }
 

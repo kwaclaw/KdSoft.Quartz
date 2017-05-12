@@ -5,7 +5,6 @@
     <Authors>Karl Waclawek</Authors>
     <TargetFramework>net451</TargetFramework>
     <AssemblyName>KdSoft.Quartz</AssemblyName>
-    <PackageId>KdSoft.Quartz</PackageId>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
@@ -16,6 +15,10 @@
     <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
     <PackageReference Include="Quartz" Version="2.5.0" />
     <PackageReference Include="System.ValueTuple" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KdSoft.Models.Shared.Scheduling\KdSoft.Models.Shared.Scheduling.csproj" />
   </ItemGroup>
 
 </Project>

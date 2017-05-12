@@ -11,9 +11,9 @@ namespace KdSoft.Quartz
 
     public abstract class RetryTrigger<T>: AbstractTrigger, IRetryTrigger where T: RetryTrigger<T>
     {
-        public RetryTrigger() { }
+        protected RetryTrigger() { }
 
-        public RetryTrigger(string name, string group) : base(name, group) { }
+        protected RetryTrigger(string name, string group) : base(name, group) { }
 
         public abstract void ApplyDefaultSettings();
 
