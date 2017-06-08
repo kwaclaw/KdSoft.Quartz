@@ -8,8 +8,18 @@ using System.Text;
 
 namespace KdSoft.Quartz
 {
+    /// <summary>
+    /// Helper routines for use with Quartz scheduler.
+    /// </summary>
     public static class SchedulerExtensions
     {
+        /// <summary>
+        /// Add <see cref="JObject"/> to job data map.
+        /// </summary>
+        /// <param name="jdm">Job data ma  to use.</param>
+        /// <param name="jobj">JSON object to add.</param>
+        /// <param name="keyPrefix">Data map keys for JSON object properties will have this prefix, separated by ':'.</param>
+        /// <param name="converters">JSON converters to use for serializing the object's properties.</param>
         public static void AddJObject(
             this JobDataMap jdm,
             JObject jobj,
@@ -27,6 +37,15 @@ namespace KdSoft.Quartz
             }
         }
 
+        /// <summary>
+        /// Replaces <see cref="JObject"/> in job data map.
+        /// </summary>
+        /// <param name="jdm">Job data ma  to use.</param>
+        /// <param name="jobj">Replacement JSON object.</param>
+        /// <param name="keyPrefix">Data map keys for JSON object properties will have this prefix, separated by ':'.</param>
+        /// <param name="converters">JSON converters to use for serializing the object's properties.</param>
+        /// <remarks>This is a cumulative update, existing properties with the same prefix and name will not be removed
+        /// if the new <see cref="JObject"/> does not include them.</remarks>
         public static void PutJObject(
             this JobDataMap jdm,
             JObject jobj,
@@ -44,6 +63,14 @@ namespace KdSoft.Quartz
             }
         }
 
+
+        /// <summary>
+        /// Retrieves <see cref="JObject"/> from job data map.
+        /// </summary>
+        /// <param name="jdm">Job data map to use.</param>
+        /// <param name="keyPrefix">All data map keys with this prefix will be used to identify the properties
+        /// for building the return JSON object.</param>
+        /// <param name="settings">JSON load settings to use for deserializing the object's properties.</param>
         public static JObject GetJObject(
             this JobDataMap jdm,
             string keyPrefix,
@@ -176,7 +203,7 @@ namespace KdSoft.Quartz
             string groupName,
             string jobBaseName,
             string triggerBaseName,
-            ScheduleJobsRequest<Action<JobDataMap>> request  // object is supposed to mean JObject
+            ScheduleJobsRequest<Action<JobDataMap>> request
         ) {
             var jobResults = new List<(IJobDetail, DateTimeOffset?)>();
             var errorResults = new List<(JobKey, string)>();
