@@ -31,6 +31,7 @@ namespace KdSoft.Quartz
             var result = new T();
             result.ApplyDefaultSettings();
             applySettings?.Invoke(result);
+            result.MisfireInstruction = misfireInstruction;
             return result;
         }
 

@@ -22,7 +22,7 @@ namespace KdSoft.Quartz
 
         // the retry trigger key is derived from the original trigger key
         static TriggerKey RetryTriggerKey(ITrigger trig) {
-            return new TriggerKey(trig.Key.Name + "#RETRY", trig.Key.Group);
+            return new TriggerKey(trig.Key.Name + RetryTriggerSuffix, trig.Key.Group);
         }
 
         public override void JobWasExecuted(IJobExecutionContext context, JobExecutionException jobException) {
@@ -52,7 +52,7 @@ namespace KdSoft.Quartz
 
                     // we want the old trigger to keep running, so this is the way to add a trigger to the job
                     var scheduledAt = context.Scheduler.ScheduleJob(retryTrigger);
-                    Debug.WriteLine("Retry scheduled - " + DateTimeOffset.Now);
+                    Debug.WriteLine("Retry scheduled - " + scheduledAt);
                 }
             }
             // if the job was successful, then we need to unschedule the current trigger if it is a retry trigger

@@ -34,52 +34,31 @@ namespace KdSoft.Quartz
         public ExpBackoffRetryTrigger(
             string name,
             string group,
-            int maxRetries,
-            TimeSpan backoffBaseInterval,
-            DateTimeOffset startTimeUtc,
-            double exponent = 2.0
+            ExpBackoffRetrySettings retrySettings,
+            DateTimeOffset startTimeUtc
         ) : base(name, group) {
-            this.MaxRetries = maxRetries;
-            this.BackoffBaseInterval = backoffBaseInterval;
+            this.RetrySettings = retrySettings ?? new ExpBackoffRetrySettings {
+                MaxRetries = 4,
+                PowerBase = 2.0,
+                BackoffBaseInterval = TimeSpan.FromMinutes(5),
+            };
             base.StartTimeUtc = startTimeUtc;
-            this.PowerBase = exponent;
             this.YearToGiveupSchedulingAt = DateTimeOffset.UtcNow.Year + 290;
         }
 
         public ExpBackoffRetryTrigger(
             string name,
-            int maxRetries,
-            TimeSpan backoffBaseInterval,
-            DateTimeOffset startTimeUtc,
-            double exponent = 2.0
-        ) : this(name, null, maxRetries, backoffBaseInterval, startTimeUtc, exponent) { }
+            ExpBackoffRetrySettings retrySettings,
+            DateTimeOffset startTimeUtc
+        ) : this(name, null, retrySettings, startTimeUtc) { }
 
         public ExpBackoffRetryTrigger(
             string name,
             string group,
-            int maxRetries,
-            TimeSpan backoffBaseInterval
-        ) : this(name, group, maxRetries, backoffBaseInterval, SystemTime.UtcNow(), 2.0) { }
+            ExpBackoffRetrySettings retrySettings
+        ) : this(name, group, retrySettings, SystemTime.UtcNow()) { }
 
-        public ExpBackoffRetryTrigger(
-            string name,
-            int maxRetries,
-            TimeSpan backoffBaseInterval
-        ) : this(name, null, maxRetries, backoffBaseInterval, SystemTime.UtcNow(), 2.0) { }
-
-        public TimeSpan BackoffBaseInterval { get; set; }
-
-        double powerBase;
-        double baseLog;
-        public double PowerBase {
-            get { return powerBase; }
-            set {
-                powerBase = value;
-                baseLog = Math.Log(value);
-            }
-        }
-
-        public int MaxRetries { get; set; }
+        public ExpBackoffRetrySettings RetrySettings { get; private set; }
 
         /// <summary>
         /// Get or set the number of times the <see cref="ISimpleTrigger" /> has already
@@ -88,18 +67,18 @@ namespace KdSoft.Quartz
         public virtual int TimesTriggered { get; set; }
 
         public override void ApplyDefaultSettings() {
-            MaxRetries = 4;
-            PowerBase = 2.0;
-            BackoffBaseInterval = TimeSpan.FromMinutes(5);
+            this.RetrySettings = new ExpBackoffRetrySettings {
+                MaxRetries = 4,
+                PowerBase = 2.0,
+                BackoffBaseInterval = TimeSpan.FromMinutes(5),
+            };
         }
 
         public override bool ApplyOriginalTriggerSettings(ITrigger trigger) {
             string retrySettingsJson = trigger.JobDataMap.GetString(QuartzKeys.ExpBackoffRetrySettingsKey);
             if (retrySettingsJson != null) {
                 var retrySettings = JsonConvert.DeserializeObject<ExpBackoffRetrySettings>(retrySettingsJson);
-                this.MaxRetries = retrySettings.MaxRetries;
-                this.PowerBase = retrySettings.PowerBase;
-                this.BackoffBaseInterval = retrySettings.BackoffBaseInterval;
+                this.RetrySettings = retrySettings;
                 return true;
             }
             else {
@@ -108,13 +87,9 @@ namespace KdSoft.Quartz
         }
 
         public override IScheduleBuilder GetScheduleBuilder() {
-            var savedMaxRetries = this.MaxRetries;
-            var savedPowerBase = this.PowerBase;
-            var savedBackoffBaseInterval = this.BackoffBaseInterval;
+            var savedSettings = this.RetrySettings;
             Action<ExpBackoffRetryTrigger> applySettings = ebrt => {
-                ebrt.MaxRetries = savedMaxRetries;
-                ebrt.BackoffBaseInterval = savedBackoffBaseInterval;
-                ebrt.PowerBase = savedPowerBase;
+                ebrt.RetrySettings = savedSettings.Clone();
             };
             var sb = RetryScheduleBuilder<ExpBackoffRetryTrigger>.Create().WithApplySettings(applySettings);
 
@@ -136,14 +111,14 @@ namespace KdSoft.Quartz
         /// </summary>
         public override DateTimeOffset? FinalFireTimeUtc {
             get {
-                if (MaxRetries == RetryIndefinitely) {
+                if (RetrySettings.MaxRetries == RetryIndefinitely) {
                     if (EndTimeUtc.HasValue)
                         return GetFireTimeBefore(EndTimeUtc);
                     else
                         return null;
                 }
 
-                DateTimeOffset lastTrigger = CalculateFireTime(MaxRetries - 1);
+                DateTimeOffset lastTrigger = CalculateFireTime(RetrySettings.MaxRetries - 1);
 
                 if (!EndTimeUtc.HasValue || lastTrigger < EndTimeUtc.Value) {
                     return lastTrigger;
@@ -267,7 +242,7 @@ namespace KdSoft.Quartz
         public override DateTimeOffset? ComputeFirstFireTimeUtc(ICalendar cal) {
             // assuming that StartTimeUtc is the time of the job failure, we wait
             // for one period before firing the retry trigger for the first time
-            nextFireTimeUtc = StartTimeUtc + BackoffBaseInterval;
+            nextFireTimeUtc = StartTimeUtc + RetrySettings.BackoffBaseInterval;
 
             while (cal != null && !cal.IsTimeIncluded(nextFireTimeUtc.Value)) {
                 nextFireTimeUtc = GetFireTimeAfter(nextFireTimeUtc);
@@ -324,8 +299,8 @@ namespace KdSoft.Quartz
         }
 
         DateTimeOffset CalculateFireTime(long triggerCount) {
-            var factor = Math.Pow(PowerBase, triggerCount);
-            TimeSpan backoff = new TimeSpan((long)(BackoffBaseInterval.Ticks * factor));
+            var factor = Math.Pow(RetrySettings.PowerBase, triggerCount);
+            TimeSpan backoff = new TimeSpan((long)(RetrySettings.BackoffBaseInterval.Ticks * factor));
             return StartTimeUtc + backoff;
         }
 
@@ -343,7 +318,7 @@ namespace KdSoft.Quartz
             var atTicks = atTimeUtc.Ticks;
             var endTicks = (EndTimeUtc ?? DateTimeOffset.MaxValue).Ticks;
             // our unit of time is BackoffBaseInterval; add small number to avoid truncation issues
-            var deltaIntervals = ((atTicks + 10 - StartTimeUtc.Ticks) / BackoffBaseInterval.Ticks);
+            var deltaIntervals = ((atTicks + 10 - StartTimeUtc.Ticks) / RetrySettings.BackoffBaseInterval.Ticks);
 
             // if atTimeUtc is at or after EndTimeUtc then we won't have a next fire time
             if (endTicks <= atTicks) {
@@ -353,7 +328,7 @@ namespace KdSoft.Quartz
             // if atTimeUtc is after StartTimeUtc and before EndTimeUtc then we have both fire times
             else if (deltaIntervals > 0) {
                 // add small number (< 1!) to avoid truncation issues due to precision loss
-                var triggerCount = Math.Log(deltaIntervals + 0.5) / baseLog;
+                var triggerCount = Math.Log(deltaIntervals + 0.5) / Math.Log(RetrySettings.PowerBase);
                 before = CalculateFireTime((long)triggerCount);
                 after = CalculateFireTime((long)triggerCount + 1);
             }
@@ -376,7 +351,7 @@ namespace KdSoft.Quartz
         /// time, <see langword="null" /> will be returned. Checks MaxRetries.
         /// </summary>
         public override DateTimeOffset? GetFireTimeAfter(DateTimeOffset? afterTimeUtc) {
-            if ((timesTriggered > MaxRetries) && (MaxRetries != RetryIndefinitely)) {
+            if ((timesTriggered > RetrySettings.MaxRetries) && (RetrySettings.MaxRetries != RetryIndefinitely)) {
                 return null;
             }
 
@@ -409,13 +384,13 @@ namespace KdSoft.Quartz
         public override void Validate() {
             base.Validate();
 
-            if (MaxRetries <= 0 && MaxRetries != RetryIndefinitely) {
+            if (RetrySettings.MaxRetries <= 0 && RetrySettings.MaxRetries != RetryIndefinitely) {
                 throw new SchedulerException("MaxRetries must be greater than zero or have a value of 'RetryIndefinitely'.");
             }
-            if (PowerBase <= 1) {
+            if (RetrySettings.PowerBase <= 1) {
                 throw new SchedulerException("PowerBase must be greater than 1.0.");
             }
-            if (BackoffBaseInterval <= TimeSpan.Zero) {
+            if (RetrySettings.BackoffBaseInterval <= TimeSpan.Zero) {
                 throw new SchedulerException("BackoffBaseInterval must be greater than zero.");
             }
         }

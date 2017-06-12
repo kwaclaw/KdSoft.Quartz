@@ -172,7 +172,7 @@ namespace KdSoft.Quartz
 
             var jobType = Type.GetType(request.QualifiedTypeName, true, true);
             var jobBuilder = JobBuilder.Create(jobType)
-                .StoreDurably(request.Persistent)
+                .StoreDurably(request.Durable)
                 .RequestRecovery(request.RequestRecovery);
 
             for (int indx = 0; indx < request.JobDataItems.Count; indx++) {
@@ -216,7 +216,7 @@ namespace KdSoft.Quartz
 
             var jobType = Type.GetType(request.QualifiedTypeName, true, true);
             var jobBuilder = JobBuilder.Create(jobType)
-                .StoreDurably(request.Persistent)
+                .StoreDurably(request.Durable)
                 .RequestRecovery(request.RequestRecovery);
 
             for (int indx = 0; indx < request.JobDataItems.Count; indx++) {
