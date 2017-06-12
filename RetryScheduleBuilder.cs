@@ -22,10 +22,7 @@ namespace KdSoft.Quartz
             return new RetryScheduleBuilder<T>();
         }
 
-        /// <summary>
-        /// Build the actual Trigger -- NOT intended to be invoked by end users,
-        /// but will rather be invoked by a TriggerBuilder which this ScheduleBuilder is given to.
-        /// </summary>
+        /// <inheritdoc/>
         /// <seealso cref="TriggerBuilder.WithSchedule(IScheduleBuilder)" />
         public override IMutableTrigger Build() {
             var result = new T();

@@ -7,7 +7,7 @@ using System.Diagnostics;
 namespace KdSoft.Quartz
 {
     /// <summary> 
-    /// A concrete <see cref="ITrigger" /> that is used to retry a failed <see cref="IJobDetail" />.
+    /// A concrete <see cref="ITrigger" /> that is used to retry a failed <see cref="IJob" />.
     /// </summary>
     /// <seealso cref="ITrigger" />
     /// <seealso cref="ICronTrigger" />
@@ -20,6 +20,7 @@ namespace KdSoft.Quartz
         /// </summary>
         public const int RetryIndefinitely = -1;
 
+        /// <summary>Limit for scheduling retries.</summary>
         public readonly int YearToGiveupSchedulingAt = 2299;
 
         DateTimeOffset? nextFireTimeUtc;
@@ -31,6 +32,13 @@ namespace KdSoft.Quartz
         /// </summary>
         public ExpBackoffRetryTrigger() { }
 
+        /// <summary>
+        /// Create a <see cref="ExpBackoffRetryTrigger" />.
+        /// </summary>
+        /// <param name="name">Name of trigger.</param>
+        /// <param name="group">Name of group trigger belongs to.</param>
+        /// <param name="retrySettings">Retry settings.</param>
+        /// <param name="startTimeUtc">Time of first job execution.</param>
         public ExpBackoffRetryTrigger(
             string name,
             string group,
@@ -46,26 +54,39 @@ namespace KdSoft.Quartz
             this.YearToGiveupSchedulingAt = DateTimeOffset.UtcNow.Year + 290;
         }
 
+        /// <summary>
+        /// Create a <see cref="ExpBackoffRetryTrigger" /> in the default group.
+        /// </summary>
+        /// <param name="name">Name of trigger.</param>
+        /// <param name="retrySettings">Retry settings.</param>
+        /// <param name="startTimeUtc">Time of first job execution.</param>
         public ExpBackoffRetryTrigger(
             string name,
             ExpBackoffRetrySettings retrySettings,
             DateTimeOffset startTimeUtc
         ) : this(name, null, retrySettings, startTimeUtc) { }
 
+        /// <summary>
+        /// Create a <see cref="ExpBackoffRetryTrigger" /> that starts now.
+        /// </summary>
+        /// <param name="name">Name of trigger.</param>
+        /// <param name="group">Name of group trigger belongs to.</param>
+        /// <param name="retrySettings">Retry settings.</param>
         public ExpBackoffRetryTrigger(
             string name,
             string group,
             ExpBackoffRetrySettings retrySettings
         ) : this(name, group, retrySettings, SystemTime.UtcNow()) { }
 
+        /// <summary>Retry settings.</summary>
         public ExpBackoffRetrySettings RetrySettings { get; private set; }
 
         /// <summary>
-        /// Get or set the number of times the <see cref="ISimpleTrigger" /> has already
-        /// fired.
+        /// Get or set the number of times the <see cref="ExpBackoffRetryTrigger" /> has already fired.
         /// </summary>
         public virtual int TimesTriggered { get; set; }
 
+        /// <inheritdoc/>
         public override void ApplyDefaultSettings() {
             this.RetrySettings = new ExpBackoffRetrySettings {
                 MaxRetries = 4,
@@ -74,6 +95,7 @@ namespace KdSoft.Quartz
             };
         }
 
+        /// <inheritdoc/>
         public override bool ApplyOriginalTriggerSettings(ITrigger trigger) {
             string retrySettingsJson = trigger.JobDataMap.GetString(QuartzKeys.ExpBackoffRetrySettingsKey);
             if (retrySettingsJson != null) {
@@ -86,6 +108,7 @@ namespace KdSoft.Quartz
             }
         }
 
+        /// <inheritdoc/>
         public override IScheduleBuilder GetScheduleBuilder() {
             var savedSettings = this.RetrySettings;
             Action<ExpBackoffRetryTrigger> applySettings = ebrt => {
@@ -102,13 +125,7 @@ namespace KdSoft.Quartz
             return sb;
         }
 
-        /// <summary> 
-        /// Returns the final UTC time at which the <see cref="ISimpleTrigger" /> will fire,
-        /// if MaxRetries is 'RetryIndefinitely' and no end time is set, null will be returned.
-        /// <para>
-        /// Note that the return time may be in the past.
-        /// </para>
-        /// </summary>
+        /// <inheritdoc/>
         public override DateTimeOffset? FinalFireTimeUtc {
             get {
                 if (RetrySettings.MaxRetries == RetryIndefinitely) {
@@ -129,20 +146,12 @@ namespace KdSoft.Quartz
             }
         }
 
-        /// <summary>
-        /// Tells whether this Trigger instance can handle events
-        /// in millisecond precision.
-        /// </summary>
-        /// <value></value>
+        /// <inheritdoc/>
         public override bool HasMillisecondPrecision {
             get { return true; }
         }
 
-        /// <summary>
-        /// Validates the misfire instruction.
-        /// </summary>
-        /// <param name="misfireInstruction">The misfire instruction.</param>
-        /// <returns></returns>
+        /// <inheritdoc/>
         protected override bool ValidateMisfireInstruction(int misfireInstruction) {
             if (misfireInstruction < global::Quartz.MisfireInstruction.IgnoreMisfirePolicy) {
                 return false;
@@ -155,6 +164,7 @@ namespace KdSoft.Quartz
             return true;
         }
 
+        /// <inheritdoc/>
         public override void UpdateAfterMisfire(ICalendar cal) {
             int instr = MisfireInstruction;
             if (instr == global::Quartz.MisfireInstruction.SmartPolicy) {
@@ -162,13 +172,7 @@ namespace KdSoft.Quartz
             }
         }
 
-        /// <summary>
-        /// Called when the <see cref="IScheduler" /> has decided to 'fire'
-        /// the trigger (Execute the associated <see cref="IJob" />), in order to
-        /// give the <see cref="ITrigger" /> a chance to update itself for its next
-        /// triggering (if any).
-        /// </summary>
-        /// <seealso cref="JobExecutionException" />
+        /// <inheritdoc/>
         public override void Triggered(ICalendar cal) {
             timesTriggered++;
             previousFireTimeUtc = nextFireTimeUtc;
@@ -191,11 +195,7 @@ namespace KdSoft.Quartz
         }
 
 
-        /// <summary>
-        /// Updates the instance with new calendar.
-        /// </summary>
-        /// <param name="calendar">The calendar.</param>
-        /// <param name="misfireThreshold">The misfire threshold.</param>
+        /// <inheritdoc/>
 		public override void UpdateWithNewCalendar(ICalendar calendar, TimeSpan misfireThreshold) {
             nextFireTimeUtc = GetFireTimeAfter(previousFireTimeUtc);
 
@@ -225,20 +225,7 @@ namespace KdSoft.Quartz
             }
         }
 
-        /// <summary>
-        /// Called by the scheduler at the time a <see cref="ITrigger" /> is first
-        /// added to the scheduler, in order to have the <see cref="ITrigger" />
-        /// compute its first fire time, based on any associated calendar.
-        /// <para>
-        /// After this method has been called, <see cref="GetNextFireTimeUtc" />
-        /// should return a valid answer.
-        /// </para>
-        /// </summary>
-        /// <returns> 
-        /// The first time at which the <see cref="ITrigger" /> will be fired
-        /// by the scheduler, which is also the same value <see cref="GetNextFireTimeUtc" />
-        /// will return (until after the first firing of the <see cref="ITrigger" />).
-        /// </returns>
+        /// <inheritdoc/>
         public override DateTimeOffset? ComputeFirstFireTimeUtc(ICalendar cal) {
             // assuming that StartTimeUtc is the time of the job failure, we wait
             // for one period before firing the retry trigger for the first time
@@ -260,29 +247,22 @@ namespace KdSoft.Quartz
             return nextFireTimeUtc;
         }
 
-        /// <summary>
-        /// Returns the next time at which the <see cref="ISimpleTrigger" /> will
-        /// fire. If the trigger will not fire again, <see langword="null" /> will be
-        /// returned. The value returned is not guaranteed to be valid until after
-        /// the <see cref="ITrigger" /> has been added to the scheduler.
-        /// </summary>
+        /// <inheritdoc/>
         public override DateTimeOffset? GetNextFireTimeUtc() {
             return nextFireTimeUtc;
         }
 
+        /// <inheritdoc/>
         public override void SetNextFireTimeUtc(DateTimeOffset? nextFireTime) {
             nextFireTimeUtc = nextFireTime;
         }
 
+        /// <inheritdoc/>
         public override void SetPreviousFireTimeUtc(DateTimeOffset? previousFireTime) {
             previousFireTimeUtc = previousFireTime;
         }
 
-        /// <summary>
-        /// Returns the previous time at which the <see cref="ISimpleTrigger" /> fired.
-        /// If the trigger has not yet fired, <see langword="null" /> will be
-        /// returned.
-        /// </summary>
+        /// <inheritdoc/>
         public override DateTimeOffset? GetPreviousFireTimeUtc() {
             return previousFireTimeUtc;
         }
@@ -305,12 +285,10 @@ namespace KdSoft.Quartz
         }
 
         /// <summary>
-        /// Calculates both, the fire times before and after the given time, constrained
-        /// by StartTimeUtc and EndTimeUtc.
-        /// Note: the resulting 'before' fire time may match the given time, but the 'after' 
-        /// fire time must be later than the given time.
+        /// Calculates both, the fire times before and after the given time, constrained by StartTimeUtc and EndTimeUtc.
+        /// Note: the resulting 'before' fire time may match the given time, but the 'after' fire time must be later than the given time.
         /// </summary>
-        /// <param name="atTimeUtc"></param>
+        /// <param name="atTimeUtc">Point in time for which the fire times should be calculated.</param>
         /// <returns></returns>
         FireTimes GetCheckedFireTimes(DateTimeOffset atTimeUtc) {
             DateTimeOffset? before, after;
@@ -345,11 +323,7 @@ namespace KdSoft.Quartz
             return new FireTimes(before, after);
         }
 
-        /// <summary> 
-        /// Returns the next UTC time at which the <see cref="ISimpleTrigger" /> will
-        /// fire, after the given UTC time. If the trigger will not fire after the given
-        /// time, <see langword="null" /> will be returned. Checks MaxRetries.
-        /// </summary>
+        /// <inheritdoc/>
         public override DateTimeOffset? GetFireTimeAfter(DateTimeOffset? afterTimeUtc) {
             if ((timesTriggered > RetrySettings.MaxRetries) && (RetrySettings.MaxRetries != RetryIndefinitely)) {
                 return null;
@@ -360,27 +334,21 @@ namespace KdSoft.Quartz
         }
 
         /// <summary>
-        /// Returns the last UTC time at which the <see cref="ISimpleTrigger" /> will
-        /// fire, before the given time. If the trigger will not fire before the
-        /// given time, <see langword="null" /> will be returned. Does not check MaxRetries.
+        /// Returns the last UTC time at which the <see cref="ISimpleTrigger" /> will fire, before the given time.
+        /// If the trigger will not fire before the given time, <see langword="null" /> will be returned.
+        /// Does not check MaxRetries.
         /// </summary>
         public virtual DateTimeOffset? GetFireTimeBefore(DateTimeOffset? endUtc) {
             var fireTimes = GetCheckedFireTimes(endUtc ?? SystemTime.UtcNow());
             return fireTimes.Before;
         }
 
-        /// <summary> 
-        /// Determines whether or not the <see cref="ISimpleTrigger" /> will occur
-        /// again.
-        /// </summary>
+        /// <inheritdoc/>
         public override bool GetMayFireAgain() {
             return GetNextFireTimeUtc().HasValue;
         }
 
-        /// <summary>
-        /// Validates whether the properties of the <see cref="IJobDetail" /> are
-        /// valid for submission into a <see cref="IScheduler" />.
-        /// </summary>
+        /// <inheritdoc/>
         public override void Validate() {
             base.Validate();
 

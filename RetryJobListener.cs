@@ -6,18 +6,25 @@ using System.Diagnostics;
 namespace KdSoft.Quartz
 {
     /// <summary>
-    /// Schedules a RetryTrigger{T} when a job fails, based on the original trigger's settings or configured fallback settings.
-    /// Unschedules that trigger once the retried job succeeds. The orginal trigger is not affected or modified.
+    /// Schedules a <see cref="RetryTrigger{T}"/> when a job fails, based on the original trigger's settings
+    /// or configured fallback settings. Unschedules that trigger once the retried job succeeds.
+    /// The orginal trigger is not affected or modified, the retry trigger will belong to the same
+    /// trigger group and its name will have the suffix <see cref="RetryTriggerSuffix"/>.
     /// </summary>
     /// <typeparam name="T">Type of retry trigger to use.</typeparam>
     public class RetryJobListener<T>: JobListenerSupport where T: RetryTrigger<T>, new()
     {
         readonly Action<T> applyFallbackSettings;
 
+        /// <summary>Suffix for retry trigger name.</summary>
+        public const string RetryTriggerSuffix = "#RETRY";
+
+        /// <param name="applyFallbackSettings">Callback to apply retry settings to the trigger if needed.</param>
         public RetryJobListener(Action<T> applyFallbackSettings = null) {
             this.applyFallbackSettings = applyFallbackSettings;
         }
 
+        /// <summary>Name of retry listener.</summary>
         public override string Name { get { return "RetryListener"; } }
 
         // the retry trigger key is derived from the original trigger key
@@ -25,6 +32,7 @@ namespace KdSoft.Quartz
             return new TriggerKey(trig.Key.Name + RetryTriggerSuffix, trig.Key.Group);
         }
 
+        /// <inheritdoc/>
         public override void JobWasExecuted(IJobExecutionContext context, JobExecutionException jobException) {
             var trig = context.Trigger;
             if (JobFailed(jobException)) {
@@ -70,6 +78,8 @@ namespace KdSoft.Quartz
             }
         }
 
+
+        /// <inheritdoc/>
         public override void JobToBeExecuted(IJobExecutionContext context) {
             //
         }

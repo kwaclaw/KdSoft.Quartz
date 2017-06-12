@@ -88,6 +88,17 @@ namespace KdSoft.Quartz
             return jobj;
         }
 
+        /// <summary>
+        /// Schedules a new job, or conditionally replaces an existing job.
+        /// </summary>
+        /// <param name="scheduler">Scheduler instance to use.</param>
+        /// <param name="jobKey">Job key to use.</param>
+        /// <param name="triggerBuilder">Trigger builder to use. It has the trigger configuration.</param>
+        /// <param name="jobBuilder">Job builder to use. It has the job configuration, excluding the job data map.</param>
+        /// <param name="jobData">Job data added to the job data map as the single entry.
+        /// The job data map key is <see cref="QuartzKeys.JObjectJobDataKey"/></param>
+        /// <param name="overrideExisting">Indicates if an existing job should be replaced.</param>
+        /// <returns>Job details and first scheduled run time.</returns>
         public static (IJobDetail, DateTimeOffset?) ScheduleJob(
             this IScheduler scheduler,
             JobKey jobKey,
@@ -121,6 +132,16 @@ namespace KdSoft.Quartz
             return (job, runat);
         }
 
+        /// <summary>
+        /// Schedules a new job, or conditionally replaces an existing job.
+        /// </summary>
+        /// <param name="scheduler">Scheduler instance to use.</param>
+        /// <param name="jobKey">Job key to use.</param>
+        /// <param name="triggerBuilder">Trigger builder to use. It has the trigger configuration.</param>
+        /// <param name="jobBuilder">Job builder to use. It has the job configuration, excluding the job data map.</param>
+        /// <param name="addJobDataToMap">Callback to update the job data map.</param>
+        /// <param name="overrideExisting">Indicates if an existing job should be replaced.</param>
+        /// <returns>Job details and first scheduled run time.</returns>
         public static (IJobDetail, DateTimeOffset?) ScheduleJob(
             this IScheduler scheduler,
             JobKey jobKey,
@@ -154,6 +175,18 @@ namespace KdSoft.Quartz
             return (job, runat);
         }
 
+        /// <summary>
+        /// Schedules multiple jobs using a shared group name, and a common job and trigger base name.
+        /// The job configuration objects must be <see cref="JObject"/> instances.
+        /// </summary>
+        /// <param name="scheduler">Scheduler instance to use.</param>
+        /// <param name="groupName">Shared name for job and trigger group.</param>
+        /// <param name="jobBaseName">Base name for job, full names will have an auto-generated suffix.</param>
+        /// <param name="triggerBaseName">Base name for trigger, full names will have an auto-generated suffix.</param>
+        /// <param name="request">Holds scheduling parameters. The JobDataItems list must hold <see cref="JObject"/> instances.</param>
+        /// <returns>Job and/or error information for scheduled jobs.</returns>
+        /// <seealso cref="ScheduleJob(IScheduler, JobKey, TriggerBuilder, JobBuilder, JObject, bool)"/>
+        /// <seealso cref="ScheduleJobsRequest{T}"/>
         public static (IEnumerable<(IJobDetail, DateTimeOffset?)>, IEnumerable<(JobKey, string)>) ScheduleJobs(
             this IScheduler scheduler,
             string groupName,
@@ -198,6 +231,20 @@ namespace KdSoft.Quartz
             return (jobResults, errorResults);
         }
 
+        /// <summary>
+        /// Schedules multiple jobs using a shared group name, and a common job and trigger base name.
+        /// The job configuration objects must be <see cref="Action{T}"/> instances where <c>T</c> 
+        /// is of type <see cref="JobDataMap"/>.
+        /// </summary>
+        /// <param name="scheduler">Scheduler instance to use.</param>
+        /// <param name="groupName">Shared name for job and trigger group.</param>
+        /// <param name="jobBaseName">Base name for job, full names will have an auto-generated suffix.</param>
+        /// <param name="triggerBaseName">Base name for trigger, full names will have an auto-generated suffix.</param>
+        /// <param name="request">Holds scheduling parameters. The JobDataItems list must hold <see cref="Action{T}"/>
+        /// instances where <c>T</c>  is of type <see cref="JobDataMap"/>.</param>
+        /// <returns>Job and/or error information for scheduled jobs.</returns>
+        /// <seealso cref="ScheduleJob(IScheduler, JobKey, TriggerBuilder, JobBuilder, Action{JobDataMap}, bool)"/>
+        /// <seealso cref="ScheduleJobsRequest{T}"/>
         public static (IEnumerable<(IJobDetail, DateTimeOffset?)>, IEnumerable<(JobKey, string)>) ScheduleJobs(
             this IScheduler scheduler,
             string groupName,
@@ -241,6 +288,14 @@ namespace KdSoft.Quartz
             return (jobResults, errorResults);
         }
 
+        /// <summary>
+        /// Updates the <see cref="JObject"/> related entry of the job's <see cref="JobDataMap"/>.
+        /// </summary>
+        /// <param name="scheduler">Scheduler to use.</param>
+        /// <param name="jobKey">Job key.</param>
+        /// <param name="jobConfigUpdate">JSON object to use for the <see cref="JObject"/> entry.
+        /// The job data map key is <see cref="QuartzKeys.JObjectJobDataKey"/></param>.
+        /// <returns>Updated job details.</returns>
         public static IJobDetail UpdateJobData(
             this IScheduler scheduler,
             JobKey jobKey,
@@ -257,6 +312,13 @@ namespace KdSoft.Quartz
             return job;
         }
 
+        /// <summary>
+        /// Updates the job's <see cref="JobDataMap"/>.
+        /// </summary>
+        /// <param name="scheduler">Scheduler to use.</param>
+        /// <param name="jobKey">Job key.</param>
+        /// <param name="addJobDataToMap">Callback that updates the job data map.</param>.
+        /// <returns>Updated job details.</returns>
         public static IJobDetail UpdateJobData(
             this IScheduler scheduler,
             JobKey jobKey,
