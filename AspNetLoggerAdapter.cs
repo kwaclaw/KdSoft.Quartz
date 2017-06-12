@@ -18,10 +18,16 @@ namespace KdSoft.Quartz.AspNet
             this.aspNetFactory = aspNetFactory;
         }
 
-        public AspNetLoggerFactoryAdapter(ILoggerFactory aspNetFactory, Common.Logging.LogLevel level, bool showDateTime, bool showLogName, bool showLevel, string dateTimeFormat, bool useTraceSource)
+        public AspNetLoggerFactoryAdapter(ILoggerFactory aspNetFactory, Common.Logging.LogLevel level, bool showDateTime, bool showLogName, bool showLevel, string dateTimeFormat)
             : base(level, showDateTime, showLogName, showLevel, dateTimeFormat)
         {
             this.aspNetFactory = aspNetFactory;
+        }
+
+        /// <inheritdoc/>
+        protected override Common.Logging.ILog CreateLogger(string name) {
+            var aspNetLogger = aspNetFactory.CreateLogger(name);
+            return new AspNetLoggerWrapper(aspNetLogger, name, this.Level, this.ShowLevel, this.ShowDateTime, this.ShowLogName, this.DateTimeFormat);
         }
 
         protected override Common.Logging.ILog CreateLogger(string name, Common.Logging.LogLevel level, bool showLevel, bool showDateTime, bool showLogName, string dateTimeFormat) {
