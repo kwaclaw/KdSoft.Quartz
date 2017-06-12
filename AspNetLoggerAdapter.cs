@@ -6,18 +6,24 @@ using System.Text;
 
 namespace KdSoft.Quartz.AspNet
 {
+    /// <summary>
+    /// Adapts Common.Logging logger factory to Asp.Net logger factory.
+    /// </summary>
     public class AspNetLoggerFactoryAdapter: AbstractSimpleLoggerFactoryAdapter
     {
         readonly ILoggerFactory aspNetFactory;
 
+        /// <inheritdoc />
         public AspNetLoggerFactoryAdapter(ILoggerFactory aspNetFactory): base(null) {
             this.aspNetFactory = aspNetFactory;
         }
 
+        /// <inheritdoc />
         public AspNetLoggerFactoryAdapter(ILoggerFactory aspNetFactory, NameValueCollection properties): base(properties) {
             this.aspNetFactory = aspNetFactory;
         }
 
+        /// <inheritdoc />
         public AspNetLoggerFactoryAdapter(ILoggerFactory aspNetFactory, Common.Logging.LogLevel level, bool showDateTime, bool showLogName, bool showLevel, string dateTimeFormat)
             : base(level, showDateTime, showLogName, showLevel, dateTimeFormat)
         {
@@ -30,26 +36,34 @@ namespace KdSoft.Quartz.AspNet
             return new AspNetLoggerWrapper(aspNetLogger, name, this.Level, this.ShowLevel, this.ShowDateTime, this.ShowLogName, this.DateTimeFormat);
         }
 
+        /// <inheritdoc/>
         protected override Common.Logging.ILog CreateLogger(string name, Common.Logging.LogLevel level, bool showLevel, bool showDateTime, bool showLogName, string dateTimeFormat) {
             var aspNetLogger = aspNetFactory.CreateLogger(name);
             return new AspNetLoggerWrapper(aspNetLogger, name, level, showLevel, showDateTime, showLogName, dateTimeFormat);
         }
     }
 
+    /// <summary>
+    /// Wraps Asp.Net logger (<see cref="ILogger"/>) as Common.Logging logger (<see cref="Common.Logging.ILog"/>).
+    /// </summary>
     public class AspNetLoggerWrapper: AbstractSimpleLogger
     {
         readonly ILogger aspNetLogger;
 
+        /// <inheritdoc />
         public AspNetLoggerWrapper(ILogger aspNetLogger, string logName, Common.Logging.LogLevel logLevel, bool showLevel, bool showDateTime, bool showLogName, string dateTimeFormat)
             : base(logName, logLevel, showLevel, showDateTime, showLogName, dateTimeFormat)
         {
             this.aspNetLogger = aspNetLogger;
         }
 
+
+        /// <inheritdoc />
         protected override bool IsLevelEnabled(Common.Logging.LogLevel level) {
             return aspNetLogger.IsEnabled(Map2AspNetLogLevel(level));
         }
 
+        /// <inheritdoc />
         protected override void WriteInternal(Common.Logging.LogLevel level, object message, Exception exception) {
             Func<object, Exception, string> formatMsg = (obj, ex) => {
                 var sb = new StringBuilder();
