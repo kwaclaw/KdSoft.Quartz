@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A5CE22FC-E764-4A0F-AC68-EE1ED5654A5E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		CollectPackages.cmd = CollectPackages.cmd
+		MyFeed_push_all.cmd = MyFeed_push_all.cmd
+		NuGet.Config = NuGet.Config
+		Projects_Clear.cmd = Projects_Clear.cmd
+		QLineFeed_push_all.cmd = QLineFeed_push_all.cmd
+		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
+		Solution.ruleset = Solution.ruleset
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KdSoft.Quartz", "KdSoft.Quartz\KdSoft.Quartz.csproj", "{8F85C92A-BA5B-4492-A836-528E27B6B69A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KdSoft.Quartz.Shared", "KdSoft.Quartz.Shared\KdSoft.Quartz.Shared.csproj", "{77E1BD5D-F7DB-4BCF-8EB2-96AFDF100CD1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KdSoft.Quartz.AspNet", "KdSoft.Quartz.AspNet\KdSoft.Quartz.AspNet.csproj", "{EF10A745-7D08-4516-89A6-157452F699A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KdSoft.Quartz.Jobs", "KdSoft.Quartz.Jobs\KdSoft.Quartz.Jobs.csproj", "{3EF0F097-A78E-4941-A618-B95E3F9F7F40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F85C92A-BA5B-4492-A836-528E27B6B69A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F85C92A-BA5B-4492-A836-528E27B6B69A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F85C92A-BA5B-4492-A836-528E27B6B69A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F85C92A-BA5B-4492-A836-528E27B6B69A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77E1BD5D-F7DB-4BCF-8EB2-96AFDF100CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77E1BD5D-F7DB-4BCF-8EB2-96AFDF100CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77E1BD5D-F7DB-4BCF-8EB2-96AFDF100CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77E1BD5D-F7DB-4BCF-8EB2-96AFDF100CD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF10A745-7D08-4516-89A6-157452F699A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF10A745-7D08-4516-89A6-157452F699A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF10A745-7D08-4516-89A6-157452F699A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF10A745-7D08-4516-89A6-157452F699A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EF0F097-A78E-4941-A618-B95E3F9F7F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF0F097-A78E-4941-A618-B95E3F9F7F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF0F097-A78E-4941-A618-B95E3F9F7F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF0F097-A78E-4941-A618-B95E3F9F7F40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
