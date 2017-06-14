@@ -1,6 +1,6 @@
 using System;
 
-namespace KdSoft.Quartz.AspNet
+namespace KdSoft.Quartz
 {
     /// <summary>
     /// Settings for exponential backoff retry trigger.

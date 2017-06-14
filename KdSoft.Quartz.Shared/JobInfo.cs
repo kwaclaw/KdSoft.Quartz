@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using KdSoft.Utils;
 
-namespace KdSoft.Quartz.AspNet
+namespace KdSoft.Quartz
 {
     /// <summary>
     /// Quartz job update, subset of <see cref="JobInfo"/>.

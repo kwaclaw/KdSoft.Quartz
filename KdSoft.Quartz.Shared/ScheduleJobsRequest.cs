@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace KdSoft.Quartz.AspNet
+namespace KdSoft.Quartz
 {
     /// <summary>
     /// Arguments to schedule multiple Quartz jobs with the same job type and trigger settings.

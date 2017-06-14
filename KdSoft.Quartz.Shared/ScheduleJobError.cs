@@ -1,4 +1,4 @@
-﻿namespace KdSoft.Quartz.AspNet
+﻿namespace KdSoft.Quartz
 {
     /// <summary>
     /// Error information returned when scheduling a Quartz job fails.

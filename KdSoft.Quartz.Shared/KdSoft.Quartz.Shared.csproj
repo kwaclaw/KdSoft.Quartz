@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>KdSoft Quartz Class Library</Description>
     <VersionPrefix>1.0.0</VersionPrefix>
     <Authors>Karl Waclawek</Authors>
-    <TargetFramework>net451</TargetFramework>
+    <TargetFramework>netstandard1.2</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RootNamespace>KdSoft.Quartz</RootNamespace>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
@@ -16,17 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\SharedAssemblyInfo.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-    <PackageReference Include="Quartz" Version="2.5.0" />
-    <PackageReference Include="System.ValueTuple" Version="4.3.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\KdSoft.Quartz.Shared\KdSoft.Quartz.Shared.csproj" />
+    <PackageReference Include="KdSoft.Utils.Portable" Version="3.5.1" />
   </ItemGroup>
 
 </Project>

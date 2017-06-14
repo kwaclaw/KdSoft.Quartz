@@ -1,5 +1,5 @@
 ﻿
-namespace KdSoft.Quartz.AspNet
+namespace KdSoft.Quartz
 {
     /// <summary>
     /// Misfire instructions.

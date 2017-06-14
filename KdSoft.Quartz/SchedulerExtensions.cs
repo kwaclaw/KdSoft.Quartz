@@ -1,5 +1,4 @@
-﻿using KdSoft.Quartz.AspNet;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Quartz;
 using System;

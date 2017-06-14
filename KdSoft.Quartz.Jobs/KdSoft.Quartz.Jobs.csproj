@@ -6,9 +6,6 @@
     <Authors>Karl Waclawek</Authors>
     <TargetFramework>net451</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <AssemblyName>KdSoft.Quartz.Jobs</AssemblyName>
-    <PackageId>KdSoft.Quartz.Jobs</PackageId>
-    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
@@ -17,17 +14,14 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <CodeAnalysisRuleSet>..\Solution.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <Compile Include="..\SharedAssemblyInfo.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KdSoft.CodeConfig\KdSoft.CodeConfig.csproj" />
-    <ProjectReference Include="..\KdSoft.Utils\KdSoft.Utils.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="KdSoft.CodeConfig" Version="2.0.3" />
+    <PackageReference Include="KdSoft.Utils" Version="2.0.3" />
     <PackageReference Include="Quartz" Version="2.5.0" />
   </ItemGroup>
 

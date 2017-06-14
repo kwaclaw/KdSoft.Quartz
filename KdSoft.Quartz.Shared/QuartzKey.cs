@@ -1,4 +1,4 @@
-﻿namespace KdSoft.Quartz.AspNet
+﻿namespace KdSoft.Quartz
 {
     /// <summary>
     /// Key for Quartz job or Quartz trigger.

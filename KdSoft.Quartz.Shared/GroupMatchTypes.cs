@@ -1,4 +1,4 @@
-﻿namespace KdSoft.Quartz.AspNet
+﻿namespace KdSoft.Quartz
 {
     /// <summary>
     /// Specifies how group names should be matched. Comparisons are not case-sensitive.
