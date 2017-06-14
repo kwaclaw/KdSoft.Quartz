@@ -1,4 +1,4 @@
-﻿using KdSoft.Models.Shared.Scheduling;
+﻿using KdSoft.Quartz.AspNet;
 using Newtonsoft.Json;
 using Quartz;
 using System;

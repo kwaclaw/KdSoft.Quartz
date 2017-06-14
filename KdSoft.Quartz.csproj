@@ -4,7 +4,6 @@
     <Description>KdSoft Quartz Class Library</Description>
     <Authors>Karl Waclawek</Authors>
     <TargetFramework>net451</TargetFramework>
-    <AssemblyName>KdSoft.Quartz</AssemblyName>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
@@ -22,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KdSoft.Models.Shared.Scheduling\KdSoft.Models.Shared.Scheduling.csproj" />
+    <ProjectReference Include="..\KdSoft.Quartz.AspNet.Shared\KdSoft.Quartz.AspNet.Shared.csproj" />
   </ItemGroup>
 
 </Project>
