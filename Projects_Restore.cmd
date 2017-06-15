@@ -1,6 +1,0 @@
-
-dotnet restore
-
-pause
-
-
