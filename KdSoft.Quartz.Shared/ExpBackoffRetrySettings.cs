@@ -2,9 +2,12 @@ using System;
 
 namespace KdSoft.Quartz
 {
-    /// <summary>
-    /// Settings for exponential backoff retry trigger.
-    /// </summary>
+  /// <summary>
+  /// Settings for exponential backoff retry trigger.
+  /// </summary>
+#if !COREFX
+    [Serializable]
+#endif
     public class ExpBackoffRetrySettings
     {
         /// <summary>
