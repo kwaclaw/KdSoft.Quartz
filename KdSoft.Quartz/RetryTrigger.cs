@@ -1,18 +1,20 @@
 ﻿using Quartz;
 using Quartz.Impl.Triggers;
 using Quartz.Spi;
+using System;
 
 namespace KdSoft.Quartz
 {
-    /// <summary>
-    /// Marker interface for retry triggers.
-    /// </summary>
-    public interface IRetryTrigger: IMutableTrigger { }
+  /// <summary>
+  /// Marker interface for retry triggers.
+  /// </summary>
+  public interface IRetryTrigger: IMutableTrigger { }
 
     /// <summary>
     /// Trigger that allows retries.
     /// </summary>
     /// <typeparam name="T"></typeparam>
+    [Serializable]
     public abstract class RetryTrigger<T>: AbstractTrigger, IRetryTrigger where T: RetryTrigger<T>
     {
         /// <inheritdoc cref="AbstractTrigger()"/>
