@@ -232,13 +232,25 @@ namespace KdSoft.Quartz.AspNet
             };
         }
 
-        /// <inheritdoc cref="SchedulerExtensions.UpdateJobData(quartz.IScheduler, quartz.JobKey, JObject)"/>
+        /// <summary>
+        /// Updates the <see cref="JObject"/> related entries of the job's <see cref="quartz.JobDataMap"/>.
+        /// </summary>
         /// <param name="jobKey">Job key.</param>
         /// <param name="jobData">Job data, must be a <see cref="JObject"/> instance.</param>
-        /// <seealso cref="SchedulerExtensions.UpdateJobData(quartz.IScheduler, quartz.JobKey, JObject)"/>
-        public JobInfo UpdateJobData(QuartzKey jobKey, object jobData) {
-            var job = Scheduler.UpdateJobData(mapper.Map<quartz.JobKey>(jobKey), (JObject)jobData);
+        /// <param name="replace">Indicates if the update is a replacement, where the updated <see cref="JObject"/>
+        /// will be identical to the <paramref name="jobData"/> argument. If <c>false</c> then only
+        /// the properties passed in the argument will be updated and other properties will be unchanged.</param>
+        /// <seealso cref="SchedulerExtensions.UpdateJobData(quartz.IScheduler, quartz.JobKey, JObject, bool)"/>
+        public JobInfo UpdateJobData(QuartzKey jobKey, object jobData, bool replace = false) {
+            var job = Scheduler.UpdateJobData(mapper.Map<quartz.JobKey>(jobKey), (JObject)jobData, replace);
             return mapper.Map<JobInfo>(job);
+        }
+
+        /// <inheritdoc cref="SchedulerExtensions.RemoveJobData(quartz.IScheduler, quartz.JobKey)"/>
+        /// <param name="jobKey">Job key.</param>
+        /// <seealso cref="SchedulerExtensions.RemoveJobData(quartz.IScheduler, quartz.JobKey)"/>
+        public void RemoveJobData(QuartzKey jobKey) {
+            Scheduler.RemoveJobData(mapper.Map<quartz.JobKey>(jobKey));
         }
 
         /// <inheritdoc cref="quartz.IScheduler.StartDelayed"/>

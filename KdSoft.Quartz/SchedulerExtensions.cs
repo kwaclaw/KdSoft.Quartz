@@ -37,9 +37,9 @@ namespace KdSoft.Quartz
         }
 
         /// <summary>
-        /// Replaces <see cref="JObject"/> in job data map.
+        /// Updates <see cref="JObject"/> in job data map.
         /// </summary>
-        /// <param name="jdm">Job data ma  to use.</param>
+        /// <param name="jdm">Job data map to use.</param>
         /// <param name="jobj">Replacement JSON object.</param>
         /// <param name="keyPrefix">Data map keys for JSON object properties will have this prefix, separated by ':'.</param>
         /// <param name="converters">JSON converters to use for serializing the object's properties.</param>
@@ -61,7 +61,6 @@ namespace KdSoft.Quartz
                 jdm.Put(sb.ToString(), prop.Value.ToString(Formatting.None, converters));
             }
         }
-
 
         /// <summary>
         /// Retrieves <see cref="JObject"/> from job data map.
@@ -85,6 +84,54 @@ namespace KdSoft.Quartz
                 jobj[key] = JToken.Parse(entry.Value.ToString(), settings);
             }
             return jobj;
+        }
+
+        /// <summary>
+        /// Retrieves <see cref="JObject"/> from job data map.
+        /// </summary>
+        /// <param name="jdm">Job data map to use.</param>
+        /// <param name="keyPrefix">All data map entries with this key prefix will be removed.</param>
+        public static void RemoveJObject(this JobDataMap jdm, string keyPrefix) {
+            var prefix = keyPrefix + ":";
+
+            var keys = new List<string>();
+            foreach (var entry in jdm) {
+                if (!entry.Key.StartsWith(prefix))
+                    continue;
+                keys.Add(entry.Key);
+            }
+
+            foreach (var key in keys) {
+                jdm.Remove(key);
+            }
+        }
+
+        /// <summary>
+        /// Replaces <see cref="JObject"/> in job data map.
+        /// </summary>
+        /// <param name="jdm">Job data map to use.</param>
+        /// <param name="jobj">Replacement JSON object.</param>
+        /// <param name="keyPrefix">Data map keys for JSON object properties will have this prefix, separated by ':'.</param>
+        /// <param name="converters">JSON converters to use for serializing the object's properties.</param>
+        /// <remarks>This is a true replacement, existing properties with the same prefix and name will be removed
+        /// if the new <see cref="JObject"/> does not include them.</remarks>
+        public static void ReplaceJObject(
+            this JobDataMap jdm,
+            JObject jobj,
+            string keyPrefix,
+            params JsonConverter[] converters
+        ) {
+            var sb = new StringBuilder(keyPrefix);
+            sb.Append(':');
+            int prefixLen = sb.Length;
+
+            RemoveJObject(jdm, keyPrefix);
+
+            foreach (var prop in jobj.Properties()) {
+                sb.Length = prefixLen;
+                sb.Append(prop.Name);
+                jdm.Put(sb.ToString(), prop.Value.ToString(Formatting.None, converters));
+            }
         }
 
         /// <summary>
@@ -288,24 +335,31 @@ namespace KdSoft.Quartz
         }
 
         /// <summary>
-        /// Updates the <see cref="JObject"/> related entry of the job's <see cref="JobDataMap"/>.
+        /// Updates the <see cref="JObject"/> related entries of the job's <see cref="JobDataMap"/>.
         /// </summary>
         /// <param name="scheduler">Scheduler to use.</param>
         /// <param name="jobKey">Job key.</param>
         /// <param name="jobConfigUpdate">JSON object to use for the <see cref="JObject"/> entry.
-        /// The job data map key is <see cref="QuartzKeys.JObjectJobDataKey"/></param>.
+        /// The job data map key prefix is <see cref="QuartzKeys.JObjectJobDataKey"/></param>.
+        /// <param name="replace">Indicates if the update is a replacement, where the updated <see cref="JObject"/>
+        /// will be identical to the <paramref name="jobConfigUpdate"/> argument. If <c>false</c> then only
+        /// the properties passed in the argument will be updated and other properties will be unchanged.</param>
         /// <returns>Updated job details.</returns>
         public static IJobDetail UpdateJobData(
             this IScheduler scheduler,
             JobKey jobKey,
-            JObject jobConfigUpdate
+            JObject jobConfigUpdate,
+            bool replace = false
         ) {
             var job = scheduler.GetJobDetail(jobKey);
             if (job == null)
                 throw new ArgumentException(string.Format("Job '{0}' does not exist.", jobKey));
 
             var jdm = job.JobDataMap;
-            jdm.PutJObject(jobConfigUpdate, QuartzKeys.JObjectJobDataKey);
+            if (replace)
+                jdm.ReplaceJObject(jobConfigUpdate, QuartzKeys.JObjectJobDataKey);
+            else
+                jdm.PutJObject(jobConfigUpdate, QuartzKeys.JObjectJobDataKey);
             scheduler.AddJob(job, true);
 
             return job;
@@ -332,6 +386,22 @@ namespace KdSoft.Quartz
             scheduler.AddJob(job, true);
 
             return job;
+        }
+
+        /// <summary>
+        /// Removes the <see cref="JObject"/> related entries of the job's <see cref="JobDataMap"/>.
+        /// The job data map key prefix is <see cref="QuartzKeys.JObjectJobDataKey"/>.
+        /// </summary>
+        /// <param name="scheduler">Scheduler to use.</param>
+        /// <param name="jobKey">Job key.</param>
+        public static void RemoveJobData(this IScheduler scheduler, JobKey jobKey) {
+            var job = scheduler.GetJobDetail(jobKey);
+            if (job == null)
+                throw new ArgumentException(string.Format("Job '{0}' does not exist.", jobKey));
+
+            var jdm = job.JobDataMap;
+            jdm.RemoveJObject(QuartzKeys.JObjectJobDataKey);
+            scheduler.AddJob(job, true);
         }
     }
 }
