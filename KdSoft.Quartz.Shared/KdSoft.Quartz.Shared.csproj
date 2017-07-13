@@ -3,7 +3,9 @@
   <PropertyGroup>
     <VersionPrefix>1.0.1</VersionPrefix>
     <Authors>Karl Waclawek</Authors>
-    <TargetFrameworks>netstandard1.2;net451</TargetFrameworks>
+    <TargetFrameworks>net451;netstandard1.2</TargetFrameworks>
+    <!-- This entry is added to satisfy DocFx, as it does not yet support <TargetFrameworks />. -->
+    <TargetFramework>net451</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <RootNamespace>KdSoft.Quartz</RootNamespace>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
@@ -20,8 +22,9 @@
     <PackageReference Include="KdSoft.Utils.Portable" Version="3.5.1" />
   </ItemGroup>
 
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
-    <DefineConstants>$(DefineConstants);COREFX</DefineConstants>
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFramework)' == 'netstandard1.2' ">COREFX</DefineConstants>
   </PropertyGroup>
-
+    
 </Project>

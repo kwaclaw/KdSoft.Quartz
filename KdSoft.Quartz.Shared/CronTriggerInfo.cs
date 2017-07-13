@@ -11,23 +11,23 @@ namespace KdSoft.Quartz
   /// </summary>
   public class CronTriggerUpdate
   {
-    /// <inheritdoc cref="CronTriggerInfo.Description"/>
+    /// <seealso cref="CronTriggerInfo.Description"/>
     public ValueWrapper<string> Description { get; set; }
-    /// <inheritdoc cref="CronTriggerInfo.JobDataMap"/>
+    /// <seealso cref="CronTriggerInfo.JobDataMap"/>
     public ValueWrapper<IDictionary<string, object>> JobDataMap { get; set; }
-    /// <inheritdoc cref="CronTriggerInfo.StartTimeUtc"/>
+    /// <seealso cref="CronTriggerInfo.StartTimeUtc"/>
     public ValueWrapper<DateTimeOffset> StartTimeUtc { get; set; }
-    /// <inheritdoc cref="CronTriggerInfo.EndTimeUtc"/>
+    /// <seealso cref="CronTriggerInfo.EndTimeUtc"/>
     public ValueWrapper<DateTimeOffset?> EndTimeUtc { get; set; }
-    /// <inheritdoc cref="CronTriggerInfo.Priority"/>
+    /// <seealso cref="CronTriggerInfo.Priority"/>
     public ValueWrapper<int> Priority { get; set; }
-    /// <inheritdoc cref="CronTriggerInfo.CalendarName"/>
+    /// <seealso cref="CronTriggerInfo.CalendarName"/>
     public ValueWrapper<string> CalendarName { get; set; }
-    /// <inheritdoc cref="CronTriggerInfo.CronExpressionString"/>
+    /// <seealso cref="CronTriggerInfo.CronExpressionString"/>
     public ValueWrapper<string> CronExpressionString { get; set; }
-    /// <inheritdoc cref="CronTriggerInfo.TimeZoneId"/>
+    /// <seealso cref="CronTriggerInfo.TimeZoneId"/>
     public ValueWrapper<string> TimeZoneId { get; set; }
-    /// <inheritdoc cref="CronTriggerInfo.MisfireInstruction"/>
+    /// <seealso cref="CronTriggerInfo.MisfireInstruction"/>
     public ValueWrapper<int> MisfireInstruction { get; set; }
   }
 

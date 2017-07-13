@@ -72,15 +72,15 @@ namespace KdSoft.Quartz.AspNet
 
         #region Jobs
 
-        /// <inheritdoc cref="quartz.IScheduler.GetJobGroupNames"/>
+        /// <seealso cref="quartz.IScheduler.GetJobGroupNames"/>
         public IList<string> GetJobGroups() {
             return Scheduler.GetJobGroupNames();
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.GetJobKeys"/>
         /// <param name="group">Name of group to match. Can be a partial group name.</param>
         /// <param name="matchType">Specifies how group names must be <see cref="GroupMatchTypes">matched</see>
         /// against the specified 'group' argument.</param>
+        /// <seealso cref="quartz.IScheduler.GetJobKeys"/>
         /// <seealso cref="quMatchers.GroupMatcher{TKey}"/>
         public IEnumerable<QuartzKey> GetJobKeys(string group, string matchType = null) {
             var matcher = GetGroupMatcher<quartz.JobKey>(group, matchType);
@@ -101,7 +101,7 @@ namespace KdSoft.Quartz.AspNet
             return jobs;
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.GetJobDetail"/>
+        /// <seealso cref="quartz.IScheduler.GetJobDetail"/>
         public JobInfo GetJob(QuartzKey key) {
             var job = Scheduler.GetJobDetail(mapper.Map<quartz.JobKey>(key));
             return mapper.Map<JobInfo>(job);
@@ -138,12 +138,12 @@ namespace KdSoft.Quartz.AspNet
             return mapper.Map<JobInfo>(newJob);
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.DeleteJobs"/>
+        /// <seealso cref="quartz.IScheduler.DeleteJobs"/>
         public bool DeleteJobs(IEnumerable<QuartzKey> jobKeys) {
             return Scheduler.DeleteJobs(mapper.Map<List<quartz.JobKey>>(jobKeys));
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.TriggerJob(quartz.JobKey)"/>
+        /// <seealso cref="quartz.IScheduler.TriggerJob(quartz.JobKey)"/>
         public void RunJob(QuartzKey jobKey) {
             Scheduler.TriggerJob(mapper.Map<quartz.JobKey>(jobKey));
         }
@@ -152,23 +152,23 @@ namespace KdSoft.Quartz.AspNet
 
         #region Triggers
 
-        /// <inheritdoc cref="quartz.IScheduler.GetTriggerGroupNames"/>
+        /// <seealso cref="quartz.IScheduler.GetTriggerGroupNames"/>
         public IList<string> GetTriggerGroups() {
             return Scheduler.GetTriggerGroupNames();
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.GetTriggerKeys"/>
         /// <param name="group">Name of group to match. Can be a partial group name.</param>
         /// <param name="matchType">Specifies how group names must be <see cref="GroupMatchTypes">matched</see>
         /// against the specified 'group' argument.</param>
+        /// <seealso cref="quartz.IScheduler.GetTriggerKeys"/>
         /// <seealso cref="quMatchers.GroupMatcher{TKey}"/>
         public IEnumerable<QuartzKey> GetTriggerKeys(string group, string matchType = null) {
             var matcher = GetGroupMatcher<quartz.TriggerKey>(group, matchType);
             return Scheduler.GetTriggerKeys(matcher).Select(tk => mapper.Map<QuartzKey>(tk));
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.GetTriggersOfJob"/>
         /// <returns>Trigger info. Includes CRON expression if applicable..</returns>
+        /// <seealso cref="quartz.IScheduler.GetTriggersOfJob"/>
         public IEnumerable<CronTriggerInfo> GetTriggersOfJob(QuartzKey jobKey) {
             var triggers = Scheduler.GetTriggersOfJob(mapper.Map<quartz.JobKey>(jobKey));
             return triggers.Select(tr => {
@@ -179,8 +179,8 @@ namespace KdSoft.Quartz.AspNet
             });
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.GetTrigger"/>
         /// <returns>Trigger info. Includes CRON expression if applicable..</returns>
+        /// <seealso cref="quartz.IScheduler.GetTrigger"/>
         public CronTriggerInfo GetTrigger(QuartzKey key) {
             var triggerKey = mapper.Map<quartz.TriggerKey>(key);
             var trigger = Scheduler.GetTrigger(triggerKey);
@@ -190,7 +190,7 @@ namespace KdSoft.Quartz.AspNet
                 return mapper.Map<CronTriggerInfo>(trigger);
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.GetTriggerState"/>
+        /// <seealso cref="quartz.IScheduler.GetTriggerState"/>
         public string GetTriggerState(QuartzKey key) {
             var triggerKey = mapper.Map<quartz.TriggerKey>(key);
             var triggerState = Scheduler.GetTriggerState(triggerKey);
@@ -201,7 +201,6 @@ namespace KdSoft.Quartz.AspNet
 
         #region Scheduling
 
-        /// <inheritdoc cref="SchedulerExtensions.ScheduleJobs(quartz.IScheduler, string, string, string, ScheduleJobsRequest{object})"/>
         /// <seealso cref="SchedulerExtensions.ScheduleJobs(quartz.IScheduler, string, string, string, ScheduleJobsRequest{object})"/>
         /// <seealso cref="ScheduleJobsResult"/>
         public ScheduleJobsResult ScheduleJobs(
@@ -246,17 +245,16 @@ namespace KdSoft.Quartz.AspNet
             return mapper.Map<JobInfo>(job);
         }
 
-        /// <inheritdoc cref="SchedulerExtensions.RemoveJobData(quartz.IScheduler, quartz.JobKey)"/>
         /// <param name="jobKey">Job key.</param>
         /// <seealso cref="SchedulerExtensions.RemoveJobData(quartz.IScheduler, quartz.JobKey)"/>
         public void RemoveJobData(QuartzKey jobKey) {
             Scheduler.RemoveJobData(mapper.Map<quartz.JobKey>(jobKey));
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.StartDelayed"/>
         /// <param name="delay">Time span to delay.</param>
         /// <param name="delaySeconds">Number of seconds to delay. Alternative delay specification,
         /// ignored if 'delay' argument is not <c>null</c>.</param>
+        /// <seealso cref="quartz.IScheduler.StartDelayed"/>
         /// <seealso cref="quartz.IScheduler.Start"/>
         public void Start(TimeSpan? delay, int? delaySeconds) {
             if (delay == null && delaySeconds != null)
@@ -268,7 +266,7 @@ namespace KdSoft.Quartz.AspNet
                 Scheduler.StartDelayed(delay.Value);
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.Standby"/>
+        /// <seealso cref="quartz.IScheduler.Standby"/>
         public void Pause() {
             Scheduler.Standby();
         }
@@ -336,88 +334,88 @@ namespace KdSoft.Quartz.AspNet
             return new RescheduleResult { TriggerInfo = mapper.Map<CronTriggerInfo>(newTrigger), RunAt = runat };
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.UnscheduleJobs"/>
+        /// <seealso cref="quartz.IScheduler.UnscheduleJobs"/>
         public bool UnscheduleJobs(IEnumerable<QuartzKey> triggerKeys) {
             return Scheduler.UnscheduleJobs(mapper.Map<List<quartz.TriggerKey>>(triggerKeys));
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.PauseJob"/>
+        /// <seealso cref="quartz.IScheduler.PauseJob"/>
         public void PauseJob(QuartzKey key) {
             Scheduler.PauseJob(mapper.Map<quartz.JobKey>(key));
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.PauseJobs"/>
         /// <param name="group">Name of group to match. Can be a partial group name.</param>
         /// <param name="matchType">Specifies how group names must be <see cref="GroupMatchTypes">matched</see>
         /// against the specified 'group' argument.</param>
+        /// <seealso cref="quartz.IScheduler.PauseJobs"/>
         /// <seealso cref="quMatchers.GroupMatcher{TKey}"/>
         public void PauseJobs(string group, string matchType = null) {
             var matcher = GetGroupMatcher<quartz.JobKey>(group, matchType);
             Scheduler.PauseJobs(matcher);
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.PauseTrigger"/>
+        /// <seealso cref="quartz.IScheduler.PauseTrigger"/>
         public void PauseTrigger(QuartzKey key) {
             Scheduler.PauseTrigger(mapper.Map<quartz.TriggerKey>(key));
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.PauseTriggers"/>
         /// <param name="group">Name of group to match. Can be a partial group name.</param>
         /// <param name="matchType">Specifies how group names must be <see cref="GroupMatchTypes">matched</see>
         /// against the specified 'group' argument.</param>
+        /// <seealso cref="quartz.IScheduler.PauseTriggers"/>
         /// <seealso cref="quMatchers.GroupMatcher{TKey}"/>
         public void PauseTriggers(string group, string matchType = null) {
             var matcher = GetGroupMatcher<quartz.TriggerKey>(group, matchType);
             Scheduler.PauseTriggers(matcher);
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.GetPausedTriggerGroups"/>
+        /// <seealso cref="quartz.IScheduler.GetPausedTriggerGroups"/>
         public ICollection<string> GetPausedTriggerGroups() {
             return Scheduler.GetPausedTriggerGroups();
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.PauseAll"/>
+        /// <seealso cref="quartz.IScheduler.PauseAll"/>
         public void PauseAll() {
             Scheduler.PauseAll();
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.ResumeJob"/>
+        /// <seealso cref="quartz.IScheduler.ResumeJob"/>
         public void ResumeJob(QuartzKey key) {
             Scheduler.ResumeJob(mapper.Map<quartz.JobKey>(key));
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.ResumeJobs"/>
         /// <param name="group">Name of group to match. Can be a partial group name.</param>
         /// <param name="matchType">Specifies how group names must be <see cref="GroupMatchTypes">matched</see>
         /// against the specified 'group' argument.</param>
+        /// <seealso cref="quartz.IScheduler.ResumeJobs"/>
         /// <seealso cref="quMatchers.GroupMatcher{TKey}"/>
         public void ResumeJobs(string group, string matchType = null) {
             var matcher = GetGroupMatcher<quartz.JobKey>(group, matchType);
             Scheduler.ResumeJobs(matcher);
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.GetCurrentlyExecutingJobs"/>
+        /// <seealso cref="quartz.IScheduler.GetCurrentlyExecutingJobs"/>
         public IEnumerable<QuartzKey> GetRunningJobs() {
             var contexts = Scheduler.GetCurrentlyExecutingJobs();
             return contexts.Select(ctx => mapper.Map<QuartzKey>(ctx.JobDetail.Key));
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.ResumeTrigger"/>
+        /// <seealso cref="quartz.IScheduler.ResumeTrigger"/>
         public void ResumeTrigger(QuartzKey key) {
             Scheduler.ResumeTrigger(mapper.Map<quartz.TriggerKey>(key));
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.ResumeTriggers"/>
         /// <param name="group">Name of group to match. Can be a partial group name.</param>
         /// <param name="matchType">Specifies how group names must be <see cref="GroupMatchTypes">matched</see>
         /// against the specified 'group' argument.</param>
+        /// <seealso cref="quartz.IScheduler.ResumeTriggers"/>
         /// <seealso cref="quMatchers.GroupMatcher{TKey}"/>
         public void ResumeTriggers(string group, string matchType = null) {
             var matcher = GetGroupMatcher<quartz.TriggerKey>(group, matchType);
             Scheduler.ResumeTriggers(matcher);
         }
 
-        /// <inheritdoc cref="quartz.IScheduler.ResumeAll"/>
+        /// <seealso cref="quartz.IScheduler.ResumeAll"/>
         public void ResumeAll() {
             Scheduler.ResumeAll();
         }

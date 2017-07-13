@@ -17,10 +17,10 @@ namespace KdSoft.Quartz
     [Serializable]
     public abstract class RetryTrigger<T>: AbstractTrigger, IRetryTrigger where T: RetryTrigger<T>
     {
-        /// <inheritdoc cref="AbstractTrigger()"/>
+        /// <seealso cref="AbstractTrigger()"/>
         protected RetryTrigger() { }
 
-        /// <inheritdoc cref="AbstractTrigger(string, string)"/>
+        /// <seealso cref="AbstractTrigger(string, string)"/>
         protected RetryTrigger(string name, string group) : base(name, group) { }
 
         /// <summary>

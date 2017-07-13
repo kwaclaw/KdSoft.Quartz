@@ -1,0 +1,33 @@
+{
+    "version": "0.2.1",
+    "workDir": "${workspaceRoot}/docfx_project/",
+    "tasks": [
+        {
+            "taskName": "Build Documentation",
+            "appliesTo": "docfx_project/",
+            "contextType": "custom",
+            "type": "command",
+            "command": "${env.COMSPEC}",
+            "args": [ "docfx.exe" ],
+            "workingDirectory": "${workDir}"
+        },
+        {
+            "taskName": "Run Documentation WebSite",
+            "appliesTo": "docfx_project/",
+            "contextType": "custom",
+            "type": "command",
+            "commands": [
+                {
+                    "command": "${env.COMSPEC}",
+                    "args": [ "start http://localhost:8089" ],
+                    "workingDirectory": "${workDir}"
+                },
+                {
+                    "command": "${env.COMSPEC}",
+                    "args": [ "start docfx.exe serve _site -p 8089" ],
+                    "workingDirectory": "${workDir}"
+                }
+            ]
+        }
+    ]
+}

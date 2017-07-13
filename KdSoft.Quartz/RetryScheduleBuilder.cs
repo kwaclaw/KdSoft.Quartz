@@ -13,6 +13,7 @@ namespace KdSoft.Quartz
         int misfireInstruction = global::Quartz.MisfireInstruction.SmartPolicy;
         Action<T> applySettings;
 
+        /// <inheritdoc/>
         protected RetryScheduleBuilder() { }
 
         /// <summary>

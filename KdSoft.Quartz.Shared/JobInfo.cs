@@ -10,13 +10,13 @@ namespace KdSoft.Quartz
     /// </summary>
     public class JobUpdate
     {
-        /// <inheritdoc cref="JobInfo.Description"/>
+        /// <seealso cref="JobInfo.Description"/>
         public ValueWrapper<string> Description { get; set; }
-        /// <inheritdoc cref="JobInfo.JobDataMap"/>
+        /// <seealso cref="JobInfo.JobDataMap"/>
         public ValueWrapper<IDictionary<string, object>> JobDataMap { get; set; }
-        /// <inheritdoc cref="JobInfo.Durable"/>
+        /// <seealso cref="JobInfo.Durable"/>
         public ValueWrapper<bool> Durable { get; set; }
-        /// <inheritdoc cref="JobInfo.RequestRecovery"/>
+        /// <seealso cref="JobInfo.RequestRecovery"/>
         public ValueWrapper<bool> RequestRecovery { get; set; }
     }
 
