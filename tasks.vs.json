@@ -12,6 +12,15 @@
             "workingDirectory": "${workDir}"
         },
         {
+            "taskName": "Rebuild Documentation",
+            "appliesTo": "docfx_project/",
+            "contextType": "custom",
+            "type": "command",
+            "command": "${env.COMSPEC}",
+            "args": [ "docfx.exe metadata -f && docfx build -f" ],
+            "workingDirectory": "${workDir}"
+        },
+        {
             "taskName": "Run Documentation WebSite",
             "appliesTo": "docfx_project/",
             "contextType": "custom",
@@ -19,12 +28,12 @@
             "commands": [
                 {
                     "command": "${env.COMSPEC}",
-                    "args": [ "start http://localhost:8089" ],
+                    "args": [ "start http://localhost:8090" ],
                     "workingDirectory": "${workDir}"
                 },
                 {
                     "command": "${env.COMSPEC}",
-                    "args": [ "start docfx.exe serve _site -p 8089" ],
+                    "args": [ "start docfx.exe serve _site -p 8090" ],
                     "workingDirectory": "${workDir}"
                 }
             ]

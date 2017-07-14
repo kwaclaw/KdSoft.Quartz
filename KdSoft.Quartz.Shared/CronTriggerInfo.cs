@@ -44,7 +44,7 @@ namespace KdSoft.Quartz
     public QuartzKey JobKey { get; set; }
     /// <summary>Trigger description, if any.</summary>
     public string Description { get; set; }
-    /// <summary><see cref="JobDataMap"/> associated with the Trigger. Changes made to this map during
+    /// <summary>JobDataMap associated with the Trigger. Changes made to this map during
     /// job execution are not re-persisted, and in fact typically result in an illegal state.</summary>
     public Dictionary<string, object> JobDataMap { get; set; }
     /// <summary>The time at which the trigger's scheduling should start. May or may not be the first actual fire time

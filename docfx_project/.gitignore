@@ -7,3 +7,6 @@
 /**/bin/
 /**/obj/
 _site
+
+src/Quartz.dll
+src/Quartz.xml
