@@ -3,8 +3,17 @@
         {
             "src": [
                 {
-                    "files": [ "**/KdSoft.Quartz.AspNet.csproj", "**/KdSoft.Quartz.csproj", "**/KdSoft.Quartz.Jobs.csproj" ],
-                    "exclude": [ "**/obj/**", "**/bin/**", "_site/**" ],
+                    "files": [
+                        "**/KdSoft.Quartz.AspNet.csproj",
+                        "**/KdSoft.Quartz.csproj",
+                        "**/KdSoft.Quartz.Jobs.csproj",
+                        "**/KdSoft.Quartz.Shared.csproj"
+                    ],
+                    "exclude": [
+                        "**/obj/**",
+                        "**/bin/**",
+                        "_site/**"
+                    ],
                     "src": "../"
                 },
                 {
@@ -16,45 +25,8 @@
                 /* Workaround to trick DocFX into generating metadata for projects using multiple target frameworks!  */
                 "TargetFramework": "net462"
             }
-        },
-        {
-            "src": [
-                {
-                    "files": [ "**/KdSoft.Quartz.Shared.csproj" ],
-                    "exclude": [ "**/obj/**", "**/bin/**", "_site/**" ],
-                    "src": "../"
-                }
-            ],
-            "dest": "temp/api/netstandard1.2",
-            "properties": {
-                /* Workaround to trick DocFX into generating metadata for projects using multiple target frameworks!  */
-                "TargetFramework": "netstandard1.2"
-            }
         }
     ],
-    "merge": {
-        "content": [
-            {
-                "files": "*.yml",
-                "src": "temp/api/netstandard1.2"
-            },
-            {
-                "files": "*.yml",
-                "src": "temp/api/net462"
-            }
-        ],
-        "fileMetadata": {
-            "platform": {
-                "temp/api/netstandard1.2/*.yml": [
-                    "netstandard1.2"
-                ],
-                "temp/api/net462/*.yml": [
-                    "net462"
-                ]
-            }
-        },
-        "dest": "api"
-    },
     "build": {
         "content": [
             {
