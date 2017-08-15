@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="KdSoft.CodeConfig" Version="2.0.3" />
+    <PackageReference Include="KdSoft.CodeConfig" Version="2.1.0" />
     <PackageReference Include="KdSoft.Utils" Version="2.0.3" />
     <PackageReference Include="Quartz" Version="2.6.0" />
   </ItemGroup>
