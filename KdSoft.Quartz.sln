@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A5CE22FC-E764-4A0F-AC68-EE1ED5654A5E}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,7 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{5803F749
 	ProjectSection(SolutionItems) = preProject
 		artifacts\CollectPackages.cmd = artifacts\CollectPackages.cmd
 		artifacts\MyFeed_push_all.cmd = artifacts\MyFeed_push_all.cmd
-		NuGet.Config = NuGet.Config
 		artifacts\QLineFeed_push_all.cmd = artifacts\QLineFeed_push_all.cmd
 	EndProjectSection
 EndProject
@@ -66,5 +65,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5803F749-1BAD-4D2C-84E4-BD6B6AA57460} = {A5CE22FC-E764-4A0F-AC68-EE1ED5654A5E}
 		{4F110E9C-AF01-4547-976C-8906E8F2EEAD} = {A5CE22FC-E764-4A0F-AC68-EE1ED5654A5E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52DA24B3-6F2C-4B7A-8535-9E0E3DBE0646}
 	EndGlobalSection
 EndGlobal
