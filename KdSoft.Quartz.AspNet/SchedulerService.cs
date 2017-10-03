@@ -1,9 +1,11 @@
-using AutoMapper;
-using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using quartz = Quartz;
 using quMatchers = Quartz.Impl.Matchers;
 using quUtil = Quartz.Util;
@@ -68,6 +70,15 @@ namespace KdSoft.Quartz.AspNet
             }
 
             return matcher;
+        }
+
+        /// <summary>
+        /// Returns version of Quartz implementation.
+        /// </summary>
+        public string Version() {
+            var assem = this.Scheduler.GetType().Assembly;
+            var informalAtt = assem.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
+            return informalAtt != null ? informalAtt.InformationalVersion : assem.GetName().Version.ToString();
         }
 
         #region Jobs
@@ -297,10 +308,20 @@ namespace KdSoft.Quartz.AspNet
                 builder = builder.EndAt(update.EndTimeUtc.Value);
             if (update.Priority != null)
                 builder = builder.WithPriority(update.Priority.Value);
-            if (update.JobDataMap != null) {
-                var jdm = new quartz.JobDataMap(update.JobDataMap.Value);
-                builder = builder.UsingJobData(jdm);
+
+            quartz.JobDataMap jdm = null;
+            if (update.RetrySettings != null) {
+                var retrySettingsJson = JsonConvert.SerializeObject(update.RetrySettings.Value);
+                jdm = jdm ?? new quartz.JobDataMap();
+                jdm.Add(KdSoft.Quartz.QuartzKeys.ExpBackoffRetrySettingsKey, retrySettingsJson);
             }
+            if (update.JobDataMap != null) {
+                jdm = jdm ?? new quartz.JobDataMap();
+                jdm.PutAll(update.JobDataMap.Value);
+            }
+            if (jdm != null)
+                builder = builder.UsingJobData(jdm);
+
             if (update.CalendarName != null)
                 builder = builder.ModifiedByCalendar(update.CalendarName.Value);
             if (update.CronExpressionString != null) {
