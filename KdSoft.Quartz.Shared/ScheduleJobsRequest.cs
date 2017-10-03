@@ -5,14 +5,13 @@ namespace KdSoft.Quartz
     /// <summary>
     /// Arguments to schedule multiple Quartz jobs with the same job type and trigger settings.
     /// </summary>
-    /// <typeparam name="T">Type of job configuration.</typeparam>
-    public class ScheduleJobsRequest<T>
+    public class ScheduleJobsRequest
     {
         /// <summary>Namespace qualified type name of job class.</summary>
         public string QualifiedTypeName { get; set; }
 
         /// <summary>Job configuration objects.</summary>
-        public IList<T> JobDataItems { get; set; }
+        public IList<JobDataDictionary> JobDataItems { get; set; }
 
         /// <summary>CRON schedule expression.</summary>
         public string CronSchedule { get; set; }

@@ -136,21 +136,21 @@ namespace KdSoft.Quartz.WebServices
             string groupName,
             string jobBaseName,
             string triggerBaseName,
-            [FromBody]ScheduleJobsRequest<object> request
+            [FromBody]ScheduleJobsRequest request
         ) {
             return Impl.ScheduleJobs(groupName, jobBaseName, triggerBaseName, request);
         }
 
         /// <seealso cref="SchedulerService.UpdateJobData(QuartzKey, object, bool)"/>
         [HttpPost]
-        public virtual JobInfo UpdateJobData(QuartzKey jobKey, [FromBody]object jobData, bool replace) {
+        public virtual JobInfo UpdateJobData(QuartzKey jobKey, [FromBody]JobDataDictionary jobData, bool replace) {
             return Impl.UpdateJobData(jobKey, jobData, replace);
         }
 
         /// <seealso cref="SchedulerService.RemoveJobData(QuartzKey)"/>
         [HttpPost]
-        public virtual void RemoveJobData(QuartzKey jobKey) {
-            Impl.RemoveJobData(jobKey);
+        public virtual void RemoveJobData(QuartzKey jobKey, IEnumerable<string> jobDataKeys) {
+            Impl.RemoveJobData(jobKey, jobDataKeys);
         }
 
         /// <seealso cref="SchedulerService.Start(TimeSpan?, int?)"/>

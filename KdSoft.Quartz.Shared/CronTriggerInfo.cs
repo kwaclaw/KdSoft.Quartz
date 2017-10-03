@@ -14,7 +14,7 @@ namespace KdSoft.Quartz
         /// <seealso cref="CronTriggerInfo.Description"/>
         public ValueWrapper<string> Description { get; set; }
         /// <seealso cref="CronTriggerInfo.JobDataMap"/>
-        public ValueWrapper<IDictionary<string, object>> JobDataMap { get; set; }
+        public ValueWrapper<IJobDataDictionary> JobDataMap { get; set; }
         /// <seealso cref="CronTriggerInfo.StartTimeUtc"/>
         public ValueWrapper<DateTimeOffset> StartTimeUtc { get; set; }
         /// <seealso cref="CronTriggerInfo.EndTimeUtc"/>
@@ -48,7 +48,7 @@ namespace KdSoft.Quartz
         public string Description { get; set; }
         /// <summary>JobDataMap associated with the Trigger. Changes made to this map during
         /// job execution are not re-persisted, and in fact typically result in an illegal state.</summary>
-        public Dictionary<string, object> JobDataMap { get; set; }
+        public JobDataDictionary JobDataMap { get; set; }
         /// <summary>The time at which the trigger's scheduling should start. May or may not be the first actual fire time
         /// of the trigger, depending upon the type of trigger and the settings of the other properties of the trigger.
         /// However the first actual first time will not be before this date.</summary>

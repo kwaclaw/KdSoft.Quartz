@@ -32,6 +32,8 @@ namespace KdSoft.Quartz.AspNet
 
         static SchedulerService() {
             var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<quartz.JobDataMap, JobDataDictionary>().ConvertUsing(jdm => jdm.Convert());
+                cfg.CreateMap<IJobDataDictionary, quartz.JobDataMap>().ConvertUsing(jdd => jdd.Convert());
                 cfg.CreateMap<quartz.IJobDetail, JobInfo>()
                     .ForMember(tgt => tgt.RequestRecovery, conf => conf.MapFrom(src => src.RequestsRecovery));
                 cfg.CreateMap<QuartzKey, quartz.JobKey>();
@@ -135,7 +137,7 @@ namespace KdSoft.Quartz.AspNet
                 builder = builder.WithDescription(update.Description.Value);
             if (update.JobDataMap != null) {
                 var jdm = job.JobDataMap;
-                jdm.PutAll(update.JobDataMap.Value);
+                jdm.UpdateFrom(update.JobDataMap.Value);
                 builder = builder.SetJobData(jdm);
             }
             if (update.Durable != null)
@@ -212,13 +214,13 @@ namespace KdSoft.Quartz.AspNet
 
         #region Scheduling
 
-        /// <seealso cref="SchedulerExtensions.ScheduleJobs(quartz.IScheduler, string, string, string, ScheduleJobsRequest{object})"/>
+        /// <seealso cref="SchedulerExtensions.ScheduleJobs(quartz.IScheduler, string, string, string, ScheduleJobsRequest)"/>
         /// <seealso cref="ScheduleJobsResult"/>
         public ScheduleJobsResult ScheduleJobs(
             string groupName,
             string jobBaseName,
             string triggerBaseName,
-            ScheduleJobsRequest<object> request
+            ScheduleJobsRequest request
         ) {
             IEnumerable<(quartz.IJobDetail job, DateTimeOffset? runat)> jobResults;
             IEnumerable<(quartz.JobKey jobKey, string message)> errorResults;
@@ -250,16 +252,19 @@ namespace KdSoft.Quartz.AspNet
         /// <param name="replace">Indicates if the update is a replacement, where the updated <see cref="JObject"/>
         /// will be identical to the <paramref name="jobData"/> argument. If <c>false</c> then only
         /// the properties passed in the argument will be updated and other properties will be unchanged.</param>
-        /// <seealso cref="SchedulerExtensions.UpdateJobData(quartz.IScheduler, quartz.JobKey, JObject, bool)"/>
-        public JobInfo UpdateJobData(QuartzKey jobKey, object jobData, bool replace = false) {
-            var job = Scheduler.UpdateJobData(mapper.Map<quartz.JobKey>(jobKey), (JObject)jobData, replace);
+        /// <seealso cref="SchedulerExtensions.UpdateJobData(quartz.IScheduler, quartz.JobKey, JobDataDictionary, bool)"/>
+        public JobInfo UpdateJobData(QuartzKey jobKey, JobDataDictionary jobData, bool replace = false) {
+            var job = Scheduler.UpdateJobData(mapper.Map<quartz.JobKey>(jobKey), jobData, replace);
             return mapper.Map<JobInfo>(job);
         }
 
         /// <param name="jobKey">Job key.</param>
-        /// <seealso cref="SchedulerExtensions.RemoveJobData(quartz.IScheduler, quartz.JobKey)"/>
-        public void RemoveJobData(QuartzKey jobKey) {
-            Scheduler.RemoveJobData(mapper.Map<quartz.JobKey>(jobKey));
+        /// <param name="jobDataKeys">Keys whose entries to remove from the job data dictionary.
+        /// If this argument is <see langword="null"/> then all entries will be removed.
+        /// If this argument is an empty collection then nothing will be removed.</param>
+        /// <seealso cref="SchedulerExtensions.RemoveJobData(quartz.IScheduler, quartz.JobKey, IEnumerable{string})"/>
+        public void RemoveJobData(QuartzKey jobKey, IEnumerable<string> jobDataKeys) {
+            Scheduler.RemoveJobData(mapper.Map<quartz.JobKey>(jobKey), jobDataKeys);
         }
 
         /// <param name="delay">Time span to delay.</param>
@@ -317,7 +322,7 @@ namespace KdSoft.Quartz.AspNet
             }
             if (update.JobDataMap != null) {
                 jdm = jdm ?? new quartz.JobDataMap();
-                jdm.PutAll(update.JobDataMap.Value);
+                jdm.UpdateFrom(update.JobDataMap.Value);
             }
             if (jdm != null)
                 builder = builder.UsingJobData(jdm);
