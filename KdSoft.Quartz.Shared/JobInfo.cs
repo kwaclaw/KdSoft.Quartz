@@ -40,7 +40,7 @@ namespace KdSoft.Quartz
         /// <seealso cref="JobInfo.Description"/>
         public ValueWrapper<string> Description { get; set; }
         /// <seealso cref="JobInfo.JobDataMap"/>
-        public ValueWrapper<IJobDataDictionary> JobDataMap { get; set; }
+        public ValueWrapper<JobDataDictionary> JobDataMap { get; set; }
         /// <seealso cref="JobInfo.Durable"/>
         public ValueWrapper<bool> Durable { get; set; }
         /// <seealso cref="JobInfo.RequestRecovery"/>

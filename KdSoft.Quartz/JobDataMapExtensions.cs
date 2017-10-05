@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Quartz;
 
@@ -30,8 +28,8 @@ namespace KdSoft.Quartz
             var result = new JobDataDictionary(jdm.Count);
             foreach (var entry in jdm) {
                 if (IsQuartzKey(entry.Key)) {
-                    var jobj = JObject.Parse((string)entry.Value);
-                    result[entry.Key] = jobj;
+                    var jobj = JsonConvert.DeserializeObject((string)entry.Value);
+                    result[entry.Key] = jobj ?? entry.Value;
                 }
                 else {
                     result[entry.Key] = entry.Value;

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using KdSoft.Utils;
 
 namespace KdSoft.Quartz
@@ -14,7 +13,7 @@ namespace KdSoft.Quartz
         /// <seealso cref="CronTriggerInfo.Description"/>
         public ValueWrapper<string> Description { get; set; }
         /// <seealso cref="CronTriggerInfo.JobDataMap"/>
-        public ValueWrapper<IJobDataDictionary> JobDataMap { get; set; }
+        public ValueWrapper<JobDataDictionary> JobDataMap { get; set; }
         /// <seealso cref="CronTriggerInfo.StartTimeUtc"/>
         public ValueWrapper<DateTimeOffset> StartTimeUtc { get; set; }
         /// <seealso cref="CronTriggerInfo.EndTimeUtc"/>
