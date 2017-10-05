@@ -8,10 +8,13 @@ using KdSoft.Quartz.AspNet;
 using KdSoft.Quartz.WebServices;
 using KdSoft.Services.Json;
 using KdSoft.Services.Security;
+using KdSoft.Services.WebApi.Infrastructure;
+using KdSoft.Utils;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.AspNetCore.Server.IISIntegration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -39,7 +42,14 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var mvc = services.AddMvc();
+            // add capability to bind ISO TimeSpans, etc.
+            var mvc = services.AddMvc(options => {
+                var indx = options.ModelBinderProviders.FindIndex(mbp => mbp is SimpleTypeModelBinderProvider);
+                if (indx >= 0)
+                    options.ModelBinderProviders[indx] = new SimpleTypeIsoModelBinderProvider();
+                else
+                    options.ModelBinderProviders.Insert(0, new SimpleTypeIsoModelBinderProvider());
+            });
 
             //TODO Review JSON serializer settings based on the comments here:
             //https://github.com/aspnet/Mvc/issues/4562#issuecomment-226049509
