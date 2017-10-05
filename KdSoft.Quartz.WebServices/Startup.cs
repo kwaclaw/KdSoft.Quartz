@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using KdSoft.Quartz;
+using KdSoft.Quartz.AspNet;
 using KdSoft.Quartz.WebServices;
 using KdSoft.Services.Json;
 using KdSoft.Services.Security;
@@ -57,11 +58,14 @@ namespace WebApplication1
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             }
+
+            // Quartz scheduler needs logging infrastructure adapted
+            ConfigureScheduler(loggerFactory);
 
             app.UseAuthentication();
 
@@ -72,6 +76,12 @@ namespace WebApplication1
                 // if SchedulerAutoStart == false then one must call SchedulerController.Start() explicitly to start the IScheduler
                 scheduler.Start();
             }
+        }
+
+        void ConfigureScheduler(ILoggerFactory loggerFactory) {
+            // adapt Quartz to use the Asp.Net logging infrastructure
+            var lfAdapter = new AspNetLoggerFactoryAdapter(loggerFactory, Common.Logging.LogLevel.All, false, false, false, null);
+            Common.Logging.LogManager.Adapter = lfAdapter;
         }
 
         void ConfigureMvcAuthorization(IServiceCollection services) {
