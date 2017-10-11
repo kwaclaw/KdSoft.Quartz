@@ -50,13 +50,19 @@ namespace KdSoft.Quartz
         public static void UpdateFrom(this JobDataMap jdm, IJobDataDictionary update, params JsonConverter[] converters) {
             foreach (var entry in update) {
                 if (IsQuartzKey(entry.Key)) {
-                    if (entry.Value is JObject jobj)
-                        jdm[entry.Key] = jobj.ToString(Formatting.None, converters);
+                    if (entry.Value is JToken jtok)
+                        jdm[entry.Key] = jtok.ToString(Formatting.None, converters);
                     else
                         jdm[entry.Key] = JsonConvert.SerializeObject(entry.Value, converters);
                 }
                 else if (entry.Value is JObject jobj) {
                     jdm[QuartzKeys.JObjectJobDataKey + ':' + entry.Key] = jobj.ToString(Formatting.None, converters);
+                }
+                else if (entry.Value is JArray jarr) {
+                    jdm[QuartzKeys.JArrayJobDataKey + ':' + entry.Key] = jarr.ToString(Formatting.None, converters);
+                }
+                else if (entry.Value is JToken jtok) {
+                    jdm[QuartzKeys.JTokenJobDataKey + ':' + entry.Key] = jtok.ToString(Formatting.None, converters);
                 }
                 else {
                     jdm[entry.Key] = entry.Value;
@@ -74,20 +80,7 @@ namespace KdSoft.Quartz
         /// <returns>Converted instance.</returns>
         public static JobDataMap Convert(this IJobDataDictionary jdd, params JsonConverter[] converters) {
             var result = new JobDataMap();
-            foreach (var entry in jdd) {
-                if (IsQuartzKey(entry.Key)) {
-                    if (entry.Value is JObject jobj)
-                        result[entry.Key] = jobj.ToString(Formatting.None, converters);
-                    else
-                        result[entry.Key] = JsonConvert.SerializeObject(entry.Value, converters);
-                }
-                else if (entry.Value is JObject jobj) {
-                    result[QuartzKeys.JObjectJobDataKey + ':' + entry.Key] = jobj.ToString(Formatting.None, converters);
-                }
-                else {
-                    result[entry.Key] = entry.Value;
-                }
-            }
+            result.UpdateFrom(jdd, converters);
             return result;
         }
     }
