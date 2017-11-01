@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+
+    <PropertyGroup>
+        <TargetFramework>net461</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="docfx.console" Version="2.26.3" />
+        <PackageReference Include="Quartz" Version="2.6.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.CSharp" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <DocfxConfigFile>docfx.json</DocfxConfigFile>
+        <LogFile>docfx.log</LogFile>
+        <LogLevel>Verbose</LogLevel>
+        <PreviewPort>8094</PreviewPort>
+    </PropertyGroup>
+
+    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+        <Message Text="Workaround for DocFx issue #1752 : setting VSINSTALLDIR environment variable in registry." Importance="high" />
+        <Message Text="--> Restart Visual Studio if building for the first time." Importance="high" />
+        <PropertyGroup>
+            <VisualInstallDir>$([System.IO.Path]::GetFullPath("$(VSAPPIDDIR)..\.."))</VisualInstallDir>
+            <PreBuildCommand>
+                <![CDATA[
+                SETX VSINSTALLDIR "$(VisualInstallDir)\\"
+                XCOPY /Y $(NuGetPackageRoot)quartz\2.6.1\lib\net40\*  src
+            ]]></PreBuildCommand>
+        </PropertyGroup>
+        <Exec Command="$(PreBuildCommand)" />
+    </Target>
+
+    <Target Name="PostDocBuild" AfterTargets="DocBuild" Condition=" '$(Configuration)' == 'Debug' ">
+        <Message Text="Previewing documentation." Importance="high" />
+        <PropertyGroup>
+            <PreviewCommand><![CDATA[
+                START $(BuildDocToolPath) serve _site -p $(PreviewPort) && START /B http://localhost:$(PreviewPort)
+            ]]></PreviewCommand>
+        </PropertyGroup>
+        <Exec Command="$(PreviewCommand)" />
+    </Target>
+
+</Project>

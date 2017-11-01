@@ -14,8 +14,6 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
     <CodeAnalysisRuleSet>..\Solution.ruleset</CodeAnalysisRuleSet>
-    <PreBuildEvent></PreBuildEvent>
-    <PostBuildEvent>XCOPY /Y "%userprofile%\.nuget\packages\quartz\2.6.0\lib\net40\Quartz.*" "F:\Work\Private\KdSoft.Quartz\docfx_project\src"</PostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,9 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.ValueTuple" Version="4.4.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="Quartz" Version="2.6.1" />
-    <PackageReference Include="System.ValueTuple" Version="4.4.0" />
   </ItemGroup>
 
   <ItemGroup>

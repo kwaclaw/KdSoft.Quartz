@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A5CE22FC-E764-4A0F-AC68-EE1ED5654A5E}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,16 +18,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{5803F749-1BAD-4D2C-84E4-BD6B6AA57460}"
 	ProjectSection(SolutionItems) = preProject
 		artifacts\CollectPackages.cmd = artifacts\CollectPackages.cmd
-		artifacts\MyFeed_push.cmd = artifacts\MyFeed_push.cmd
-		artifacts\QLineFeed_push.cmd = artifacts\QLineFeed_push.cmd
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docfx_project", "docfx_project", "{4F110E9C-AF01-4547-976C-8906E8F2EEAD}"
-	ProjectSection(SolutionItems) = preProject
-		docfx_project\BuildDocs.cmd = docfx_project\BuildDocs.cmd
-		docfx_project\docfx.json = docfx_project\docfx.json
-		docfx_project\RebuildDocs.Cmd = docfx_project\RebuildDocs.Cmd
-		docfx_project\RunSite.cmd = docfx_project\RunSite.cmd
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KdSoft.Quartz", "KdSoft.Quartz\KdSoft.Quartz.csproj", "{63E3AEB0-A091-4BF0-9D96-59214A8B0D4A}"
@@ -36,7 +26,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KdSoft.Quartz.Jobs", "KdSof
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KdSoft.Quartz.AspNet", "KdSoft.Quartz.AspNet\KdSoft.Quartz.AspNet.csproj", "{2914864D-B57E-4140-B38D-1F7B9DE78D17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KdSoft.Quartz.WebServices", "KdSoft.Quartz.WebServices\KdSoft.Quartz.WebServices.csproj", "{2A97AC85-BFEA-4B36-B38D-014DA861F754}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KdSoft.Quartz.WebServices", "KdSoft.Quartz.WebServices\KdSoft.Quartz.WebServices.csproj", "{2A97AC85-BFEA-4B36-B38D-014DA861F754}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "docfx", "docfx\docfx.csproj", "{6794472A-21E8-4B2B-9FE8-BDE7C47D05E1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2914864D-B57E-4140-B38D-1F7B9DE78D17} = {2914864D-B57E-4140-B38D-1F7B9DE78D17}
+		{4D7D44CD-B92B-4F06-99A9-9193734F1EFB} = {4D7D44CD-B92B-4F06-99A9-9193734F1EFB}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,13 +60,15 @@ Global
 		{2A97AC85-BFEA-4B36-B38D-014DA861F754}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A97AC85-BFEA-4B36-B38D-014DA861F754}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A97AC85-BFEA-4B36-B38D-014DA861F754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6794472A-21E8-4B2B-9FE8-BDE7C47D05E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6794472A-21E8-4B2B-9FE8-BDE7C47D05E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6794472A-21E8-4B2B-9FE8-BDE7C47D05E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5803F749-1BAD-4D2C-84E4-BD6B6AA57460} = {A5CE22FC-E764-4A0F-AC68-EE1ED5654A5E}
-		{4F110E9C-AF01-4547-976C-8906E8F2EEAD} = {A5CE22FC-E764-4A0F-AC68-EE1ED5654A5E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52DA24B3-6F2C-4B7A-8535-9E0E3DBE0646}
