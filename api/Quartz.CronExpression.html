@@ -1,0 +1,2485 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CronExpression
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CronExpression
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.CronExpression">
+  
+  
+  <h1 id="Quartz_CronExpression" data-uid="Quartz.CronExpression" class="text-break">Class CronExpression
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a parser and evaluator for unix-like cron expressions. Cron
+expressions provide the ability to specify complex time combinations such as
+&quot;At 8:00am every Monday through Friday&quot; or &quot;At 1:30am every
+last Friday of the month&quot;.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CronExpression</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ICloneable</span></div>
+    <div><span class="xref">System.Runtime.Serialization.IDeserializationCallback</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_CronExpression_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CronExpression : ICloneable, IDeserializationCallback</code></pre>
+  </div>
+  <h5 id="Quartz_CronExpression_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Cron expressions are comprised of 6 required fields and one optional field
+separated by white space. The fields respectively are described as follows:
+</p>
+<table cellspacing="8">
+<tr>
+<th align="left">Field Name</th>
+<th align="left"> </th>
+<th align="left">Allowed Values</th>
+<th align="left"> </th>
+<th align="left">Allowed Special Characters</th>
+</tr>
+<tr>
+<td align="left">Seconds</td>
+<td align="left"> </td>
+<td align="left">0-59</td>
+<td align="left"> </td>
+<td align="left">, - /// /</td>
+</tr>
+<tr>
+<td align="left">Minutes</td>
+<td align="left"> </td>
+<td align="left">0-59</td>
+<td align="left"> </td>
+<td align="left">, - /// /</td>
+</tr>
+<tr>
+<td align="left">Hours</td>
+<td align="left"> </td>
+<td align="left">0-23</td>
+<td align="left"> </td>
+<td align="left">, - /// /</td>
+</tr>
+<tr>
+<td align="left">Day-of-month</td>
+<td align="left"> </td>
+<td align="left">1-31</td>
+<td align="left"> </td>
+<td align="left">, - /// ? / L W C</td>
+</tr>
+<tr>
+<td align="left">Month</td>
+<td align="left"> </td>
+<td align="left">1-12 or JAN-DEC</td>
+<td align="left"> </td>
+<td align="left">, - /// /</td>
+</tr>
+<tr>
+<td align="left">Day-of-Week</td>
+<td align="left"> </td>
+<td align="left">1-7 or SUN-SAT</td>
+<td align="left"> </td>
+<td align="left">, - /// ? / L #</td>
+</tr>
+<tr>
+<td align="left">Year (Optional)</td>
+<td align="left"> </td>
+<td align="left">empty, 1970-2199</td>
+<td align="left"> </td>
+<td align="left">, - /// /</td>
+</tr>
+</table>
+<p>
+The &apos;<em>&apos; character is used to specify all values. For example, &quot;</em>&quot;
+in the minute field means &quot;every minute&quot;.
+</p>
+<p>
+The &apos;?&apos; character is allowed for the day-of-month and day-of-week fields. It
+is used to specify &apos;no specific value&apos;. This is useful when you need to
+specify something in one of the two fields, but not the other.
+</p>
+<p>
+The &apos;-&apos; character is used to specify ranges For example &quot;10-12&quot; in
+the hour field means &quot;the hours 10, 11 and 12&quot;.
+</p>
+<p>
+The &apos;,&apos; character is used to specify additional values. For example
+&quot;MON,WED,FRI&quot; in the day-of-week field means &quot;the days Monday,
+Wednesday, and Friday&quot;.
+</p>
+<p>
+The &apos;/&apos; character is used to specify increments. For example &quot;0/15&quot;
+in the seconds field means &quot;the seconds 0, 15, 30, and 45&quot;. And
+&quot;5/15&quot; in the seconds field means &quot;the seconds 5, 20, 35, and
+50&quot;.  Specifying &apos;*&apos; before the  &apos;/&apos; is equivalent to specifying 0 is
+the value to start with. Essentially, for each field in the expression, there
+is a set of numbers that can be turned on or off. For seconds and minutes,
+the numbers range from 0 to 59. For hours 0 to 23, for days of the month 0 to
+31, and for months 1 to 12. The &quot;/&quot; character simply helps you turn
+on every &quot;nth&quot; value in the given set. Thus &quot;7/6&quot; in the
+month field only turns on month &quot;7&quot;, it does NOT mean every 6th
+month, please note that subtlety.
+</p>
+<p>
+The &apos;L&apos; character is allowed for the day-of-month and day-of-week fields.
+This character is short-hand for &quot;last&quot;, but it has different
+meaning in each of the two fields. For example, the value &quot;L&quot; in
+the day-of-month field means &quot;the last day of the month&quot; - day 31
+for January, day 28 for February on non-leap years. If used in the
+day-of-week field by itself, it simply means &quot;7&quot; or
+&quot;SAT&quot;. But if used in the day-of-week field after another value, it
+means &quot;the last xxx day of the month&quot; - for example &quot;6L&quot;
+means &quot;the last friday of the month&quot;. You can also specify an offset
+from the last day of the month, such as &quot;L-3&quot; which would mean the third-to-last
+day of the calendar month. <em>When using the &apos;L&apos; option, it is important not to
+specify lists, or ranges of values, as you&apos;ll get confusing/unexpected results.</em>
+</p>
+<p>
+The &apos;W&apos; character is allowed for the day-of-month field.  This character
+is used to specify the weekday (Monday-Friday) nearest the given day.  As an
+example, if you were to specify &quot;15W&quot; as the value for the
+day-of-month field, the meaning is: &quot;the nearest weekday to the 15th of
+the month&quot;. So if the 15th is a Saturday, the trigger will fire on
+Friday the 14th. If the 15th is a Sunday, the trigger will fire on Monday the
+16th. If the 15th is a Tuesday, then it will fire on Tuesday the 15th.
+However if you specify &quot;1W&quot; as the value for day-of-month, and the
+1st is a Saturday, the trigger will fire on Monday the 3rd, as it will not
+&apos;jump&apos; over the boundary of a month&apos;s days.  The &apos;W&apos; character can only be
+specified when the day-of-month is a single day, not a range or list of days.
+</p>
+<p>
+The &apos;L&apos; and &apos;W&apos; characters can also be combined for the day-of-month
+expression to yield &apos;LW&apos;, which translates to &quot;last weekday of the
+month&quot;.
+</p>
+<p>
+The &apos;#&apos; character is allowed for the day-of-week field. This character is
+used to specify &quot;the nth&quot; XXX day of the month. For example, the
+value of &quot;6#3&quot; in the day-of-week field means the third Friday of
+the month (day 6 = Friday and &quot;#3&quot; = the 3rd one in the month).
+Other examples: &quot;2#1&quot; = the first Monday of the month and
+&quot;4#5&quot; = the fifth Wednesday of the month. Note that if you specify
+&quot;#5&quot; and there is not 5 of the given day-of-week in the month, then
+no firing will occur that month. If the &apos;#&apos; character is used, there can
+only be one expression in the day-of-week field (&quot;3#1,6#3&quot; is
+not valid, since there are two expressions).
+</p>
+<p>
+<!--The 'C' character is allowed for the day-of-month and day-of-week fields.
+This character is short-hand for "calendar". This means values are
+calculated against the associated calendar, if any. If no calendar is
+associated, then it is equivalent to having an all-inclusive calendar. A
+value of "5C" in the day-of-month field means "the first day included by the
+calendar on or after the 5th". A value of "1C" in the day-of-week field
+means "the first day included by the calendar on or after Sunday". -->
+</p>
+<p>
+The legal characters and the names of months and days of the week are not
+case sensitive.
+</p>
+<p>
+<strong>NOTES:</strong>
+<ul>
+<li>Support for specifying both a day-of-week and a day-of-month value is
+not complete (you&apos;ll need to use the &apos;?&apos; character in one of these fields).
+</li>
+<li>Overflowing ranges is supported - that is, having a larger number on
+the left hand side than the right. You might do 22-2 to catch 10 o&apos;clock
+at night until 2 o&apos;clock in the morning, or you might have NOV-FEB. It is
+very important to note that overuse of overflowing ranges creates ranges
+that don&apos;t make sense and no effort has been made to determine which
+interpretation CronExpression chooses. An example would be
+&quot;0 0 14-6 ? * FRI-MON&quot;. </li>
+</ul>
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_CronExpression__ctor_" data-uid="Quartz.CronExpression.#ctor*"></a>
+  <h4 id="Quartz_CronExpression__ctor_System_String_" data-uid="Quartz.CronExpression.#ctor(System.String)">CronExpression(String)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Quartz.CronExpression.html#Quartz_CronExpression_CronExpressionString">CronExpressionString</a> based on the specified
+parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpression(string cronExpression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cronExpression</span></td>
+        <td><p>String representation of the cron expression the new object should represent</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Quartz_CronExpression_AllSpec" data-uid="Quartz.CronExpression.AllSpec">AllSpec</h4>
+  <div class="markdown level1 summary"><p>Field specification for wildcard &apos;*&apos;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int AllSpec = 99</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_AllSpecInt" data-uid="Quartz.CronExpression.AllSpecInt">AllSpecInt</h4>
+  <div class="markdown level1 summary"><p>Field specification for all wildcard value &apos;*&apos;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int AllSpecInt = 99</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_calendardayOfMonth" data-uid="Quartz.CronExpression.calendardayOfMonth">calendardayOfMonth</h4>
+  <div class="markdown level1 summary"><p>Calendar day of month.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool calendardayOfMonth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_calendardayOfWeek" data-uid="Quartz.CronExpression.calendardayOfWeek">calendardayOfWeek</h4>
+  <div class="markdown level1 summary"><p>Calendar day of week.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool calendardayOfWeek</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_DayOfMonth" data-uid="Quartz.CronExpression.DayOfMonth">DayOfMonth</h4>
+  <div class="markdown level1 summary"><p>Field specification for day of month.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int DayOfMonth = 3</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_DayOfWeek" data-uid="Quartz.CronExpression.DayOfWeek">DayOfWeek</h4>
+  <div class="markdown level1 summary"><p>Field specification for day of week.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int DayOfWeek = 5</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_daysOfMonth" data-uid="Quartz.CronExpression.daysOfMonth">daysOfMonth</h4>
+  <div class="markdown level1 summary"><p>Days of month.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TreeSet&lt;int&gt; daysOfMonth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.TreeSet-1.html">TreeSet</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_daysOfWeek" data-uid="Quartz.CronExpression.daysOfWeek">daysOfWeek</h4>
+  <div class="markdown level1 summary"><p>Days of week.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TreeSet&lt;int&gt; daysOfWeek</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.TreeSet-1.html">TreeSet</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_expressionParsed" data-uid="Quartz.CronExpression.expressionParsed">expressionParsed</h4>
+  <div class="markdown level1 summary"><p>Expression parsed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool expressionParsed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_Hour" data-uid="Quartz.CronExpression.Hour">Hour</h4>
+  <div class="markdown level1 summary"><p>Field specification for hour.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int Hour = 2</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_hours" data-uid="Quartz.CronExpression.hours">hours</h4>
+  <div class="markdown level1 summary"><p>Hours.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TreeSet&lt;int&gt; hours</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.TreeSet-1.html">TreeSet</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_lastdayOffset" data-uid="Quartz.CronExpression.lastdayOffset">lastdayOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int lastdayOffset</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_lastdayOfMonth" data-uid="Quartz.CronExpression.lastdayOfMonth">lastdayOfMonth</h4>
+  <div class="markdown level1 summary"><p>Last day of month.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool lastdayOfMonth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_lastdayOfWeek" data-uid="Quartz.CronExpression.lastdayOfWeek">lastdayOfWeek</h4>
+  <div class="markdown level1 summary"><p>Last day of week.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool lastdayOfWeek</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_MaxYear" data-uid="Quartz.CronExpression.MaxYear">MaxYear</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly int MaxYear</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_Minute" data-uid="Quartz.CronExpression.Minute">Minute</h4>
+  <div class="markdown level1 summary"><p>Field specification for minute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int Minute = 1</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_minutes" data-uid="Quartz.CronExpression.minutes">minutes</h4>
+  <div class="markdown level1 summary"><p>minutes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TreeSet&lt;int&gt; minutes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.TreeSet-1.html">TreeSet</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_Month" data-uid="Quartz.CronExpression.Month">Month</h4>
+  <div class="markdown level1 summary"><p>Field specification for month.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int Month = 4</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_months" data-uid="Quartz.CronExpression.months">months</h4>
+  <div class="markdown level1 summary"><p>Months.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TreeSet&lt;int&gt; months</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.TreeSet-1.html">TreeSet</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_nearestWeekday" data-uid="Quartz.CronExpression.nearestWeekday">nearestWeekday</h4>
+  <div class="markdown level1 summary"><p>Nearest weekday.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool nearestWeekday</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_NoSpec" data-uid="Quartz.CronExpression.NoSpec">NoSpec</h4>
+  <div class="markdown level1 summary"><p>Field specification for no specification at all &apos;?&apos;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int NoSpec = 98</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_NoSpecInt" data-uid="Quartz.CronExpression.NoSpecInt">NoSpecInt</h4>
+  <div class="markdown level1 summary"><p>Field specification for not specified value &apos;?&apos;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int NoSpecInt = 98</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_nthdayOfWeek" data-uid="Quartz.CronExpression.nthdayOfWeek">nthdayOfWeek</h4>
+  <div class="markdown level1 summary"><p>Nth day of week.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int nthdayOfWeek</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_Second" data-uid="Quartz.CronExpression.Second">Second</h4>
+  <div class="markdown level1 summary"><p>Field specification for second.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int Second = 0</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_seconds" data-uid="Quartz.CronExpression.seconds">seconds</h4>
+  <div class="markdown level1 summary"><p>Seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TreeSet&lt;int&gt; seconds</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.TreeSet-1.html">TreeSet</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_Year" data-uid="Quartz.CronExpression.Year">Year</h4>
+  <div class="markdown level1 summary"><p>Field specification for year.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int Year = 6</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_CronExpression_years" data-uid="Quartz.CronExpression.years">years</h4>
+  <div class="markdown level1 summary"><p>Years.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TreeSet&lt;int&gt; years</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.TreeSet-1.html">TreeSet</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_CronExpression_CronExpressionString_" data-uid="Quartz.CronExpression.CronExpressionString*"></a>
+  <h4 id="Quartz_CronExpression_CronExpressionString" data-uid="Quartz.CronExpression.CronExpressionString">CronExpressionString</h4>
+  <div class="markdown level1 summary"><p>Gets the cron expression string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CronExpressionString { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The cron expression string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_TimeZone_" data-uid="Quartz.CronExpression.TimeZone*"></a>
+  <h4 id="Quartz_CronExpression_TimeZone" data-uid="Quartz.CronExpression.TimeZone">TimeZone</h4>
+  <div class="markdown level1 summary"><p>Sets or gets the time zone for which the <a class="xref" href="Quartz.CronExpression.html">CronExpression</a> of this
+<a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a> will be resolved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TimeZoneInfo TimeZone { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeZoneInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_CronExpression_AddToSet_" data-uid="Quartz.CronExpression.AddToSet*"></a>
+  <h4 id="Quartz_CronExpression_AddToSet_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Quartz.CronExpression.AddToSet(System.Int32,System.Int32,System.Int32,System.Int32)">AddToSet(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Adds to set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddToSet(int val, int end, int incr, int type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">val</span></td>
+        <td><p>The val.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The end.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">incr</span></td>
+        <td><p>The incr.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_BuildExpression_" data-uid="Quartz.CronExpression.BuildExpression*"></a>
+  <h4 id="Quartz_CronExpression_BuildExpression_System_String_" data-uid="Quartz.CronExpression.BuildExpression(System.String)">BuildExpression(String)</h4>
+  <div class="markdown level1 summary"><p>Builds the expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void BuildExpression(string expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>The expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_CheckNext_" data-uid="Quartz.CronExpression.CheckNext*"></a>
+  <h4 id="Quartz_CronExpression_CheckNext_System_Int32_System_String_System_Int32_System_Int32_" data-uid="Quartz.CronExpression.CheckNext(System.Int32,System.String,System.Int32,System.Int32)">CheckNext(Int32, String, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Checks the next value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int CheckNext(int pos, string s, int val, int type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">pos</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The string to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">val</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type to search.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_Clone_" data-uid="Quartz.CronExpression.Clone*"></a>
+  <h4 id="Quartz_CronExpression_Clone" data-uid="Quartz.CronExpression.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Creates a new object that is a copy of the current instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>A new object that is a copy of this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_CreateDateTimeWithoutMillis_" data-uid="Quartz.CronExpression.CreateDateTimeWithoutMillis*"></a>
+  <h4 id="Quartz_CronExpression_CreateDateTimeWithoutMillis_System_DateTimeOffset_" data-uid="Quartz.CronExpression.CreateDateTimeWithoutMillis(System.DateTimeOffset)">CreateDateTimeWithoutMillis(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Creates the date time without milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static DateTimeOffset CreateDateTimeWithoutMillis(DateTimeOffset time)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">time</span></td>
+        <td><p>The time.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_Equals_" data-uid="Quartz.CronExpression.Equals*"></a>
+  <h4 id="Quartz_CronExpression_Equals_Quartz_CronExpression_" data-uid="Quartz.CronExpression.Equals(Quartz.CronExpression)">Equals(CronExpression)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Quartz.CronExpression.html">CronExpression</a> is equal to the current <a class="xref" href="Quartz.CronExpression.html">CronExpression</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(CronExpression other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The <a class="xref" href="Quartz.CronExpression.html">CronExpression</a> to compare with the current <a class="xref" href="Quartz.CronExpression.html">CronExpression</a>. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the specified <a class="xref" href="Quartz.CronExpression.html">CronExpression</a> is equal to the current <a class="xref" href="Quartz.CronExpression.html">CronExpression</a>; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_Equals_" data-uid="Quartz.CronExpression.Equals*"></a>
+  <h4 id="Quartz_CronExpression_Equals_System_Object_" data-uid="Quartz.CronExpression.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <span class="xref">System.Object</span> is equal to the current <span class="xref">System.Object</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The <span class="xref">System.Object</span> to compare with the current <span class="xref">System.Object</span>. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the specified <span class="xref">System.Object</span> is equal to the current <span class="xref">System.Object</span>; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
+  <a id="Quartz_CronExpression_FindNextWhiteSpace_" data-uid="Quartz.CronExpression.FindNextWhiteSpace*"></a>
+  <h4 id="Quartz_CronExpression_FindNextWhiteSpace_System_Int32_System_String_" data-uid="Quartz.CronExpression.FindNextWhiteSpace(System.Int32,System.String)">FindNextWhiteSpace(Int32, String)</h4>
+  <div class="markdown level1 summary"><p>Finds the next white space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int FindNextWhiteSpace(int i, string s)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">i</span></td>
+        <td><p>The i.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The s.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetDayOfWeekNumber_" data-uid="Quartz.CronExpression.GetDayOfWeekNumber*"></a>
+  <h4 id="Quartz_CronExpression_GetDayOfWeekNumber_System_String_" data-uid="Quartz.CronExpression.GetDayOfWeekNumber(System.String)">GetDayOfWeekNumber(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the day of week number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int GetDayOfWeekNumber(string s)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The s.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetExpressionSetSummary_" data-uid="Quartz.CronExpression.GetExpressionSetSummary*"></a>
+  <h4 id="Quartz_CronExpression_GetExpressionSetSummary_Quartz_Collection_ISet_System_Int32__" data-uid="Quartz.CronExpression.GetExpressionSetSummary(Quartz.Collection.ISet{System.Int32})">GetExpressionSetSummary(ISet&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the expression set summary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string GetExpressionSetSummary(ISet&lt;int&gt; data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetExpressionSummary_" data-uid="Quartz.CronExpression.GetExpressionSummary*"></a>
+  <h4 id="Quartz_CronExpression_GetExpressionSummary" data-uid="Quartz.CronExpression.GetExpressionSummary">GetExpressionSummary()</h4>
+  <div class="markdown level1 summary"><p>Gets the expression summary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string GetExpressionSummary()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetFinalFireTime_" data-uid="Quartz.CronExpression.GetFinalFireTime*"></a>
+  <h4 id="Quartz_CronExpression_GetFinalFireTime" data-uid="Quartz.CronExpression.GetFinalFireTime">GetFinalFireTime()</h4>
+  <div class="markdown level1 summary"><p>NOT YET IMPLEMENTED: Returns the final time that the
+<a class="xref" href="Quartz.CronExpression.html">CronExpression</a> will match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset? GetFinalFireTime()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetHashCode_" data-uid="Quartz.CronExpression.GetHashCode*"></a>
+  <h4 id="Quartz_CronExpression_GetHashCode" data-uid="Quartz.CronExpression.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Serves as a hash function for a particular type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A hash code for the current <span class="xref">System.Object</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  
+  
+  <a id="Quartz_CronExpression_GetLastDayOfMonth_" data-uid="Quartz.CronExpression.GetLastDayOfMonth*"></a>
+  <h4 id="Quartz_CronExpression_GetLastDayOfMonth_System_Int32_System_Int32_" data-uid="Quartz.CronExpression.GetLastDayOfMonth(System.Int32,System.Int32)">GetLastDayOfMonth(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the last day of month.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int GetLastDayOfMonth(int monthNum, int year)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">monthNum</span></td>
+        <td><p>The month num.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">year</span></td>
+        <td><p>The year.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetMonthNumber_" data-uid="Quartz.CronExpression.GetMonthNumber*"></a>
+  <h4 id="Quartz_CronExpression_GetMonthNumber_System_String_" data-uid="Quartz.CronExpression.GetMonthNumber(System.String)">GetMonthNumber(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the month number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int GetMonthNumber(string s)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The string to map with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetNextInvalidTimeAfter_" data-uid="Quartz.CronExpression.GetNextInvalidTimeAfter*"></a>
+  <h4 id="Quartz_CronExpression_GetNextInvalidTimeAfter_System_DateTimeOffset_" data-uid="Quartz.CronExpression.GetNextInvalidTimeAfter(System.DateTimeOffset)">GetNextInvalidTimeAfter(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Returns the next date/time <em>after</em> the given date/time which does
+<em>not</em> satisfy the expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset? GetNextInvalidTimeAfter(DateTimeOffset date)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">date</span></td>
+        <td><p>the date/time at which to begin the search for the next invalid date/time</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>the next valid date/time</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetNextValidTimeAfter_" data-uid="Quartz.CronExpression.GetNextValidTimeAfter*"></a>
+  <h4 id="Quartz_CronExpression_GetNextValidTimeAfter_System_DateTimeOffset_" data-uid="Quartz.CronExpression.GetNextValidTimeAfter(System.DateTimeOffset)">GetNextValidTimeAfter(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Returns the next date/time <em>after</em> the given date/time which
+satisfies the cron expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset? GetNextValidTimeAfter(DateTimeOffset date)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">date</span></td>
+        <td><p>the date/time at which to begin the search for the next valid date/time</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>the next valid date/time</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetNumericValue_" data-uid="Quartz.CronExpression.GetNumericValue*"></a>
+  <h4 id="Quartz_CronExpression_GetNumericValue_System_String_System_Int32_" data-uid="Quartz.CronExpression.GetNumericValue(System.String,System.Int32)">GetNumericValue(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the numeric value from string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int GetNumericValue(string s, int i)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The string to parse from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">i</span></td>
+        <td><p>The i.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetSet_" data-uid="Quartz.CronExpression.GetSet*"></a>
+  <h4 id="Quartz_CronExpression_GetSet_System_Int32_" data-uid="Quartz.CronExpression.GetSet(System.Int32)">GetSet(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the set of given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ISortedSet&lt;int&gt; GetSet(int type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of set to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISortedSet-1.html">ISortedSet</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetTime_" data-uid="Quartz.CronExpression.GetTime*"></a>
+  <h4 id="Quartz_CronExpression_GetTime_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Quartz.CronExpression.GetTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">GetTime(Int32, Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the time from given time parts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual DateTimeOffset? GetTime(int sc, int mn, int hr, int dayofmn, int mon)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">sc</span></td>
+        <td><p>The seconds.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">mn</span></td>
+        <td><p>The minutes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">hr</span></td>
+        <td><p>The hours.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">dayofmn</span></td>
+        <td><p>The day of month.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">mon</span></td>
+        <td><p>The month.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetTimeAfter_" data-uid="Quartz.CronExpression.GetTimeAfter*"></a>
+  <h4 id="Quartz_CronExpression_GetTimeAfter_System_DateTimeOffset_" data-uid="Quartz.CronExpression.GetTimeAfter(System.DateTimeOffset)">GetTimeAfter(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Gets the next fire time after the given time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset? GetTimeAfter(DateTimeOffset afterTimeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">afterTimeUtc</span></td>
+        <td><p>The UTC time to start searching from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetTimeBefore_" data-uid="Quartz.CronExpression.GetTimeBefore*"></a>
+  <h4 id="Quartz_CronExpression_GetTimeBefore_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.CronExpression.GetTimeBefore(System.Nullable{System.DateTimeOffset})">GetTimeBefore(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the time before.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset? GetTimeBefore(DateTimeOffset? endTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">endTime</span></td>
+        <td><p>The end time.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_GetValue_" data-uid="Quartz.CronExpression.GetValue*"></a>
+  <h4 id="Quartz_CronExpression_GetValue_System_Int32_System_String_System_Int32_" data-uid="Quartz.CronExpression.GetValue(System.Int32,System.String,System.Int32)">GetValue(Int32, String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueSet GetValue(int v, string s, int i)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The v.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The s.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">i</span></td>
+        <td><p>The i.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ValueSet.html">ValueSet</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_IsLeapYear_" data-uid="Quartz.CronExpression.IsLeapYear*"></a>
+  <h4 id="Quartz_CronExpression_IsLeapYear_System_Int32_" data-uid="Quartz.CronExpression.IsLeapYear(System.Int32)">IsLeapYear(Int32)</h4>
+  <div class="markdown level1 summary"><p>Determines whether given year is a leap year.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool IsLeapYear(int year)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">year</span></td>
+        <td><p>The year.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the specified year is a leap year; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_IsSatisfiedBy_" data-uid="Quartz.CronExpression.IsSatisfiedBy*"></a>
+  <h4 id="Quartz_CronExpression_IsSatisfiedBy_System_DateTimeOffset_" data-uid="Quartz.CronExpression.IsSatisfiedBy(System.DateTimeOffset)">IsSatisfiedBy(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the given date satisfies the cron expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsSatisfiedBy(DateTimeOffset dateUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">dateUtc</span></td>
+        <td><p>The date to evaluate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>a boolean indicating whether the given date satisfies the cron expression</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CronExpression_IsSatisfiedBy_System_DateTimeOffset__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note that  milliseconds are ignored, so two Dates falling on different milliseconds
+of the same second will always have the same result here.</p>
+</div>
+  
+  
+  <a id="Quartz_CronExpression_IsValidExpression_" data-uid="Quartz.CronExpression.IsValidExpression*"></a>
+  <h4 id="Quartz_CronExpression_IsValidExpression_System_String_" data-uid="Quartz.CronExpression.IsValidExpression(System.String)">IsValidExpression(String)</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the specified cron expression can be parsed into a
+valid cron expression</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValidExpression(string cronExpression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cronExpression</span></td>
+        <td><p>the expression to evaluate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>a boolean indicating whether the given expression is a valid cron
+        expression</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_OnDeserialization_" data-uid="Quartz.CronExpression.OnDeserialization*"></a>
+  <h4 id="Quartz_CronExpression_OnDeserialization_System_Object_" data-uid="Quartz.CronExpression.OnDeserialization(System.Object)">OnDeserialization(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnDeserialization(object sender)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_SetCalendarHour_" data-uid="Quartz.CronExpression.SetCalendarHour*"></a>
+  <h4 id="Quartz_CronExpression_SetCalendarHour_System_DateTimeOffset_System_Int32_" data-uid="Quartz.CronExpression.SetCalendarHour(System.DateTimeOffset,System.Int32)">SetCalendarHour(DateTimeOffset, Int32)</h4>
+  <div class="markdown level1 summary"><p>Advance the calendar to the particular hour paying particular attention
+to daylight saving problems.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static DateTimeOffset SetCalendarHour(DateTimeOffset date, int hour)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">date</span></td>
+        <td><p>The date.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">hour</span></td>
+        <td><p>The hour.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_SkipWhiteSpace_" data-uid="Quartz.CronExpression.SkipWhiteSpace*"></a>
+  <h4 id="Quartz_CronExpression_SkipWhiteSpace_System_Int32_System_String_" data-uid="Quartz.CronExpression.SkipWhiteSpace(System.Int32,System.String)">SkipWhiteSpace(Int32, String)</h4>
+  <div class="markdown level1 summary"><p>Skips the white space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int SkipWhiteSpace(int i, string s)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">i</span></td>
+        <td><p>The i.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The s.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_StoreExpressionVals_" data-uid="Quartz.CronExpression.StoreExpressionVals*"></a>
+  <h4 id="Quartz_CronExpression_StoreExpressionVals_System_Int32_System_String_System_Int32_" data-uid="Quartz.CronExpression.StoreExpressionVals(System.Int32,System.String,System.Int32)">StoreExpressionVals(Int32, String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Stores the expression values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int StoreExpressionVals(int pos, string s, int type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">pos</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The string to traverse.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CronExpression_ToString_" data-uid="Quartz.CronExpression.ToString*"></a>
+  <h4 id="Quartz_CronExpression_ToString" data-uid="Quartz.CronExpression.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns the string representation of the <a class="xref" href="Quartz.CronExpression.html">CronExpression</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The string representation of the <a class="xref" href="Quartz.CronExpression.html">CronExpression</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  
+  
+  <a id="Quartz_CronExpression_ValidateExpression_" data-uid="Quartz.CronExpression.ValidateExpression*"></a>
+  <h4 id="Quartz_CronExpression_ValidateExpression_System_String_" data-uid="Quartz.CronExpression.ValidateExpression(System.String)">ValidateExpression(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ValidateExpression(string cronExpression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cronExpression</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <div>
+      <span class="xref">System.Runtime.Serialization.IDeserializationCallback</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

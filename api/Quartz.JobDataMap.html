@@ -1,0 +1,1552 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class JobDataMap
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class JobDataMap
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.JobDataMap">
+  
+  
+  <h1 id="Quartz_JobDataMap" data-uid="Quartz.JobDataMap" class="text-break">Class JobDataMap
+  </h1>
+  <div class="markdown level0 summary"><p>Holds state information for <a class="xref" href="Quartz.IJob.html">IJob</a> instances.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Quartz.Util.DirtyFlagMap-2.html">DirtyFlagMap</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</div>
+    <div class="level2"><a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html">StringKeyDirtyFlagMap</a></div>
+    <div class="level3"><span class="xref">JobDataMap</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IDictionary</span></div>
+    <div><span class="xref">System.Collections.ICollection</span></div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div><span class="xref">System.ICloneable</span></div>
+    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_Equals_System_Object_">StringKeyDirtyFlagMap.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetHashCode">StringKeyDirtyFlagMap.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetKeys">StringKeyDirtyFlagMap.GetKeys()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_PutAll_System_Collections_Generic_IDictionary_System_String_System_Object__">StringKeyDirtyFlagMap.PutAll(IDictionary&lt;String, Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_Put_System_String_System_Int32_">StringKeyDirtyFlagMap.Put(String, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_Put_System_String_System_Int64_">StringKeyDirtyFlagMap.Put(String, Int64)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_Put_System_String_System_Single_">StringKeyDirtyFlagMap.Put(String, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_Put_System_String_System_Double_">StringKeyDirtyFlagMap.Put(String, Double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_Put_System_String_System_Boolean_">StringKeyDirtyFlagMap.Put(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_Put_System_String_System_Char_">StringKeyDirtyFlagMap.Put(String, Char)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_Put_System_String_System_String_">StringKeyDirtyFlagMap.Put(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetInt_System_String_">StringKeyDirtyFlagMap.GetInt(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetLong_System_String_">StringKeyDirtyFlagMap.GetLong(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetFloat_System_String_">StringKeyDirtyFlagMap.GetFloat(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetDouble_System_String_">StringKeyDirtyFlagMap.GetDouble(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetBoolean_System_String_">StringKeyDirtyFlagMap.GetBoolean(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetChar_System_String_">StringKeyDirtyFlagMap.GetChar(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetString_System_String_">StringKeyDirtyFlagMap.GetString(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetDateTime_System_String_">StringKeyDirtyFlagMap.GetDateTime(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetDateTimeOffset_System_String_">StringKeyDirtyFlagMap.GetDateTimeOffset(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.StringKeyDirtyFlagMap.html#Quartz_Util_StringKeyDirtyFlagMap_GetTimeSpan_System_String_">StringKeyDirtyFlagMap.GetTimeSpan(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">DirtyFlagMap&lt;String, Object&gt;.GetObjectData(SerializationInfo, StreamingContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Clone">DirtyFlagMap&lt;String, Object&gt;.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_TryGetValue__0__1__">DirtyFlagMap&lt;String, Object&gt;.TryGetValue(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Get__0_">DirtyFlagMap&lt;String, Object&gt;.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Remove_System_Collections_Generic_KeyValuePair__0__1__">DirtyFlagMap&lt;String, Object&gt;.Remove(KeyValuePair&lt;String, Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Add_System_Collections_Generic_KeyValuePair__0__1__">DirtyFlagMap&lt;String, Object&gt;.Add(KeyValuePair&lt;String, Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Contains_System_Object_">DirtyFlagMap&lt;String, Object&gt;.Contains(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Add_System_Object_System_Object_">DirtyFlagMap&lt;String, Object&gt;.Add(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Clear">DirtyFlagMap&lt;String, Object&gt;.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_System_Collections_IDictionary_GetEnumerator">DirtyFlagMap&lt;String, Object&gt;.IDictionary.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Remove_System_Object_">DirtyFlagMap&lt;String, Object&gt;.Remove(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_System_Collections_IDictionary_get_Item_System_Object_">DirtyFlagMap&lt;String, Object&gt;.IDictionary.get_Item(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_System_Collections_IDictionary_set_Item_System_Object_System_Object_">DirtyFlagMap&lt;String, Object&gt;.IDictionary.set_Item(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Contains_System_Collections_Generic_KeyValuePair__0__1__">DirtyFlagMap&lt;String, Object&gt;.Contains(KeyValuePair&lt;String, Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_CopyTo_System_Collections_Generic_KeyValuePair__0__1____System_Int32_">DirtyFlagMap&lt;String, Object&gt;.CopyTo(KeyValuePair&lt;String, Object&gt;[], Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_ContainsKey__0_">DirtyFlagMap&lt;String, Object&gt;.ContainsKey(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Remove__0_">DirtyFlagMap&lt;String, Object&gt;.Remove(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_GetEnumerator">DirtyFlagMap&lt;String, Object&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Add__0__1_">DirtyFlagMap&lt;String, Object&gt;.Add(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_CopyTo_System_Array_System_Int32_">DirtyFlagMap&lt;String, Object&gt;.CopyTo(Array, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_ClearDirtyFlag">DirtyFlagMap&lt;String, Object&gt;.ClearDirtyFlag()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_ContainsValue__1_">DirtyFlagMap&lt;String, Object&gt;.ContainsValue(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_EntrySet">DirtyFlagMap&lt;String, Object&gt;.EntrySet()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Equals_System_Object_">DirtyFlagMap&lt;String, Object&gt;.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_GetHashCode">DirtyFlagMap&lt;String, Object&gt;.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_System_Collections_IEnumerable_GetEnumerator">DirtyFlagMap&lt;String, Object&gt;.IEnumerable.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_KeySet">DirtyFlagMap&lt;String, Object&gt;.KeySet()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Put__0__1_">DirtyFlagMap&lt;String, Object&gt;.Put(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_PutAll_System_Collections_Generic_IDictionary__0__1__">DirtyFlagMap&lt;String, Object&gt;.PutAll(IDictionary&lt;String, Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Dirty">DirtyFlagMap&lt;String, Object&gt;.Dirty</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_WrappedMap">DirtyFlagMap&lt;String, Object&gt;.WrappedMap</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_IsEmpty">DirtyFlagMap&lt;String, Object&gt;.IsEmpty</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Item__0_">DirtyFlagMap&lt;String, Object&gt;.Item[String]</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Count">DirtyFlagMap&lt;String, Object&gt;.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_System_Collections_IDictionary_Keys">DirtyFlagMap&lt;String, Object&gt;.IDictionary.Keys</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_System_Collections_IDictionary_Values">DirtyFlagMap&lt;String, Object&gt;.IDictionary.Values</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Values">DirtyFlagMap&lt;String, Object&gt;.Values</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_System_Collections_IDictionary_Item_System_Object_">DirtyFlagMap&lt;String, Object&gt;.IDictionary.Item[Object]</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_Keys">DirtyFlagMap&lt;String, Object&gt;.Keys</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_IsReadOnly">DirtyFlagMap&lt;String, Object&gt;.IsReadOnly</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_IsFixedSize">DirtyFlagMap&lt;String, Object&gt;.IsFixedSize</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_SyncRoot">DirtyFlagMap&lt;String, Object&gt;.SyncRoot</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Util.DirtyFlagMap-2.html#Quartz_Util_DirtyFlagMap_2_IsSynchronized">DirtyFlagMap&lt;String, Object&gt;.IsSynchronized</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_JobDataMap_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class JobDataMap : StringKeyDirtyFlagMap, IDictionary&lt;string, object&gt;, ICollection&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, IDictionary, ICollection, IEnumerable, ICloneable, ISerializable</code></pre>
+  </div>
+  <h5 id="Quartz_JobDataMap_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> instances are stored once when the <a class="xref" href="Quartz.IJob.html">IJob</a>
+is added to a scheduler. They are also re-persisted after every execution of
+instances that have <a class="xref" href="Quartz.PersistJobDataAfterExecutionAttribute.html">PersistJobDataAfterExecutionAttribute</a> present.
+<p>
+<a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> instances can also be stored with a 
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.  This can be useful in the case where you have a Job
+that is stored in the scheduler for regular/repeated use by multiple 
+Triggers, yet with each independent triggering, you want to supply the
+Job with different data inputs.<br></p>
+<p>
+The <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> passed to a Job at execution time 
+also contains a convenience <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> that is the result
+of merging the contents of the trigger&apos;s JobDataMap (if any) over the
+Job&apos;s JobDataMap (if any).<br></p>
+<p>
+Update since 2.4.2 - We keep an dirty flag for this map so that whenever you modify(add/delete) any of the entries,
+it will set to &quot;true&quot;. However if you create new instance using an exising map with constructor, then
+the dirty flag will NOT be set to &quot;true&quot; until you modify the instance.
+</p></p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_JobDataMap__ctor_" data-uid="Quartz.JobDataMap.#ctor*"></a>
+  <h4 id="Quartz_JobDataMap__ctor" data-uid="Quartz.JobDataMap.#ctor">JobDataMap()</h4>
+  <div class="markdown level1 summary"><p>Create an empty <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobDataMap()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_JobDataMap__ctor_" data-uid="Quartz.JobDataMap.#ctor*"></a>
+  <h4 id="Quartz_JobDataMap__ctor_System_Collections_Generic_IDictionary_System_String_System_Object__" data-uid="Quartz.JobDataMap.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">JobDataMap(IDictionary&lt;String, Object&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> with the given data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobDataMap(IDictionary&lt;string, object&gt; map)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">map</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap__ctor_" data-uid="Quartz.JobDataMap.#ctor*"></a>
+  <h4 id="Quartz_JobDataMap__ctor_System_Collections_IDictionary_" data-uid="Quartz.JobDataMap.#ctor(System.Collections.IDictionary)">JobDataMap(IDictionary)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> with the given data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobDataMap(IDictionary map)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IDictionary</span></td>
+        <td><span class="parametername">map</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap__ctor_" data-uid="Quartz.JobDataMap.#ctor*"></a>
+  <h4 id="Quartz_JobDataMap__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="Quartz.JobDataMap.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">JobDataMap(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"><p>Serialization constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected JobDataMap(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_JobDataMap_GetBooleanValue_" data-uid="Quartz.JobDataMap.GetBooleanValue*"></a>
+  <h4 id="Quartz_JobDataMap_GetBooleanValue_System_String_" data-uid="Quartz.JobDataMap.GetBooleanValue(System.String)">GetBooleanValue(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.Boolean</span> value from the 
+<a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool GetBooleanValue(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetBooleanValueFromString_" data-uid="Quartz.JobDataMap.GetBooleanValueFromString*"></a>
+  <h4 id="Quartz_JobDataMap_GetBooleanValueFromString_System_String_" data-uid="Quartz.JobDataMap.GetBooleanValueFromString(System.String)">GetBooleanValueFromString(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.Boolean</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool GetBooleanValueFromString(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetCharFromString_" data-uid="Quartz.JobDataMap.GetCharFromString*"></a>
+  <h4 id="Quartz_JobDataMap_GetCharFromString_System_String_" data-uid="Quartz.JobDataMap.GetCharFromString(System.String)">GetCharFromString(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.Char</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual char GetCharFromString(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetDateTimeOffsetValue_" data-uid="Quartz.JobDataMap.GetDateTimeOffsetValue*"></a>
+  <h4 id="Quartz_JobDataMap_GetDateTimeOffsetValue_System_String_" data-uid="Quartz.JobDataMap.GetDateTimeOffsetValue(System.String)">GetDateTimeOffsetValue(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the date time offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset GetDateTimeOffsetValue(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetDateTimeOffsetValueFromString_" data-uid="Quartz.JobDataMap.GetDateTimeOffsetValueFromString*"></a>
+  <h4 id="Quartz_JobDataMap_GetDateTimeOffsetValueFromString_System_String_" data-uid="Quartz.JobDataMap.GetDateTimeOffsetValueFromString(System.String)">GetDateTimeOffsetValueFromString(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.DateTimeOffset</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset GetDateTimeOffsetValueFromString(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetDateTimeValue_" data-uid="Quartz.JobDataMap.GetDateTimeValue*"></a>
+  <h4 id="Quartz_JobDataMap_GetDateTimeValue_System_String_" data-uid="Quartz.JobDataMap.GetDateTimeValue(System.String)">GetDateTimeValue(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the date time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTime GetDateTimeValue(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetDateTimeValueFromString_" data-uid="Quartz.JobDataMap.GetDateTimeValueFromString*"></a>
+  <h4 id="Quartz_JobDataMap_GetDateTimeValueFromString_System_String_" data-uid="Quartz.JobDataMap.GetDateTimeValueFromString(System.String)">GetDateTimeValueFromString(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.DateTime</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTime GetDateTimeValueFromString(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetDoubleValue_" data-uid="Quartz.JobDataMap.GetDoubleValue*"></a>
+  <h4 id="Quartz_JobDataMap_GetDoubleValue_System_String_" data-uid="Quartz.JobDataMap.GetDoubleValue(System.String)">GetDoubleValue(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.Double</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double GetDoubleValue(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetDoubleValueFromString_" data-uid="Quartz.JobDataMap.GetDoubleValueFromString*"></a>
+  <h4 id="Quartz_JobDataMap_GetDoubleValueFromString_System_String_" data-uid="Quartz.JobDataMap.GetDoubleValueFromString(System.String)">GetDoubleValueFromString(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.Double</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double GetDoubleValueFromString(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetFloatValue_" data-uid="Quartz.JobDataMap.GetFloatValue*"></a>
+  <h4 id="Quartz_JobDataMap_GetFloatValue_System_String_" data-uid="Quartz.JobDataMap.GetFloatValue(System.String)">GetFloatValue(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.Single</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual float GetFloatValue(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetFloatValueFromString_" data-uid="Quartz.JobDataMap.GetFloatValueFromString*"></a>
+  <h4 id="Quartz_JobDataMap_GetFloatValueFromString_System_String_" data-uid="Quartz.JobDataMap.GetFloatValueFromString(System.String)">GetFloatValueFromString(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.Single</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual float GetFloatValueFromString(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetIntValue_" data-uid="Quartz.JobDataMap.GetIntValue*"></a>
+  <h4 id="Quartz_JobDataMap_GetIntValue_System_String_" data-uid="Quartz.JobDataMap.GetIntValue(System.String)">GetIntValue(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.Int32</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int GetIntValue(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetIntValueFromString_" data-uid="Quartz.JobDataMap.GetIntValueFromString*"></a>
+  <h4 id="Quartz_JobDataMap_GetIntValueFromString_System_String_" data-uid="Quartz.JobDataMap.GetIntValueFromString(System.String)">GetIntValueFromString(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.Int32</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int GetIntValueFromString(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetLongValue_" data-uid="Quartz.JobDataMap.GetLongValue*"></a>
+  <h4 id="Quartz_JobDataMap_GetLongValue_System_String_" data-uid="Quartz.JobDataMap.GetLongValue(System.String)">GetLongValue(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.Int64</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long GetLongValue(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetLongValueFromString_" data-uid="Quartz.JobDataMap.GetLongValueFromString*"></a>
+  <h4 id="Quartz_JobDataMap_GetLongValueFromString_System_String_" data-uid="Quartz.JobDataMap.GetLongValueFromString(System.String)">GetLongValueFromString(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.Int64</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long GetLongValueFromString(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetTimeSpanValue_" data-uid="Quartz.JobDataMap.GetTimeSpanValue*"></a>
+  <h4 id="Quartz_JobDataMap_GetTimeSpanValue_System_String_" data-uid="Quartz.JobDataMap.GetTimeSpanValue(System.String)">GetTimeSpanValue(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.TimeSpan</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TimeSpan GetTimeSpanValue(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_GetTimeSpanValueFromString_" data-uid="Quartz.JobDataMap.GetTimeSpanValueFromString*"></a>
+  <h4 id="Quartz_JobDataMap_GetTimeSpanValueFromString_System_String_" data-uid="Quartz.JobDataMap.GetTimeSpanValueFromString(System.String)">GetTimeSpanValueFromString(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the identified <span class="xref">System.TimeSpan</span> value from the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TimeSpan GetTimeSpanValueFromString(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_PutAsString_" data-uid="Quartz.JobDataMap.PutAsString*"></a>
+  <h4 id="Quartz_JobDataMap_PutAsString_System_String_System_Boolean_" data-uid="Quartz.JobDataMap.PutAsString(System.String,System.Boolean)">PutAsString(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Adds the given <span class="xref">System.Boolean</span> value as a string version to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s data map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PutAsString(string key, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_PutAsString_" data-uid="Quartz.JobDataMap.PutAsString*"></a>
+  <h4 id="Quartz_JobDataMap_PutAsString_System_String_System_Char_" data-uid="Quartz.JobDataMap.PutAsString(System.String,System.Char)">PutAsString(String, Char)</h4>
+  <div class="markdown level1 summary"><p>Adds the given <span class="xref">System.Char</span> value as a string version to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s data map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PutAsString(string key, char value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_PutAsString_" data-uid="Quartz.JobDataMap.PutAsString*"></a>
+  <h4 id="Quartz_JobDataMap_PutAsString_System_String_System_DateTime_" data-uid="Quartz.JobDataMap.PutAsString(System.String,System.DateTime)">PutAsString(String, DateTime)</h4>
+  <div class="markdown level1 summary"><p>Adds the given <span class="xref">System.DateTime</span> value as a string version to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s data map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PutAsString(string key, DateTime value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_PutAsString_" data-uid="Quartz.JobDataMap.PutAsString*"></a>
+  <h4 id="Quartz_JobDataMap_PutAsString_System_String_System_DateTimeOffset_" data-uid="Quartz.JobDataMap.PutAsString(System.String,System.DateTimeOffset)">PutAsString(String, DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Adds the given <span class="xref">System.DateTimeOffset</span> value as a string version to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s data map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PutAsString(string key, DateTimeOffset value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_PutAsString_" data-uid="Quartz.JobDataMap.PutAsString*"></a>
+  <h4 id="Quartz_JobDataMap_PutAsString_System_String_System_Double_" data-uid="Quartz.JobDataMap.PutAsString(System.String,System.Double)">PutAsString(String, Double)</h4>
+  <div class="markdown level1 summary"><p>Adds the given <span class="xref">System.Double</span> value as a string version to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s data map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PutAsString(string key, double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_PutAsString_" data-uid="Quartz.JobDataMap.PutAsString*"></a>
+  <h4 id="Quartz_JobDataMap_PutAsString_System_String_System_Int32_" data-uid="Quartz.JobDataMap.PutAsString(System.String,System.Int32)">PutAsString(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Adds the given <span class="xref">System.Int32</span> value as a string version to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s data map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PutAsString(string key, int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_PutAsString_" data-uid="Quartz.JobDataMap.PutAsString*"></a>
+  <h4 id="Quartz_JobDataMap_PutAsString_System_String_System_Int64_" data-uid="Quartz.JobDataMap.PutAsString(System.String,System.Int64)">PutAsString(String, Int64)</h4>
+  <div class="markdown level1 summary"><p>Adds the given <span class="xref">System.Int64</span> value as a string version to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s data map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PutAsString(string key, long value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_PutAsString_" data-uid="Quartz.JobDataMap.PutAsString*"></a>
+  <h4 id="Quartz_JobDataMap_PutAsString_System_String_System_Single_" data-uid="Quartz.JobDataMap.PutAsString(System.String,System.Single)">PutAsString(String, Single)</h4>
+  <div class="markdown level1 summary"><p>Adds the given <span class="xref">System.Single</span> value as a string version to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s data map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PutAsString(string key, float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobDataMap_PutAsString_" data-uid="Quartz.JobDataMap.PutAsString*"></a>
+  <h4 id="Quartz_JobDataMap_PutAsString_System_String_System_TimeSpan_" data-uid="Quartz.JobDataMap.PutAsString(System.String,System.TimeSpan)">PutAsString(String, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Adds the given <span class="xref">System.TimeSpan</span> value as a string version to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s data map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PutAsString(string key, TimeSpan value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IDictionary</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.ICollection</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <div>
+      <span class="xref">System.Runtime.Serialization.ISerializable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.DictionaryExtensions.html#Quartz_Util_DictionaryExtensions_TryGetAndReturn__2_System_Collections_Generic_IDictionary___0___1____0_">DictionaryExtensions.TryGetAndReturn&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, TKey)</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJob.html">IJob</a></div>
+      <div><a class="xref" href="Quartz.PersistJobDataAfterExecutionAttribute.html">PersistJobDataAfterExecutionAttribute</a></div>
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+      <div><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

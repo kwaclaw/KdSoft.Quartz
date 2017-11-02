@@ -1,0 +1,3922 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class QuartzScheduler
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class QuartzScheduler
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Core.QuartzScheduler">
+  
+  
+  <h1 id="Quartz_Core_QuartzScheduler" data-uid="Quartz.Core.QuartzScheduler" class="text-break">Class QuartzScheduler
+  </h1>
+  <div class="markdown level0 summary"><p>This is the heart of Quartz, an indirect implementation of the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+interface, containing methods to schedule <a class="xref" href="Quartz.IJob.html">IJob</a>s,
+register <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> instances, etc.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">QuartzScheduler</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.Simpl.IRemotableQuartzScheduler.html">IRemotableQuartzScheduler</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.CreateObjRef(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Core.html">Quartz.Core</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Core_QuartzScheduler_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class QuartzScheduler : MarshalByRefObject, IRemotableQuartzScheduler</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler__ctor_" data-uid="Quartz.Core.QuartzScheduler.#ctor*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler__ctor" data-uid="Quartz.Core.QuartzScheduler.#ctor">QuartzScheduler()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected QuartzScheduler()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler__ctor_" data-uid="Quartz.Core.QuartzScheduler.#ctor*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler__ctor_Quartz_Core_QuartzSchedulerResources_System_TimeSpan_" data-uid="Quartz.Core.QuartzScheduler.#ctor(Quartz.Core.QuartzSchedulerResources,System.TimeSpan)">QuartzScheduler(QuartzSchedulerResources, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a> with the given configuration
+properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuartzScheduler(QuartzSchedulerResources resources, TimeSpan idleWaitTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Core.QuartzSchedulerResources.html">QuartzSchedulerResources</a></td>
+        <td><span class="parametername">resources</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">idleWaitTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Core_QuartzScheduler__ctor_Quartz_Core_QuartzSchedulerResources_System_TimeSpan__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Core.QuartzSchedulerResources.html">QuartzSchedulerResources</a></div>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Clustered_" data-uid="Quartz.Core.QuartzScheduler.Clustered*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Clustered" data-uid="Quartz.Core.QuartzScheduler.Clustered">Clustered</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Clustered { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_CurrentlyExecutingJobs_" data-uid="Quartz.Core.QuartzScheduler.CurrentlyExecutingJobs*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_CurrentlyExecutingJobs" data-uid="Quartz.Core.QuartzScheduler.CurrentlyExecutingJobs">CurrentlyExecutingJobs</h4>
+  <div class="markdown level1 summary"><p>Return a list of <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> objects that
+represent all currently executing Jobs in this Scheduler instance.
+<p>
+This method is not cluster aware.  That is, it will only return Jobs
+currently executing in this Scheduler instance, not across the entire
+cluster.
+</p>
+<p>
+Note that the list returned is an &apos;instantaneous&apos; snap-shot, and that as
+soon as it&apos;s returned, the true list of executing jobs may be different.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;IJobExecutionContext&gt; CurrentlyExecutingJobs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_InStandbyMode_" data-uid="Quartz.Core.QuartzScheduler.InStandbyMode*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_InStandbyMode" data-uid="Quartz.Core.QuartzScheduler.InStandbyMode">InStandbyMode</h4>
+  <div class="markdown level1 summary"><p>Reports whether the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> is paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool InStandbyMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_InternalJobListeners_" data-uid="Quartz.Core.QuartzScheduler.InternalJobListeners*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_InternalJobListeners" data-uid="Quartz.Core.QuartzScheduler.InternalJobListeners">InternalJobListeners</h4>
+  <div class="markdown level1 summary"><p>Get a List containing all of the <a class="xref" href="Quartz.IJobListener.html">IJobListener</a>s
+in the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>&apos;s <em>internal</em> list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;IJobListener&gt; InternalJobListeners { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.IJobListener.html">IJobListener</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_InternalSchedulerListeners_" data-uid="Quartz.Core.QuartzScheduler.InternalSchedulerListeners*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_InternalSchedulerListeners" data-uid="Quartz.Core.QuartzScheduler.InternalSchedulerListeners">InternalSchedulerListeners</h4>
+  <div class="markdown level1 summary"><p>Get a List containing all of the <em>internal</em> <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>s
+registered with the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ISchedulerListener&gt; InternalSchedulerListeners { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_InternalTriggerListeners_" data-uid="Quartz.Core.QuartzScheduler.InternalTriggerListeners*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_InternalTriggerListeners" data-uid="Quartz.Core.QuartzScheduler.InternalTriggerListeners">InternalTriggerListeners</h4>
+  <div class="markdown level1 summary"><p>Get a list containing all of the <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>s
+in the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>&apos;s <em>internal</em> list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ITriggerListener&gt; InternalTriggerListeners { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_IsShutdown_" data-uid="Quartz.Core.QuartzScheduler.IsShutdown*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_IsShutdown" data-uid="Quartz.Core.QuartzScheduler.IsShutdown">IsShutdown</h4>
+  <div class="markdown level1 summary"><p>Reports whether the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> has been Shutdown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsShutdown { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_IsShuttingDown_" data-uid="Quartz.Core.QuartzScheduler.IsShuttingDown*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_IsShuttingDown" data-uid="Quartz.Core.QuartzScheduler.IsShuttingDown">IsShuttingDown</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsShuttingDown { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_IsStarted_" data-uid="Quartz.Core.QuartzScheduler.IsStarted*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_IsStarted" data-uid="Quartz.Core.QuartzScheduler.IsStarted">IsStarted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsStarted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_JobFactory_" data-uid="Quartz.Core.QuartzScheduler.JobFactory*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_JobFactory" data-uid="Quartz.Core.QuartzScheduler.JobFactory">JobFactory</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the job factory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IJobFactory JobFactory { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IJobFactory.html">IJobFactory</a></td>
+        <td><p>The job factory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_JobStoreClass_" data-uid="Quartz.Core.QuartzScheduler.JobStoreClass*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_JobStoreClass" data-uid="Quartz.Core.QuartzScheduler.JobStoreClass">JobStoreClass</h4>
+  <div class="markdown level1 summary"><p>Gets the job store class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Type JobStoreClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><p>The job store class.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ListenerManager_" data-uid="Quartz.Core.QuartzScheduler.ListenerManager*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ListenerManager" data-uid="Quartz.Core.QuartzScheduler.ListenerManager">ListenerManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IListenerManager ListenerManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IListenerManager.html">IListenerManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NumJobsExecuted_" data-uid="Quartz.Core.QuartzScheduler.NumJobsExecuted*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NumJobsExecuted" data-uid="Quartz.Core.QuartzScheduler.NumJobsExecuted">NumJobsExecuted</h4>
+  <div class="markdown level1 summary"><p>Gets the number of jobs executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int NumJobsExecuted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of jobs executed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_RunningSince_" data-uid="Quartz.Core.QuartzScheduler.RunningSince*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_RunningSince" data-uid="Quartz.Core.QuartzScheduler.RunningSince">RunningSince</h4>
+  <div class="markdown level1 summary"><p>Gets the running since.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset? RunningSince { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>The running since.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_SchedulerContext_" data-uid="Quartz.Core.QuartzScheduler.SchedulerContext*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_SchedulerContext" data-uid="Quartz.Core.QuartzScheduler.SchedulerContext">SchedulerContext</h4>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Quartz.Core.QuartzScheduler.html#Quartz_Core_QuartzScheduler_SchedulerContext">SchedulerContext</a> of the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SchedulerContext SchedulerContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerContext.html">SchedulerContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_SchedulerInstanceId_" data-uid="Quartz.Core.QuartzScheduler.SchedulerInstanceId*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_SchedulerInstanceId" data-uid="Quartz.Core.QuartzScheduler.SchedulerInstanceId">SchedulerInstanceId</h4>
+  <div class="markdown level1 summary"><p>Returns the instance Id of the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string SchedulerInstanceId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_SchedulerName_" data-uid="Quartz.Core.QuartzScheduler.SchedulerName*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_SchedulerName" data-uid="Quartz.Core.QuartzScheduler.SchedulerName">SchedulerName</h4>
+  <div class="markdown level1 summary"><p>Returns the name of the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string SchedulerName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_SchedulerSignaler_" data-uid="Quartz.Core.QuartzScheduler.SchedulerSignaler*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_SchedulerSignaler" data-uid="Quartz.Core.QuartzScheduler.SchedulerSignaler">SchedulerSignaler</h4>
+  <div class="markdown level1 summary"><p>Gets the scheduler signaler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ISchedulerSignaler SchedulerSignaler { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.ISchedulerSignaler.html">ISchedulerSignaler</a></td>
+        <td><p>The scheduler signaler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_SignalOnSchedulingChange_" data-uid="Quartz.Core.QuartzScheduler.SignalOnSchedulingChange*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_SignalOnSchedulingChange" data-uid="Quartz.Core.QuartzScheduler.SignalOnSchedulingChange">SignalOnSchedulingChange</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to signal on scheduling change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SignalOnSchedulingChange { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if scheduler should signal on scheduling change; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_SupportsPersistence_" data-uid="Quartz.Core.QuartzScheduler.SupportsPersistence*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_SupportsPersistence" data-uid="Quartz.Core.QuartzScheduler.SupportsPersistence">SupportsPersistence</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this scheduler supports persistence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SupportsPersistence { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if supports persistence; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ThreadPoolClass_" data-uid="Quartz.Core.QuartzScheduler.ThreadPoolClass*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ThreadPoolClass" data-uid="Quartz.Core.QuartzScheduler.ThreadPoolClass">ThreadPoolClass</h4>
+  <div class="markdown level1 summary"><p>Gets the thread pool class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Type ThreadPoolClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><p>The thread pool class.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ThreadPoolSize_" data-uid="Quartz.Core.QuartzScheduler.ThreadPoolSize*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ThreadPoolSize" data-uid="Quartz.Core.QuartzScheduler.ThreadPoolSize">ThreadPoolSize</h4>
+  <div class="markdown level1 summary"><p>Gets the size of the thread pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int ThreadPoolSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The size of the thread pool.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Version_" data-uid="Quartz.Core.QuartzScheduler.Version*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Version" data-uid="Quartz.Core.QuartzScheduler.Version">Version</h4>
+  <div class="markdown level1 summary"><p>Gets the version of the Quartz Scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Version { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The version.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_VersionIteration_" data-uid="Quartz.Core.QuartzScheduler.VersionIteration*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_VersionIteration" data-uid="Quartz.Core.QuartzScheduler.VersionIteration">VersionIteration</h4>
+  <div class="markdown level1 summary"><p>Gets the version iteration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string VersionIteration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The version iteration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_VersionMajor_" data-uid="Quartz.Core.QuartzScheduler.VersionMajor*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_VersionMajor" data-uid="Quartz.Core.QuartzScheduler.VersionMajor">VersionMajor</h4>
+  <div class="markdown level1 summary"><p>Gets the version major.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string VersionMajor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The version major.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_VersionMinor_" data-uid="Quartz.Core.QuartzScheduler.VersionMinor*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_VersionMinor" data-uid="Quartz.Core.QuartzScheduler.VersionMinor">VersionMinor</h4>
+  <div class="markdown level1 summary"><p>Gets the version minor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string VersionMinor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The version minor.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_AddCalendar_" data-uid="Quartz.Core.QuartzScheduler.AddCalendar*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_AddCalendar_System_String_Quartz_ICalendar_System_Boolean_System_Boolean_" data-uid="Quartz.Core.QuartzScheduler.AddCalendar(System.String,Quartz.ICalendar,System.Boolean,System.Boolean)">AddCalendar(String, ICalendar, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Add (register) the given <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> to the Scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AddCalendar(string calName, ICalendar calendar, bool replace, bool updateTriggers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">calendar</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">updateTriggers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_AddInternalJobListener_" data-uid="Quartz.Core.QuartzScheduler.AddInternalJobListener*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_AddInternalJobListener_Quartz_IJobListener_" data-uid="Quartz.Core.QuartzScheduler.AddInternalJobListener(Quartz.IJobListener)">AddInternalJobListener(IJobListener)</h4>
+  <div class="markdown level1 summary"><p>Add the given <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> to the
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>&apos;s <em>internal</em> list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddInternalJobListener(IJobListener jobListener)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobListener.html">IJobListener</a></td>
+        <td><span class="parametername">jobListener</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_AddInternalSchedulerListener_" data-uid="Quartz.Core.QuartzScheduler.AddInternalSchedulerListener*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_AddInternalSchedulerListener_Quartz_ISchedulerListener_" data-uid="Quartz.Core.QuartzScheduler.AddInternalSchedulerListener(Quartz.ISchedulerListener)">AddInternalSchedulerListener(ISchedulerListener)</h4>
+  <div class="markdown level1 summary"><p>Register the given <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a> with the
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>&apos;s list of internal listeners.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddInternalSchedulerListener(ISchedulerListener schedulerListener)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a></td>
+        <td><span class="parametername">schedulerListener</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_AddInternalTriggerListener_" data-uid="Quartz.Core.QuartzScheduler.AddInternalTriggerListener*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_AddInternalTriggerListener_Quartz_ITriggerListener_" data-uid="Quartz.Core.QuartzScheduler.AddInternalTriggerListener(Quartz.ITriggerListener)">AddInternalTriggerListener(ITriggerListener)</h4>
+  <div class="markdown level1 summary"><p>Add the given <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> to the
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>&apos;s <em>internal</em> list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddInternalTriggerListener(ITriggerListener triggerListener)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a></td>
+        <td><span class="parametername">triggerListener</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_AddJob_" data-uid="Quartz.Core.QuartzScheduler.AddJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_AddJob_Quartz_IJobDetail_System_Boolean_" data-uid="Quartz.Core.QuartzScheduler.AddJob(Quartz.IJobDetail,System.Boolean)">AddJob(IJobDetail, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Add the given <a class="xref" href="Quartz.IJob.html">IJob</a> to the Scheduler - with no associated
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>. The <a class="xref" href="Quartz.IJob.html">IJob</a> will be &apos;dormant&apos; until
+it is scheduled with a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>, or <a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_TriggerJob_Quartz_JobKey_">TriggerJob(JobKey)</a>
+is called for it.
+<p>
+The <a class="xref" href="Quartz.IJob.html">IJob</a> must by definition be &apos;durable&apos;, if it is not,
+SchedulerException will be thrown.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AddJob(IJobDetail jobDetail, bool replace)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_AddJob_" data-uid="Quartz.Core.QuartzScheduler.AddJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_AddJob_Quartz_IJobDetail_System_Boolean_System_Boolean_" data-uid="Quartz.Core.QuartzScheduler.AddJob(Quartz.IJobDetail,System.Boolean,System.Boolean)">AddJob(IJobDetail, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AddJob(IJobDetail jobDetail, bool replace, bool storeNonDurableWhileAwaitingScheduling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">storeNonDurableWhileAwaitingScheduling</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_AddNoGCObject_" data-uid="Quartz.Core.QuartzScheduler.AddNoGCObject*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_AddNoGCObject_System_Object_" data-uid="Quartz.Core.QuartzScheduler.AddNoGCObject(System.Object)">AddNoGCObject(Object)</h4>
+  <div class="markdown level1 summary"><p>Adds an object that should be kept as reference to prevent
+it from being garbage collected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AddNoGCObject(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The obj.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_CheckExists_" data-uid="Quartz.Core.QuartzScheduler.CheckExists*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_CheckExists_Quartz_JobKey_" data-uid="Quartz.Core.QuartzScheduler.CheckExists(Quartz.JobKey)">CheckExists(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Determine whether a <a class="xref" href="Quartz.IJob.html">IJob</a> with the given identifier already
+exists within the scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CheckExists(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>the identifier to check for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if a Job exists with the given identifier</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_CheckExists_" data-uid="Quartz.Core.QuartzScheduler.CheckExists*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_CheckExists_Quartz_TriggerKey_" data-uid="Quartz.Core.QuartzScheduler.CheckExists(Quartz.TriggerKey)">CheckExists(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Determine whether a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given identifier already
+exists within the scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CheckExists(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>the identifier to check for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if a Trigger exists with the given identifier</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Clear_" data-uid="Quartz.Core.QuartzScheduler.Clear*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Clear" data-uid="Quartz.Core.QuartzScheduler.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Clears (deletes!) all scheduling data - all <a class="xref" href="Quartz.IJob.html">IJob</a>s, <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s
+<a class="xref" href="Quartz.ICalendar.html">ICalendar</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Clear()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_DeleteCalendar_" data-uid="Quartz.Core.QuartzScheduler.DeleteCalendar*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_DeleteCalendar_System_String_" data-uid="Quartz.Core.QuartzScheduler.DeleteCalendar(System.String)">DeleteCalendar(String)</h4>
+  <div class="markdown level1 summary"><p>Delete the identified <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> from the Scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool DeleteCalendar(string calName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the Calendar was found and deleted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_DeleteJob_" data-uid="Quartz.Core.QuartzScheduler.DeleteJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_DeleteJob_Quartz_JobKey_" data-uid="Quartz.Core.QuartzScheduler.DeleteJob(Quartz.JobKey)">DeleteJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Delete the identified <a class="xref" href="Quartz.IJob.html">IJob</a> from the Scheduler - and any
+associated <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool DeleteJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the Job was found and deleted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_DeleteJobs_" data-uid="Quartz.Core.QuartzScheduler.DeleteJobs*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_DeleteJobs_System_Collections_Generic_IList_Quartz_JobKey__" data-uid="Quartz.Core.QuartzScheduler.DeleteJobs(System.Collections.Generic.IList{Quartz.JobKey})">DeleteJobs(IList&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool DeleteJobs(IList&lt;JobKey&gt; jobKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">jobKeys</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Dispose_" data-uid="Quartz.Core.QuartzScheduler.Dispose*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Dispose" data-uid="Quartz.Core.QuartzScheduler.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Dispose_" data-uid="Quartz.Core.QuartzScheduler.Dispose*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Dispose_System_Boolean_" data-uid="Quartz.Core.QuartzScheduler.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetCalendar_" data-uid="Quartz.Core.QuartzScheduler.GetCalendar*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetCalendar_System_String_" data-uid="Quartz.Core.QuartzScheduler.GetCalendar(System.String)">GetCalendar(String)</h4>
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> instance with the given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICalendar GetCalendar(string calName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetCalendarNames_" data-uid="Quartz.Core.QuartzScheduler.GetCalendarNames*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetCalendarNames" data-uid="Quartz.Core.QuartzScheduler.GetCalendarNames">GetCalendarNames()</h4>
+  <div class="markdown level1 summary"><p>Get the names of all registered <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;string&gt; GetCalendarNames()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetInternalJobListener_" data-uid="Quartz.Core.QuartzScheduler.GetInternalJobListener*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetInternalJobListener_System_String_" data-uid="Quartz.Core.QuartzScheduler.GetInternalJobListener(System.String)">GetInternalJobListener(String)</h4>
+  <div class="markdown level1 summary"><p>Get the <em>internal</em> <a class="xref" href="Quartz.IJobListener.html">IJobListener</a>
+that has the given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IJobListener GetInternalJobListener(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobListener.html">IJobListener</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetInternalTriggerListener_" data-uid="Quartz.Core.QuartzScheduler.GetInternalTriggerListener*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetInternalTriggerListener_System_String_" data-uid="Quartz.Core.QuartzScheduler.GetInternalTriggerListener(System.String)">GetInternalTriggerListener(String)</h4>
+  <div class="markdown level1 summary"><p>Get the <em>internal</em> <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> that
+has the given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITriggerListener GetInternalTriggerListener(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetJobDetail_" data-uid="Quartz.Core.QuartzScheduler.GetJobDetail*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetJobDetail_Quartz_JobKey_" data-uid="Quartz.Core.QuartzScheduler.GetJobDetail(Quartz.JobKey)">GetJobDetail(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> for the <a class="xref" href="Quartz.IJob.html">IJob</a>
+instance with the given name and group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IJobDetail GetJobDetail(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetJobGroupNames_" data-uid="Quartz.Core.QuartzScheduler.GetJobGroupNames*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetJobGroupNames" data-uid="Quartz.Core.QuartzScheduler.GetJobGroupNames">GetJobGroupNames()</h4>
+  <div class="markdown level1 summary"><p>Get the names of all known <a class="xref" href="Quartz.IJob.html">IJob</a> groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;string&gt; GetJobGroupNames()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetJobKeys_" data-uid="Quartz.Core.QuartzScheduler.GetJobKeys*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetJobKeys_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__" data-uid="Quartz.Core.QuartzScheduler.GetJobKeys(Quartz.Impl.Matchers.GroupMatcher{Quartz.JobKey})">GetJobKeys(GroupMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get the names of all the <a class="xref" href="Quartz.IJob.html">IJob</a>s in the
+given group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ISet&lt;JobKey&gt; GetJobKeys(GroupMatcher&lt;JobKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetPausedTriggerGroups_" data-uid="Quartz.Core.QuartzScheduler.GetPausedTriggerGroups*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetPausedTriggerGroups" data-uid="Quartz.Core.QuartzScheduler.GetPausedTriggerGroups">GetPausedTriggerGroups()</h4>
+  <div class="markdown level1 summary"><p>Gets the paused trigger groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ISet&lt;string&gt; GetPausedTriggerGroups()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetTrigger_" data-uid="Quartz.Core.QuartzScheduler.GetTrigger*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetTrigger_Quartz_TriggerKey_" data-uid="Quartz.Core.QuartzScheduler.GetTrigger(Quartz.TriggerKey)">GetTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> instance with the given name and
+group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ITrigger GetTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetTriggerGroupNames_" data-uid="Quartz.Core.QuartzScheduler.GetTriggerGroupNames*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetTriggerGroupNames" data-uid="Quartz.Core.QuartzScheduler.GetTriggerGroupNames">GetTriggerGroupNames()</h4>
+  <div class="markdown level1 summary"><p>Get the names of all known <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;string&gt; GetTriggerGroupNames()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetTriggerKeys_" data-uid="Quartz.Core.QuartzScheduler.GetTriggerKeys*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetTriggerKeys_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Core.QuartzScheduler.GetTriggerKeys(Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">GetTriggerKeys(GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get the names of all the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s in
+the matching groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ISet&lt;TriggerKey&gt; GetTriggerKeys(GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetTriggersOfJob_" data-uid="Quartz.Core.QuartzScheduler.GetTriggersOfJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetTriggersOfJob_Quartz_JobKey_" data-uid="Quartz.Core.QuartzScheduler.GetTriggersOfJob(Quartz.JobKey)">GetTriggersOfJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Get all <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s that are associated with the
+identified <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;ITrigger&gt; GetTriggersOfJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_GetTriggerState_" data-uid="Quartz.Core.QuartzScheduler.GetTriggerState*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_GetTriggerState_Quartz_TriggerKey_" data-uid="Quartz.Core.QuartzScheduler.GetTriggerState(Quartz.TriggerKey)">GetTriggerState(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Get the current state of the identified <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.  </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TriggerState GetTriggerState(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerState.html">TriggerState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Core_QuartzScheduler_GetTriggerState_Quartz_TriggerKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.TriggerState.html">TriggerState</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Initialize_" data-uid="Quartz.Core.QuartzScheduler.Initialize*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Initialize" data-uid="Quartz.Core.QuartzScheduler.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_InitializeLifetimeService_" data-uid="Quartz.Core.QuartzScheduler.InitializeLifetimeService*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_InitializeLifetimeService" data-uid="Quartz.Core.QuartzScheduler.InitializeLifetimeService">InitializeLifetimeService()</h4>
+  <div class="markdown level1 summary"><p>Obtains a lifetime service object to control the lifetime policy for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SecurityCritical]
+public override object InitializeLifetimeService()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span></div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Interrupt_" data-uid="Quartz.Core.QuartzScheduler.Interrupt*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Interrupt_Quartz_JobKey_" data-uid="Quartz.Core.QuartzScheduler.Interrupt(Quartz.JobKey)">Interrupt(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Interrupt all instances of the identified InterruptableJob.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Interrupt(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Interrupt_" data-uid="Quartz.Core.QuartzScheduler.Interrupt*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Interrupt_System_String_" data-uid="Quartz.Core.QuartzScheduler.Interrupt(System.String)">Interrupt(String)</h4>
+  <div class="markdown level1 summary"><p>Interrupt all instances of the identified InterruptableJob executing in this Scheduler instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Interrupt(string fireInstanceId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fireInstanceId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Core_QuartzScheduler_Interrupt_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is not cluster aware.  That is, it will only interrupt 
+instances of the identified InterruptableJob currently executing in this 
+Scheduler instance, not across the entire cluster.</p>
+</div>
+  <h5 id="Quartz_Core_QuartzScheduler_Interrupt_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Simpl.IRemotableQuartzScheduler.html#Quartz_Simpl_IRemotableQuartzScheduler_Interrupt_Quartz_JobKey_">Interrupt</a>(<a class="xref" href="Quartz.JobKey.html">JobKey</a>)</div>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_IsJobGroupPaused_" data-uid="Quartz.Core.QuartzScheduler.IsJobGroupPaused*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_IsJobGroupPaused_System_String_" data-uid="Quartz.Core.QuartzScheduler.IsJobGroupPaused(System.String)">IsJobGroupPaused(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsJobGroupPaused(string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_IsTriggerGroupPaused_" data-uid="Quartz.Core.QuartzScheduler.IsTriggerGroupPaused*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_IsTriggerGroupPaused_System_String_" data-uid="Quartz.Core.QuartzScheduler.IsTriggerGroupPaused(System.String)">IsTriggerGroupPaused(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsTriggerGroupPaused(string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NextLong_" data-uid="Quartz.Core.QuartzScheduler.NextLong*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NextLong_System_Random_" data-uid="Quartz.Core.QuartzScheduler.NextLong(System.Random)">NextLong(Random)</h4>
+  <div class="markdown level1 summary"><p>Creates a new positive random number </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long NextLong(Random random)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Random</span></td>
+        <td><span class="parametername">random</span></td>
+        <td><p>The last random obtained</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><p>Returns a new positive random number</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifyJobListenersToBeExecuted_" data-uid="Quartz.Core.QuartzScheduler.NotifyJobListenersToBeExecuted*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifyJobListenersToBeExecuted_Quartz_IJobExecutionContext_" data-uid="Quartz.Core.QuartzScheduler.NotifyJobListenersToBeExecuted(Quartz.IJobExecutionContext)">NotifyJobListenersToBeExecuted(IJobExecutionContext)</h4>
+  <div class="markdown level1 summary"><p>Notifies the job listeners about job to be executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifyJobListenersToBeExecuted(IJobExecutionContext jec)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">jec</span></td>
+        <td><p>The jec.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifyJobListenersWasExecuted_" data-uid="Quartz.Core.QuartzScheduler.NotifyJobListenersWasExecuted*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifyJobListenersWasExecuted_Quartz_IJobExecutionContext_Quartz_JobExecutionException_" data-uid="Quartz.Core.QuartzScheduler.NotifyJobListenersWasExecuted(Quartz.IJobExecutionContext,Quartz.JobExecutionException)">NotifyJobListenersWasExecuted(IJobExecutionContext, JobExecutionException)</h4>
+  <div class="markdown level1 summary"><p>Notifies the job listeners that job was executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifyJobListenersWasExecuted(IJobExecutionContext jec, JobExecutionException je)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">jec</span></td>
+        <td><p>The jec.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></td>
+        <td><span class="parametername">je</span></td>
+        <td><p>The je.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifyJobListenersWasVetoed_" data-uid="Quartz.Core.QuartzScheduler.NotifyJobListenersWasVetoed*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifyJobListenersWasVetoed_Quartz_IJobExecutionContext_" data-uid="Quartz.Core.QuartzScheduler.NotifyJobListenersWasVetoed(Quartz.IJobExecutionContext)">NotifyJobListenersWasVetoed(IJobExecutionContext)</h4>
+  <div class="markdown level1 summary"><p>Notifies the job listeners that job execution was vetoed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifyJobListenersWasVetoed(IJobExecutionContext jec)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">jec</span></td>
+        <td><p>The job execution context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifyJobStoreJobComplete_" data-uid="Quartz.Core.QuartzScheduler.NotifyJobStoreJobComplete*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifyJobStoreJobComplete_Quartz_Spi_IOperableTrigger_Quartz_IJobDetail_Quartz_SchedulerInstruction_" data-uid="Quartz.Core.QuartzScheduler.NotifyJobStoreJobComplete(Quartz.Spi.IOperableTrigger,Quartz.IJobDetail,Quartz.SchedulerInstruction)">NotifyJobStoreJobComplete(IOperableTrigger, IJobDetail, SchedulerInstruction)</h4>
+  <div class="markdown level1 summary"><p>Notifies the job store job complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifyJobStoreJobComplete(IOperableTrigger trigger, IJobDetail detail, SchedulerInstruction instCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The trigger.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">detail</span></td>
+        <td><p>The detail.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></td>
+        <td><span class="parametername">instCode</span></td>
+        <td><p>The instruction code.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifyJobStoreJobVetoed_" data-uid="Quartz.Core.QuartzScheduler.NotifyJobStoreJobVetoed*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifyJobStoreJobVetoed_Quartz_Spi_IOperableTrigger_Quartz_IJobDetail_Quartz_SchedulerInstruction_" data-uid="Quartz.Core.QuartzScheduler.NotifyJobStoreJobVetoed(Quartz.Spi.IOperableTrigger,Quartz.IJobDetail,Quartz.SchedulerInstruction)">NotifyJobStoreJobVetoed(IOperableTrigger, IJobDetail, SchedulerInstruction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifyJobStoreJobVetoed(IOperableTrigger trigger, IJobDetail detail, SchedulerInstruction instCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">detail</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></td>
+        <td><span class="parametername">instCode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersError_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersError*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersError_System_String_Quartz_SchedulerException_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersError(System.String,Quartz.SchedulerException)">NotifySchedulerListenersError(String, SchedulerException)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners about scheduler error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersError(string msg, SchedulerException se)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">msg</span></td>
+        <td><p>The MSG.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a></td>
+        <td><span class="parametername">se</span></td>
+        <td><p>The se.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersFinalized_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersFinalized*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersFinalized_Quartz_ITrigger_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersFinalized(Quartz.ITrigger)">NotifySchedulerListenersFinalized(ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners about finalized trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersFinalized(ITrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersInStandbyMode_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersInStandbyMode*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersInStandbyMode" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersInStandbyMode">NotifySchedulerListenersInStandbyMode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersInStandbyMode()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersJobAdded_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersJobAdded*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersJobAdded_Quartz_IJobDetail_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersJobAdded(Quartz.IJobDetail)">NotifySchedulerListenersJobAdded(IJobDetail)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersJobAdded(IJobDetail jobDetail)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersJobDeleted_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersJobDeleted*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersJobDeleted_Quartz_JobKey_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersJobDeleted(Quartz.JobKey)">NotifySchedulerListenersJobDeleted(JobKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersJobDeleted(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersPausedJob_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersPausedJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersPausedJob_Quartz_JobKey_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersPausedJob(Quartz.JobKey)">NotifySchedulerListenersPausedJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners about paused job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersPausedJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersPausedJobs_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersPausedJobs*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersPausedJobs_System_String_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersPausedJobs(System.String)">NotifySchedulerListenersPausedJobs(String)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners about paused job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersPausedJobs(string group)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersPausedTrigger_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersPausedTrigger*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersPausedTrigger_Quartz_TriggerKey_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersPausedTrigger(Quartz.TriggerKey)">NotifySchedulerListenersPausedTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners about paused trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersPausedTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersPausedTriggers_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersPausedTriggers*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersPausedTriggers_System_String_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersPausedTriggers(System.String)">NotifySchedulerListenersPausedTriggers(String)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners about paused trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersPausedTriggers(string group)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersResumedJob_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersResumedJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersResumedJob_Quartz_JobKey_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersResumedJob(Quartz.JobKey)">NotifySchedulerListenersResumedJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners about resumed job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersResumedJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersResumedJobs_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersResumedJobs*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersResumedJobs_System_String_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersResumedJobs(System.String)">NotifySchedulerListenersResumedJobs(String)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners about resumed job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersResumedJobs(string group)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersResumedTrigger_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersResumedTrigger*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersResumedTrigger_Quartz_TriggerKey_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersResumedTrigger(Quartz.TriggerKey)">NotifySchedulerListenersResumedTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners resumed trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersResumedTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersResumedTriggers_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersResumedTriggers*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersResumedTriggers_System_String_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersResumedTriggers(System.String)">NotifySchedulerListenersResumedTriggers(String)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners resumed trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersResumedTriggers(string group)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersScheduled_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersScheduled*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersScheduled_Quartz_ITrigger_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersScheduled(Quartz.ITrigger)">NotifySchedulerListenersScheduled(ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners about job that was scheduled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersScheduled(ITrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersShutdown_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersShutdown*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersShutdown" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersShutdown">NotifySchedulerListenersShutdown()</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners about scheduler shutdown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersShutdown()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersShuttingdown_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersShuttingdown*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersShuttingdown" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersShuttingdown">NotifySchedulerListenersShuttingdown()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersShuttingdown()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersStarted_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersStarted*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersStarted" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersStarted">NotifySchedulerListenersStarted()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersStarted()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersStarting_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersStarting*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersStarting" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersStarting">NotifySchedulerListenersStarting()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersStarting()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersUnscheduled_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersUnscheduled*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerListenersUnscheduled_Quartz_TriggerKey_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerListenersUnscheduled(Quartz.TriggerKey)">NotifySchedulerListenersUnscheduled(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler listeners about job that was unscheduled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifySchedulerListenersUnscheduled(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifySchedulerThread_" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerThread*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifySchedulerThread_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.Core.QuartzScheduler.NotifySchedulerThread(System.Nullable{System.DateTimeOffset})">NotifySchedulerThread(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"><p>Notifies the scheduler thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void NotifySchedulerThread(DateTimeOffset? candidateNewNextFireTimeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">candidateNewNextFireTimeUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifyTriggerListenersComplete_" data-uid="Quartz.Core.QuartzScheduler.NotifyTriggerListenersComplete*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifyTriggerListenersComplete_Quartz_IJobExecutionContext_Quartz_SchedulerInstruction_" data-uid="Quartz.Core.QuartzScheduler.NotifyTriggerListenersComplete(Quartz.IJobExecutionContext,Quartz.SchedulerInstruction)">NotifyTriggerListenersComplete(IJobExecutionContext, SchedulerInstruction)</h4>
+  <div class="markdown level1 summary"><p>Notifies the trigger listeners of completion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifyTriggerListenersComplete(IJobExecutionContext jec, SchedulerInstruction instCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">jec</span></td>
+        <td><p>The job execution context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></td>
+        <td><span class="parametername">instCode</span></td>
+        <td><p>The instruction code to report to triggers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifyTriggerListenersFired_" data-uid="Quartz.Core.QuartzScheduler.NotifyTriggerListenersFired*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifyTriggerListenersFired_Quartz_IJobExecutionContext_" data-uid="Quartz.Core.QuartzScheduler.NotifyTriggerListenersFired(Quartz.IJobExecutionContext)">NotifyTriggerListenersFired(IJobExecutionContext)</h4>
+  <div class="markdown level1 summary"><p>Notifies the trigger listeners about fired trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool NotifyTriggerListenersFired(IJobExecutionContext jec)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">jec</span></td>
+        <td><p>The job execution context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_NotifyTriggerListenersMisfired_" data-uid="Quartz.Core.QuartzScheduler.NotifyTriggerListenersMisfired*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_NotifyTriggerListenersMisfired_Quartz_ITrigger_" data-uid="Quartz.Core.QuartzScheduler.NotifyTriggerListenersMisfired(Quartz.ITrigger)">NotifyTriggerListenersMisfired(ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Notifies the trigger listeners about misfired trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void NotifyTriggerListenersMisfired(ITrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_PauseAll_" data-uid="Quartz.Core.QuartzScheduler.PauseAll*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_PauseAll" data-uid="Quartz.Core.QuartzScheduler.PauseAll">PauseAll()</h4>
+  <div class="markdown level1 summary"><p>Pause all triggers - equivalent of calling <a class="xref" href="Quartz.Core.QuartzScheduler.html#Quartz_Core_QuartzScheduler_PauseTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__">PauseTriggers(GroupMatcher&lt;TriggerKey&gt;)</a>
+with a matcher matching all known groups.
+<p>
+When <a class="xref" href="Quartz.Core.QuartzScheduler.html#Quartz_Core_QuartzScheduler_ResumeAll">ResumeAll()</a> is called (to un-pause), trigger misfire
+instructions WILL be applied.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PauseAll()</code></pre>
+  </div>
+  <h5 id="Quartz_Core_QuartzScheduler_PauseAll_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Core.QuartzScheduler.html#Quartz_Core_QuartzScheduler_ResumeAll">ResumeAll()</a></div>
+      <div><a class="xref" href="Quartz.Core.QuartzScheduler.html#Quartz_Core_QuartzScheduler_PauseJob_Quartz_JobKey_">PauseJob(JobKey)</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_PauseJob_" data-uid="Quartz.Core.QuartzScheduler.PauseJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_PauseJob_Quartz_JobKey_" data-uid="Quartz.Core.QuartzScheduler.PauseJob(Quartz.JobKey)">PauseJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Pause the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> with the given
+name - by pausing all of its current <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PauseJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_PauseJobs_" data-uid="Quartz.Core.QuartzScheduler.PauseJobs*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_PauseJobs_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__" data-uid="Quartz.Core.QuartzScheduler.PauseJobs(Quartz.Impl.Matchers.GroupMatcher{Quartz.JobKey})">PauseJobs(GroupMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Pause all of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>s in the
+given group - by pausing all of their <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PauseJobs(GroupMatcher&lt;JobKey&gt; groupMatcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">groupMatcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_PauseTrigger_" data-uid="Quartz.Core.QuartzScheduler.PauseTrigger*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_PauseTrigger_Quartz_TriggerKey_" data-uid="Quartz.Core.QuartzScheduler.PauseTrigger(Quartz.TriggerKey)">PauseTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Pause the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PauseTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_PauseTriggers_" data-uid="Quartz.Core.QuartzScheduler.PauseTriggers*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_PauseTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Core.QuartzScheduler.PauseTriggers(Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">PauseTriggers(GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Pause all of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s in the given group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PauseTriggers(GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_RemoveInternalJobListener_" data-uid="Quartz.Core.QuartzScheduler.RemoveInternalJobListener*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_RemoveInternalJobListener_System_String_" data-uid="Quartz.Core.QuartzScheduler.RemoveInternalJobListener(System.String)">RemoveInternalJobListener(String)</h4>
+  <div class="markdown level1 summary"><p>Remove the identified <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> from the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>&apos;s
+list of <em>internal</em> listeners.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveInternalJobListener(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the identified listener was found in the list, and removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_RemoveInternalSchedulerListener_" data-uid="Quartz.Core.QuartzScheduler.RemoveInternalSchedulerListener*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_RemoveInternalSchedulerListener_Quartz_ISchedulerListener_" data-uid="Quartz.Core.QuartzScheduler.RemoveInternalSchedulerListener(Quartz.ISchedulerListener)">RemoveInternalSchedulerListener(ISchedulerListener)</h4>
+  <div class="markdown level1 summary"><p>Remove the given <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a> from the
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>&apos;s list of internal listeners.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveInternalSchedulerListener(ISchedulerListener schedulerListener)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a></td>
+        <td><span class="parametername">schedulerListener</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the identified listener was found in the list, andremoved.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_RemoveinternalTriggerListener_" data-uid="Quartz.Core.QuartzScheduler.RemoveinternalTriggerListener*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_RemoveinternalTriggerListener_System_String_" data-uid="Quartz.Core.QuartzScheduler.RemoveinternalTriggerListener(System.String)">RemoveinternalTriggerListener(String)</h4>
+  <div class="markdown level1 summary"><p>Remove the identified <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> from the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>&apos;s
+list of <em>internal</em> listeners.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveinternalTriggerListener(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the identified listener was found in the list, and removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_RemoveNoGCObject_" data-uid="Quartz.Core.QuartzScheduler.RemoveNoGCObject*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_RemoveNoGCObject_System_Object_" data-uid="Quartz.Core.QuartzScheduler.RemoveNoGCObject(System.Object)">RemoveNoGCObject(Object)</h4>
+  <div class="markdown level1 summary"><p>Removes the object from garbage collection protected list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool RemoveNoGCObject(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The obj.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_RescheduleJob_" data-uid="Quartz.Core.QuartzScheduler.RescheduleJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_RescheduleJob_Quartz_TriggerKey_Quartz_ITrigger_" data-uid="Quartz.Core.QuartzScheduler.RescheduleJob(Quartz.TriggerKey,Quartz.ITrigger)">RescheduleJob(TriggerKey, ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Remove (delete) the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the
+given name, and store the new given one - which must be associated
+with the same job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset? RescheduleJob(TriggerKey triggerKey, ITrigger newTrigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>the key of the trigger</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">newTrigger</span></td>
+        <td><p>The new <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to be stored.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p><span class="xref">null</span> if a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given
+name and group was not found and removed from the store, otherwise
+the first fire time of the newly scheduled trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ResumeAll_" data-uid="Quartz.Core.QuartzScheduler.ResumeAll*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ResumeAll" data-uid="Quartz.Core.QuartzScheduler.ResumeAll">ResumeAll()</h4>
+  <div class="markdown level1 summary"><p>Resume (un-pause) all triggers - equivalent of calling <a class="xref" href="Quartz.Core.QuartzScheduler.html#Quartz_Core_QuartzScheduler_ResumeTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__">ResumeTriggers(GroupMatcher&lt;TriggerKey&gt;)</a>
+on every group.
+<p>
+If any <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> missed one or more fire-times, then the
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s misfire instruction will be applied.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResumeAll()</code></pre>
+  </div>
+  <h5 id="Quartz_Core_QuartzScheduler_ResumeAll_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Core.QuartzScheduler.html#Quartz_Core_QuartzScheduler_PauseAll">PauseAll()</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ResumeJob_" data-uid="Quartz.Core.QuartzScheduler.ResumeJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ResumeJob_Quartz_JobKey_" data-uid="Quartz.Core.QuartzScheduler.ResumeJob(Quartz.JobKey)">ResumeJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Resume (un-pause) the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> with
+the given name.
+<p>
+If any of the <a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s missed one
+or more fire-times, then the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s misfire
+instruction will be applied.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResumeJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ResumeJobs_" data-uid="Quartz.Core.QuartzScheduler.ResumeJobs*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ResumeJobs_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__" data-uid="Quartz.Core.QuartzScheduler.ResumeJobs(Quartz.Impl.Matchers.GroupMatcher{Quartz.JobKey})">ResumeJobs(GroupMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Resume (un-pause) all of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>s
+in the matching groups.
+<p>
+If any of the <a class="xref" href="Quartz.IJob.html">IJob</a> s had <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s that
+missed one or more fire-times, then the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s
+misfire instruction will be applied.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResumeJobs(GroupMatcher&lt;JobKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ResumeTrigger_" data-uid="Quartz.Core.QuartzScheduler.ResumeTrigger*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ResumeTrigger_Quartz_TriggerKey_" data-uid="Quartz.Core.QuartzScheduler.ResumeTrigger(Quartz.TriggerKey)">ResumeTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Resume (un-pause) the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given
+name.
+<p>
+If the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> missed one or more fire-times, then the
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s misfire instruction will be applied.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResumeTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ResumeTriggers_" data-uid="Quartz.Core.QuartzScheduler.ResumeTriggers*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ResumeTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Core.QuartzScheduler.ResumeTriggers(Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">ResumeTriggers(GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Resume (un-pause) all of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s in the
+matching groups.
+<p>
+If any <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> missed one or more fire-times, then the
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s misfire instruction will be applied.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResumeTriggers(GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ScheduleJob_" data-uid="Quartz.Core.QuartzScheduler.ScheduleJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ScheduleJob_Quartz_IJobDetail_Quartz_Collection_ISet_Quartz_ITrigger__System_Boolean_" data-uid="Quartz.Core.QuartzScheduler.ScheduleJob(Quartz.IJobDetail,Quartz.Collection.ISet{Quartz.ITrigger},System.Boolean)">ScheduleJob(IJobDetail, ISet&lt;ITrigger&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ScheduleJob(IJobDetail jobDetail, ISet&lt;ITrigger&gt; triggersForJob, bool replace)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;</td>
+        <td><span class="parametername">triggersForJob</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ScheduleJob_" data-uid="Quartz.Core.QuartzScheduler.ScheduleJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ScheduleJob_Quartz_IJobDetail_Quartz_ITrigger_" data-uid="Quartz.Core.QuartzScheduler.ScheduleJob(Quartz.IJobDetail,Quartz.ITrigger)">ScheduleJob(IJobDetail, ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Add the <a class="xref" href="Quartz.IJob.html">IJob</a> identified by the given
+<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> to the Scheduler, and
+associate the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with it.
+<p>
+If the given Trigger does not reference any <a class="xref" href="Quartz.IJob.html">IJob</a>, then it
+will be set to reference the Job passed with it into this method.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset ScheduleJob(IJobDetail jobDetail, ITrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ScheduleJob_" data-uid="Quartz.Core.QuartzScheduler.ScheduleJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ScheduleJob_Quartz_ITrigger_" data-uid="Quartz.Core.QuartzScheduler.ScheduleJob(Quartz.ITrigger)">ScheduleJob(ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Schedule the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the
+<a class="xref" href="Quartz.IJob.html">IJob</a> identified by the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset ScheduleJob(ITrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ScheduleJobs_" data-uid="Quartz.Core.QuartzScheduler.ScheduleJobs*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ScheduleJobs_System_Collections_Generic_IDictionary_Quartz_IJobDetail_Quartz_Collection_ISet_Quartz_ITrigger___System_Boolean_" data-uid="Quartz.Core.QuartzScheduler.ScheduleJobs(System.Collections.Generic.IDictionary{Quartz.IJobDetail,Quartz.Collection.ISet{Quartz.ITrigger}},System.Boolean)">ScheduleJobs(IDictionary&lt;IJobDetail, ISet&lt;ITrigger&gt;&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ScheduleJobs(IDictionary&lt;IJobDetail, ISet&lt;ITrigger&gt;&gt; triggersAndJobs, bool replace)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>, <a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;&gt;</td>
+        <td><span class="parametername">triggersAndJobs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Shutdown_" data-uid="Quartz.Core.QuartzScheduler.Shutdown*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Shutdown" data-uid="Quartz.Core.QuartzScheduler.Shutdown">Shutdown()</h4>
+  <div class="markdown level1 summary"><p>Halts the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>&apos;s firing of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s,
+and cleans up all resources associated with the QuartzScheduler.
+Equivalent to <a class="xref" href="Quartz.Core.QuartzScheduler.html#Quartz_Core_QuartzScheduler_Shutdown_System_Boolean_">Shutdown(Boolean)</a>.
+<p>
+The scheduler cannot be re-started.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Shutdown()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Shutdown_" data-uid="Quartz.Core.QuartzScheduler.Shutdown*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Shutdown_System_Boolean_" data-uid="Quartz.Core.QuartzScheduler.Shutdown(System.Boolean)">Shutdown(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Halts the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>&apos;s firing of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s,
+and cleans up all resources associated with the QuartzScheduler.
+<p>
+The scheduler cannot be re-started.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Shutdown(bool waitForJobsToComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">waitForJobsToComplete</span></td>
+        <td><p>if <span class="xref">true</span> the scheduler will not allow this method
+to return until all currently executing jobs have completed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Standby_" data-uid="Quartz.Core.QuartzScheduler.Standby*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Standby" data-uid="Quartz.Core.QuartzScheduler.Standby">Standby()</h4>
+  <div class="markdown level1 summary"><p>Temporarily halts the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>&apos;s firing of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.
+<p>
+The scheduler is not destroyed, and can be re-started at any time.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Standby()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_Start_" data-uid="Quartz.Core.QuartzScheduler.Start*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_Start" data-uid="Quartz.Core.QuartzScheduler.Start">Start()</h4>
+  <div class="markdown level1 summary"><p>Starts the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>&apos;s threads that fire <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.
+<p>
+All <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s that have misfired will
+be passed to the appropriate TriggerListener(s).
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Start()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_StartDelayed_" data-uid="Quartz.Core.QuartzScheduler.StartDelayed*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_StartDelayed_System_TimeSpan_" data-uid="Quartz.Core.QuartzScheduler.StartDelayed(System.TimeSpan)">StartDelayed(TimeSpan)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void StartDelayed(TimeSpan delay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">delay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_TriggerJob_" data-uid="Quartz.Core.QuartzScheduler.TriggerJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_TriggerJob_Quartz_JobKey_Quartz_JobDataMap_" data-uid="Quartz.Core.QuartzScheduler.TriggerJob(Quartz.JobKey,Quartz.JobDataMap)">TriggerJob(JobKey, JobDataMap)</h4>
+  <div class="markdown level1 summary"><p>Trigger the identified <a class="xref" href="Quartz.IJob.html">IJob</a> (Execute it now) - with a non-volatile trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void TriggerJob(JobKey jobKey, JobDataMap data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_TriggerJob_" data-uid="Quartz.Core.QuartzScheduler.TriggerJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_TriggerJob_Quartz_Spi_IOperableTrigger_" data-uid="Quartz.Core.QuartzScheduler.TriggerJob(Quartz.Spi.IOperableTrigger)">TriggerJob(IOperableTrigger)</h4>
+  <div class="markdown level1 summary"><p>Store and schedule the identified <a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void TriggerJob(IOperableTrigger trig)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trig</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_UnscheduleJob_" data-uid="Quartz.Core.QuartzScheduler.UnscheduleJob*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_UnscheduleJob_Quartz_TriggerKey_" data-uid="Quartz.Core.QuartzScheduler.UnscheduleJob(Quartz.TriggerKey)">UnscheduleJob(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Remove the indicated <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> from the
+scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool UnscheduleJob(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_UnscheduleJobs_" data-uid="Quartz.Core.QuartzScheduler.UnscheduleJobs*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_UnscheduleJobs_System_Collections_Generic_IList_Quartz_TriggerKey__" data-uid="Quartz.Core.QuartzScheduler.UnscheduleJobs(System.Collections.Generic.IList{Quartz.TriggerKey})">UnscheduleJobs(IList&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool UnscheduleJobs(IList&lt;TriggerKey&gt; triggerKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">triggerKeys</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzScheduler_ValidateState_" data-uid="Quartz.Core.QuartzScheduler.ValidateState*"></a>
+  <h4 id="Quartz_Core_QuartzScheduler_ValidateState" data-uid="Quartz.Core.QuartzScheduler.ValidateState">ValidateState()</h4>
+  <div class="markdown level1 summary"><p>Validates the state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ValidateState()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.Simpl.IRemotableQuartzScheduler.html">IRemotableQuartzScheduler</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></div>
+      <div><a class="xref" href="Quartz.Core.QuartzSchedulerThread.html">QuartzSchedulerThread</a></div>
+      <div><a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a></div>
+      <div><a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

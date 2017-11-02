@@ -1,0 +1,1247 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class JobBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class JobBuilder
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.JobBuilder">
+  
+  
+  <h1 id="Quartz_JobBuilder" data-uid="Quartz.JobBuilder" class="text-break">Class JobBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>JobBuilder is used to instantiate <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>s.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">JobBuilder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_JobBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class JobBuilder</code></pre>
+  </div>
+  <h5 id="Quartz_JobBuilder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p><p>
+The builder will always try to keep itself in a valid state, with 
+reasonable defaults set for calling Build() at any point.  For instance
+if you do not invoke <em>WithIdentity(..)</em> a job name will be generated
+for you.
+</p>
+<p>
+Quartz provides a builder-style API for constructing scheduling-related
+entities via a Domain-Specific Language (DSL).  The DSL can best be
+utilized through the usage of static imports of the methods on the classes
+<a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a>, <a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a>,
+<a class="xref" href="Quartz.DateBuilder.html">DateBuilder</a>, <a class="xref" href="Quartz.JobKey.html">JobKey</a>, <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>
+and the various <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> implementations.
+</p>
+<p>
+Client code can then use the DSL to write code such as this:
+</p></p>
+<pre><code>        IJobDetail job = JobBuilder.Create&lt;MyJob>()
+            .WithIdentity(&quot;myJob&quot;)
+            .Build();
+
+        ITrigger trigger = TriggerBuilder.Create() 
+            .WithIdentity(&quot;myTrigger&quot;, &quot;myTriggerGroup&quot;)
+            .WithSimpleSchedule(x => x.WithIntervalInHours(1).RepeatForever())
+            .StartAt(DateBuilder.FutureDate(10, IntervalUnit.Minute))
+            .Build();
+
+        scheduler.scheduleJob(job, trigger);</code></pre>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_JobBuilder__ctor_" data-uid="Quartz.JobBuilder.#ctor*"></a>
+  <h4 id="Quartz_JobBuilder__ctor" data-uid="Quartz.JobBuilder.#ctor">JobBuilder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected JobBuilder()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_JobBuilder_Build_" data-uid="Quartz.JobBuilder.Build*"></a>
+  <h4 id="Quartz_JobBuilder_Build" data-uid="Quartz.JobBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Produce the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> instance defined by this JobBuilder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IJobDetail Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><p>the defined JobDetail.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobBuilder_Create_" data-uid="Quartz.JobBuilder.Create*"></a>
+  <h4 id="Quartz_JobBuilder_Create" data-uid="Quartz.JobBuilder.Create">Create()</h4>
+  <div class="markdown level1 summary"><p>Create a JobBuilder with which to define a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobBuilder Create()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>a new JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobBuilder_Create_" data-uid="Quartz.JobBuilder.Create*"></a>
+  <h4 id="Quartz_JobBuilder_Create_System_Type_" data-uid="Quartz.JobBuilder.Create(System.Type)">Create(Type)</h4>
+  <div class="markdown level1 summary"><p>Create a JobBuilder with which to define a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>,
+and set the class name of the job to be executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobBuilder Create(Type jobType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">jobType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>a new JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobBuilder_Create_" data-uid="Quartz.JobBuilder.Create*"></a>
+  <h4 id="Quartz_JobBuilder_Create__1" data-uid="Quartz.JobBuilder.Create``1">Create&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Create a JobBuilder with which to define a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>,
+and set the class name of the job to be executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobBuilder Create&lt;T&gt;()where T : IJob</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>a new JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobBuilder_OfType_" data-uid="Quartz.JobBuilder.OfType*"></a>
+  <h4 id="Quartz_JobBuilder_OfType_System_Type_" data-uid="Quartz.JobBuilder.OfType(System.Type)">OfType(Type)</h4>
+  <div class="markdown level1 summary"><p>Set the class which will be instantiated and executed when a
+Trigger fires that is associated with this JobDetail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder OfType(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_OfType_System_Type__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobType">JobType</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_OfType_" data-uid="Quartz.JobBuilder.OfType*"></a>
+  <h4 id="Quartz_JobBuilder_OfType__1" data-uid="Quartz.JobBuilder.OfType``1">OfType&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Set the class which will be instantiated and executed when a
+Trigger fires that is associated with this JobDetail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder OfType&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_OfType__1_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobType">JobType</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_RequestRecovery_" data-uid="Quartz.JobBuilder.RequestRecovery*"></a>
+  <h4 id="Quartz_JobBuilder_RequestRecovery" data-uid="Quartz.JobBuilder.RequestRecovery">RequestRecovery()</h4>
+  <div class="markdown level1 summary"><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> whether or not the job
+should be re-executed if a &apos;recovery&apos; or &apos;fail-over&apos; situation is
+encountered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder RequestRecovery()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_RequestRecovery_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is <span class="xref">false</span>.</p>
+</div>
+  <h5 id="Quartz_JobBuilder_RequestRecovery_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_RequestsRecovery">RequestsRecovery</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_RequestRecovery_" data-uid="Quartz.JobBuilder.RequestRecovery*"></a>
+  <h4 id="Quartz_JobBuilder_RequestRecovery_System_Boolean_" data-uid="Quartz.JobBuilder.RequestRecovery(System.Boolean)">RequestRecovery(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Instructs the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> whether or not the job
+should be re-executed if a &apos;recovery&apos; or &apos;fail-over&apos; situation is
+encountered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder RequestRecovery(bool shouldRecover)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">shouldRecover</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_RequestRecovery_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is <span class="xref">false</span>.</p>
+</div>
+  
+  
+  <a id="Quartz_JobBuilder_SetJobData_" data-uid="Quartz.JobBuilder.SetJobData*"></a>
+  <h4 id="Quartz_JobBuilder_SetJobData_Quartz_JobDataMap_" data-uid="Quartz.JobBuilder.SetJobData(Quartz.JobDataMap)">SetJobData(JobDataMap)</h4>
+  <div class="markdown level1 summary"><p>Replace the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>&apos;s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> with the
+given <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder SetJobData(JobDataMap newJobDataMap)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></td>
+        <td><span class="parametername">newJobDataMap</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_JobBuilder_StoreDurably_" data-uid="Quartz.JobBuilder.StoreDurably*"></a>
+  <h4 id="Quartz_JobBuilder_StoreDurably" data-uid="Quartz.JobBuilder.StoreDurably">StoreDurably()</h4>
+  <div class="markdown level1 summary"><p>Whether or not the job should remain stored after it is
+orphaned (no <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s point to it).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder StoreDurably()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_StoreDurably_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is <span class="xref">false</span></p>
+<ul>
+<li>this method sets the value to <pre><code>true</code></pre>.</li>
+</ul>
+</div>
+  <h5 id="Quartz_JobBuilder_StoreDurably_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_Durable">Durable</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_StoreDurably_" data-uid="Quartz.JobBuilder.StoreDurably*"></a>
+  <h4 id="Quartz_JobBuilder_StoreDurably_System_Boolean_" data-uid="Quartz.JobBuilder.StoreDurably(System.Boolean)">StoreDurably(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Whether or not the job should remain stored after it is
+orphaned (no <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s point to it).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder StoreDurably(bool durability)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">durability</span></td>
+        <td><p>the value to set for the durability property.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_StoreDurably_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is <span class="xref">false</span>.</p>
+</div>
+  <h5 id="Quartz_JobBuilder_StoreDurably_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_Durable">Durable</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_UsingJobData_" data-uid="Quartz.JobBuilder.UsingJobData*"></a>
+  <h4 id="Quartz_JobBuilder_UsingJobData_Quartz_JobDataMap_" data-uid="Quartz.JobBuilder.UsingJobData(Quartz.JobDataMap)">UsingJobData(JobDataMap)</h4>
+  <div class="markdown level1 summary"><p>Add all the data from the given <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> to the 
+<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>&apos;s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder UsingJobData(JobDataMap newJobDataMap)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></td>
+        <td><span class="parametername">newJobDataMap</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_UsingJobData_Quartz_JobDataMap__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_UsingJobData_" data-uid="Quartz.JobBuilder.UsingJobData*"></a>
+  <h4 id="Quartz_JobBuilder_UsingJobData_System_String_System_Boolean_" data-uid="Quartz.JobBuilder.UsingJobData(System.String,System.Boolean)">UsingJobData(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Add the given key-value pair to the JobDetail&apos;s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder UsingJobData(string key, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_UsingJobData_System_String_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_UsingJobData_" data-uid="Quartz.JobBuilder.UsingJobData*"></a>
+  <h4 id="Quartz_JobBuilder_UsingJobData_System_String_System_Double_" data-uid="Quartz.JobBuilder.UsingJobData(System.String,System.Double)">UsingJobData(String, Double)</h4>
+  <div class="markdown level1 summary"><p>Add the given key-value pair to the JobDetail&apos;s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder UsingJobData(string key, double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_UsingJobData_System_String_System_Double__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_UsingJobData_" data-uid="Quartz.JobBuilder.UsingJobData*"></a>
+  <h4 id="Quartz_JobBuilder_UsingJobData_System_String_System_Int32_" data-uid="Quartz.JobBuilder.UsingJobData(System.String,System.Int32)">UsingJobData(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Add the given key-value pair to the JobDetail&apos;s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder UsingJobData(string key, int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_UsingJobData_System_String_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_UsingJobData_" data-uid="Quartz.JobBuilder.UsingJobData*"></a>
+  <h4 id="Quartz_JobBuilder_UsingJobData_System_String_System_Int64_" data-uid="Quartz.JobBuilder.UsingJobData(System.String,System.Int64)">UsingJobData(String, Int64)</h4>
+  <div class="markdown level1 summary"><p>Add the given key-value pair to the JobDetail&apos;s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder UsingJobData(string key, long value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_UsingJobData_System_String_System_Int64__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_UsingJobData_" data-uid="Quartz.JobBuilder.UsingJobData*"></a>
+  <h4 id="Quartz_JobBuilder_UsingJobData_System_String_System_Single_" data-uid="Quartz.JobBuilder.UsingJobData(System.String,System.Single)">UsingJobData(String, Single)</h4>
+  <div class="markdown level1 summary"><p>Add the given key-value pair to the JobDetail&apos;s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder UsingJobData(string key, float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_UsingJobData_System_String_System_Single__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_UsingJobData_" data-uid="Quartz.JobBuilder.UsingJobData*"></a>
+  <h4 id="Quartz_JobBuilder_UsingJobData_System_String_System_String_" data-uid="Quartz.JobBuilder.UsingJobData(System.String,System.String)">UsingJobData(String, String)</h4>
+  <div class="markdown level1 summary"><p>Add the given key-value pair to the JobDetail&apos;s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder UsingJobData(string key, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_UsingJobData_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_WithDescription_" data-uid="Quartz.JobBuilder.WithDescription*"></a>
+  <h4 id="Quartz_JobBuilder_WithDescription_System_String_" data-uid="Quartz.JobBuilder.WithDescription(System.String)">WithDescription(String)</h4>
+  <div class="markdown level1 summary"><p>Set the given (human-meaningful) description of the Job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder WithDescription(string description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>the description for the Job</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_WithDescription_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_Description">Description</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_WithIdentity_" data-uid="Quartz.JobBuilder.WithIdentity*"></a>
+  <h4 id="Quartz_JobBuilder_WithIdentity_Quartz_JobKey_" data-uid="Quartz.JobBuilder.WithIdentity(Quartz.JobKey)">WithIdentity(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Use a <a class="xref" href="Quartz.JobKey.html">JobKey</a> to identify the JobDetail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder WithIdentity(JobKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>the Job&apos;s JobKey</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_WithIdentity_Quartz_JobKey__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If none of the &apos;withIdentity&apos; methods are set on the JobBuilder,
+then a random, unique JobKey will be generated.</p>
+</div>
+  <h5 id="Quartz_JobBuilder_WithIdentity_Quartz_JobKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.JobKey.html">JobKey</a></div>
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_Key">Key</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_WithIdentity_" data-uid="Quartz.JobBuilder.WithIdentity*"></a>
+  <h4 id="Quartz_JobBuilder_WithIdentity_System_String_" data-uid="Quartz.JobBuilder.WithIdentity(System.String)">WithIdentity(String)</h4>
+  <div class="markdown level1 summary"><p>Use a <a class="xref" href="Quartz.JobKey.html">JobKey</a> with the given name and default group to
+identify the JobDetail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder WithIdentity(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>the name element for the Job&apos;s JobKey</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_WithIdentity_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If none of the &apos;withIdentity&apos; methods are set on the JobBuilder,
+then a random, unique JobKey will be generated.</p>
+</div>
+  <h5 id="Quartz_JobBuilder_WithIdentity_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.JobKey.html">JobKey</a></div>
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_Key">Key</a></div>
+  </div>
+  
+  
+  <a id="Quartz_JobBuilder_WithIdentity_" data-uid="Quartz.JobBuilder.WithIdentity*"></a>
+  <h4 id="Quartz_JobBuilder_WithIdentity_System_String_System_String_" data-uid="Quartz.JobBuilder.WithIdentity(System.String,System.String)">WithIdentity(String, String)</h4>
+  <div class="markdown level1 summary"><p>Use a <a class="xref" href="Quartz.JobKey.html">JobKey</a> with the given name and group to
+identify the JobDetail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobBuilder WithIdentity(string name, string group)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>the name element for the Job&apos;s JobKey</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>the group element for the Job&apos;s JobKey</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td><p>the updated JobBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_JobBuilder_WithIdentity_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If none of the &apos;withIdentity&apos; methods are set on the JobBuilder,
+then a random, unique JobKey will be generated.</p>
+</div>
+  <h5 id="Quartz_JobBuilder_WithIdentity_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.JobKey.html">JobKey</a></div>
+      <div><a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_Key">Key</a></div>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a></div>
+      <div><a class="xref" href="Quartz.DateBuilder.html">DateBuilder</a></div>
+      <div><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

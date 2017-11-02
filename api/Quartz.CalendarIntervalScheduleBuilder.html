@@ -1,0 +1,952 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CalendarIntervalScheduleBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CalendarIntervalScheduleBuilder
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.CalendarIntervalScheduleBuilder">
+  
+  
+  <h1 id="Quartz_CalendarIntervalScheduleBuilder" data-uid="Quartz.CalendarIntervalScheduleBuilder" class="text-break">Class CalendarIntervalScheduleBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>CalendarIntervalScheduleBuilder is a <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a>
+that defines calendar time (day, week, month, year) interval-based
+schedules for Triggers.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Quartz.ScheduleBuilder-1.html">ScheduleBuilder</a>&lt;<a class="xref" href="Quartz.ICalendarIntervalTrigger.html">ICalendarIntervalTrigger</a>&gt;</div>
+    <div class="level2"><span class="xref">CalendarIntervalScheduleBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CalendarIntervalScheduleBuilder : ScheduleBuilder&lt;ICalendarIntervalTrigger&gt;, IScheduleBuilder</code></pre>
+  </div>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p><p>
+Quartz provides a builder-style API for constructing scheduling-related
+entities via a Domain-Specific Language (DSL).  The DSL can best be
+utilized through the usage of static imports of the methods on the classes
+<a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a>, <a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a>,
+<a class="xref" href="Quartz.DateBuilder.html">DateBuilder</a>, <a class="xref" href="Quartz.JobKey.html">JobKey</a>, <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>
+and the various <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> implementations.
+</p>
+<p>Client code can then use the DSL to write code such as this:</p></p>
+<pre><code>JobDetail job = JobBuilder.Create&lt;MyJob>()
+    .WithIdentity(&quot;myJob&quot;)
+    .Build();
+Trigger trigger = TriggerBuilder.Create()
+    .WithIdentity(&quot;myTrigger&quot;, &quot;myTriggerGroup&quot;)
+    .WithSimpleSchedule(x => x
+        .WithIntervalInHours(1)
+        .RepeatForever())
+    .StartAt(DateBuilder.FutureDate(10, IntervalUnit.Minute))
+    .Build();
+scheduler.scheduleJob(job, trigger);</code></pre>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder__ctor_" data-uid="Quartz.CalendarIntervalScheduleBuilder.#ctor*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder__ctor" data-uid="Quartz.CalendarIntervalScheduleBuilder.#ctor">CalendarIntervalScheduleBuilder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CalendarIntervalScheduleBuilder()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_Build_" data-uid="Quartz.CalendarIntervalScheduleBuilder.Build*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_Build" data-uid="Quartz.CalendarIntervalScheduleBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Build the actual Trigger -- NOT intended to be invoked by end users,
+but will rather be invoked by a TriggerBuilder which this 
+ScheduleBuilder is given to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IMutableTrigger Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IMutableTrigger.html">IMutableTrigger</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Quartz.ScheduleBuilder&lt;Quartz.ICalendarIntervalTrigger&gt;.Build()</span></div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_Create_" data-uid="Quartz.CalendarIntervalScheduleBuilder.Create*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_Create" data-uid="Quartz.CalendarIntervalScheduleBuilder.Create">Create()</h4>
+  <div class="markdown level1 summary"><p>Create a CalendarIntervalScheduleBuilder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CalendarIntervalScheduleBuilder Create()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_InTimeZone_" data-uid="Quartz.CalendarIntervalScheduleBuilder.InTimeZone*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_InTimeZone_System_TimeZoneInfo_" data-uid="Quartz.CalendarIntervalScheduleBuilder.InTimeZone(System.TimeZoneInfo)">InTimeZone(TimeZoneInfo)</h4>
+  <div class="markdown level1 summary"><p>TimeZone in which to base the schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder InTimeZone(TimeZoneInfo timezone)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeZoneInfo</span></td>
+        <td><span class="parametername">timezone</span></td>
+        <td><p>the time-zone for the schedule</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CalendarIntervalScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_InTimeZone_System_TimeZoneInfo__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_TimeZone">TimeZone</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_PreserveHourOfDayAcrossDaylightSavings_" data-uid="Quartz.CalendarIntervalScheduleBuilder.PreserveHourOfDayAcrossDaylightSavings*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_PreserveHourOfDayAcrossDaylightSavings_System_Boolean_" data-uid="Quartz.CalendarIntervalScheduleBuilder.PreserveHourOfDayAcrossDaylightSavings(System.Boolean)">PreserveHourOfDayAcrossDaylightSavings(Boolean)</h4>
+  <div class="markdown level1 summary"><p>If intervals are a day or greater, this property (set to true) will 
+cause the firing of the trigger to always occur at the same time of day,
+(the time of day of the startTime) regardless of daylight saving time 
+transitions.  Default value is false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder PreserveHourOfDayAcrossDaylightSavings(bool preserveHourOfDay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">preserveHourOfDay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_PreserveHourOfDayAcrossDaylightSavings_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+For example, without the property set, your trigger may have a start 
+time of 9:00 am on March 1st, and a repeat interval of 2 days.  But 
+after the daylight saving transition occurs, the trigger may start 
+firing at 8:00 am every other day.
+</p>
+<p>
+If however, the time of day does not exist on a given day to fire
+(e.g. 2:00 am in the United States on the days of daylight saving
+transition), the trigger will go ahead and fire one hour off on 
+that day, and then resume the normal hour on other days.  If
+you wish for the trigger to never fire at the &quot;wrong&quot; hour, then
+you should set the property skipDayIfHourDoesNotExist.
+</p>
+</div>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_PreserveHourOfDayAcrossDaylightSavings_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html#Quartz_CalendarIntervalScheduleBuilder_SkipDayIfHourDoesNotExist_System_Boolean_">SkipDayIfHourDoesNotExist(Boolean)</a></div>
+      <div><span class="xref">System.TimeZone</span></div>
+      <div><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html#Quartz_CalendarIntervalScheduleBuilder_InTimeZone_System_TimeZoneInfo_">InTimeZone(TimeZoneInfo)</a></div>
+      <div><a class="xref" href="Quartz.TriggerBuilder.html#Quartz_TriggerBuilder_StartAt_System_DateTimeOffset_">StartAt(DateTimeOffset)</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_SkipDayIfHourDoesNotExist_" data-uid="Quartz.CalendarIntervalScheduleBuilder.SkipDayIfHourDoesNotExist*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_SkipDayIfHourDoesNotExist_System_Boolean_" data-uid="Quartz.CalendarIntervalScheduleBuilder.SkipDayIfHourDoesNotExist(System.Boolean)">SkipDayIfHourDoesNotExist(Boolean)</h4>
+  <div class="markdown level1 summary"><p>If intervals are a day or greater, and 
+preserveHourOfDayAcrossDaylightSavings property is set to true, and the
+hour of the day does not exist on a given day for which the trigger 
+would fire, the day will be skipped and the trigger advanced a second
+interval if this property is set to true.  Defaults to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder SkipDayIfHourDoesNotExist(bool skipDay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">skipDay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_SkipDayIfHourDoesNotExist_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><strong>CAUTION!</strong>  If you enable this property, and your hour of day happens 
+to be that of daylight savings transition (e.g. 2:00 am in the United 
+States) and the trigger&apos;s interval would have had the trigger fire on
+that day, then you may actually completely miss a firing on the day of 
+transition if that hour of day does not exist on that day!  In such a 
+case the next fire time of the trigger will be computed as double (if 
+the interval is 2 days, then a span of 4 days between firings will 
+occur).</p>
+</div>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_SkipDayIfHourDoesNotExist_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html#Quartz_CalendarIntervalScheduleBuilder_PreserveHourOfDayAcrossDaylightSavings_System_Boolean_">PreserveHourOfDayAcrossDaylightSavings(Boolean)</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_WithInterval_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithInterval*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_WithInterval_System_Int32_Quartz_IntervalUnit_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithInterval(System.Int32,Quartz.IntervalUnit)">WithInterval(Int32, IntervalUnit)</h4>
+  <div class="markdown level1 summary"><p>Specify the time unit and interval for the Trigger to be produced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder WithInterval(int interval, IntervalUnit unit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">interval</span></td>
+        <td><p>the interval at which the trigger should repeat.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IntervalUnit.html">IntervalUnit</a></td>
+        <td><span class="parametername">unit</span></td>
+        <td><p>the time unit (IntervalUnit) of the interval.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CalendarIntervalScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_WithInterval_System_Int32_Quartz_IntervalUnit__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatInterval">RepeatInterval</a></div>
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatIntervalUnit">RepeatIntervalUnit</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInDays_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInDays*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInDays_System_Int32_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInDays(System.Int32)">WithIntervalInDays(Int32)</h4>
+  <div class="markdown level1 summary"><p>Specify an interval in the IntervalUnit.DAY that the produced
+Trigger will repeat at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder WithIntervalInDays(int intervalInDays)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">intervalInDays</span></td>
+        <td><p>the number of days at which the trigger should repeat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CalendarIntervalScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInDays_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatInterval">RepeatInterval</a></div>
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatIntervalUnit">RepeatIntervalUnit</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInHours_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInHours*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInHours_System_Int32_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInHours(System.Int32)">WithIntervalInHours(Int32)</h4>
+  <div class="markdown level1 summary"><p>Specify an interval in the IntervalUnit.HOUR that the produced
+Trigger will repeat at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder WithIntervalInHours(int intervalInHours)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">intervalInHours</span></td>
+        <td><p>the number of hours at which the trigger should repeat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CalendarIntervalScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInHours_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatInterval">RepeatInterval</a></div>
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatIntervalUnit">RepeatIntervalUnit</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInMinutes_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInMinutes*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInMinutes_System_Int32_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInMinutes(System.Int32)">WithIntervalInMinutes(Int32)</h4>
+  <div class="markdown level1 summary"><p>Specify an interval in the IntervalUnit.MINUTE that the produced
+Trigger will repeat at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder WithIntervalInMinutes(int intervalInMinutes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">intervalInMinutes</span></td>
+        <td><p>the number of minutes at which the trigger should repeat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CalendarIntervalScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInMinutes_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatInterval">RepeatInterval</a></div>
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatIntervalUnit">RepeatIntervalUnit</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInMonths_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInMonths*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInMonths_System_Int32_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInMonths(System.Int32)">WithIntervalInMonths(Int32)</h4>
+  <div class="markdown level1 summary"><p>Specify an interval in the IntervalUnit.MONTH that the produced
+Trigger will repeat at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder WithIntervalInMonths(int intervalInMonths)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">intervalInMonths</span></td>
+        <td><p>the number of months at which the trigger should repeat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CalendarIntervalScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInMonths_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatInterval">RepeatInterval</a></div>
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatIntervalUnit">RepeatIntervalUnit</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInSeconds_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInSeconds*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInSeconds_System_Int32_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInSeconds(System.Int32)">WithIntervalInSeconds(Int32)</h4>
+  <div class="markdown level1 summary"><p>Specify an interval in the IntervalUnit.SECOND that the produced
+Trigger will repeat at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder WithIntervalInSeconds(int intervalInSeconds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">intervalInSeconds</span></td>
+        <td><p>the number of seconds at which the trigger should repeat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CalendarIntervalScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInSeconds_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatInterval">RepeatInterval</a></div>
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatIntervalUnit">RepeatIntervalUnit</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInWeeks_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInWeeks*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInWeeks_System_Int32_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInWeeks(System.Int32)">WithIntervalInWeeks(Int32)</h4>
+  <div class="markdown level1 summary"><p>Specify an interval in the IntervalUnit.WEEK that the produced
+Trigger will repeat at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder WithIntervalInWeeks(int intervalInWeeks)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">intervalInWeeks</span></td>
+        <td><p>the number of weeks at which the trigger should repeat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CalendarIntervalScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInWeeks_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatInterval">RepeatInterval</a></div>
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatIntervalUnit">RepeatIntervalUnit</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInYears_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInYears*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInYears_System_Int32_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithIntervalInYears(System.Int32)">WithIntervalInYears(Int32)</h4>
+  <div class="markdown level1 summary"><p>Specify an interval in the IntervalUnit.YEAR that the produced
+Trigger will repeat at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder WithIntervalInYears(int intervalInYears)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">intervalInYears</span></td>
+        <td><p>the number of years at which the trigger should repeat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CalendarIntervalScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_WithIntervalInYears_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatInterval">RepeatInterval</a></div>
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html#Quartz_ICalendarIntervalTrigger_RepeatIntervalUnit">RepeatIntervalUnit</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_WithMisfireHandlingInstructionDoNothing_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithMisfireHandlingInstructionDoNothing*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_WithMisfireHandlingInstructionDoNothing" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithMisfireHandlingInstructionDoNothing">WithMisfireHandlingInstructionDoNothing()</h4>
+  <div class="markdown level1 summary"><p>If the Trigger misfires, use the
+<a class="xref" href="Quartz.MisfireInstruction.CalendarIntervalTrigger.html#Quartz_MisfireInstruction_CalendarIntervalTrigger_DoNothing">DoNothing</a> instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder WithMisfireHandlingInstructionDoNothing()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CalendarIntervalScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_WithMisfireHandlingInstructionDoNothing_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.MisfireInstruction.CalendarIntervalTrigger.html#Quartz_MisfireInstruction_CalendarIntervalTrigger_DoNothing">DoNothing</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_WithMisfireHandlingInstructionFireAndProceed_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithMisfireHandlingInstructionFireAndProceed*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_WithMisfireHandlingInstructionFireAndProceed" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithMisfireHandlingInstructionFireAndProceed">WithMisfireHandlingInstructionFireAndProceed()</h4>
+  <div class="markdown level1 summary"><p>If the Trigger misfires, use the
+<a class="xref" href="Quartz.MisfireInstruction.CalendarIntervalTrigger.html#Quartz_MisfireInstruction_CalendarIntervalTrigger_FireOnceNow">FireOnceNow</a> instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder WithMisfireHandlingInstructionFireAndProceed()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CalendarIntervalScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_WithMisfireHandlingInstructionFireAndProceed_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.MisfireInstruction.CalendarIntervalTrigger.html#Quartz_MisfireInstruction_CalendarIntervalTrigger_FireOnceNow">FireOnceNow</a></div>
+  </div>
+  
+  
+  <a id="Quartz_CalendarIntervalScheduleBuilder_WithMisfireHandlingInstructionIgnoreMisfires_" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithMisfireHandlingInstructionIgnoreMisfires*"></a>
+  <h4 id="Quartz_CalendarIntervalScheduleBuilder_WithMisfireHandlingInstructionIgnoreMisfires" data-uid="Quartz.CalendarIntervalScheduleBuilder.WithMisfireHandlingInstructionIgnoreMisfires">WithMisfireHandlingInstructionIgnoreMisfires()</h4>
+  <div class="markdown level1 summary"><p>If the Trigger misfires, use the
+<a class="xref" href="Quartz.MisfireInstruction.html#Quartz_MisfireInstruction_IgnoreMisfirePolicy">IgnoreMisfirePolicy</a> instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CalendarIntervalScheduleBuilder WithMisfireHandlingInstructionIgnoreMisfires()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></td>
+        <td><p>the updated CronScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_CalendarIntervalScheduleBuilder_WithMisfireHandlingInstructionIgnoreMisfires_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.MisfireInstruction.html#Quartz_MisfireInstruction_IgnoreMisfirePolicy">IgnoreMisfirePolicy</a></div>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html">ICalendarIntervalTrigger</a></div>
+      <div><a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a></div>
+      <div><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></div>
+      <div><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></div>
+      <div><a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

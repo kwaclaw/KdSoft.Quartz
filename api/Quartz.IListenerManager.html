@@ -1,0 +1,1044 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IListenerManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IListenerManager
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.IListenerManager">
+  
+  
+  <h1 id="Quartz_IListenerManager" data-uid="Quartz.IListenerManager" class="text-break">Interface IListenerManager
+  </h1>
+  <div class="markdown level0 summary"><p>Client programs may be interested in the &apos;listener&apos; interfaces that are
+available from Quartz. The <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> interface
+provides notifications of Job executions. The
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> interface provides notifications of
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> firings. The <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>
+interface provides notifications of scheduler events and
+errors.  Listeners can be associated with local schedulers through the
+<a class="xref" href="Quartz.IListenerManager.html">IListenerManager</a> interface.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_IListenerManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IListenerManager</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_IListenerManager_AddJobListener_" data-uid="Quartz.IListenerManager.AddJobListener*"></a>
+  <h4 id="Quartz_IListenerManager_AddJobListener_Quartz_IJobListener_Quartz_IMatcher_Quartz_JobKey____" data-uid="Quartz.IListenerManager.AddJobListener(Quartz.IJobListener,Quartz.IMatcher{Quartz.JobKey}[])">AddJobListener(IJobListener, IMatcher&lt;JobKey&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Add the given <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> to the<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>,
+and register it to receive events for Jobs that are matched by ANY of the
+given Matchers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddJobListener(IJobListener jobListener, params IMatcher&lt;JobKey&gt;[] matchers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobListener.html">IJobListener</a></td>
+        <td><span class="parametername">jobListener</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;[]</td>
+        <td><span class="parametername">matchers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IListenerManager_AddJobListener_Quartz_IJobListener_Quartz_IMatcher_Quartz_JobKey_____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If no matchers are provided, the <a class="xref" href="Quartz.Impl.Matchers.EverythingMatcher-1.html">EverythingMatcher&lt;TKey&gt;</a> will be used.</p>
+</div>
+  <h5 id="Quartz_IListenerManager_AddJobListener_Quartz_IJobListener_Quartz_IMatcher_Quartz_JobKey_____seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;T&gt;</div>
+      <div><a class="xref" href="Quartz.Impl.Matchers.EverythingMatcher-1.html">EverythingMatcher</a>&lt;TKey&gt;</div>
+  </div>
+  
+  
+  <a id="Quartz_IListenerManager_AddJobListener_" data-uid="Quartz.IListenerManager.AddJobListener*"></a>
+  <h4 id="Quartz_IListenerManager_AddJobListener_Quartz_IJobListener_System_Collections_Generic_IList_Quartz_IMatcher_Quartz_JobKey___" data-uid="Quartz.IListenerManager.AddJobListener(Quartz.IJobListener,System.Collections.Generic.IList{Quartz.IMatcher{Quartz.JobKey}})">AddJobListener(IJobListener, IList&lt;IMatcher&lt;JobKey&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Add the given <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> to the<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>,
+and register it to receive events for Jobs that are matched by ANY of the
+given Matchers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddJobListener(IJobListener jobListener, IList&lt;IMatcher&lt;JobKey&gt;&gt; matchers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobListener.html">IJobListener</a></td>
+        <td><span class="parametername">jobListener</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;&gt;</td>
+        <td><span class="parametername">matchers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IListenerManager_AddJobListener_Quartz_IJobListener_System_Collections_Generic_IList_Quartz_IMatcher_Quartz_JobKey____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If no matchers are provided, the <a class="xref" href="Quartz.Impl.Matchers.EverythingMatcher-1.html">EverythingMatcher&lt;TKey&gt;</a> will be used.</p>
+</div>
+  <h5 id="Quartz_IListenerManager_AddJobListener_Quartz_IJobListener_System_Collections_Generic_IList_Quartz_IMatcher_Quartz_JobKey____seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;T&gt;</div>
+      <div><a class="xref" href="Quartz.Impl.Matchers.EverythingMatcher-1.html">EverythingMatcher</a>&lt;TKey&gt;</div>
+  </div>
+  
+  
+  <a id="Quartz_IListenerManager_AddJobListenerMatcher_" data-uid="Quartz.IListenerManager.AddJobListenerMatcher*"></a>
+  <h4 id="Quartz_IListenerManager_AddJobListenerMatcher_System_String_Quartz_IMatcher_Quartz_JobKey__" data-uid="Quartz.IListenerManager.AddJobListenerMatcher(System.String,Quartz.IMatcher{Quartz.JobKey})">AddJobListenerMatcher(String, IMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Add the given Matcher to the set of matchers for which the listener
+will receive events if ANY of the matchers match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AddJobListenerMatcher(string listenerName, IMatcher&lt;JobKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">listenerName</span></td>
+        <td><p>the name of the listener to add the matcher to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td><p>the additional matcher to apply for selecting events</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the identified listener was found and updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_AddSchedulerListener_" data-uid="Quartz.IListenerManager.AddSchedulerListener*"></a>
+  <h4 id="Quartz_IListenerManager_AddSchedulerListener_Quartz_ISchedulerListener_" data-uid="Quartz.IListenerManager.AddSchedulerListener(Quartz.ISchedulerListener)">AddSchedulerListener(ISchedulerListener)</h4>
+  <div class="markdown level1 summary"><p>Register the given <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a> with the
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddSchedulerListener(ISchedulerListener schedulerListener)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a></td>
+        <td><span class="parametername">schedulerListener</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_AddTriggerListener_" data-uid="Quartz.IListenerManager.AddTriggerListener*"></a>
+  <h4 id="Quartz_IListenerManager_AddTriggerListener_Quartz_ITriggerListener_Quartz_IMatcher_Quartz_TriggerKey____" data-uid="Quartz.IListenerManager.AddTriggerListener(Quartz.ITriggerListener,Quartz.IMatcher{Quartz.TriggerKey}[])">AddTriggerListener(ITriggerListener, IMatcher&lt;TriggerKey&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Add the given <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> to the<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>,
+and register it to receive events for Triggers that are matched by ANY of the
+given Matchers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddTriggerListener(ITriggerListener triggerListener, params IMatcher&lt;TriggerKey&gt;[] matchers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a></td>
+        <td><span class="parametername">triggerListener</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;[]</td>
+        <td><span class="parametername">matchers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IListenerManager_AddTriggerListener_Quartz_ITriggerListener_Quartz_IMatcher_Quartz_TriggerKey_____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If no matcher is provided, the <a class="xref" href="Quartz.Impl.Matchers.EverythingMatcher-1.html">EverythingMatcher&lt;TKey&gt;</a> will be used.</p>
+</div>
+  <h5 id="Quartz_IListenerManager_AddTriggerListener_Quartz_ITriggerListener_Quartz_IMatcher_Quartz_TriggerKey_____seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;T&gt;</div>
+      <div><a class="xref" href="Quartz.Impl.Matchers.EverythingMatcher-1.html">EverythingMatcher</a>&lt;TKey&gt;</div>
+  </div>
+  
+  
+  <a id="Quartz_IListenerManager_AddTriggerListener_" data-uid="Quartz.IListenerManager.AddTriggerListener*"></a>
+  <h4 id="Quartz_IListenerManager_AddTriggerListener_Quartz_ITriggerListener_System_Collections_Generic_IList_Quartz_IMatcher_Quartz_TriggerKey___" data-uid="Quartz.IListenerManager.AddTriggerListener(Quartz.ITriggerListener,System.Collections.Generic.IList{Quartz.IMatcher{Quartz.TriggerKey}})">AddTriggerListener(ITriggerListener, IList&lt;IMatcher&lt;TriggerKey&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Add the given <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> to the<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>,
+and register it to receive events for Triggers that are matched by ANY of the
+given Matchers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddTriggerListener(ITriggerListener triggerListener, IList&lt;IMatcher&lt;TriggerKey&gt;&gt; matchers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a></td>
+        <td><span class="parametername">triggerListener</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</td>
+        <td><span class="parametername">matchers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IListenerManager_AddTriggerListener_Quartz_ITriggerListener_System_Collections_Generic_IList_Quartz_IMatcher_Quartz_TriggerKey____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If no matcher is provided, the <a class="xref" href="Quartz.Impl.Matchers.EverythingMatcher-1.html">EverythingMatcher&lt;TKey&gt;</a> will be used.</p>
+</div>
+  <h5 id="Quartz_IListenerManager_AddTriggerListener_Quartz_ITriggerListener_System_Collections_Generic_IList_Quartz_IMatcher_Quartz_TriggerKey____seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;T&gt;</div>
+      <div><a class="xref" href="Quartz.Impl.Matchers.EverythingMatcher-1.html">EverythingMatcher</a>&lt;TKey&gt;</div>
+  </div>
+  
+  
+  <a id="Quartz_IListenerManager_AddTriggerListenerMatcher_" data-uid="Quartz.IListenerManager.AddTriggerListenerMatcher*"></a>
+  <h4 id="Quartz_IListenerManager_AddTriggerListenerMatcher_System_String_Quartz_IMatcher_Quartz_TriggerKey__" data-uid="Quartz.IListenerManager.AddTriggerListenerMatcher(System.String,Quartz.IMatcher{Quartz.TriggerKey})">AddTriggerListenerMatcher(String, IMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Add the given Matcher to the set of matchers for which the listener
+will receive events if ANY of the matchers match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AddTriggerListenerMatcher(string listenerName, IMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">listenerName</span></td>
+        <td><p>the name of the listener to add the matcher to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td><p>the additional matcher to apply for selecting events</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the identified listener was found and updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_GetJobListener_" data-uid="Quartz.IListenerManager.GetJobListener*"></a>
+  <h4 id="Quartz_IListenerManager_GetJobListener_System_String_" data-uid="Quartz.IListenerManager.GetJobListener(System.String)">GetJobListener(String)</h4>
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> that has the given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobListener GetJobListener(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobListener.html">IJobListener</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_GetJobListenerMatchers_" data-uid="Quartz.IListenerManager.GetJobListenerMatchers*"></a>
+  <h4 id="Quartz_IListenerManager_GetJobListenerMatchers_System_String_" data-uid="Quartz.IListenerManager.GetJobListenerMatchers(System.String)">GetJobListenerMatchers(String)</h4>
+  <div class="markdown level1 summary"><p>Get the set of Matchers for which the listener
+will receive events if ANY of the matchers match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;IMatcher&lt;JobKey&gt;&gt; GetJobListenerMatchers(string listenerName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">listenerName</span></td>
+        <td><p>the name of the listener to add the matcher to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;&gt;</td>
+        <td><p>the matchers registered for selecting events for the identified listener</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_GetJobListeners_" data-uid="Quartz.IListenerManager.GetJobListeners*"></a>
+  <h4 id="Quartz_IListenerManager_GetJobListeners" data-uid="Quartz.IListenerManager.GetJobListeners">GetJobListeners()</h4>
+  <div class="markdown level1 summary"><p>Get a List containing all of the <a class="xref" href="Quartz.IJobListener.html">IJobListener</a>s in
+the<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;IJobListener&gt; GetJobListeners()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.IJobListener.html">IJobListener</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_GetSchedulerListeners_" data-uid="Quartz.IListenerManager.GetSchedulerListeners*"></a>
+  <h4 id="Quartz_IListenerManager_GetSchedulerListeners" data-uid="Quartz.IListenerManager.GetSchedulerListeners">GetSchedulerListeners()</h4>
+  <div class="markdown level1 summary"><p>Get a List containing all of the <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>s
+registered with the<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;ISchedulerListener&gt; GetSchedulerListeners()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_GetTriggerListener_" data-uid="Quartz.IListenerManager.GetTriggerListener*"></a>
+  <h4 id="Quartz_IListenerManager_GetTriggerListener_System_String_" data-uid="Quartz.IListenerManager.GetTriggerListener(System.String)">GetTriggerListener(String)</h4>
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> that has the given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITriggerListener GetTriggerListener(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_GetTriggerListenerMatchers_" data-uid="Quartz.IListenerManager.GetTriggerListenerMatchers*"></a>
+  <h4 id="Quartz_IListenerManager_GetTriggerListenerMatchers_System_String_" data-uid="Quartz.IListenerManager.GetTriggerListenerMatchers(System.String)">GetTriggerListenerMatchers(String)</h4>
+  <div class="markdown level1 summary"><p>Get the set of Matchers for which the listener
+will receive events if ANY of the matchers match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;IMatcher&lt;TriggerKey&gt;&gt; GetTriggerListenerMatchers(string listenerName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">listenerName</span></td>
+        <td><p>the name of the listener to add the matcher to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</td>
+        <td><p>the matchers registered for selecting events for the identified listener</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_GetTriggerListeners_" data-uid="Quartz.IListenerManager.GetTriggerListeners*"></a>
+  <h4 id="Quartz_IListenerManager_GetTriggerListeners" data-uid="Quartz.IListenerManager.GetTriggerListeners">GetTriggerListeners()</h4>
+  <div class="markdown level1 summary"><p>Get a List containing all of the <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>s
+in the<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;ITriggerListener&gt; GetTriggerListeners()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_RemoveJobListener_" data-uid="Quartz.IListenerManager.RemoveJobListener*"></a>
+  <h4 id="Quartz_IListenerManager_RemoveJobListener_System_String_" data-uid="Quartz.IListenerManager.RemoveJobListener(System.String)">RemoveJobListener(String)</h4>
+  <div class="markdown level1 summary"><p>Remove the identified <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> from the<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveJobListener(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the identified listener was found in the list, and removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_RemoveJobListenerMatcher_" data-uid="Quartz.IListenerManager.RemoveJobListenerMatcher*"></a>
+  <h4 id="Quartz_IListenerManager_RemoveJobListenerMatcher_System_String_Quartz_IMatcher_Quartz_JobKey__" data-uid="Quartz.IListenerManager.RemoveJobListenerMatcher(System.String,Quartz.IMatcher{Quartz.JobKey})">RemoveJobListenerMatcher(String, IMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Remove the given Matcher to the set of matchers for which the listener
+will receive events if ANY of the matchers match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveJobListenerMatcher(string listenerName, IMatcher&lt;JobKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">listenerName</span></td>
+        <td><p>the name of the listener to add the matcher to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td><p>the additional matcher to apply for selecting events</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the given matcher was found and removed from the listener&apos;s list of matchers</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_RemoveSchedulerListener_" data-uid="Quartz.IListenerManager.RemoveSchedulerListener*"></a>
+  <h4 id="Quartz_IListenerManager_RemoveSchedulerListener_Quartz_ISchedulerListener_" data-uid="Quartz.IListenerManager.RemoveSchedulerListener(Quartz.ISchedulerListener)">RemoveSchedulerListener(ISchedulerListener)</h4>
+  <div class="markdown level1 summary"><p>Remove the given <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a> from the
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveSchedulerListener(ISchedulerListener schedulerListener)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a></td>
+        <td><span class="parametername">schedulerListener</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the identified listener was found in the list, and removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_RemoveTriggerListener_" data-uid="Quartz.IListenerManager.RemoveTriggerListener*"></a>
+  <h4 id="Quartz_IListenerManager_RemoveTriggerListener_System_String_" data-uid="Quartz.IListenerManager.RemoveTriggerListener(System.String)">RemoveTriggerListener(String)</h4>
+  <div class="markdown level1 summary"><p>Remove the identified <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> from the<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveTriggerListener(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the identified listener was found in the list, and</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_RemoveTriggerListenerMatcher_" data-uid="Quartz.IListenerManager.RemoveTriggerListenerMatcher*"></a>
+  <h4 id="Quartz_IListenerManager_RemoveTriggerListenerMatcher_System_String_Quartz_IMatcher_Quartz_TriggerKey__" data-uid="Quartz.IListenerManager.RemoveTriggerListenerMatcher(System.String,Quartz.IMatcher{Quartz.TriggerKey})">RemoveTriggerListenerMatcher(String, IMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Remove the given Matcher to the set of matchers for which the listener
+will receive events if ANY of the matchers match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveTriggerListenerMatcher(string listenerName, IMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">listenerName</span></td>
+        <td><p>the name of the listener to add the matcher to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td><p>the additional matcher to apply for selecting events</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the given matcher was found and removed from the listener&apos;s list of matchers</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IListenerManager_SetJobListenerMatchers_" data-uid="Quartz.IListenerManager.SetJobListenerMatchers*"></a>
+  <h4 id="Quartz_IListenerManager_SetJobListenerMatchers_System_String_System_Collections_Generic_IList_Quartz_IMatcher_Quartz_JobKey___" data-uid="Quartz.IListenerManager.SetJobListenerMatchers(System.String,System.Collections.Generic.IList{Quartz.IMatcher{Quartz.JobKey}})">SetJobListenerMatchers(String, IList&lt;IMatcher&lt;JobKey&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the set of Matchers for which the listener
+will receive events if ANY of the matchers match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SetJobListenerMatchers(string listenerName, IList&lt;IMatcher&lt;JobKey&gt;&gt; matchers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">listenerName</span></td>
+        <td><p>the name of the listener to add the matcher to</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;&gt;</td>
+        <td><span class="parametername">matchers</span></td>
+        <td><p>the matchers to apply for selecting events</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the given matcher was found and removed from the listener&apos;s list of matchers</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IListenerManager_SetJobListenerMatchers_System_String_System_Collections_Generic_IList_Quartz_IMatcher_Quartz_JobKey____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Removes any existing matchers for the identified listener!</p>
+</div>
+  
+  
+  <a id="Quartz_IListenerManager_SetTriggerListenerMatchers_" data-uid="Quartz.IListenerManager.SetTriggerListenerMatchers*"></a>
+  <h4 id="Quartz_IListenerManager_SetTriggerListenerMatchers_System_String_System_Collections_Generic_IList_Quartz_IMatcher_Quartz_TriggerKey___" data-uid="Quartz.IListenerManager.SetTriggerListenerMatchers(System.String,System.Collections.Generic.IList{Quartz.IMatcher{Quartz.TriggerKey}})">SetTriggerListenerMatchers(String, IList&lt;IMatcher&lt;TriggerKey&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the set of Matchers for which the listener
+will receive events if ANY of the matchers match.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SetTriggerListenerMatchers(string listenerName, IList&lt;IMatcher&lt;TriggerKey&gt;&gt; matchers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">listenerName</span></td>
+        <td><p>the name of the listener to add the matcher to</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;&gt;</td>
+        <td><span class="parametername">matchers</span></td>
+        <td><p>the matchers to apply for selecting events</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the given matcher was found and removed from the listener&apos;s list of matchers</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IListenerManager_SetTriggerListenerMatchers_System_String_System_Collections_Generic_IList_Quartz_IMatcher_Quartz_TriggerKey____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Removes any existing matchers for the identified listener!</p>
+</div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1701 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StdSchedulerFactory
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StdSchedulerFactory
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.StdSchedulerFactory">
+  
+  
+  <h1 id="Quartz_Impl_StdSchedulerFactory" data-uid="Quartz.Impl.StdSchedulerFactory" class="text-break">Class StdSchedulerFactory
+  </h1>
+  <div class="markdown level0 summary"><p>An implementation of <a class="xref" href="Quartz.ISchedulerFactory.html">ISchedulerFactory</a> that
+does all of it&apos;s work of creating a <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a> instance
+based on the contents of a properties file.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StdSchedulerFactory</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.ISchedulerFactory.html">ISchedulerFactory</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.html">Quartz.Impl</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_StdSchedulerFactory_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StdSchedulerFactory : ISchedulerFactory</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_StdSchedulerFactory_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+By default a properties are loaded from App.config&apos;s quartz section. 
+If that fails, then the file is loaded &quot;quartz.properties&quot;. If file does not exist,
+default configuration located (as a embedded resource) in Quartz.dll is loaded. If you
+wish to use a file other than these defaults, you must define the system
+property &apos;quartz.properties&apos; to point to the file you want.
+</p>
+<p>
+See the sample properties that are distributed with Quartz for
+information about the various settings available within the file.
+</p>
+<p>
+Alternatively, you can explicitly Initialize the factory by calling one of
+the <a class="xref" href="Quartz.Impl.StdSchedulerFactory.html#Quartz_Impl_StdSchedulerFactory_Initialize">Initialize()</a> methods before calling <a class="xref" href="Quartz.Impl.StdSchedulerFactory.html#Quartz_Impl_StdSchedulerFactory_GetScheduler">GetScheduler()</a>.
+</p>
+<p>
+Instances of the specified <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>,
+<a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a>, classes will be created
+by name, and then any additional properties specified for them in the config
+file will be set on the instance by calling an equivalent &apos;set&apos; method. For
+example if the properties file contains the property &apos;quartz.jobStore.
+myProp = 10&apos; then after the JobStore class has been instantiated, the property
+&apos;MyProp&apos; will be set with the value. Type conversion to primitive CLR types
+(int, long, float, double, boolean, enum and string) are performed before calling
+the property&apos;s setter method.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory__ctor_" data-uid="Quartz.Impl.StdSchedulerFactory.#ctor*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory__ctor" data-uid="Quartz.Impl.StdSchedulerFactory.#ctor">StdSchedulerFactory()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Impl.StdSchedulerFactory.html">StdSchedulerFactory</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StdSchedulerFactory()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory__ctor_" data-uid="Quartz.Impl.StdSchedulerFactory.#ctor*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory__ctor_System_Collections_Specialized_NameValueCollection_" data-uid="Quartz.Impl.StdSchedulerFactory.#ctor(System.Collections.Specialized.NameValueCollection)">StdSchedulerFactory(NameValueCollection)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Impl.StdSchedulerFactory.html">StdSchedulerFactory</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StdSchedulerFactory(NameValueCollection props)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Specialized.NameValueCollection</span></td>
+        <td><span class="parametername">props</span></td>
+        <td><p>The props.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_AutoGenerateInstanceId" data-uid="Quartz.Impl.StdSchedulerFactory.AutoGenerateInstanceId">AutoGenerateInstanceId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AutoGenerateInstanceId = &quot;AUTO&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_ConfigurationSectionName" data-uid="Quartz.Impl.StdSchedulerFactory.ConfigurationSectionName">ConfigurationSectionName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ConfigurationSectionName = &quot;quartz&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_DefaultInstanceId" data-uid="Quartz.Impl.StdSchedulerFactory.DefaultInstanceId">DefaultInstanceId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultInstanceId = &quot;NON_CLUSTERED&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertiesFile" data-uid="Quartz.Impl.StdSchedulerFactory.PropertiesFile">PropertiesFile</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertiesFile = &quot;quartz.config&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyCheckConfiguration" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyCheckConfiguration">PropertyCheckConfiguration</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyCheckConfiguration = &quot;quartz.checkConfiguration&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyDataSourceConnectionString" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyDataSourceConnectionString">PropertyDataSourceConnectionString</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyDataSourceConnectionString = &quot;connectionString&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyDataSourceConnectionStringName" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyDataSourceConnectionStringName">PropertyDataSourceConnectionStringName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyDataSourceConnectionStringName = &quot;connectionStringName&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyDataSourcePrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyDataSourcePrefix">PropertyDataSourcePrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyDataSourcePrefix = &quot;quartz.dataSource&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyDataSourceProvider" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyDataSourceProvider">PropertyDataSourceProvider</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyDataSourceProvider = &quot;provider&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyDbProvider" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyDbProvider">PropertyDbProvider</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyDbProvider = &quot;quartz.dbprovider&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyDbProviderType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyDbProviderType">PropertyDbProviderType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyDbProviderType = &quot;connectionProvider.type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyJobListenerPrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyJobListenerPrefix">PropertyJobListenerPrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyJobListenerPrefix = &quot;quartz.jobListener&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyJobStoreLockHandlerPrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyJobStoreLockHandlerPrefix">PropertyJobStoreLockHandlerPrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyJobStoreLockHandlerPrefix = &quot;quartz.jobStore.lockHandler&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyJobStoreLockHandlerType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyJobStoreLockHandlerType">PropertyJobStoreLockHandlerType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyJobStoreLockHandlerType = &quot;quartz.jobStore.lockHandler.type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyJobStorePrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyJobStorePrefix">PropertyJobStorePrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyJobStorePrefix = &quot;quartz.jobStore&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyJobStoreType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyJobStoreType">PropertyJobStoreType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyJobStoreType = &quot;quartz.jobStore.type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyListenerType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyListenerType">PropertyListenerType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyListenerType = &quot;type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyObjectSerializer" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyObjectSerializer">PropertyObjectSerializer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyObjectSerializer = &quot;quartz.serializer&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyPluginPrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyPluginPrefix">PropertyPluginPrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyPluginPrefix = &quot;quartz.plugin&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyPluginType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyPluginType">PropertyPluginType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyPluginType = &quot;type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerBatchTimeWindow" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerBatchTimeWindow">PropertySchedulerBatchTimeWindow</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerBatchTimeWindow = &quot;quartz.scheduler.batchTriggerAcquisitionFireAheadTimeWindow&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerContextPrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerContextPrefix">PropertySchedulerContextPrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerContextPrefix = &quot;quartz.context.key&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerDbFailureRetryInterval" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerDbFailureRetryInterval">PropertySchedulerDbFailureRetryInterval</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerDbFailureRetryInterval = &quot;quartz.scheduler.dbFailureRetryInterval&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerExporterPrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerExporterPrefix">PropertySchedulerExporterPrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerExporterPrefix = &quot;quartz.scheduler.exporter&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerExporterType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerExporterType">PropertySchedulerExporterType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerExporterType = &quot;quartz.scheduler.exporter.type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerIdleWaitTime" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerIdleWaitTime">PropertySchedulerIdleWaitTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerIdleWaitTime = &quot;quartz.scheduler.idleWaitTime&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerInstanceId" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerInstanceId">PropertySchedulerInstanceId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerInstanceId = &quot;quartz.scheduler.instanceId&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerInstanceIdGeneratorPrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerInstanceIdGeneratorPrefix">PropertySchedulerInstanceIdGeneratorPrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerInstanceIdGeneratorPrefix = &quot;quartz.scheduler.instanceIdGenerator&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerInstanceIdGeneratorType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerInstanceIdGeneratorType">PropertySchedulerInstanceIdGeneratorType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerInstanceIdGeneratorType = &quot;quartz.scheduler.instanceIdGenerator.type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerInstanceName" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerInstanceName">PropertySchedulerInstanceName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerInstanceName = &quot;quartz.scheduler.instanceName&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerInterruptJobsOnShutdown" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerInterruptJobsOnShutdown">PropertySchedulerInterruptJobsOnShutdown</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerInterruptJobsOnShutdown = &quot;quartz.scheduler.interruptJobsOnShutdown&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerInterruptJobsOnShutdownWithWait" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerInterruptJobsOnShutdownWithWait">PropertySchedulerInterruptJobsOnShutdownWithWait</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerInterruptJobsOnShutdownWithWait = &quot;quartz.scheduler.interruptJobsOnShutdownWithWait&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerJobFactoryPrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerJobFactoryPrefix">PropertySchedulerJobFactoryPrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerJobFactoryPrefix = &quot;quartz.scheduler.jobFactory&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerJobFactoryType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerJobFactoryType">PropertySchedulerJobFactoryType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerJobFactoryType = &quot;quartz.scheduler.jobFactory.type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerMakeSchedulerThreadDaemon" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerMakeSchedulerThreadDaemon">PropertySchedulerMakeSchedulerThreadDaemon</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerMakeSchedulerThreadDaemon = &quot;quartz.scheduler.makeSchedulerThreadDaemon&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerMaxBatchSize" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerMaxBatchSize">PropertySchedulerMaxBatchSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerMaxBatchSize = &quot;quartz.scheduler.batchTriggerAcquisitionMaxCount&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerName" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerName">PropertySchedulerName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerName = &quot;schedName&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerProxy" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerProxy">PropertySchedulerProxy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerProxy = &quot;quartz.scheduler.proxy&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerProxyType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerProxyType">PropertySchedulerProxyType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerProxyType = &quot;quartz.scheduler.proxy.type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerThreadName" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerThreadName">PropertySchedulerThreadName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerThreadName = &quot;quartz.scheduler.threadName&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertySchedulerTypeLoadHelperType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertySchedulerTypeLoadHelperType">PropertySchedulerTypeLoadHelperType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertySchedulerTypeLoadHelperType = &quot;quartz.scheduler.typeLoadHelper.type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyTablePrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyTablePrefix">PropertyTablePrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyTablePrefix = &quot;tablePrefix&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyThreadExecutor" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyThreadExecutor">PropertyThreadExecutor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyThreadExecutor = &quot;quartz.threadExecutor&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyThreadExecutorType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyThreadExecutorType">PropertyThreadExecutorType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyThreadExecutorType = &quot;quartz.threadExecutor.type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyThreadPoolPrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyThreadPoolPrefix">PropertyThreadPoolPrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyThreadPoolPrefix = &quot;quartz.threadPool&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyThreadPoolType" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyThreadPoolType">PropertyThreadPoolType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyThreadPoolType = &quot;quartz.threadPool.type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_PropertyTriggerListenerPrefix" data-uid="Quartz.Impl.StdSchedulerFactory.PropertyTriggerListenerPrefix">PropertyTriggerListenerPrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyTriggerListenerPrefix = &quot;quartz.triggerListener&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_StdSchedulerFactory_SystemPropertyAsInstanceId" data-uid="Quartz.Impl.StdSchedulerFactory.SystemPropertyAsInstanceId">SystemPropertyAsInstanceId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SystemPropertyAsInstanceId = &quot;SYS_PROP&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory_AllSchedulers_" data-uid="Quartz.Impl.StdSchedulerFactory.AllSchedulers*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory_AllSchedulers" data-uid="Quartz.Impl.StdSchedulerFactory.AllSchedulers">AllSchedulers</h4>
+  <div class="markdown level1 summary"><p>
+           Returns a handle to all known Schedulers (made by any
+           StdSchedulerFactory instance.).
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;IScheduler&gt; AllSchedulers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory_Log_" data-uid="Quartz.Impl.StdSchedulerFactory.Log*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory_Log" data-uid="Quartz.Impl.StdSchedulerFactory.Log">Log</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ILog Log { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Common.Logging.ILog</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory_GetDefaultScheduler_" data-uid="Quartz.Impl.StdSchedulerFactory.GetDefaultScheduler*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory_GetDefaultScheduler" data-uid="Quartz.Impl.StdSchedulerFactory.GetDefaultScheduler">GetDefaultScheduler()</h4>
+  <div class="markdown level1 summary"><p>Returns a handle to the default Scheduler, creating it if it does not
+yet exist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IScheduler GetDefaultScheduler()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_StdSchedulerFactory_GetDefaultScheduler_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Impl.StdSchedulerFactory.html#Quartz_Impl_StdSchedulerFactory_Initialize">Initialize()</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory_GetScheduler_" data-uid="Quartz.Impl.StdSchedulerFactory.GetScheduler*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory_GetScheduler" data-uid="Quartz.Impl.StdSchedulerFactory.GetScheduler">GetScheduler()</h4>
+  <div class="markdown level1 summary"><p>Returns a handle to the Scheduler produced by this factory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IScheduler GetScheduler()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_StdSchedulerFactory_GetScheduler_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If one of the <a class="xref" href="Quartz.Impl.StdSchedulerFactory.html#Quartz_Impl_StdSchedulerFactory_Initialize">Initialize()</a> methods has not be previously
+called, then the default (no-arg) <a class="xref" href="Quartz.Impl.StdSchedulerFactory.html#Quartz_Impl_StdSchedulerFactory_Initialize">Initialize()</a> method
+will be called by this method.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory_GetScheduler_" data-uid="Quartz.Impl.StdSchedulerFactory.GetScheduler*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory_GetScheduler_System_String_" data-uid="Quartz.Impl.StdSchedulerFactory.GetScheduler(System.String)">GetScheduler(String)</h4>
+  <div class="markdown level1 summary"><p>
+           Returns a handle to the Scheduler with the given name, if it exists (if
+           it has already been instantiated).
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IScheduler GetScheduler(string schedName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">schedName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory_Initialize_" data-uid="Quartz.Impl.StdSchedulerFactory.Initialize*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory_Initialize" data-uid="Quartz.Impl.StdSchedulerFactory.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"><p>Initialize the <a class="xref" href="Quartz.ISchedulerFactory.html">ISchedulerFactory</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_StdSchedulerFactory_Initialize_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>By default a properties file named &quot;quartz.properties&quot; is loaded from
+the &apos;current working directory&apos;. If that fails, then the
+&quot;quartz.properties&quot; file located (as an embedded resource) in the Quartz.NET
+assembly is loaded. If you wish to use a file other than these defaults,
+you must define the system property &apos;quartz.properties&apos; to point to
+the file you want.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory_Initialize_" data-uid="Quartz.Impl.StdSchedulerFactory.Initialize*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory_Initialize_System_Collections_Specialized_NameValueCollection_" data-uid="Quartz.Impl.StdSchedulerFactory.Initialize(System.Collections.Specialized.NameValueCollection)">Initialize(NameValueCollection)</h4>
+  <div class="markdown level1 summary"><p>Initialize the <a class="xref" href="Quartz.ISchedulerFactory.html">ISchedulerFactory</a> with
+the contents of the given key value collection object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Initialize(NameValueCollection props)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Specialized.NameValueCollection</span></td>
+        <td><span class="parametername">props</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory_Instantiate_" data-uid="Quartz.Impl.StdSchedulerFactory.Instantiate*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory_Instantiate_Quartz_Core_QuartzSchedulerResources_Quartz_Core_QuartzScheduler_" data-uid="Quartz.Impl.StdSchedulerFactory.Instantiate(Quartz.Core.QuartzSchedulerResources,Quartz.Core.QuartzScheduler)">Instantiate(QuartzSchedulerResources, QuartzScheduler)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IScheduler Instantiate(QuartzSchedulerResources rsrcs, QuartzScheduler qs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Core.QuartzSchedulerResources.html">QuartzSchedulerResources</a></td>
+        <td><span class="parametername">rsrcs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a></td>
+        <td><span class="parametername">qs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory_LoadType_" data-uid="Quartz.Impl.StdSchedulerFactory.LoadType*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory_LoadType_System_String_" data-uid="Quartz.Impl.StdSchedulerFactory.LoadType(System.String)">LoadType(String)</h4>
+  <div class="markdown level1 summary"><p>Needed while loadhelper is not constructed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Type LoadType(string typeName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">typeName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_StdSchedulerFactory_ValidateConfiguration_" data-uid="Quartz.Impl.StdSchedulerFactory.ValidateConfiguration*"></a>
+  <h4 id="Quartz_Impl_StdSchedulerFactory_ValidateConfiguration" data-uid="Quartz.Impl.StdSchedulerFactory.ValidateConfiguration">ValidateConfiguration()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ValidateConfiguration()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.ISchedulerFactory.html">ISchedulerFactory</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IJobDetail
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IJobDetail
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.IJobDetail">
+  
+  
+  <h1 id="Quartz_IJobDetail" data-uid="Quartz.IJobDetail" class="text-break">Interface IJobDetail
+  </h1>
+  <div class="markdown level0 summary"><p>Conveys the detail properties of a given job instance. 
+JobDetails are to be created/defined with <a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ICloneable.Clone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_IJobDetail_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IJobDetail : ICloneable</code></pre>
+  </div>
+  <h5 id="Quartz_IJobDetail_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Quartz does not store an actual instance of a <a class="xref" href="Quartz.IJob.html">IJob</a> type, but
+instead allows you to define an instance of one, through the use of a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.
+<p>
+<a class="xref" href="Quartz.IJob.html">IJob</a>s have a name and group associated with them, which
+should uniquely identify them within a single <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.
+</p>
+<p>
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s are the &apos;mechanism&apos; by which <a class="xref" href="Quartz.IJob.html">IJob</a> s
+are scheduled. Many <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s can point to the same <a class="xref" href="Quartz.IJob.html">IJob</a>,
+but a single <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> can only point to one <a class="xref" href="Quartz.IJob.html">IJob</a>.
+</p></p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_IJobDetail_ConcurrentExecutionDisallowed_" data-uid="Quartz.IJobDetail.ConcurrentExecutionDisallowed*"></a>
+  <h4 id="Quartz_IJobDetail_ConcurrentExecutionDisallowed" data-uid="Quartz.IJobDetail.ConcurrentExecutionDisallowed">ConcurrentExecutionDisallowed</h4>
+  <div class="markdown level1 summary"><p>Whether the associated Job class carries the <a class="xref" href="Quartz.DisallowConcurrentExecutionAttribute.html">DisallowConcurrentExecutionAttribute</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ConcurrentExecutionDisallowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IJobDetail_ConcurrentExecutionDisallowed_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.DisallowConcurrentExecutionAttribute.html">DisallowConcurrentExecutionAttribute</a></div>
+  </div>
+  
+  
+  <a id="Quartz_IJobDetail_Description_" data-uid="Quartz.IJobDetail.Description*"></a>
+  <h4 id="Quartz_IJobDetail_Description" data-uid="Quartz.IJobDetail.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Get or set the description given to the <a class="xref" href="Quartz.IJob.html">IJob</a> instance by its
+creator (if any).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobDetail_Durable_" data-uid="Quartz.IJobDetail.Durable*"></a>
+  <h4 id="Quartz_IJobDetail_Durable" data-uid="Quartz.IJobDetail.Durable">Durable</h4>
+  <div class="markdown level1 summary"><p>Whether or not the <a class="xref" href="Quartz.IJob.html">IJob</a> should remain stored after it is
+orphaned (no <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s point to it).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Durable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the Job should remain persisted after being orphaned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IJobDetail_Durable_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is <span class="xref">false</span>.</p>
+</div>
+  
+  
+  <a id="Quartz_IJobDetail_JobDataMap_" data-uid="Quartz.IJobDetail.JobDataMap*"></a>
+  <h4 id="Quartz_IJobDetail_JobDataMap" data-uid="Quartz.IJobDetail.JobDataMap">JobDataMap</h4>
+  <div class="markdown level1 summary"><p>Get or set the <a class="xref" href="Quartz.IJobDetail.html#Quartz_IJobDetail_JobDataMap">JobDataMap</a> that is associated with the <a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">JobDataMap JobDataMap { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobDetail_JobType_" data-uid="Quartz.IJobDetail.JobType*"></a>
+  <h4 id="Quartz_IJobDetail_JobType" data-uid="Quartz.IJobDetail.JobType">JobType</h4>
+  <div class="markdown level1 summary"><p>Get or sets the instance of <a class="xref" href="Quartz.IJob.html">IJob</a> that will be executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Type JobType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobDetail_Key_" data-uid="Quartz.IJobDetail.Key*"></a>
+  <h4 id="Quartz_IJobDetail_Key" data-uid="Quartz.IJobDetail.Key">Key</h4>
+  <div class="markdown level1 summary"><p>The key that identifies this jobs uniquely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">JobKey Key { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobDetail_PersistJobDataAfterExecution_" data-uid="Quartz.IJobDetail.PersistJobDataAfterExecution*"></a>
+  <h4 id="Quartz_IJobDetail_PersistJobDataAfterExecution" data-uid="Quartz.IJobDetail.PersistJobDataAfterExecution">PersistJobDataAfterExecution</h4>
+  <div class="markdown level1 summary"><p>Whether the associated Job class carries the <a class="xref" href="Quartz.PersistJobDataAfterExecutionAttribute.html">PersistJobDataAfterExecutionAttribute</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool PersistJobDataAfterExecution { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IJobDetail_PersistJobDataAfterExecution_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.PersistJobDataAfterExecutionAttribute.html">PersistJobDataAfterExecutionAttribute</a></div>
+  </div>
+  
+  
+  <a id="Quartz_IJobDetail_RequestsRecovery_" data-uid="Quartz.IJobDetail.RequestsRecovery*"></a>
+  <h4 id="Quartz_IJobDetail_RequestsRecovery" data-uid="Quartz.IJobDetail.RequestsRecovery">RequestsRecovery</h4>
+  <div class="markdown level1 summary"><p>Set whether or not the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> should re-Execute
+the <a class="xref" href="Quartz.IJob.html">IJob</a> if a &apos;recovery&apos; or &apos;fail-over&apos; situation is
+encountered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RequestsRecovery { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IJobDetail_RequestsRecovery_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is <span class="xref">false</span>.</p>
+</div>
+  <h5 id="Quartz_IJobDetail_RequestsRecovery_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_Recovering">Recovering</a></div>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_IJobDetail_GetJobBuilder_" data-uid="Quartz.IJobDetail.GetJobBuilder*"></a>
+  <h4 id="Quartz_IJobDetail_GetJobBuilder" data-uid="Quartz.IJobDetail.GetJobBuilder">GetJobBuilder()</h4>
+  <div class="markdown level1 summary"><p>Get a <a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a> that is configured to produce a 
+<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> identical to this one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">JobBuilder GetJobBuilder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJob.html">IJob</a></div>
+      <div><a class="xref" href="Quartz.DisallowConcurrentExecutionAttribute.html">DisallowConcurrentExecutionAttribute</a></div>
+      <div><a class="xref" href="Quartz.PersistJobDataAfterExecutionAttribute.html">PersistJobDataAfterExecutionAttribute</a></div>
+      <div><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></div>
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

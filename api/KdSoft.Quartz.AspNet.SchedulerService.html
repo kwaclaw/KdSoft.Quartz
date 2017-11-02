@@ -1,0 +1,1466 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SchedulerService
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SchedulerService
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="KdSoft.Quartz.AspNet.SchedulerService">
+  
+  
+  <h1 id="KdSoft_Quartz_AspNet_SchedulerService" data-uid="KdSoft.Quartz.AspNet.SchedulerService" class="text-break">Class SchedulerService
+  </h1>
+  <div class="markdown level0 summary"><p>Wrapper for Quartz scheduler.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SchedulerService</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="KdSoft.Quartz.AspNet.html">KdSoft.Quartz.AspNet</a></h6>
+  <h6><strong>Assembly</strong>: KdSoft.Quartz.AspNet.dll</h6>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SchedulerService</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService__ctor_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.#ctor*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService__ctor_System_IServiceProvider_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.#ctor(System.IServiceProvider)">SchedulerService(IServiceProvider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SchedulerService(IServiceProvider serviceProvider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="parametername">serviceProvider</span></td>
+        <td><p>Service provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_Scheduler_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.Scheduler*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_Scheduler" data-uid="KdSoft.Quartz.AspNet.SchedulerService.Scheduler">Scheduler</h4>
+  <div class="markdown level1 summary"><p>Quartz scheduler instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IScheduler Scheduler { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_DeleteJobs_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.DeleteJobs*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_DeleteJobs_System_Collections_Generic_IEnumerable_KdSoft_Quartz_QuartzKey__" data-uid="KdSoft.Quartz.AspNet.SchedulerService.DeleteJobs(System.Collections.Generic.IEnumerable{KdSoft.Quartz.QuartzKey})">DeleteJobs(IEnumerable&lt;QuartzKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DeleteJobs(IEnumerable&lt;QuartzKey&gt; jobKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a>&gt;</td>
+        <td><span class="parametername">jobKeys</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_DeleteJobs_System_Collections_Generic_IEnumerable_KdSoft_Quartz_QuartzKey___seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_DeleteJobs_System_Collections_Generic_IList_Quartz_JobKey__">DeleteJobs</a>(<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;)</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_GetJob_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetJob*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_GetJob_KdSoft_Quartz_QuartzKey_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetJob(KdSoft.Quartz.QuartzKey)">GetJob(QuartzKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobInfo GetJob(QuartzKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.JobInfo.html">JobInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_GetJob_KdSoft_Quartz_QuartzKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetJobDetail_Quartz_JobKey_">GetJobDetail</a>(<a class="xref" href="Quartz.JobKey.html">JobKey</a>)</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_GetJobGroups_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetJobGroups*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_GetJobGroups" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetJobGroups">GetJobGroups()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;string&gt; GetJobGroups()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_GetJobGroups_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetJobGroupNames">GetJobGroupNames</a>()</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_GetJobKeys_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetJobKeys*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_GetJobKeys_System_String_System_String_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetJobKeys(System.String,System.String)">GetJobKeys(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;QuartzKey&gt; GetJobKeys(string group, string matchType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>Name of group to match. Can be a partial group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">matchType</span></td>
+        <td><p>Specifies how group names must be <a class="xref" href="KdSoft.Quartz.GroupMatchTypes.html">GroupMatchTypes</a>
+against the specified &apos;group&apos; argument.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_GetJobKeys_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetJobKeys_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__">GetJobKeys</a>(<a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;)</div>
+      <div><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;TKey&gt;</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_GetJobs_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetJobs*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_GetJobs_System_String_System_String_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetJobs(System.String,System.String)">GetJobs(String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns job details for jobs matching the supplied group name as specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;JobInfo&gt; GetJobs(string group, string matchType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>Name of group to match. Can be a partial group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">matchType</span></td>
+        <td><p>Specifies how group names must be <a class="xref" href="KdSoft.Quartz.GroupMatchTypes.html">GroupMatchTypes</a>
+against the specified &apos;group&apos; argument.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="KdSoft.Quartz.JobInfo.html">JobInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_GetJobs_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetJobKeys_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__">GetJobKeys</a>(<a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;)</div>
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetJobDetail_Quartz_JobKey_">GetJobDetail</a>(<a class="xref" href="Quartz.JobKey.html">JobKey</a>)</div>
+      <div><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;TKey&gt;</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_GetPausedTriggerGroups_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetPausedTriggerGroups*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_GetPausedTriggerGroups" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetPausedTriggerGroups">GetPausedTriggerGroups()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;string&gt; GetPausedTriggerGroups()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_GetPausedTriggerGroups_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetPausedTriggerGroups">GetPausedTriggerGroups</a>()</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_GetRunningJobs_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetRunningJobs*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_GetRunningJobs" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetRunningJobs">GetRunningJobs()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;QuartzKey&gt; GetRunningJobs()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_GetRunningJobs_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetCurrentlyExecutingJobs">GetCurrentlyExecutingJobs</a>()</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_GetTrigger_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetTrigger*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_GetTrigger_KdSoft_Quartz_QuartzKey_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetTrigger(KdSoft.Quartz.QuartzKey)">GetTrigger(QuartzKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronTriggerInfo GetTrigger(QuartzKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.CronTriggerInfo.html">CronTriggerInfo</a></td>
+        <td><p>Trigger info. Includes CRON expression if applicable..</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_GetTrigger_KdSoft_Quartz_QuartzKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetTrigger_Quartz_TriggerKey_">GetTrigger</a>(<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>)</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggerGroups_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetTriggerGroups*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggerGroups" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetTriggerGroups">GetTriggerGroups()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;string&gt; GetTriggerGroups()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggerGroups_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetTriggerGroupNames">GetTriggerGroupNames</a>()</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggerKeys_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetTriggerKeys*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggerKeys_System_String_System_String_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetTriggerKeys(System.String,System.String)">GetTriggerKeys(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;QuartzKey&gt; GetTriggerKeys(string group, string matchType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>Name of group to match. Can be a partial group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">matchType</span></td>
+        <td><p>Specifies how group names must be <a class="xref" href="KdSoft.Quartz.GroupMatchTypes.html">GroupMatchTypes</a>
+against the specified &apos;group&apos; argument.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggerKeys_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetTriggerKeys_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__">GetTriggerKeys</a>(<a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;)</div>
+      <div><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;TKey&gt;</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggersOfJob_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetTriggersOfJob*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggersOfJob_KdSoft_Quartz_QuartzKey_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetTriggersOfJob(KdSoft.Quartz.QuartzKey)">GetTriggersOfJob(QuartzKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;CronTriggerInfo&gt; GetTriggersOfJob(QuartzKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="KdSoft.Quartz.CronTriggerInfo.html">CronTriggerInfo</a>&gt;</td>
+        <td><p>Trigger info. Includes CRON expression if applicable..</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggersOfJob_KdSoft_Quartz_QuartzKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetTriggersOfJob_Quartz_JobKey_">GetTriggersOfJob</a>(<a class="xref" href="Quartz.JobKey.html">JobKey</a>)</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggerState_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetTriggerState*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggerState_KdSoft_Quartz_QuartzKey_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.GetTriggerState(KdSoft.Quartz.QuartzKey)">GetTriggerState(QuartzKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetTriggerState(QuartzKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_GetTriggerState_KdSoft_Quartz_QuartzKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_GetTriggerState_Quartz_TriggerKey_">GetTriggerState</a>(<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>)</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_Pause_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.Pause*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_Pause" data-uid="KdSoft.Quartz.AspNet.SchedulerService.Pause">Pause()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Pause()</code></pre>
+  </div>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_Pause_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_Standby">Standby</a>()</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_PauseAll_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.PauseAll*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_PauseAll" data-uid="KdSoft.Quartz.AspNet.SchedulerService.PauseAll">PauseAll()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PauseAll()</code></pre>
+  </div>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_PauseAll_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_PauseAll">PauseAll</a>()</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_PauseJob_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.PauseJob*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_PauseJob_KdSoft_Quartz_QuartzKey_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.PauseJob(KdSoft.Quartz.QuartzKey)">PauseJob(QuartzKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PauseJob(QuartzKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_PauseJob_KdSoft_Quartz_QuartzKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_PauseJob_Quartz_JobKey_">PauseJob</a>(<a class="xref" href="Quartz.JobKey.html">JobKey</a>)</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_PauseJobs_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.PauseJobs*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_PauseJobs_System_String_System_String_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.PauseJobs(System.String,System.String)">PauseJobs(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PauseJobs(string group, string matchType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>Name of group to match. Can be a partial group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">matchType</span></td>
+        <td><p>Specifies how group names must be <a class="xref" href="KdSoft.Quartz.GroupMatchTypes.html">GroupMatchTypes</a>
+against the specified &apos;group&apos; argument.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_PauseJobs_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_PauseJobs_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__">PauseJobs</a>(<a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;)</div>
+      <div><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;TKey&gt;</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_PauseTrigger_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.PauseTrigger*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_PauseTrigger_KdSoft_Quartz_QuartzKey_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.PauseTrigger(KdSoft.Quartz.QuartzKey)">PauseTrigger(QuartzKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PauseTrigger(QuartzKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_PauseTrigger_KdSoft_Quartz_QuartzKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_PauseTrigger_Quartz_TriggerKey_">PauseTrigger</a>(<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>)</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_PauseTriggers_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.PauseTriggers*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_PauseTriggers_System_String_System_String_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.PauseTriggers(System.String,System.String)">PauseTriggers(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PauseTriggers(string group, string matchType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>Name of group to match. Can be a partial group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">matchType</span></td>
+        <td><p>Specifies how group names must be <a class="xref" href="KdSoft.Quartz.GroupMatchTypes.html">GroupMatchTypes</a>
+against the specified &apos;group&apos; argument.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_PauseTriggers_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_PauseTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__">PauseTriggers</a>(<a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;)</div>
+      <div><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;TKey&gt;</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_RemoveJobData_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.RemoveJobData*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_RemoveJobData_KdSoft_Quartz_QuartzKey_System_Collections_Generic_IEnumerable_System_String__" data-uid="KdSoft.Quartz.AspNet.SchedulerService.RemoveJobData(KdSoft.Quartz.QuartzKey,System.Collections.Generic.IEnumerable{System.String})">RemoveJobData(QuartzKey, IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveJobData(QuartzKey jobKey, IEnumerable&lt;string&gt; jobDataKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>Job key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">jobDataKeys</span></td>
+        <td><p>Keys whose entries to remove from the job data dictionary.
+If this argument is <span class="xref">null</span> then all entries will be removed.
+If this argument is an empty collection then nothing will be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_RemoveJobData_KdSoft_Quartz_QuartzKey_System_Collections_Generic_IEnumerable_System_String___seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="KdSoft.Quartz.SchedulerExtensions.html#KdSoft_Quartz_SchedulerExtensions_RemoveJobData_Quartz_IScheduler_Quartz_JobKey_System_Collections_Generic_IEnumerable_System_String__">RemoveJobData(IScheduler, JobKey, IEnumerable&lt;String&gt;)</a></div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_RescheduleJob_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.RescheduleJob*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_RescheduleJob_KdSoft_Quartz_QuartzKey_KdSoft_Quartz_CronTriggerUpdate_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.RescheduleJob(KdSoft.Quartz.QuartzKey,KdSoft.Quartz.CronTriggerUpdate)">RescheduleJob(QuartzKey, CronTriggerUpdate)</h4>
+  <div class="markdown level1 summary"><p>Reschedules job, including updates to the trigger&apos;s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RescheduleResult RescheduleJob(QuartzKey triggerKey, CronTriggerUpdate update)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>Key of job&apos;s trigger.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.CronTriggerUpdate.html">CronTriggerUpdate</a></td>
+        <td><span class="parametername">update</span></td>
+        <td><p>Holds update parameters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.RescheduleResult.html">RescheduleResult</a></td>
+        <td><p>Updated trigger information, including associated job information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_RescheduleJob_KdSoft_Quartz_QuartzKey_KdSoft_Quartz_CronTriggerUpdate__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only CRON triggers are supported.</p>
+</div>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_RescheduleJob_KdSoft_Quartz_QuartzKey_KdSoft_Quartz_CronTriggerUpdate__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a></div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_ResumeAll_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ResumeAll*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_ResumeAll" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ResumeAll">ResumeAll()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResumeAll()</code></pre>
+  </div>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_ResumeAll_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_ResumeAll">ResumeAll</a>()</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_ResumeJob_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ResumeJob*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_ResumeJob_KdSoft_Quartz_QuartzKey_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ResumeJob(KdSoft.Quartz.QuartzKey)">ResumeJob(QuartzKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResumeJob(QuartzKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_ResumeJob_KdSoft_Quartz_QuartzKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_ResumeJob_Quartz_JobKey_">ResumeJob</a>(<a class="xref" href="Quartz.JobKey.html">JobKey</a>)</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_ResumeJobs_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ResumeJobs*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_ResumeJobs_System_String_System_String_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ResumeJobs(System.String,System.String)">ResumeJobs(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResumeJobs(string group, string matchType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>Name of group to match. Can be a partial group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">matchType</span></td>
+        <td><p>Specifies how group names must be <a class="xref" href="KdSoft.Quartz.GroupMatchTypes.html">GroupMatchTypes</a>
+against the specified &apos;group&apos; argument.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_ResumeJobs_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_ResumeJobs_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__">ResumeJobs</a>(<a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;)</div>
+      <div><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;TKey&gt;</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_ResumeTrigger_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ResumeTrigger*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_ResumeTrigger_KdSoft_Quartz_QuartzKey_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ResumeTrigger(KdSoft.Quartz.QuartzKey)">ResumeTrigger(QuartzKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResumeTrigger(QuartzKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_ResumeTrigger_KdSoft_Quartz_QuartzKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_ResumeTrigger_Quartz_TriggerKey_">ResumeTrigger</a>(<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>)</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_ResumeTriggers_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ResumeTriggers*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_ResumeTriggers_System_String_System_String_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ResumeTriggers(System.String,System.String)">ResumeTriggers(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResumeTriggers(string group, string matchType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>Name of group to match. Can be a partial group name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">matchType</span></td>
+        <td><p>Specifies how group names must be <a class="xref" href="KdSoft.Quartz.GroupMatchTypes.html">GroupMatchTypes</a>
+against the specified &apos;group&apos; argument.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_ResumeTriggers_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_ResumeTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__">ResumeTriggers</a>(<a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;)</div>
+      <div><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;TKey&gt;</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_RunJob_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.RunJob*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_RunJob_KdSoft_Quartz_QuartzKey_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.RunJob(KdSoft.Quartz.QuartzKey)">RunJob(QuartzKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RunJob(QuartzKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_RunJob_KdSoft_Quartz_QuartzKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_TriggerJob_Quartz_JobKey_">TriggerJob</a>(<a class="xref" href="Quartz.JobKey.html">JobKey</a>)</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_ScheduleJobs_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ScheduleJobs*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_ScheduleJobs_System_String_System_String_System_String_KdSoft_Quartz_ScheduleJobsRequest_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.ScheduleJobs(System.String,System.String,System.String,KdSoft.Quartz.ScheduleJobsRequest)">ScheduleJobs(String, String, String, ScheduleJobsRequest)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ScheduleJobsResult ScheduleJobs(string groupName, string jobBaseName, string triggerBaseName, ScheduleJobsRequest request)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobBaseName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">triggerBaseName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.ScheduleJobsRequest.html">ScheduleJobsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.ScheduleJobsResult.html">ScheduleJobsResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_ScheduleJobs_System_String_System_String_System_String_KdSoft_Quartz_ScheduleJobsRequest__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="KdSoft.Quartz.SchedulerExtensions.html#KdSoft_Quartz_SchedulerExtensions_ScheduleJobs_Quartz_IScheduler_System_String_System_String_System_String_KdSoft_Quartz_ScheduleJobsRequest_">ScheduleJobs(IScheduler, String, String, String, ScheduleJobsRequest)</a></div>
+      <div><a class="xref" href="KdSoft.Quartz.ScheduleJobsResult.html">ScheduleJobsResult</a></div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_Start_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.Start*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_Start_System_Nullable_System_TimeSpan__System_Nullable_System_Int32__" data-uid="KdSoft.Quartz.AspNet.SchedulerService.Start(System.Nullable{System.TimeSpan},System.Nullable{System.Int32})">Start(Nullable&lt;TimeSpan&gt;, Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start(TimeSpan? delay, int ? delaySeconds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
+        <td><span class="parametername">delay</span></td>
+        <td><p>Time span to delay.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">delaySeconds</span></td>
+        <td><p>Number of seconds to delay. Alternative delay specification,
+ignored if &apos;delay&apos; argument is not <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_Start_System_Nullable_System_TimeSpan__System_Nullable_System_Int32___seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_StartDelayed_System_TimeSpan_">StartDelayed</a>(<span class="xref">System.TimeSpan</span>)</div>
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_Start">Start</a>()</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_UnscheduleJobs_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.UnscheduleJobs*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_UnscheduleJobs_System_Collections_Generic_IEnumerable_KdSoft_Quartz_QuartzKey__" data-uid="KdSoft.Quartz.AspNet.SchedulerService.UnscheduleJobs(System.Collections.Generic.IEnumerable{KdSoft.Quartz.QuartzKey})">UnscheduleJobs(IEnumerable&lt;QuartzKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UnscheduleJobs(IEnumerable&lt;QuartzKey&gt; triggerKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a>&gt;</td>
+        <td><span class="parametername">triggerKeys</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_UnscheduleJobs_System_Collections_Generic_IEnumerable_KdSoft_Quartz_QuartzKey___seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_UnscheduleJobs_System_Collections_Generic_IList_Quartz_TriggerKey__">UnscheduleJobs</a>(<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;)</div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_UpdateJob_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.UpdateJob*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_UpdateJob_KdSoft_Quartz_QuartzKey_KdSoft_Quartz_JobUpdate_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.UpdateJob(KdSoft.Quartz.QuartzKey,KdSoft.Quartz.JobUpdate)">UpdateJob(QuartzKey, JobUpdate)</h4>
+  <div class="markdown level1 summary"><p>Updates selected job details and the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobInfo UpdateJob(QuartzKey key, JobUpdate update)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Job key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.JobUpdate.html">JobUpdate</a></td>
+        <td><span class="parametername">update</span></td>
+        <td><p>Holds update parameters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.JobInfo.html">JobInfo</a></td>
+        <td><p>Updated job information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_UpdateJobData_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.UpdateJobData*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_UpdateJobData_KdSoft_Quartz_QuartzKey_KdSoft_Quartz_JobDataDictionary_System_Boolean_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.UpdateJobData(KdSoft.Quartz.QuartzKey,KdSoft.Quartz.JobDataDictionary,System.Boolean)">UpdateJobData(QuartzKey, JobDataDictionary, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Updates the <span class="xref">Newtonsoft.Json.Linq.JObject</span> related entries of the job&apos;s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobInfo UpdateJobData(QuartzKey jobKey, JobDataDictionary jobData, bool replace = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>Job key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.JobDataDictionary.html">JobDataDictionary</a></td>
+        <td><span class="parametername">jobData</span></td>
+        <td><p>Job data, must be a <span class="xref">Newtonsoft.Json.Linq.JObject</span> instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td><p>Indicates if the update is a replacement, where the updated <span class="xref">Newtonsoft.Json.Linq.JObject</span>
+will be identical to the <code data-dev-comment-type="paramref" class="paramref">jobData</code> argument. If <code>false</code> then only
+the properties passed in the argument will be updated and other properties will be unchanged.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.JobInfo.html">JobInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_AspNet_SchedulerService_UpdateJobData_KdSoft_Quartz_QuartzKey_KdSoft_Quartz_JobDataDictionary_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="KdSoft.Quartz.SchedulerExtensions.html#KdSoft_Quartz_SchedulerExtensions_UpdateJobData_Quartz_IScheduler_Quartz_JobKey_KdSoft_Quartz_JobDataDictionary_System_Boolean_">UpdateJobData(IScheduler, JobKey, JobDataDictionary, Boolean)</a></div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_AspNet_SchedulerService_Version_" data-uid="KdSoft.Quartz.AspNet.SchedulerService.Version*"></a>
+  <h4 id="KdSoft_Quartz_AspNet_SchedulerService_Version" data-uid="KdSoft.Quartz.AspNet.SchedulerService.Version">Version()</h4>
+  <div class="markdown level1 summary"><p>Returns version of Quartz implementation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Version()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

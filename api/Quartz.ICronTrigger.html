@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ICronTrigger
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ICronTrigger
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.ICronTrigger">
+  
+  
+  <h1 id="Quartz_ICronTrigger" data-uid="Quartz.ICronTrigger" class="text-break">Interface ICronTrigger
+  </h1>
+  <div class="markdown level0 summary"><p>The public interface for inspecting settings specific to a CronTrigger, 
+which is used to fire a <a class="xref" href="Quartz.IJob.html">IJob</a>
+at given moments in time, defined with Unix &apos;cron-like&apos; schedule definitions.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetTriggerBuilder">ITrigger.GetTriggerBuilder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetScheduleBuilder">ITrigger.GetScheduleBuilder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetMayFireAgain">ITrigger.GetMayFireAgain()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetNextFireTimeUtc">ITrigger.GetNextFireTimeUtc()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetPreviousFireTimeUtc">ITrigger.GetPreviousFireTimeUtc()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__">ITrigger.GetFireTimeAfter(Nullable&lt;DateTimeOffset&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_Key">ITrigger.Key</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobKey">ITrigger.JobKey</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_Description">ITrigger.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_CalendarName">ITrigger.CalendarName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobDataMap">ITrigger.JobDataMap</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_FinalFireTimeUtc">ITrigger.FinalFireTimeUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_MisfireInstruction">ITrigger.MisfireInstruction</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_EndTimeUtc">ITrigger.EndTimeUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_StartTimeUtc">ITrigger.StartTimeUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_Priority">ITrigger.Priority</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_HasMillisecondPrecision">ITrigger.HasMillisecondPrecision</a>
+    </div>
+    <div>
+      <span class="xref">System.ICloneable.Clone()</span>
+    </div>
+    <div>
+      <span class="xref">System.IComparable&lt;Quartz.ITrigger&gt;.CompareTo(Quartz.ITrigger)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_ICronTrigger_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ICronTrigger : ITrigger, ICloneable, IComparable&lt;ITrigger&gt;</code></pre>
+  </div>
+  <h5 id="Quartz_ICronTrigger_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+For those unfamiliar with &quot;cron&quot;, this means being able to create a firing
+schedule such as: &quot;At 8:00am every Monday through Friday&quot; or &quot;At 1:30am
+every last Friday of the month&quot;.
+</p>
+
+<p>
+The format of a &quot;Cron-Expression&quot; string is documented on the 
+<a class="xref" href="Quartz.CronExpression.html">CronExpression</a> class.
+</p>
+
+<p>
+Here are some full examples: <br>
+<table cellspacing="8">
+<tr>
+<th align="left">Expression</th>
+<th align="left"> </th>
+<th align="left">Meaning</th>
+</tr>
+<tr>
+<td align="left">&quot;0 0 12 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 12pm (noon) every day&quot; /&gt;</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * *&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am every day&quot; /&gt;</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am every day&quot; /&gt;</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 * * ? *&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am every day&quot; /&gt;</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 * * ? 2005&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am every day during the year 2005&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 * 14 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire every minute starting at 2pm and ending at 2:59pm, every day&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 0/5 14 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire every 5 minutes starting at 2pm and ending at 2:55pm, every day&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 0/5 14,18 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire every 5 minutes starting at 2pm and ending at 2:55pm, AND fire every 5 minutes starting at 6pm and ending at 6:55pm, every day&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 0-5 14 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire every minute starting at 2pm and ending at 2:05pm, every day&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 10,44 14 ? 3 WED&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 2:10pm and at 2:44pm every Wednesday in the month of March.&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * MON-FRI&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am every Monday, Tuesday, Wednesday, Thursday and Friday&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 15 * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on the 15th day of every month&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 L * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on the last day of every month&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * 6L&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on the last Friday of every month&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * 6L&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on the last Friday of every month&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * 6L 2002-2005&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on every last Friday of every month during the years 2002, 2003, 2004 and 2005&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * 6#3&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on the third Friday of every month&quot; /&gt;
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+Pay attention to the effects of &apos;?&apos; and &apos;*&apos; in the day-of-week and
+day-of-month fields!
+</p>
+
+<p>
+<strong>NOTES:</strong>
+<ul>
+<li>Support for specifying both a day-of-week and a day-of-month value is
+not complete (you&apos;ll need to use the &apos;?&apos; character in on of these fields).
+</li>
+<li>Be careful when setting fire times between mid-night and 1:00 AM -
+&quot;daylight savings&quot; can cause a skip or a repeat depending on whether the
+time moves back or jumps forward.</li>
+</ul>
+</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_ICronTrigger_CronExpressionString_" data-uid="Quartz.ICronTrigger.CronExpressionString*"></a>
+  <h4 id="Quartz_ICronTrigger_CronExpressionString" data-uid="Quartz.ICronTrigger.CronExpressionString">CronExpressionString</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the cron expression string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string CronExpressionString { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The cron expression string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ICronTrigger_TimeZone_" data-uid="Quartz.ICronTrigger.TimeZone*"></a>
+  <h4 id="Quartz_ICronTrigger_TimeZone" data-uid="Quartz.ICronTrigger.TimeZone">TimeZone</h4>
+  <div class="markdown level1 summary"><p>Sets the time zone for which the <a class="xref" href="Quartz.ICronTrigger.html#Quartz_ICronTrigger_CronExpressionString">CronExpressionString</a> of this
+<a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a> will be resolved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TimeZoneInfo TimeZone { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeZoneInfo</span></td>
+        <td><p>The time zone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_ICronTrigger_TimeZone_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Quartz.ICronTrigger.html#Quartz_ICronTrigger_CronExpressionString">CronExpressionString</a> is set after this
+property, the TimeZone setting on the CronExpression will &quot;win&quot;.  However
+if <a class="xref" href="Quartz.ICronTrigger.html#Quartz_ICronTrigger_CronExpressionString">CronExpressionString</a> is set after this property, the
+time zone applied by this method will remain in effect, since the 
+string cron expression does not carry a time zone!</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_ICronTrigger_GetExpressionSummary_" data-uid="Quartz.ICronTrigger.GetExpressionSummary*"></a>
+  <h4 id="Quartz_ICronTrigger_GetExpressionSummary" data-uid="Quartz.ICronTrigger.GetExpressionSummary">GetExpressionSummary()</h4>
+  <div class="markdown level1 summary"><p>Gets the expression summary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetExpressionSummary()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

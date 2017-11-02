@@ -1,0 +1,1248 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SimpleScheduleBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SimpleScheduleBuilder
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.SimpleScheduleBuilder">
+  
+  
+  <h1 id="Quartz_SimpleScheduleBuilder" data-uid="Quartz.SimpleScheduleBuilder" class="text-break">Class SimpleScheduleBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>SimpleScheduleBuilder is a <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a>
+that defines strict/literal interval-based schedules for
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Quartz.ScheduleBuilder-1.html">ScheduleBuilder</a>&lt;<a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a>&gt;</div>
+    <div class="level2"><span class="xref">SimpleScheduleBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_SimpleScheduleBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SimpleScheduleBuilder : ScheduleBuilder&lt;ISimpleTrigger&gt;, IScheduleBuilder</code></pre>
+  </div>
+  <h5 id="Quartz_SimpleScheduleBuilder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p><p>
+Quartz provides a builder-style API for constructing scheduling-related
+entities via a Domain-Specific Language (DSL).  The DSL can best be
+utilized through the usage of static imports of the methods on the classes
+<a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a>, <a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a>,
+<a class="xref" href="Quartz.DateBuilder.html">DateBuilder</a>, <a class="xref" href="Quartz.JobKey.html">JobKey</a>, <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>
+and the various <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> implementations.
+</p>
+<p>Client code can then use the DSL to write code such as this:</p></p>
+<pre><code>JobDetail job = JobBuilder.Create&lt;MyJob>()
+    .WithIdentity(&quot;myJob&quot;)
+    .Build();
+Trigger trigger = TriggerBuilder.Create()
+    .WithIdentity(triggerKey(&quot;myTrigger&quot;, &quot;myTriggerGroup&quot;))
+    .WithSimpleSchedule(x => x
+        .WithIntervalInHours(1)
+        .RepeatForever())
+    .StartAt(DateBuilder.FutureDate(10, IntervalUnit.Minute))
+    .Build();
+scheduler.scheduleJob(job, trigger);</code></pre>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder__ctor_" data-uid="Quartz.SimpleScheduleBuilder.#ctor*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder__ctor" data-uid="Quartz.SimpleScheduleBuilder.#ctor">SimpleScheduleBuilder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SimpleScheduleBuilder()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_Build_" data-uid="Quartz.SimpleScheduleBuilder.Build*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_Build" data-uid="Quartz.SimpleScheduleBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Build the actual Trigger -- NOT intended to be invoked by end users,
+but will rather be invoked by a TriggerBuilder which this
+ScheduleBuilder is given to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IMutableTrigger Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IMutableTrigger.html">IMutableTrigger</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Quartz.ScheduleBuilder&lt;Quartz.ISimpleTrigger&gt;.Build()</span></div>
+  <h5 id="Quartz_SimpleScheduleBuilder_Build_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.TriggerBuilder.html#Quartz_TriggerBuilder_WithSchedule_Quartz_IScheduleBuilder_">WithSchedule(IScheduleBuilder)</a></div>
+  </div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_Create_" data-uid="Quartz.SimpleScheduleBuilder.Create*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_Create" data-uid="Quartz.SimpleScheduleBuilder.Create">Create()</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder Create()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatForever_" data-uid="Quartz.SimpleScheduleBuilder.RepeatForever*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatForever" data-uid="Quartz.SimpleScheduleBuilder.RepeatForever">RepeatForever()</h4>
+  <div class="markdown level1 summary"><p>Specify that the trigger will repeat indefinitely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder RepeatForever()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the updated SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_RepeatForever_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html#Quartz_ISimpleTrigger_RepeatCount">RepeatCount</a></div>
+      <div><a class="xref" href="Quartz.Impl.Triggers.SimpleTriggerImpl.html#Quartz_Impl_Triggers_SimpleTriggerImpl_RepeatIndefinitely">RepeatIndefinitely</a></div>
+      <div><a class="xref" href="Quartz.SimpleScheduleBuilder.html#Quartz_SimpleScheduleBuilder_WithInterval_System_TimeSpan_">WithInterval(TimeSpan)</a></div>
+  </div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatHourlyForever_" data-uid="Quartz.SimpleScheduleBuilder.RepeatHourlyForever*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatHourlyForever" data-uid="Quartz.SimpleScheduleBuilder.RepeatHourlyForever">RepeatHourlyForever()</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat forever with a 1 hour interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatHourlyForever()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatHourlyForever_" data-uid="Quartz.SimpleScheduleBuilder.RepeatHourlyForever*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatHourlyForever_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.RepeatHourlyForever(System.Int32)">RepeatHourlyForever(Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat forever with an interval
+of the given number of hours.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatHourlyForever(int hours)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">hours</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatHourlyForTotalCount_" data-uid="Quartz.SimpleScheduleBuilder.RepeatHourlyForTotalCount*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatHourlyForTotalCount_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.RepeatHourlyForTotalCount(System.Int32)">RepeatHourlyForTotalCount(Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat the given number
+of times - 1  with a 1 hour interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatHourlyForTotalCount(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_RepeatHourlyForTotalCount_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note: Total count = 1 (at start time) + repeat count</p>
+</div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatHourlyForTotalCount_" data-uid="Quartz.SimpleScheduleBuilder.RepeatHourlyForTotalCount*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatHourlyForTotalCount_System_Int32_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.RepeatHourlyForTotalCount(System.Int32,System.Int32)">RepeatHourlyForTotalCount(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat the given number
+of times - 1  with an interval of the given number of hours.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatHourlyForTotalCount(int count, int hours)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">hours</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_RepeatHourlyForTotalCount_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note: Total count = 1 (at start time) + repeat count</p>
+</div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatMinutelyForever_" data-uid="Quartz.SimpleScheduleBuilder.RepeatMinutelyForever*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatMinutelyForever" data-uid="Quartz.SimpleScheduleBuilder.RepeatMinutelyForever">RepeatMinutelyForever()</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat forever with a 1 minute interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatMinutelyForever()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatMinutelyForever_" data-uid="Quartz.SimpleScheduleBuilder.RepeatMinutelyForever*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatMinutelyForever_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.RepeatMinutelyForever(System.Int32)">RepeatMinutelyForever(Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat forever with an interval
+of the given number of minutes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatMinutelyForever(int minutes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">minutes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatMinutelyForTotalCount_" data-uid="Quartz.SimpleScheduleBuilder.RepeatMinutelyForTotalCount*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatMinutelyForTotalCount_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.RepeatMinutelyForTotalCount(System.Int32)">RepeatMinutelyForTotalCount(Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat the given number
+of times - 1  with a 1 minute interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatMinutelyForTotalCount(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_RepeatMinutelyForTotalCount_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note: Total count = 1 (at start time) + repeat count</p>
+</div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatMinutelyForTotalCount_" data-uid="Quartz.SimpleScheduleBuilder.RepeatMinutelyForTotalCount*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatMinutelyForTotalCount_System_Int32_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.RepeatMinutelyForTotalCount(System.Int32,System.Int32)">RepeatMinutelyForTotalCount(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat the given number
+of times - 1  with an interval of the given number of minutes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatMinutelyForTotalCount(int count, int minutes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">minutes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_RepeatMinutelyForTotalCount_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note: Total count = 1 (at start time) + repeat count</p>
+</div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatSecondlyForever_" data-uid="Quartz.SimpleScheduleBuilder.RepeatSecondlyForever*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatSecondlyForever" data-uid="Quartz.SimpleScheduleBuilder.RepeatSecondlyForever">RepeatSecondlyForever()</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat forever with a 1 second interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatSecondlyForever()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatSecondlyForever_" data-uid="Quartz.SimpleScheduleBuilder.RepeatSecondlyForever*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatSecondlyForever_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.RepeatSecondlyForever(System.Int32)">RepeatSecondlyForever(Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat forever with an interval
+of the given number of seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatSecondlyForever(int seconds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">seconds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatSecondlyForTotalCount_" data-uid="Quartz.SimpleScheduleBuilder.RepeatSecondlyForTotalCount*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatSecondlyForTotalCount_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.RepeatSecondlyForTotalCount(System.Int32)">RepeatSecondlyForTotalCount(Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat the given number
+of times - 1  with a 1 second interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatSecondlyForTotalCount(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_RepeatSecondlyForTotalCount_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note: Total count = 1 (at start time) + repeat count</p>
+</div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_RepeatSecondlyForTotalCount_" data-uid="Quartz.SimpleScheduleBuilder.RepeatSecondlyForTotalCount*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_RepeatSecondlyForTotalCount_System_Int32_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.RepeatSecondlyForTotalCount(System.Int32,System.Int32)">RepeatSecondlyForTotalCount(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a SimpleScheduleBuilder set to repeat the given number
+of times - 1  with an interval of the given number of seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SimpleScheduleBuilder RepeatSecondlyForTotalCount(int count, int seconds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">seconds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the new SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_RepeatSecondlyForTotalCount_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note: Total count = 1 (at start time) + repeat count</p>
+</div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_WithInterval_" data-uid="Quartz.SimpleScheduleBuilder.WithInterval*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_WithInterval_System_TimeSpan_" data-uid="Quartz.SimpleScheduleBuilder.WithInterval(System.TimeSpan)">WithInterval(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Specify a repeat interval in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithInterval(TimeSpan timeSpan)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeSpan</span></td>
+        <td><p>the time span at which the trigger should repeat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the updated SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_WithInterval_System_TimeSpan__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html#Quartz_ISimpleTrigger_RepeatInterval">RepeatInterval</a></div>
+      <div><a class="xref" href="Quartz.SimpleScheduleBuilder.html#Quartz_SimpleScheduleBuilder_WithRepeatCount_System_Int32_">WithRepeatCount(Int32)</a></div>
+  </div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_WithIntervalInHours_" data-uid="Quartz.SimpleScheduleBuilder.WithIntervalInHours*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_WithIntervalInHours_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.WithIntervalInHours(System.Int32)">WithIntervalInHours(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithIntervalInHours(int hours)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">hours</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_WithIntervalInMinutes_" data-uid="Quartz.SimpleScheduleBuilder.WithIntervalInMinutes*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_WithIntervalInMinutes_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.WithIntervalInMinutes(System.Int32)">WithIntervalInMinutes(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithIntervalInMinutes(int minutes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">minutes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_WithIntervalInSeconds_" data-uid="Quartz.SimpleScheduleBuilder.WithIntervalInSeconds*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_WithIntervalInSeconds_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.WithIntervalInSeconds(System.Int32)">WithIntervalInSeconds(Int32)</h4>
+  <div class="markdown level1 summary"><p>Specify a repeat interval in seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithIntervalInSeconds(int seconds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">seconds</span></td>
+        <td><p>the time span at which the trigger should repeat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the updated SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_WithIntervalInSeconds_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html#Quartz_ISimpleTrigger_RepeatInterval">RepeatInterval</a></div>
+      <div><a class="xref" href="Quartz.SimpleScheduleBuilder.html#Quartz_SimpleScheduleBuilder_WithRepeatCount_System_Int32_">WithRepeatCount(Int32)</a></div>
+  </div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionFireNow_" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionFireNow*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionFireNow" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionFireNow">WithMisfireHandlingInstructionFireNow()</h4>
+  <div class="markdown level1 summary"><p>If the Trigger misfires, use the
+<a class="xref" href="Quartz.MisfireInstruction.SimpleTrigger.html#Quartz_MisfireInstruction_SimpleTrigger_FireNow">FireNow</a> instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithMisfireHandlingInstructionFireNow()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the updated SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionFireNow_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.MisfireInstruction.SimpleTrigger.html#Quartz_MisfireInstruction_SimpleTrigger_FireNow">FireNow</a></div>
+  </div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionIgnoreMisfires_" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionIgnoreMisfires*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionIgnoreMisfires" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionIgnoreMisfires">WithMisfireHandlingInstructionIgnoreMisfires()</h4>
+  <div class="markdown level1 summary"><p>If the Trigger misfires, use the
+<a class="xref" href="Quartz.MisfireInstruction.html#Quartz_MisfireInstruction_IgnoreMisfirePolicy">IgnoreMisfirePolicy</a> instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithMisfireHandlingInstructionIgnoreMisfires()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the updated CronScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionIgnoreMisfires_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.MisfireInstruction.html#Quartz_MisfireInstruction_IgnoreMisfirePolicy">IgnoreMisfirePolicy</a></div>
+  </div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNextWithExistingCount_" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionNextWithExistingCount*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNextWithExistingCount" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionNextWithExistingCount">WithMisfireHandlingInstructionNextWithExistingCount()</h4>
+  <div class="markdown level1 summary"><p>If the Trigger misfires, use the
+<a class="xref" href="Quartz.MisfireInstruction.SimpleTrigger.html#Quartz_MisfireInstruction_SimpleTrigger_RescheduleNextWithExistingCount">RescheduleNextWithExistingCount</a> instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithMisfireHandlingInstructionNextWithExistingCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the updated SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNextWithExistingCount_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.MisfireInstruction.SimpleTrigger.html#Quartz_MisfireInstruction_SimpleTrigger_RescheduleNextWithExistingCount">RescheduleNextWithExistingCount</a></div>
+  </div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNextWithRemainingCount_" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionNextWithRemainingCount*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNextWithRemainingCount" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionNextWithRemainingCount">WithMisfireHandlingInstructionNextWithRemainingCount()</h4>
+  <div class="markdown level1 summary"><p>If the Trigger misfires, use the
+<a class="xref" href="Quartz.MisfireInstruction.SimpleTrigger.html#Quartz_MisfireInstruction_SimpleTrigger_RescheduleNextWithRemainingCount">RescheduleNextWithRemainingCount</a> instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithMisfireHandlingInstructionNextWithRemainingCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the updated SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNextWithRemainingCount_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.MisfireInstruction.SimpleTrigger.html#Quartz_MisfireInstruction_SimpleTrigger_RescheduleNextWithRemainingCount">RescheduleNextWithRemainingCount</a></div>
+  </div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNowWithExistingCount_" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionNowWithExistingCount*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNowWithExistingCount" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionNowWithExistingCount">WithMisfireHandlingInstructionNowWithExistingCount()</h4>
+  <div class="markdown level1 summary"><p>If the Trigger misfires, use the
+<a class="xref" href="Quartz.MisfireInstruction.SimpleTrigger.html#Quartz_MisfireInstruction_SimpleTrigger_RescheduleNowWithExistingRepeatCount">RescheduleNowWithExistingRepeatCount</a> instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithMisfireHandlingInstructionNowWithExistingCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the updated SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNowWithExistingCount_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.MisfireInstruction.SimpleTrigger.html#Quartz_MisfireInstruction_SimpleTrigger_RescheduleNowWithExistingRepeatCount">RescheduleNowWithExistingRepeatCount</a></div>
+  </div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNowWithRemainingCount_" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionNowWithRemainingCount*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNowWithRemainingCount" data-uid="Quartz.SimpleScheduleBuilder.WithMisfireHandlingInstructionNowWithRemainingCount">WithMisfireHandlingInstructionNowWithRemainingCount()</h4>
+  <div class="markdown level1 summary"><p>If the Trigger misfires, use the
+<a class="xref" href="Quartz.MisfireInstruction.SimpleTrigger.html#Quartz_MisfireInstruction_SimpleTrigger_RescheduleNowWithRemainingRepeatCount">RescheduleNowWithRemainingRepeatCount</a> instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithMisfireHandlingInstructionNowWithRemainingCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the updated SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_WithMisfireHandlingInstructionNowWithRemainingCount_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.MisfireInstruction.SimpleTrigger.html#Quartz_MisfireInstruction_SimpleTrigger_RescheduleNowWithRemainingRepeatCount">RescheduleNowWithRemainingRepeatCount</a></div>
+  </div>
+  
+  
+  <a id="Quartz_SimpleScheduleBuilder_WithRepeatCount_" data-uid="Quartz.SimpleScheduleBuilder.WithRepeatCount*"></a>
+  <h4 id="Quartz_SimpleScheduleBuilder_WithRepeatCount_System_Int32_" data-uid="Quartz.SimpleScheduleBuilder.WithRepeatCount(System.Int32)">WithRepeatCount(Int32)</h4>
+  <div class="markdown level1 summary"><p>Specify a the number of time the trigger will repeat - total number of
+firings will be this number + 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleScheduleBuilder WithRepeatCount(int repeatCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">repeatCount</span></td>
+        <td><p>the number of seconds at which the trigger should repeat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></td>
+        <td><p>the updated SimpleScheduleBuilder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_SimpleScheduleBuilder_WithRepeatCount_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html#Quartz_ISimpleTrigger_RepeatCount">RepeatCount</a></div>
+      <div><a class="xref" href="Quartz.SimpleScheduleBuilder.html#Quartz_SimpleScheduleBuilder_RepeatForever">RepeatForever()</a></div>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></div>
+      <div><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></div>
+      <div><a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a></div>
+      <div><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></div>
+      <div><a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

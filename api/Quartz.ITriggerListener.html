@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ITriggerListener
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ITriggerListener
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.ITriggerListener">
+  
+  
+  <h1 id="Quartz_ITriggerListener" data-uid="Quartz.ITriggerListener" class="text-break">Interface ITriggerListener
+  </h1>
+  <div class="markdown level0 summary"><p>The interface to be implemented by classes that want to be informed when a
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> fires. In general, applications that use a
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a> will not have use for this mechanism.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_ITriggerListener_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITriggerListener</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_ITriggerListener_Name_" data-uid="Quartz.ITriggerListener.Name*"></a>
+  <h4 id="Quartz_ITriggerListener_Name" data-uid="Quartz.ITriggerListener.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Get the name of the <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_ITriggerListener_TriggerComplete_" data-uid="Quartz.ITriggerListener.TriggerComplete*"></a>
+  <h4 id="Quartz_ITriggerListener_TriggerComplete_Quartz_ITrigger_Quartz_IJobExecutionContext_Quartz_SchedulerInstruction_" data-uid="Quartz.ITriggerListener.TriggerComplete(Quartz.ITrigger,Quartz.IJobExecutionContext,Quartz.SchedulerInstruction)">TriggerComplete(ITrigger, IJobExecutionContext, SchedulerInstruction)</h4>
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has fired, it&apos;s associated <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+has been executed, and it&apos;s <a class="xref" href="Quartz.Spi.IOperableTrigger.html#Quartz_Spi_IOperableTrigger_Triggered_Quartz_ICalendar_">Triggered(ICalendar)</a> method has been
+called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TriggerComplete(ITrigger trigger, IJobExecutionContext context, SchedulerInstruction triggerInstructionCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that was fired.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that was passed to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s<a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_">Execute(IJobExecutionContext)</a> method.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></td>
+        <td><span class="parametername">triggerInstructionCode</span></td>
+        <td><p>The result of the call on the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s<a class="xref" href="Quartz.Spi.IOperableTrigger.html#Quartz_Spi_IOperableTrigger_Triggered_Quartz_ICalendar_">Triggered(ICalendar)</a>  method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITriggerListener_TriggerFired_" data-uid="Quartz.ITriggerListener.TriggerFired*"></a>
+  <h4 id="Quartz_ITriggerListener_TriggerFired_Quartz_ITrigger_Quartz_IJobExecutionContext_" data-uid="Quartz.ITriggerListener.TriggerFired(Quartz.ITrigger,Quartz.IJobExecutionContext)">TriggerFired(ITrigger, IJobExecutionContext)</h4>
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has fired, and it&apos;s associated <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+is about to be executed.
+<p>
+It is called before the <a class="xref" href="Quartz.ITriggerListener.html#Quartz_ITriggerListener_VetoJobExecution_Quartz_ITrigger_Quartz_IJobExecutionContext_">VetoJobExecution(ITrigger, IJobExecutionContext)</a> method of this
+interface.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TriggerFired(ITrigger trigger, IJobExecutionContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that has fired.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that will be passed to the <a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s<a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_">Execute(IJobExecutionContext)</a> method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITriggerListener_TriggerMisfired_" data-uid="Quartz.ITriggerListener.TriggerMisfired*"></a>
+  <h4 id="Quartz_ITriggerListener_TriggerMisfired_Quartz_ITrigger_" data-uid="Quartz.ITriggerListener.TriggerMisfired(Quartz.ITrigger)">TriggerMisfired(ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has misfired.
+<p>
+Consideration should be given to how much time is spent in this method,
+as it will affect all triggers that are misfiring.  If you have lots
+of triggers misfiring at once, it could be an issue it this method
+does a lot.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TriggerMisfired(ITrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that has misfired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITriggerListener_VetoJobExecution_" data-uid="Quartz.ITriggerListener.VetoJobExecution*"></a>
+  <h4 id="Quartz_ITriggerListener_VetoJobExecution_Quartz_ITrigger_Quartz_IJobExecutionContext_" data-uid="Quartz.ITriggerListener.VetoJobExecution(Quartz.ITrigger,Quartz.IJobExecutionContext)">VetoJobExecution(ITrigger, IJobExecutionContext)</h4>
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has fired, and it&apos;s associated <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+is about to be executed.
+<p>
+It is called after the <a class="xref" href="Quartz.ITriggerListener.html#Quartz_ITriggerListener_TriggerFired_Quartz_ITrigger_Quartz_IJobExecutionContext_">TriggerFired(ITrigger, IJobExecutionContext)</a> method of this
+interface.  If the implementation vetoes the execution (via
+returning <span class="xref">true</span>), the job&apos;s execute method will not be called.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool VetoJobExecution(ITrigger trigger, IJobExecutionContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that has fired.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that will be passed to
+the <a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s<a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_">Execute(IJobExecutionContext)</a> method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Returns true if job execution should be vetoed, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IListenerManager.html">IListenerManager</a></div>
+      <div><a class="xref" href="Quartz.IMatcher-1.html">IMatcher</a>&lt;T&gt;</div>
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+      <div><a class="xref" href="Quartz.IJobListener.html">IJobListener</a></div>
+      <div><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

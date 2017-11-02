@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Quartz
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Quartz
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz">
+  
+  <h1 id="Quartz" data-uid="Quartz" class="text-break">Namespace Quartz
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a></h4>
+      <section><p>CalendarIntervalScheduleBuilder is a <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a>
+that defines calendar time (day, week, month, year) interval-based
+schedules for Triggers.</p>
+</section>
+      <h4><a class="xref" href="Quartz.CalendarIntervalTriggerBuilderExtensions.html">CalendarIntervalTriggerBuilderExtensions</a></h4>
+      <section><p>Extension methods that attach <a class="xref" href="Quartz.CalendarIntervalScheduleBuilder.html">CalendarIntervalScheduleBuilder</a> to <a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></h4>
+      <section><p>Provides a parser and evaluator for unix-like cron expressions. Cron
+expressions provide the ability to specify complex time combinations such as
+&quot;At 8:00am every Monday through Friday&quot; or &quot;At 1:30am every
+last Friday of the month&quot;.</p>
+</section>
+      <h4><a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a></h4>
+      <section><p>CronScheduleBuilder is a <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> that defines
+<a class="xref" href="Quartz.CronExpression.html">CronExpression</a>-based schedules for <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.</p>
+</section>
+      <h4><a class="xref" href="Quartz.CronScheduleTriggerBuilderExtensions.html">CronScheduleTriggerBuilderExtensions</a></h4>
+      <section><p>Extension methods that attach <a class="xref" href="Quartz.CronScheduleBuilder.html">CronScheduleBuilder</a> to <a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.DailyTimeIntervalScheduleBuilder.html">DailyTimeIntervalScheduleBuilder</a></h4>
+      <section><p>A <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> implementation that build schedule for DailyTimeIntervalTrigger.</p>
+</section>
+      <h4><a class="xref" href="Quartz.DailyTimeIntervalTriggerBuilderExtensions.html">DailyTimeIntervalTriggerBuilderExtensions</a></h4>
+      <section><p>Extension methods that attach <a class="xref" href="Quartz.DailyTimeIntervalScheduleBuilder.html">DailyTimeIntervalScheduleBuilder</a> to <a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.DateBuilder.html">DateBuilder</a></h4>
+      <section><p>DateBuilder is used to conveniently create
+<span class="xref">System.DateTimeOffset</span> instances that meet particular criteria.</p>
+</section>
+      <h4><a class="xref" href="Quartz.DisallowConcurrentExecutionAttribute.html">DisallowConcurrentExecutionAttribute</a></h4>
+      <section><p>An attribute that marks a <a class="xref" href="Quartz.IJob.html">IJob</a> class as one that must not have multiple
+instances executed concurrently (where instance is based-upon a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> 
+definition - or in other words based upon a <a class="xref" href="Quartz.JobKey.html">JobKey</a>). </p>
+</section>
+      <h4><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></h4>
+      <section><p>JobBuilder is used to instantiate <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>s.</p>
+</section>
+      <h4><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></h4>
+      <section><p>Holds state information for <a class="xref" href="Quartz.IJob.html">IJob</a> instances.</p>
+</section>
+      <h4><a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></h4>
+      <section><p>An exception that can be thrown by a <a class="xref" href="Quartz.IJob.html">IJob</a>
+to indicate to the Quartz <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> that an error
+occurred while executing, and whether or not the <a class="xref" href="Quartz.IJob.html">IJob</a> requests
+to be re-fired immediately (using the same <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a>),
+or whether it wants to be unscheduled.</p>
+</section>
+      <h4><a class="xref" href="Quartz.JobKey.html">JobKey</a></h4>
+      <section><p>Uniquely identifies a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.JobPersistenceException.html">JobPersistenceException</a></h4>
+      <section><p>An exception that is thrown to indicate that there has been a failure in the
+scheduler&apos;s underlying persistence mechanism.</p>
+</section>
+      <h4><a class="xref" href="Quartz.ObjectAlreadyExistsException.html">ObjectAlreadyExistsException</a></h4>
+      <section><p>An exception that is thrown to indicate that an attempt to store a new
+object (i.e. <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>,<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+or <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>) in a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+failed, because one with the same name and group already exists.</p>
+</section>
+      <h4><a class="xref" href="Quartz.PersistJobDataAfterExecutionAttribute.html">PersistJobDataAfterExecutionAttribute</a></h4>
+      <section><p>An attribute that marks a <a class="xref" href="Quartz.IJob.html">IJob</a> class as one that makes updates to its
+<a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> during execution, and wishes the scheduler to re-store the
+<a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> when execution completes. </p>
+</section>
+      <h4><a class="xref" href="Quartz.QuartzThread.html">QuartzThread</a></h4>
+      <section><p>Support class used to handle threads</p>
+</section>
+      <h4><a class="xref" href="Quartz.ScheduleBuilder-1.html">ScheduleBuilder&lt;T&gt;</a></h4>
+      <section><p>Base class for <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> implementors.</p>
+</section>
+      <h4><a class="xref" href="Quartz.SchedulerConfigException.html">SchedulerConfigException</a></h4>
+      <section><p>An exception that is thrown to indicate that there is a misconfiguration of
+the <a class="xref" href="Quartz.ISchedulerFactory.html">ISchedulerFactory</a>- or one of the components it
+configures.</p>
+</section>
+      <h4><a class="xref" href="Quartz.SchedulerContext.html">SchedulerContext</a></h4>
+      <section><p>Holds context/environment data that can be made available to Jobs as they
+are executed. </p>
+</section>
+      <h4><a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a></h4>
+      <section><p>Base class for exceptions thrown by the Quartz <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.SchedulerMetaData.html">SchedulerMetaData</a></h4>
+      <section><p>Describes the settings and capabilities of a given <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+instance.</p>
+</section>
+      <h4><a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a></h4>
+      <section><p>SimpleScheduleBuilder is a <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a>
+that defines strict/literal interval-based schedules for
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.</p>
+</section>
+      <h4><a class="xref" href="Quartz.SimpleScheduleTriggerBuilderExtensions.html">SimpleScheduleTriggerBuilderExtensions</a></h4>
+      <section><p>Extension methods that attach <a class="xref" href="Quartz.SimpleScheduleBuilder.html">SimpleScheduleBuilder</a> to <a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.SystemTime.html">SystemTime</a></h4>
+      <section><p>A time source for Quartz.NET that returns the current time.
+Original idea by Ayende Rahien:
+<a href="http://ayende.com/Blog/archive/2008/07/07/Dealing-with-time-in-tests.aspx">http://ayende.com/Blog/archive/2008/07/07/Dealing-with-time-in-tests.aspx</a></p>
+</section>
+      <h4><a class="xref" href="Quartz.TimeOfDay.html">TimeOfDay</a></h4>
+      <section><p>Represents a time in hour, minute and second of any given day.
+<remarks>
+<p>
+The hour is in 24-hour convention, meaning values are from 0 to 23. 
+</p>
+</remarks></p>
+</section>
+      <h4><a class="xref" href="Quartz.TimeSpanParseRuleAttribute.html">TimeSpanParseRuleAttribute</a></h4>
+      <section><p>Attribute to use with public <span class="xref">System.TimeSpan</span> properties that
+can be set with Quartz configuration. Attribute can be used to advice
+parsing to use correct type of time span (milliseconds, seconds, minutes, hours)
+as it may depend on property.</p>
+</section>
+      <h4><a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a></h4>
+      <section><p>TriggerBuilder is used to instantiate <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.</p>
+</section>
+      <h4><a class="xref" href="Quartz.TriggerConstants.html">TriggerConstants</a></h4>
+      <section><p>Common constants for triggers.</p>
+</section>
+      <h4><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></h4>
+      <section><p>Uniquely identifies a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.TriggerTimeComparator.html">TriggerTimeComparator</a></h4>
+      <section><p>A Comparator that compares trigger&apos;s next fire times, or in other words,
+sorts them according to earliest next fire time.  If the fire times are
+the same, then the triggers are sorted according to priority (highest
+value first), if the priorities are the same, then they are sorted
+by key.</p>
+</section>
+      <h4><a class="xref" href="Quartz.TriggerUtils.html">TriggerUtils</a></h4>
+      <section><p>Convenience and utility methods for simplifying the construction and
+configuration of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s and DateTimeOffsetOffsets.</p>
+</section>
+      <h4><a class="xref" href="Quartz.UnableToInterruptJobException.html">UnableToInterruptJobException</a></h4>
+      <section><p>An exception that is thrown to indicate that a call to 
+<a class="xref" href="Quartz.IInterruptableJob.html#Quartz_IInterruptableJob_Interrupt">Interrupt()</a> failed without interrupting the Job.</p>
+</section>
+      <h4><a class="xref" href="Quartz.ValueSet.html">ValueSet</a></h4>
+      <section><p>Helper class for cron expression handling.</p>
+</section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="Quartz.MisfireInstruction.html">MisfireInstruction</a></h4>
+      <section><p>Misfire instructions.</p>
+</section>
+      <h4><a class="xref" href="Quartz.MisfireInstruction.CalendarIntervalTrigger.html">MisfireInstruction.CalendarIntervalTrigger</a></h4>
+      <section><p>Misfire instructions for DateIntervalTrigger</p>
+</section>
+      <h4><a class="xref" href="Quartz.MisfireInstruction.CronTrigger.html">MisfireInstruction.CronTrigger</a></h4>
+      <section><p>misfire instructions for CronTrigger</p>
+</section>
+      <h4><a class="xref" href="Quartz.MisfireInstruction.DailyTimeIntervalTrigger.html">MisfireInstruction.DailyTimeIntervalTrigger</a></h4>
+      <section><p>Misfire instructions for DailyTimeIntervalTrigger</p>
+</section>
+      <h4><a class="xref" href="Quartz.MisfireInstruction.SimpleTrigger.html">MisfireInstruction.SimpleTrigger</a></h4>
+      <section><p>Misfire policy settings for SimpleTrigger.</p>
+</section>
+      <h4><a class="xref" href="Quartz.SchedulerConstants.html">SchedulerConstants</a></h4>
+      <section><p>Scheduler constants.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></h4>
+      <section><p>An interface to be implemented by objects that define spaces of time during 
+which an associated <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> may (not) fire. Calendars 
+do not define actual fire times, but rather are used to limit a 
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> from firing on its normal schedule if necessary. Most 
+Calendars include all times by default and allow the user to specify times 
+to exclude. </p>
+</section>
+      <h4><a class="xref" href="Quartz.ICalendarIntervalTrigger.html">ICalendarIntervalTrigger</a></h4>
+      <section><p>A <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that is used to fire a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+based upon repeating calendar time intervals.</p>
+</section>
+      <h4><a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a></h4>
+      <section><p>The public interface for inspecting settings specific to a CronTrigger, 
+which is used to fire a <a class="xref" href="Quartz.IJob.html">IJob</a>
+at given moments in time, defined with Unix &apos;cron-like&apos; schedule definitions.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a></h4>
+      <section><p>A <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that is used to fire a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+based upon daily repeating time intervals.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IInterruptableJob.html">IInterruptableJob</a></h4>
+      <section><p>The interface to be implemented by <a class="xref" href="Quartz.IJob.html">IJob</a>s that provide a 
+mechanism for having their execution interrupted.  It is NOT a requirement
+for jobs to implement this interface - in fact, for most people, none of
+their jobs will.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IJob.html">IJob</a></h4>
+      <section><p>The interface to be implemented by classes which represent a &apos;job&apos; to be
+performed.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></h4>
+      <section><p>Conveys the detail properties of a given job instance. 
+JobDetails are to be created/defined with <a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></h4>
+      <section><p>A context bundle containing handles to various environment information, that
+is given to a <a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_JobDetail">JobDetail</a> instance as it is
+executed, and to a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> instance after the
+execution completes.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IJobListener.html">IJobListener</a></h4>
+      <section><p>The interface to be implemented by classes that want to be informed when a
+<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> executes. In general,  applications that use a 
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a> will not have use for this mechanism.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IListenerManager.html">IListenerManager</a></h4>
+      <section><p>Client programs may be interested in the &apos;listener&apos; interfaces that are
+available from Quartz. The <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> interface
+provides notifications of Job executions. The
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a> interface provides notifications of
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> firings. The <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>
+interface provides notifications of scheduler events and
+errors.  Listeners can be associated with local schedulers through the
+<a class="xref" href="Quartz.IListenerManager.html">IListenerManager</a> interface.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IMatcher-1.html">IMatcher&lt;T&gt;</a></h4>
+      <section><p>Matchers can be used in various <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> API methods to 
+select the entities that should be operated upon.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></h4>
+      <section><p>Schedule builders offer fluent interface and are responsible for creating schedules.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></h4>
+      <section><p>This is the main interface of a Quartz Scheduler.</p>
+</section>
+      <h4><a class="xref" href="Quartz.ISchedulerFactory.html">ISchedulerFactory</a></h4>
+      <section><p>Provides a mechanism for obtaining client-usable handles to <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+instances.</p>
+</section>
+      <h4><a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a></h4>
+      <section><p>The interface to be implemented by classes that want to be informed of major
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a> events.</p>
+</section>
+      <h4><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></h4>
+      <section><p>A <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that is used to fire a <a class="xref" href="Quartz.IJob.html">IJob</a>
+at a given moment in time, and optionally repeated at a specified interval.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IStatefulJob.html">IStatefulJob</a></h4>
+      <section><p>A marker interface for <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> s that
+wish to have their state maintained between executions.</p>
+</section>
+      <h4><a class="xref" href="Quartz.IThreadRunnable.html">IThreadRunnable</a></h4>
+      <section><p>This interface should be implemented by any class whose instances are intended 
+to be executed by a thread.</p>
+</section>
+      <h4><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></h4>
+      <section><p>The base interface with properties common to all <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s - 
+use <a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a> to instantiate an actual Trigger.</p>
+</section>
+      <h4><a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a></h4>
+      <section><p>The interface to be implemented by classes that want to be informed when a
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> fires. In general, applications that use a
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a> will not have use for this mechanism.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Quartz.IntervalUnit.html">IntervalUnit</a></h4>
+      <section><p>Supported interval units used by <a class="xref" href="Quartz.ICalendarIntervalTrigger.html">ICalendarIntervalTrigger</a>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></h4>
+      <section><p>Instructs Scheduler what to do with a trigger and job.</p>
+</section>
+      <h4><a class="xref" href="Quartz.TimeSpanParseRule.html">TimeSpanParseRule</a></h4>
+      <section><p>Possible parse rules for <span class="xref">System.TimeSpan</span>s.</p>
+</section>
+      <h4><a class="xref" href="Quartz.TriggerState.html">TriggerState</a></h4>
+      <section><p>All trigger states known to Scheduler.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

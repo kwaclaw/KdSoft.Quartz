@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CronTriggerInfo
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CronTriggerInfo
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="KdSoft.Quartz.CronTriggerInfo">
+  
+  
+  <h1 id="KdSoft_Quartz_CronTriggerInfo" data-uid="KdSoft.Quartz.CronTriggerInfo" class="text-break">Class CronTriggerInfo
+  </h1>
+  <div class="markdown level0 summary"><p>Trigger information (static), includes information for the trigger&apos;s associated job.
+If the trigger is a CRON trigger then the <a class="xref" href="KdSoft.Quartz.CronTriggerInfo.html#KdSoft_Quartz_CronTriggerInfo_CronExpressionString">CronExpressionString</a>
+and <a class="xref" href="KdSoft.Quartz.CronTriggerInfo.html#KdSoft_Quartz_CronTriggerInfo_TimeZoneId">TimeZoneId</a> properties will be set.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CronTriggerInfo</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="KdSoft.Quartz.html">KdSoft.Quartz</a></h6>
+  <h6><strong>Assembly</strong>: KdSoft.Quartz.Shared.dll</h6>
+  <h5 id="KdSoft_Quartz_CronTriggerInfo_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CronTriggerInfo</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_CalendarName_" data-uid="KdSoft.Quartz.CronTriggerInfo.CalendarName*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_CalendarName" data-uid="KdSoft.Quartz.CronTriggerInfo.CalendarName">CalendarName</h4>
+  <div class="markdown level1 summary"><p>Get or set the Calendar with the given name on this Trigger.
+Use <code>null</code> when setting to dis-associate a Calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CalendarName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_CronExpressionString_" data-uid="KdSoft.Quartz.CronTriggerInfo.CronExpressionString*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_CronExpressionString" data-uid="KdSoft.Quartz.CronTriggerInfo.CronExpressionString">CronExpressionString</h4>
+  <div class="markdown level1 summary"><p>Get or set the CRON expression, if this is a CRON trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CronExpressionString { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_Description_" data-uid="KdSoft.Quartz.CronTriggerInfo.Description*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_Description" data-uid="KdSoft.Quartz.CronTriggerInfo.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Trigger description, if any.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_EndTimeUtc_" data-uid="KdSoft.Quartz.CronTriggerInfo.EndTimeUtc*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_EndTimeUtc" data-uid="KdSoft.Quartz.CronTriggerInfo.EndTimeUtc">EndTimeUtc</h4>
+  <div class="markdown level1 summary"><p>The time on which the trigger must stop firing. This defines the final boundary for trigger firings.
+The trigger will not fire after to this date and time. If this value is null, no end time boundary is assumed,
+and the trigger can continue indefinitely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? EndTimeUtc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_FinalFireTimeUtc_" data-uid="KdSoft.Quartz.CronTriggerInfo.FinalFireTimeUtc*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_FinalFireTimeUtc" data-uid="KdSoft.Quartz.CronTriggerInfo.FinalFireTimeUtc">FinalFireTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Returns the last UTC time at which the Trigger will fire, if the Trigger will repeat indefinitely,
+null will be returned. <br>Note that the return time* may* be in the past.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? FinalFireTimeUtc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_HasMillisecondPrecision_" data-uid="KdSoft.Quartz.CronTriggerInfo.HasMillisecondPrecision*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_HasMillisecondPrecision" data-uid="KdSoft.Quartz.CronTriggerInfo.HasMillisecondPrecision">HasMillisecondPrecision</h4>
+  <div class="markdown level1 summary"><p>Tells whether this Trigger instance can handle events in millisecond precision.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasMillisecondPrecision { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_JobDataMap_" data-uid="KdSoft.Quartz.CronTriggerInfo.JobDataMap*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_JobDataMap" data-uid="KdSoft.Quartz.CronTriggerInfo.JobDataMap">JobDataMap</h4>
+  <div class="markdown level1 summary"><p>JobDataMap associated with the Trigger. Changes made to this map during
+job execution are not re-persisted, and in fact typically result in an illegal state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobDataDictionary JobDataMap { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.JobDataDictionary.html">JobDataDictionary</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_JobKey_" data-uid="KdSoft.Quartz.CronTriggerInfo.JobKey*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_JobKey" data-uid="KdSoft.Quartz.CronTriggerInfo.JobKey">JobKey</h4>
+  <div class="markdown level1 summary"><p>Associated job key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuartzKey JobKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_Key_" data-uid="KdSoft.Quartz.CronTriggerInfo.Key*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_Key" data-uid="KdSoft.Quartz.CronTriggerInfo.Key">Key</h4>
+  <div class="markdown level1 summary"><p>Trigger key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuartzKey Key { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.QuartzKey.html">QuartzKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_MisfireInstruction_" data-uid="KdSoft.Quartz.CronTriggerInfo.MisfireInstruction*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_MisfireInstruction" data-uid="KdSoft.Quartz.CronTriggerInfo.MisfireInstruction">MisfireInstruction</h4>
+  <div class="markdown level1 summary"><p>Get or set the instruction the Scheduler should be given for handling misfire situations
+for this Trigger- the concrete Trigger type that you are using will have defined a set of additional
+<a class="xref" href="KdSoft.Quartz.MisfireInstruction.html">MisfireInstruction</a> constants that may be set to this property.<br>
+If not explicitly set, the default value is <a class="xref" href="KdSoft.Quartz.MisfireInstruction.html#KdSoft_Quartz_MisfireInstruction_InstructionNotSet">InstructionNotSet</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MisfireInstruction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_CronTriggerInfo_MisfireInstruction_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="KdSoft.Quartz.MisfireInstruction.html">MisfireInstruction</a></div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_Priority_" data-uid="KdSoft.Quartz.CronTriggerInfo.Priority*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_Priority" data-uid="KdSoft.Quartz.CronTriggerInfo.Priority">Priority</h4>
+  <div class="markdown level1 summary"><p>The priority of a Trigger acts as a tie breaker such that if two Triggers have the same scheduled fire time,
+then Quartz will do its best to give the one with the higher priority first access to a worker thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ? Priority { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_CronTriggerInfo_Priority_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is 5.</p>
+</div>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_StartTimeUtc_" data-uid="KdSoft.Quartz.CronTriggerInfo.StartTimeUtc*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_StartTimeUtc" data-uid="KdSoft.Quartz.CronTriggerInfo.StartTimeUtc">StartTimeUtc</h4>
+  <div class="markdown level1 summary"><p>The time at which the trigger&apos;s scheduling should start. May or may not be the first actual fire time
+of the trigger, depending upon the type of trigger and the settings of the other properties of the trigger.
+However the first actual first time will not be before this date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset StartTimeUtc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KdSoft_Quartz_CronTriggerInfo_StartTimeUtc_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Setting a value in the past may cause a new trigger to compute a first fire time that is in the past,
+which may cause an immediate misfire of the trigger.</p>
+</div>
+  
+  
+  <a id="KdSoft_Quartz_CronTriggerInfo_TimeZoneId_" data-uid="KdSoft.Quartz.CronTriggerInfo.TimeZoneId*"></a>
+  <h4 id="KdSoft_Quartz_CronTriggerInfo_TimeZoneId" data-uid="KdSoft.Quartz.CronTriggerInfo.TimeZoneId">TimeZoneId</h4>
+  <div class="markdown level1 summary"><p>Get or set the time zone for which the CronExpressionString will be resolved.
+Applies to CRON triggers only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TimeZoneId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

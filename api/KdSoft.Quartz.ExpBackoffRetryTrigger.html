@@ -1,0 +1,1138 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ExpBackoffRetryTrigger
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ExpBackoffRetryTrigger
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger">
+  
+  
+  <h1 id="KdSoft_Quartz_ExpBackoffRetryTrigger" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger" class="text-break">Class ExpBackoffRetryTrigger
+  </h1>
+  <div class="markdown level0 summary"><p>A concrete <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that is used to retry a failed <a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html">AbstractTrigger</a></div>
+    <div class="level2"><a class="xref" href="KdSoft.Quartz.RetryTrigger-1.html">RetryTrigger</a>&lt;<a class="xref" href="KdSoft.Quartz.ExpBackoffRetryTrigger.html">ExpBackoffRetryTrigger</a>&gt;</div>
+    <div class="level3"><span class="xref">ExpBackoffRetryTrigger</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html">AbstractTrigger</a>&gt;</div>
+    <div><a class="xref" href="KdSoft.Quartz.IRetryTrigger.html">IRetryTrigger</a></div>
+    <div><a class="xref" href="Quartz.Spi.IMutableTrigger.html">IMutableTrigger</a></div>
+    <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+    <div><span class="xref">System.ICloneable</span></div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetTriggerBuilder">AbstractTrigger.GetTriggerBuilder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException_">AbstractTrigger.ExecutionComplete(IJobExecutionContext, JobExecutionException)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_ToString">AbstractTrigger.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_CompareTo_Quartz_ITrigger_">AbstractTrigger.CompareTo(ITrigger)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Equals_System_Object_">AbstractTrigger.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Equals_Quartz_Impl_Triggers_AbstractTrigger_">AbstractTrigger.Equals(AbstractTrigger)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetHashCode">AbstractTrigger.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Clone">AbstractTrigger.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Name">AbstractTrigger.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Group">AbstractTrigger.Group</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobName">AbstractTrigger.JobName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobGroup">AbstractTrigger.JobGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_FullName">AbstractTrigger.FullName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Key">AbstractTrigger.Key</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobKey">AbstractTrigger.JobKey</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_FullJobName">AbstractTrigger.FullJobName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Description">AbstractTrigger.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_CalendarName">AbstractTrigger.CalendarName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobDataMap">AbstractTrigger.JobDataMap</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_MisfireInstruction">AbstractTrigger.MisfireInstruction</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_FireInstanceId">AbstractTrigger.FireInstanceId</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_EndTimeUtc">AbstractTrigger.EndTimeUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_StartTimeUtc">AbstractTrigger.StartTimeUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Priority">AbstractTrigger.Priority</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_HasAdditionalProperties">AbstractTrigger.HasAdditionalProperties</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="KdSoft.Quartz.html">KdSoft.Quartz</a></h6>
+  <h6><strong>Assembly</strong>: KdSoft.Quartz.dll</h6>
+  <h5 id="KdSoft_Quartz_ExpBackoffRetryTrigger_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class ExpBackoffRetryTrigger : RetryTrigger&lt;ExpBackoffRetryTrigger&gt;, IOperableTrigger, IEquatable&lt;AbstractTrigger&gt;, IRetryTrigger, IMutableTrigger, ITrigger, ICloneable, IComparable&lt;ITrigger&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger__ctor_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.#ctor*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger__ctor" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.#ctor">ExpBackoffRetryTrigger()</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="KdSoft.Quartz.ExpBackoffRetryTrigger.html">ExpBackoffRetryTrigger</a> with no settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExpBackoffRetryTrigger()</code></pre>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger__ctor_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.#ctor*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger__ctor_System_String_KdSoft_Quartz_ExpBackoffRetrySettings_System_DateTimeOffset_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.#ctor(System.String,KdSoft.Quartz.ExpBackoffRetrySettings,System.DateTimeOffset)">ExpBackoffRetryTrigger(String, ExpBackoffRetrySettings, DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="KdSoft.Quartz.ExpBackoffRetryTrigger.html">ExpBackoffRetryTrigger</a> in the default group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExpBackoffRetryTrigger(string name, ExpBackoffRetrySettings retrySettings, DateTimeOffset startTimeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of trigger.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.ExpBackoffRetrySettings.html">ExpBackoffRetrySettings</a></td>
+        <td><span class="parametername">retrySettings</span></td>
+        <td><p>Retry settings.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">startTimeUtc</span></td>
+        <td><p>Time of first job execution.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger__ctor_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.#ctor*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger__ctor_System_String_System_String_KdSoft_Quartz_ExpBackoffRetrySettings_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.#ctor(System.String,System.String,KdSoft.Quartz.ExpBackoffRetrySettings)">ExpBackoffRetryTrigger(String, String, ExpBackoffRetrySettings)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="KdSoft.Quartz.ExpBackoffRetryTrigger.html">ExpBackoffRetryTrigger</a> that starts now.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExpBackoffRetryTrigger(string name, string group, ExpBackoffRetrySettings retrySettings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of trigger.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>Name of group trigger belongs to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.ExpBackoffRetrySettings.html">ExpBackoffRetrySettings</a></td>
+        <td><span class="parametername">retrySettings</span></td>
+        <td><p>Retry settings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger__ctor_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.#ctor*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger__ctor_System_String_System_String_KdSoft_Quartz_ExpBackoffRetrySettings_System_DateTimeOffset_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.#ctor(System.String,System.String,KdSoft.Quartz.ExpBackoffRetrySettings,System.DateTimeOffset)">ExpBackoffRetryTrigger(String, String, ExpBackoffRetrySettings, DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="KdSoft.Quartz.ExpBackoffRetryTrigger.html">ExpBackoffRetryTrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExpBackoffRetryTrigger(string name, string group, ExpBackoffRetrySettings retrySettings, DateTimeOffset startTimeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of trigger.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>Name of group trigger belongs to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.ExpBackoffRetrySettings.html">ExpBackoffRetrySettings</a></td>
+        <td><span class="parametername">retrySettings</span></td>
+        <td><p>Retry settings.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">startTimeUtc</span></td>
+        <td><p>Time of first job execution.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_RetryIndefinitely" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.RetryIndefinitely">RetryIndefinitely</h4>
+  <div class="markdown level1 summary"><p>Used to indicate the &apos;retry count&apos; of the trigger is indefinite. Or in other words,
+the trigger should repeat continually until the trigger&apos;s ending timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int RetryIndefinitely = -1</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_YearToGiveupSchedulingAt" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.YearToGiveupSchedulingAt">YearToGiveupSchedulingAt</h4>
+  <div class="markdown level1 summary"><p>Limit for scheduling retries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int YearToGiveupSchedulingAt</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_FinalFireTimeUtc_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.FinalFireTimeUtc*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_FinalFireTimeUtc" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.FinalFireTimeUtc">FinalFireTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Returns the last UTC time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will fire, if
+the Trigger will repeat indefinitely, null will be returned.
+<p>
+Note that the return time <em>may</em> be in the past.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? FinalFireTimeUtc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_FinalFireTimeUtc">AbstractTrigger.FinalFireTimeUtc</a></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_HasMillisecondPrecision_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.HasMillisecondPrecision*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_HasMillisecondPrecision" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.HasMillisecondPrecision">HasMillisecondPrecision</h4>
+  <div class="markdown level1 summary"><p>Tells whether this Trigger instance can handle events
+in millisecond precision.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool HasMillisecondPrecision { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_HasMillisecondPrecision">AbstractTrigger.HasMillisecondPrecision</a></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_RetrySettings_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.RetrySettings*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_RetrySettings" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.RetrySettings">RetrySettings</h4>
+  <div class="markdown level1 summary"><p>Retry settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExpBackoffRetrySettings RetrySettings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KdSoft.Quartz.ExpBackoffRetrySettings.html">ExpBackoffRetrySettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_TimesTriggered_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.TimesTriggered*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_TimesTriggered" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.TimesTriggered">TimesTriggered</h4>
+  <div class="markdown level1 summary"><p>Get or set the number of times the <a class="xref" href="KdSoft.Quartz.ExpBackoffRetryTrigger.html">ExpBackoffRetryTrigger</a> has already fired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int TimesTriggered { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_ApplyDefaultSettings_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.ApplyDefaultSettings*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_ApplyDefaultSettings" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.ApplyDefaultSettings">ApplyDefaultSettings()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ApplyDefaultSettings()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">KdSoft.Quartz.RetryTrigger&lt;KdSoft.Quartz.ExpBackoffRetryTrigger&gt;.ApplyDefaultSettings()</span></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_ApplyOriginalTriggerSettings_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.ApplyOriginalTriggerSettings*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_ApplyOriginalTriggerSettings_Quartz_ITrigger_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.ApplyOriginalTriggerSettings(Quartz.ITrigger)">ApplyOriginalTriggerSettings(ITrigger)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool ApplyOriginalTriggerSettings(ITrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">KdSoft.Quartz.RetryTrigger&lt;KdSoft.Quartz.ExpBackoffRetryTrigger&gt;.ApplyOriginalTriggerSettings(Quartz.ITrigger)</span></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_ComputeFirstFireTimeUtc_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.ComputeFirstFireTimeUtc*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_ComputeFirstFireTimeUtc_Quartz_ICalendar_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.ComputeFirstFireTimeUtc(Quartz.ICalendar)">ComputeFirstFireTimeUtc(ICalendar)</h4>
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? ComputeFirstFireTimeUtc(ICalendar cal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>The first time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will be fired
+by the scheduler, which is also the same value <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetNextFireTimeUtc">GetNextFireTimeUtc()</a>
+will return (until after the first firing of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_ComputeFirstFireTimeUtc_Quartz_ICalendar_">AbstractTrigger.ComputeFirstFireTimeUtc(ICalendar)</a></div>
+  <h5 id="KdSoft_Quartz_ExpBackoffRetryTrigger_ComputeFirstFireTimeUtc_Quartz_ICalendar__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Called by the scheduler at the time a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is first
+added to the scheduler, in order to have the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+compute its first fire time, based on any associated calendar.
+</p>
+
+<p>
+After this method has been called, <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetNextFireTimeUtc">GetNextFireTimeUtc()</a>
+should return a valid answer.
+</p>
+</div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetFireTimeAfter_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetFireTimeAfter*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetFireTimeAfter(System.Nullable{System.DateTimeOffset})">GetFireTimeAfter(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will fire,
+after the given time. If the trigger will not fire after the given time,
+<span class="xref">null</span> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? GetFireTimeAfter(DateTimeOffset? afterTimeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">afterTimeUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__">AbstractTrigger.GetFireTimeAfter(Nullable&lt;DateTimeOffset&gt;)</a></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetFireTimeBefore_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetFireTimeBefore*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetFireTimeBefore_System_Nullable_System_DateTimeOffset__" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetFireTimeBefore(System.Nullable{System.DateTimeOffset})">GetFireTimeBefore(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"><p>Returns the last UTC time at which the <a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a> will fire, before the given time.
+If the trigger will not fire before the given time, <span class="xref">null</span> will be returned.
+Does not check MaxRetries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset? GetFireTimeBefore(DateTimeOffset? endUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">endUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetMayFireAgain_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetMayFireAgain*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetMayFireAgain" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetMayFireAgain">GetMayFireAgain()</h4>
+  <div class="markdown level1 summary"><p>Used by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> to determine whether or not
+it is possible for this <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to fire again.
+<p>
+If the returned value is <span class="xref">false</span> then the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+may remove the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> from the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool GetMayFireAgain()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetMayFireAgain">AbstractTrigger.GetMayFireAgain()</a></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetNextFireTimeUtc_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetNextFireTimeUtc*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetNextFireTimeUtc" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetNextFireTimeUtc">GetNextFireTimeUtc()</h4>
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is scheduled to fire. If
+the trigger will not fire again, <span class="xref">null</span> will be returned.  Note that
+the time returned can possibly be in the past, if the time that was computed
+for the trigger to next fire has already arrived, but the scheduler has not yet
+been able to fire the trigger (which would likely be due to lack of resources
+e.g. threads).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? GetNextFireTimeUtc()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetNextFireTimeUtc">AbstractTrigger.GetNextFireTimeUtc()</a></div>
+  <h5 id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetNextFireTimeUtc_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The value returned is not guaranteed to be valid until after the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has been added to the scheduler.</p>
+</div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetPreviousFireTimeUtc_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetPreviousFireTimeUtc*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetPreviousFireTimeUtc" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetPreviousFireTimeUtc">GetPreviousFireTimeUtc()</h4>
+  <div class="markdown level1 summary"><p>Returns the previous time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> fired.
+If the trigger has not yet fired, <span class="xref">null</span> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? GetPreviousFireTimeUtc()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetPreviousFireTimeUtc">AbstractTrigger.GetPreviousFireTimeUtc()</a></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetScheduleBuilder_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetScheduleBuilder*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_GetScheduleBuilder" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.GetScheduleBuilder">GetScheduleBuilder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IScheduleBuilder GetScheduleBuilder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetScheduleBuilder">AbstractTrigger.GetScheduleBuilder()</a></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_SetNextFireTimeUtc_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.SetNextFireTimeUtc*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_SetNextFireTimeUtc_System_Nullable_System_DateTimeOffset__" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.SetNextFireTimeUtc(System.Nullable{System.DateTimeOffset})">SetNextFireTimeUtc(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetNextFireTimeUtc(DateTimeOffset? nextFireTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">nextFireTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_SetNextFireTimeUtc_System_Nullable_System_DateTimeOffset__">AbstractTrigger.SetNextFireTimeUtc(Nullable&lt;DateTimeOffset&gt;)</a></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_SetPreviousFireTimeUtc_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.SetPreviousFireTimeUtc*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_SetPreviousFireTimeUtc_System_Nullable_System_DateTimeOffset__" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.SetPreviousFireTimeUtc(System.Nullable{System.DateTimeOffset})">SetPreviousFireTimeUtc(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetPreviousFireTimeUtc(DateTimeOffset? previousFireTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">previousFireTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_SetPreviousFireTimeUtc_System_Nullable_System_DateTimeOffset__">AbstractTrigger.SetPreviousFireTimeUtc(Nullable&lt;DateTimeOffset&gt;)</a></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_Triggered_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.Triggered*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_Triggered_Quartz_ICalendar_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.Triggered(Quartz.ICalendar)">Triggered(ICalendar)</h4>
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Triggered(ICalendar cal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Triggered_Quartz_ICalendar_">AbstractTrigger.Triggered(ICalendar)</a></div>
+  <h5 id="KdSoft_Quartz_ExpBackoffRetryTrigger_Triggered_Quartz_ICalendar__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Called when the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> has decided to &apos;fire&apos;
+the trigger (Execute the associated <a class="xref" href="Quartz.IJob.html">IJob</a>), in order to
+give the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> a chance to update itself for its next
+triggering (if any).</p>
+</div>
+  <h5 id="KdSoft_Quartz_ExpBackoffRetryTrigger_Triggered_Quartz_ICalendar__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></div>
+  </div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_UpdateAfterMisfire_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.UpdateAfterMisfire*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_UpdateAfterMisfire_Quartz_ICalendar_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.UpdateAfterMisfire(Quartz.ICalendar)">UpdateAfterMisfire(ICalendar)</h4>
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.
+<p>
+To be implemented by the concrete classes that extend this class.
+</p>
+<p>
+The implementation should update the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s state
+based on the MISFIRE_INSTRUCTION_XXX that was selected when the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+was created.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UpdateAfterMisfire(ICalendar cal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_UpdateAfterMisfire_Quartz_ICalendar_">AbstractTrigger.UpdateAfterMisfire(ICalendar)</a></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_UpdateWithNewCalendar_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.UpdateWithNewCalendar*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_UpdateWithNewCalendar_Quartz_ICalendar_System_TimeSpan_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.UpdateWithNewCalendar(Quartz.ICalendar,System.TimeSpan)">UpdateWithNewCalendar(ICalendar, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.
+<p>
+The implementation should update the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s state
+based on the given new version of the associated <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>
+(the state should be updated so that it&apos;s next fire time is appropriate
+given the Calendar&apos;s new settings). 
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UpdateWithNewCalendar(ICalendar calendar, TimeSpan misfireThreshold)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">calendar</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">misfireThreshold</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_UpdateWithNewCalendar_Quartz_ICalendar_System_TimeSpan_">AbstractTrigger.UpdateWithNewCalendar(ICalendar, TimeSpan)</a></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_Validate_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.Validate*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_Validate" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.Validate">Validate()</h4>
+  <div class="markdown level1 summary"><p>Validates whether the properties of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> are
+valid for submission into a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Validate()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Validate">AbstractTrigger.Validate()</a></div>
+  
+  
+  <a id="KdSoft_Quartz_ExpBackoffRetryTrigger_ValidateMisfireInstruction_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.ValidateMisfireInstruction*"></a>
+  <h4 id="KdSoft_Quartz_ExpBackoffRetryTrigger_ValidateMisfireInstruction_System_Int32_" data-uid="KdSoft.Quartz.ExpBackoffRetryTrigger.ValidateMisfireInstruction(System.Int32)">ValidateMisfireInstruction(Int32)</h4>
+  <div class="markdown level1 summary"><p>Validates the misfire instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool ValidateMisfireInstruction(int misfireInstruction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">misfireInstruction</span></td>
+        <td><p>The misfire instruction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_ValidateMisfireInstruction_System_Int32_">AbstractTrigger.ValidateMisfireInstruction(Int32)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="KdSoft.Quartz.IRetryTrigger.html">IRetryTrigger</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.Spi.IMutableTrigger.html">IMutableTrigger</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+      <div><a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

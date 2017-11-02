@@ -1,0 +1,4332 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IDriverDelegate
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IDriverDelegate
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate">
+  
+  
+  <h1 id="Quartz_Impl_AdoJobStore_IDriverDelegate" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate" class="text-break">Interface IDriverDelegate
+  </h1>
+  <div class="markdown level0 summary"><p>This is the base interface for all driver delegate classes.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.AdoJobStore.html">Quartz.Impl.AdoJobStore</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_AdoJobStore_IDriverDelegate_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDriverDelegate</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_AdoJobStore_IDriverDelegate_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+This interface is very similar to the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>
+interface except each method has an additional <a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a>
+parameter.
+</p>
+<p>
+Unless a database driver has some <strong>extremely-DB-specific</strong>
+requirements, any IDriverDelegate implementation classes should extend the
+<a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoDelegate.html">StdAdoDelegate</a> class.
+</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_CalendarExists_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.CalendarExists*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_CalendarExists_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.CalendarExists(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">CalendarExists(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Check whether or not a calendar exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CalendarExists(ConnectionAndTransactionHolder conn, string calendarName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calendarName</span></td>
+        <td><p>The name of the calendar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the trigger exists, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_CalendarIsReferenced_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.CalendarIsReferenced*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_CalendarIsReferenced_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.CalendarIsReferenced(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">CalendarIsReferenced(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Check whether or not a calendar is referenced by any triggers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CalendarIsReferenced(ConnectionAndTransactionHolder conn, string calendarName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calendarName</span></td>
+        <td><p>The name of the calendar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if any triggers reference the calendar, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_ClearData_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.ClearData*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_ClearData_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.ClearData(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">ClearData(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Clear (delete!) all scheduling data - all <a class="xref" href="Quartz.IJob.html">IJob</a>s, <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s
+<a class="xref" href="Quartz.ICalendar.html">ICalendar</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ClearData(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_CountMisfiredTriggersInState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.CountMisfiredTriggersInState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_CountMisfiredTriggersInState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_System_DateTimeOffset_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.CountMisfiredTriggersInState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,System.DateTimeOffset)">CountMisfiredTriggersInState(ConnectionAndTransactionHolder, String, DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Counts the misfired triggers in states.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int CountMisfiredTriggersInState(ConnectionAndTransactionHolder conn, string state1, DateTimeOffset ts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The conn.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state1</span></td>
+        <td><p>The state1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">ts</span></td>
+        <td><p>The ts.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteAllPausedTriggerGroups_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteAllPausedTriggerGroups*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteAllPausedTriggerGroups_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteAllPausedTriggerGroups(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">DeleteAllPausedTriggerGroups(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Deletes all paused trigger groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DeleteAllPausedTriggerGroups(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The conn.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteBlobTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteBlobTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteBlobTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteBlobTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey)">DeleteBlobTrigger(ConnectionAndTransactionHolder, TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Delete the BLOB trigger data for a trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DeleteBlobTrigger(ConnectionAndTransactionHolder conn, TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>The key identifying the trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows deleted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteCalendar_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteCalendar*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteCalendar_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteCalendar(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">DeleteCalendar(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Delete a calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DeleteCalendar(ConnectionAndTransactionHolder conn, string calendarName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calendarName</span></td>
+        <td><p>The name of the trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows deleted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteFiredTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteFiredTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteFiredTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteFiredTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">DeleteFiredTrigger(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Delete a fired trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DeleteFiredTrigger(ConnectionAndTransactionHolder conn, string entryId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">entryId</span></td>
+        <td><p>The fired trigger entry to delete.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows deleted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteFiredTriggers_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteFiredTriggers*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteFiredTriggers_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteFiredTriggers(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">DeleteFiredTriggers(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Delete all fired triggers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DeleteFiredTriggers(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows deleted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteFiredTriggers_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteFiredTriggers*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteFiredTriggers_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteFiredTriggers(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">DeleteFiredTriggers(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Delete all fired triggers of the given instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DeleteFiredTriggers(ConnectionAndTransactionHolder conn, string instanceId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">instanceId</span></td>
+        <td><p>The instance id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows deleted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteJobDetail_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteJobDetail*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteJobDetail_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_JobKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteJobDetail(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.JobKey)">DeleteJobDetail(ConnectionAndTransactionHolder, JobKey)</h4>
+  <div class="markdown level1 summary"><p>Delete the job detail record for the given job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DeleteJobDetail(ConnectionAndTransactionHolder conn, JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>The key identifying the job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the number of rows deleted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeletePausedTriggerGroup_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeletePausedTriggerGroup*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeletePausedTriggerGroup_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeletePausedTriggerGroup(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">DeletePausedTriggerGroup(ConnectionAndTransactionHolder, GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DeletePausedTriggerGroup(ConnectionAndTransactionHolder conn, GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeletePausedTriggerGroup_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeletePausedTriggerGroup*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeletePausedTriggerGroup_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeletePausedTriggerGroup(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">DeletePausedTriggerGroup(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Deletes the paused trigger group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DeletePausedTriggerGroup(ConnectionAndTransactionHolder conn, string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The conn.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteSchedulerState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteSchedulerState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteSchedulerState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteSchedulerState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">DeleteSchedulerState(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Delete a scheduler-instance state record.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DeleteSchedulerState(ConnectionAndTransactionHolder conn, string instanceId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">instanceId</span></td>
+        <td><p>The instance id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of deleted rows.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_DeleteTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.DeleteTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey)">DeleteTrigger(ConnectionAndTransactionHolder, TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Delete the base trigger data for a trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DeleteTrigger(ConnectionAndTransactionHolder conn, TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>The key identifying the trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the number of rows deleted </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_HasMisfiredTriggersInState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.HasMisfiredTriggersInState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_HasMisfiredTriggersInState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_System_DateTimeOffset_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.HasMisfiredTriggersInState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,System.DateTimeOffset)">HasMisfiredTriggersInState(ConnectionAndTransactionHolder, String, DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Get the names of all of the triggers in the given state that have
+misfired - according to the given timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;TriggerKey&gt; HasMisfiredTriggersInState(ConnectionAndTransactionHolder conn, string state, DateTimeOffset ts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">ts</span></td>
+        <td><p>The time stamp.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><p>An array of <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a> objects</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_HasMisfiredTriggersInState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.HasMisfiredTriggersInState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_HasMisfiredTriggersInState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_System_DateTimeOffset_System_Int32_System_Collections_Generic_IList_Quartz_TriggerKey__" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.HasMisfiredTriggersInState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,System.DateTimeOffset,System.Int32,System.Collections.Generic.IList{Quartz.TriggerKey})">HasMisfiredTriggersInState(ConnectionAndTransactionHolder, String, DateTimeOffset, Int32, IList&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Selects the misfired triggers in states.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HasMisfiredTriggersInState(ConnectionAndTransactionHolder conn, string state1, DateTimeOffset ts, int count, IList&lt;TriggerKey&gt; resultList)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The conn.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state1</span></td>
+        <td><p>The state1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">ts</span></td>
+        <td><p>The ts.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>The count.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">resultList</span></td>
+        <td><p>The result list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_Initialize_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.Initialize*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_Initialize_Quartz_Impl_AdoJobStore_DelegateInitializationArgs_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.Initialize(Quartz.Impl.AdoJobStore.DelegateInitializationArgs)">Initialize(DelegateInitializationArgs)</h4>
+  <div class="markdown level1 summary"><p>Initializes the driver delegate with configuration data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Initialize(DelegateInitializationArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.DelegateInitializationArgs.html">DelegateInitializationArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertBlobTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertBlobTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertBlobTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Spi_IOperableTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertBlobTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Spi.IOperableTrigger)">InsertBlobTrigger(ConnectionAndTransactionHolder, IOperableTrigger)</h4>
+  <div class="markdown level1 summary"><p>Insert the blob trigger data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int InsertBlobTrigger(ConnectionAndTransactionHolder conn, IOperableTrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The trigger to insert</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows inserted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertCalendar_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertCalendar*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertCalendar_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_Quartz_ICalendar_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertCalendar(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,Quartz.ICalendar)">InsertCalendar(ConnectionAndTransactionHolder, String, ICalendar)</h4>
+  <div class="markdown level1 summary"><p>Insert a new calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int InsertCalendar(ConnectionAndTransactionHolder conn, string calendarName, ICalendar calendar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calendarName</span></td>
+        <td><p>The name for the new calendar.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">calendar</span></td>
+        <td><p>The calendar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows inserted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertFiredTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertFiredTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertFiredTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Spi_IOperableTrigger_System_String_Quartz_IJobDetail_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertFiredTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Spi.IOperableTrigger,System.String,Quartz.IJobDetail)">InsertFiredTrigger(ConnectionAndTransactionHolder, IOperableTrigger, String, IJobDetail)</h4>
+  <div class="markdown level1 summary"><p>Insert a fired trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int InsertFiredTrigger(ConnectionAndTransactionHolder conn, IOperableTrigger trigger, string state, IJobDetail jobDetail)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The trigger.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state that the trigger should be stored in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td><p>The job detail.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows inserted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertJobDetail_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertJobDetail*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertJobDetail_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_IJobDetail_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertJobDetail(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.IJobDetail)">InsertJobDetail(ConnectionAndTransactionHolder, IJobDetail)</h4>
+  <div class="markdown level1 summary"><p>Insert the job detail record.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int InsertJobDetail(ConnectionAndTransactionHolder conn, IJobDetail job)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">job</span></td>
+        <td><p>The job to insert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Number of rows inserted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertPausedTriggerGroup_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertPausedTriggerGroup*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertPausedTriggerGroup_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertPausedTriggerGroup(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">InsertPausedTriggerGroup(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Inserts the paused trigger group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int InsertPausedTriggerGroup(ConnectionAndTransactionHolder conn, string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The conn.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertSchedulerState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertSchedulerState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertSchedulerState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_System_DateTimeOffset_System_TimeSpan_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertSchedulerState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,System.DateTimeOffset,System.TimeSpan)">InsertSchedulerState(ConnectionAndTransactionHolder, String, DateTimeOffset, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Insert a scheduler-instance state record.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int InsertSchedulerState(ConnectionAndTransactionHolder conn, string instanceId, DateTimeOffset checkInTime, TimeSpan interval)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">instanceId</span></td>
+        <td><p>The instance id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">checkInTime</span></td>
+        <td><p>The check in time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">interval</span></td>
+        <td><p>The interval.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of inserted rows.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_InsertTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Spi_IOperableTrigger_System_String_Quartz_IJobDetail_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.InsertTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Spi.IOperableTrigger,System.String,Quartz.IJobDetail)">InsertTrigger(ConnectionAndTransactionHolder, IOperableTrigger, String, IJobDetail)</h4>
+  <div class="markdown level1 summary"><p>Insert the base trigger data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int InsertTrigger(ConnectionAndTransactionHolder conn, IOperableTrigger trigger, string state, IJobDetail jobDetail)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The trigger to insert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state that the trigger should be stored in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td><p>The job detail.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows inserted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_IsExistingTriggerGroup_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.IsExistingTriggerGroup*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_IsExistingTriggerGroup_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.IsExistingTriggerGroup(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">IsExistingTriggerGroup(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Determines whether given trigger group already exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsExistingTriggerGroup(ConnectionAndTransactionHolder conn, string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The conn.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if trigger group exists; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_IsJobStateful_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.IsJobStateful*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_IsJobStateful_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_JobKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.IsJobStateful(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.JobKey)">IsJobStateful(ConnectionAndTransactionHolder, JobKey)</h4>
+  <div class="markdown level1 summary"><p>Check whether or not the given job is stateful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsJobStateful(ConnectionAndTransactionHolder conn, JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>The key identifying the job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the job exists and is stateful, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_IsTriggerGroupPaused_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.IsTriggerGroupPaused*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_IsTriggerGroupPaused_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.IsTriggerGroupPaused(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">IsTriggerGroupPaused(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified trigger group is paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsTriggerGroupPaused(ConnectionAndTransactionHolder conn, string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The conn.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if trigger group is paused; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_JobExists_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.JobExists*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_JobExists_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_JobKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.JobExists(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.JobKey)">JobExists(ConnectionAndTransactionHolder, JobKey)</h4>
+  <div class="markdown level1 summary"><p>Check whether or not the given job exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool JobExists(ConnectionAndTransactionHolder conn, JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>The key identifying the job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the job exists, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectCalendar_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectCalendar*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectCalendar_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectCalendar(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">SelectCalendar(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Select a calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICalendar SelectCalendar(ConnectionAndTransactionHolder conn, string calendarName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calendarName</span></td>
+        <td><p>The name of the calendar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><p>The Calendar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectCalendars_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectCalendars*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectCalendars_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectCalendars(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">SelectCalendars(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Select all of the stored calendars.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; SelectCalendars(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>An array of <span class="xref">System.String</span> calendar names.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectFiredTriggerInstanceNames_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectFiredTriggerInstanceNames*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectFiredTriggerInstanceNames_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectFiredTriggerInstanceNames(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">SelectFiredTriggerInstanceNames(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Select the distinct instance names of all fired-trigger records.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISet&lt;string&gt; SelectFiredTriggerInstanceNames(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The conn.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectFiredTriggerInstanceNames_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is useful when trying to identify orphaned fired triggers (a 
+fired trigger without a scheduler state record.) </p>
+</div>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectFiredTriggerRecords_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectFiredTriggerRecords*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectFiredTriggerRecords_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectFiredTriggerRecords(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,System.String)">SelectFiredTriggerRecords(ConnectionAndTransactionHolder, String, String)</h4>
+  <div class="markdown level1 summary"><p>Select the states of all fired-trigger records for a given trigger, or
+trigger group if trigger name is <span class="xref">null</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;FiredTriggerRecord&gt; SelectFiredTriggerRecords(ConnectionAndTransactionHolder conn, string triggerName, string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">triggerName</span></td>
+        <td><p>Name of the trigger.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.FiredTriggerRecord.html">FiredTriggerRecord</a>&gt;</td>
+        <td><p>A list of FiredTriggerRecord objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectFiredTriggerRecordsByJob_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectFiredTriggerRecordsByJob*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectFiredTriggerRecordsByJob_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectFiredTriggerRecordsByJob(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,System.String)">SelectFiredTriggerRecordsByJob(ConnectionAndTransactionHolder, String, String)</h4>
+  <div class="markdown level1 summary"><p>Select the states of all fired-trigger records for a given job, or job
+group if job name is <span class="xref">null</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;FiredTriggerRecord&gt; SelectFiredTriggerRecordsByJob(ConnectionAndTransactionHolder conn, string jobName, string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobName</span></td>
+        <td><p>Name of the job.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.FiredTriggerRecord.html">FiredTriggerRecord</a>&gt;</td>
+        <td><p>A List of FiredTriggerRecord objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectInstancesFiredTriggerRecords_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectInstancesFiredTriggerRecords*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectInstancesFiredTriggerRecords_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectInstancesFiredTriggerRecords(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">SelectInstancesFiredTriggerRecords(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Select the states of all fired-trigger records for a given scheduler
+instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;FiredTriggerRecord&gt; SelectInstancesFiredTriggerRecords(ConnectionAndTransactionHolder conn, string instanceName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">instanceName</span></td>
+        <td><p>Name of the instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.FiredTriggerRecord.html">FiredTriggerRecord</a>&gt;</td>
+        <td><p>A list of FiredTriggerRecord objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobDetail_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobDetail*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobDetail_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_JobKey_Quartz_Spi_ITypeLoadHelper_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobDetail(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.JobKey,Quartz.Spi.ITypeLoadHelper)">SelectJobDetail(ConnectionAndTransactionHolder, JobKey, ITypeLoadHelper)</h4>
+  <div class="markdown level1 summary"><p>Select the JobDetail object for a given job name / group name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobDetail SelectJobDetail(ConnectionAndTransactionHolder conn, JobKey jobKey, ITypeLoadHelper classLoadHelper)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>The key identifying the job.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.ITypeLoadHelper.html">ITypeLoadHelper</a></td>
+        <td><span class="parametername">classLoadHelper</span></td>
+        <td><p>The class load helper.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><p>The populated JobDetail object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobExecutionCount_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobExecutionCount*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobExecutionCount_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_JobKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobExecutionCount(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.JobKey)">SelectJobExecutionCount(ConnectionAndTransactionHolder, JobKey)</h4>
+  <div class="markdown level1 summary"><p>Get the number instances of the identified job currently executing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int SelectJobExecutionCount(ConnectionAndTransactionHolder conn, JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>The key identifying the job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number instances of the identified job currently executing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobForTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobForTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobForTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_Quartz_Spi_ITypeLoadHelper_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobForTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey,Quartz.Spi.ITypeLoadHelper)">SelectJobForTrigger(ConnectionAndTransactionHolder, TriggerKey, ITypeLoadHelper)</h4>
+  <div class="markdown level1 summary"><p>Select the job to which the trigger is associated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobDetail SelectJobForTrigger(ConnectionAndTransactionHolder conn, TriggerKey triggerKey, ITypeLoadHelper loadHelper)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.ITypeLoadHelper.html">ITypeLoadHelper</a></td>
+        <td><span class="parametername">loadHelper</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobForTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobForTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobForTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_Quartz_Spi_ITypeLoadHelper_System_Boolean_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobForTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey,Quartz.Spi.ITypeLoadHelper,System.Boolean)">SelectJobForTrigger(ConnectionAndTransactionHolder, TriggerKey, ITypeLoadHelper, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Select the job to which the trigger is associated. Allow option to load actual job class or not. When case of
+remove, we do not need to load the type, which in many cases, it&apos;s no longer exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobDetail SelectJobForTrigger(ConnectionAndTransactionHolder conn, TriggerKey triggerKey, ITypeLoadHelper loadHelper, bool loadJobType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.ITypeLoadHelper.html">ITypeLoadHelper</a></td>
+        <td><span class="parametername">loadHelper</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">loadJobType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobGroups_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobGroups*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobGroups_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobGroups(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">SelectJobGroups(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Select all of the job group names that are stored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; SelectJobGroups(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>an array of <span class="xref">System.String</span> group names</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobsInGroup_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobsInGroup*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectJobsInGroup_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectJobsInGroup(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Impl.Matchers.GroupMatcher{Quartz.JobKey})">SelectJobsInGroup(ConnectionAndTransactionHolder, GroupMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Select all of the jobs contained in a given group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISet&lt;JobKey&gt; SelectJobsInGroup(ConnectionAndTransactionHolder conn, GroupMatcher&lt;JobKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><p>an array of <span class="xref">System.String</span> job names</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectMisfiredTriggers_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectMisfiredTriggers*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectMisfiredTriggers_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_DateTimeOffset_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectMisfiredTriggers(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.DateTimeOffset)">SelectMisfiredTriggers(ConnectionAndTransactionHolder, DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Get the names of all of the triggers that have misfired - according to
+the given timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;TriggerKey&gt; SelectMisfiredTriggers(ConnectionAndTransactionHolder conn, DateTimeOffset timestamp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">timestamp</span></td>
+        <td><p>The timestamp.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><p>An array of <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a> objects</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectMisfiredTriggersInGroupInState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectMisfiredTriggersInGroupInState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectMisfiredTriggersInGroupInState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_System_String_System_DateTimeOffset_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectMisfiredTriggersInGroupInState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,System.String,System.DateTimeOffset)">SelectMisfiredTriggersInGroupInState(ConnectionAndTransactionHolder, String, String, DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Get the names of all of the triggers in the given group and state that
+have misfired - according to the given timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;TriggerKey&gt; SelectMisfiredTriggersInGroupInState(ConnectionAndTransactionHolder conn, string groupName, string state, DateTimeOffset ts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>Name of the group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">ts</span></td>
+        <td><p>The timestamp.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><p>An array of <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a> objects</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectNumCalendars_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectNumCalendars*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectNumCalendars_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectNumCalendars(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">SelectNumCalendars(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Select the total number of calendars stored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int SelectNumCalendars(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The total number of calendars stored.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectNumJobs_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectNumJobs*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectNumJobs_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectNumJobs(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">SelectNumJobs(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Select the total number of jobs stored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int SelectNumJobs(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the total number of jobs stored</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectNumTriggers_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectNumTriggers*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectNumTriggers_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectNumTriggers(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">SelectNumTriggers(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Select the total number of triggers stored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int SelectNumTriggers(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The total number of triggers stored.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectNumTriggersForJob_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectNumTriggersForJob*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectNumTriggersForJob_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_JobKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectNumTriggersForJob(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.JobKey)">SelectNumTriggersForJob(ConnectionAndTransactionHolder, JobKey)</h4>
+  <div class="markdown level1 summary"><p>Select the number of triggers associated with a given job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int SelectNumTriggersForJob(ConnectionAndTransactionHolder conn, JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>The key identifying the job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the number of triggers for the given job </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectPausedTriggerGroups_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectPausedTriggerGroups*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectPausedTriggerGroups_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectPausedTriggerGroups(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">SelectPausedTriggerGroups(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Selects the paused trigger groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISet&lt;string&gt; SelectPausedTriggerGroups(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectSchedulerStateRecords_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectSchedulerStateRecords*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectSchedulerStateRecords_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectSchedulerStateRecords(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">SelectSchedulerStateRecords(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>A List of all current <a class="xref" href="Quartz.Impl.AdoJobStore.SchedulerStateRecord.html">SchedulerStateRecord</a>s.
+<p>
+If instanceId is not null, then only the record for the identified
+instance will be returned.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;SchedulerStateRecord&gt; SelectSchedulerStateRecords(ConnectionAndTransactionHolder conn, string instanceName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">instanceName</span></td>
+        <td><p>The instance id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Impl.AdoJobStore.SchedulerStateRecord.html">SchedulerStateRecord</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey)">SelectTrigger(ConnectionAndTransactionHolder, TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Select a trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOperableTrigger SelectTrigger(ConnectionAndTransactionHolder conn, TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>The key identifying the trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerForFireTime_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerForFireTime*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerForFireTime_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_DateTimeOffset_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerForFireTime(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.DateTimeOffset)">SelectTriggerForFireTime(ConnectionAndTransactionHolder, DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Select the trigger that will be fired at the given fire time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TriggerKey SelectTriggerForFireTime(ConnectionAndTransactionHolder conn, DateTimeOffset fireTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">fireTime</span></td>
+        <td><p>The time that the trigger will be fired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><p>A <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a> representing the
+trigger that will be fired at the given fire time, or null if no
+trigger will be fired at that time</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerGroups_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerGroups*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerGroups_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerGroups(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">SelectTriggerGroups(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Select all of the trigger group names that are stored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; SelectTriggerGroups(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>An array of <span class="xref">System.String</span> group names.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerGroups_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerGroups*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerGroups_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerGroups(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">SelectTriggerGroups(ConnectionAndTransactionHolder, GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; SelectTriggerGroups(ConnectionAndTransactionHolder conn, GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerJobDataMap_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerJobDataMap*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerJobDataMap_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerJobDataMap(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey)">SelectTriggerJobDataMap(ConnectionAndTransactionHolder, TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Select a trigger&apos;s JobDataMap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">JobDataMap SelectTriggerJobDataMap(ConnectionAndTransactionHolder conn, TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>The key identifying the trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></td>
+        <td><p>The <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> of the Trigger, never null, but possibly empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerNamesForJob_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerNamesForJob*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerNamesForJob_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_JobKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerNamesForJob(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.JobKey)">SelectTriggerNamesForJob(ConnectionAndTransactionHolder, JobKey)</h4>
+  <div class="markdown level1 summary"><p>
+           Get the names of all of the triggers associated with the given job.
+</p>
+
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;TriggerKey&gt; SelectTriggerNamesForJob(ConnectionAndTransactionHolder conn, JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>The key identifying the job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersForCalendar_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggersForCalendar*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersForCalendar_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggersForCalendar(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">SelectTriggersForCalendar(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Select the triggers for a calendar</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;IOperableTrigger&gt; SelectTriggersForCalendar(ConnectionAndTransactionHolder conn, string calName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calName</span></td>
+        <td><p>Name of the calendar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a>&gt;</td>
+        <td><p>An array of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> objects associated with a given job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersForJob_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggersForJob*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersForJob_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_JobKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggersForJob(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.JobKey)">SelectTriggersForJob(ConnectionAndTransactionHolder, JobKey)</h4>
+  <div class="markdown level1 summary"><p>Select the triggers for a job&gt;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;IOperableTrigger&gt; SelectTriggersForJob(ConnectionAndTransactionHolder conn, JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>The key identifying the job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a>&gt;</td>
+        <td><p>an array of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> objects associated with a given job. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersForRecoveringJobs_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggersForRecoveringJobs*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersForRecoveringJobs_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggersForRecoveringJobs(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder)">SelectTriggersForRecoveringJobs(ConnectionAndTransactionHolder)</h4>
+  <div class="markdown level1 summary"><p>Select all of the triggers for jobs that are requesting recovery. The
+returned trigger objects will have unique &quot;recoverXXX&quot; trigger names and
+will be in the <a class="xref" href="Quartz.SchedulerConstants.html#Quartz_SchedulerConstants_DefaultRecoveryGroup">DefaultRecoveryGroup</a> trigger group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;IOperableTrigger&gt; SelectTriggersForRecoveringJobs(ConnectionAndTransactionHolder conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a>&gt;</td>
+        <td><p>An array of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> objects</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersForRecoveringJobs_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>In order to preserve the ordering of the triggers, the fire time will be
+set from the <em>ColumnFiredTime</em> column in the <em>TableFiredTriggers</em>
+table. The caller is responsible for calling <a class="xref" href="Quartz.Spi.IOperableTrigger.html#Quartz_Spi_IOperableTrigger_ComputeFirstFireTimeUtc_Quartz_ICalendar_">ComputeFirstFireTimeUtc(ICalendar)</a>
+on each returned trigger. It is also up to the caller to insert the
+returned triggers to ensure that they are fired.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersInGroup_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggersInGroup*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersInGroup_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggersInGroup(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">SelectTriggersInGroup(ConnectionAndTransactionHolder, GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Select all of the triggers contained in a given group. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISet&lt;TriggerKey&gt; SelectTriggersInGroup(ConnectionAndTransactionHolder conn, GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><p>An array of <span class="xref">System.String</span> trigger names.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersInState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggersInState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggersInState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggersInState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">SelectTriggersInState(ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Select all of the triggers in a given state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;TriggerKey&gt; SelectTriggersInState(ConnectionAndTransactionHolder conn, string state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state the triggers must be in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><p>An array of trigger <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>s.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey)">SelectTriggerState(ConnectionAndTransactionHolder, TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Select a trigger&apos;s state value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SelectTriggerState(ConnectionAndTransactionHolder conn, TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>The key identifying the trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerStatus_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerStatus*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerStatus_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerStatus(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey)">SelectTriggerStatus(ConnectionAndTransactionHolder, TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Select a triggers status (state and next fire time).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TriggerStatus SelectTriggerStatus(ConnectionAndTransactionHolder conn, TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>The key identifying the trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerStatus.html">TriggerStatus</a></td>
+        <td><p>A <a class="xref" href="Quartz.Impl.AdoJobStore.TriggerStatus.html">TriggerStatus</a> object, or null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerToAcquire_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerToAcquire*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_SelectTriggerToAcquire_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_DateTimeOffset_System_DateTimeOffset_System_Int32_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.SelectTriggerToAcquire(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.DateTimeOffset,System.DateTimeOffset,System.Int32)">SelectTriggerToAcquire(ConnectionAndTransactionHolder, DateTimeOffset, DateTimeOffset, Int32)</h4>
+  <div class="markdown level1 summary"><p>Select the next trigger which will fire to fire between the two given timestamps 
+in ascending order of fire time, and then descending by priority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;TriggerKey&gt; SelectTriggerToAcquire(ConnectionAndTransactionHolder conn, DateTimeOffset noLaterThan, DateTimeOffset noEarlierThan, int maxCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The conn.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">noLaterThan</span></td>
+        <td><p>highest value of <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetNextFireTimeUtc">GetNextFireTimeUtc()</a> of the triggers (exclusive)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">noEarlierThan</span></td>
+        <td><p>highest value of <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetNextFireTimeUtc">GetNextFireTimeUtc()</a> of the triggers (inclusive)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxCount</span></td>
+        <td><p>maximum number of trigger keys allow to acquired in the returning list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><p>A (never null, possibly empty) list of the identifiers (Key objects) of the next triggers to be fired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_TriggerExists_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.TriggerExists*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_TriggerExists_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.TriggerExists(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey)">TriggerExists(ConnectionAndTransactionHolder, TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Check whether or not a trigger exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TriggerExists(ConnectionAndTransactionHolder conn, TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>the DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>The key identifying the trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>the number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateBlobTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateBlobTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateBlobTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Spi_IOperableTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateBlobTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Spi.IOperableTrigger)">UpdateBlobTrigger(ConnectionAndTransactionHolder, IOperableTrigger)</h4>
+  <div class="markdown level1 summary"><p>Update the blob trigger data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateBlobTrigger(ConnectionAndTransactionHolder conn, IOperableTrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>the DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateCalendar_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateCalendar*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateCalendar_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_Quartz_ICalendar_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateCalendar(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,Quartz.ICalendar)">UpdateCalendar(ConnectionAndTransactionHolder, String, ICalendar)</h4>
+  <div class="markdown level1 summary"><p>Update a calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateCalendar(ConnectionAndTransactionHolder conn, string calendarName, ICalendar calendar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calendarName</span></td>
+        <td><p>The name for the new calendar.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">calendar</span></td>
+        <td><p>The calendar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows updated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateFiredTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateFiredTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateFiredTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Spi_IOperableTrigger_System_String_Quartz_IJobDetail_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateFiredTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Spi.IOperableTrigger,System.String,Quartz.IJobDetail)">UpdateFiredTrigger(ConnectionAndTransactionHolder, IOperableTrigger, String, IJobDetail)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateFiredTrigger(ConnectionAndTransactionHolder conn, IOperableTrigger trigger, string state, IJobDetail job)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">job</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateJobData_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateJobData*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateJobData_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_IJobDetail_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateJobData(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.IJobDetail)">UpdateJobData(ConnectionAndTransactionHolder, IJobDetail)</h4>
+  <div class="markdown level1 summary"><p>Update the job data map for the given job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateJobData(ConnectionAndTransactionHolder conn, IJobDetail job)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">job</span></td>
+        <td><p>The job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateJobDetail_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateJobDetail*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateJobDetail_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_IJobDetail_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateJobDetail(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.IJobDetail)">UpdateJobDetail(ConnectionAndTransactionHolder, IJobDetail)</h4>
+  <div class="markdown level1 summary"><p>Update the job detail record.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateJobDetail(ConnectionAndTransactionHolder conn, IJobDetail job)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">job</span></td>
+        <td><p>The job to update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Number of rows updated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateSchedulerState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateSchedulerState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateSchedulerState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_System_DateTimeOffset_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateSchedulerState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,System.DateTimeOffset)">UpdateSchedulerState(ConnectionAndTransactionHolder, String, DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Update a scheduler-instance state record.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateSchedulerState(ConnectionAndTransactionHolder conn, string instanceId, DateTimeOffset checkInTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">instanceId</span></td>
+        <td><p>The instance id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">checkInTime</span></td>
+        <td><p>The check in time.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of updated rows.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTrigger_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTrigger*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTrigger_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Spi_IOperableTrigger_System_String_Quartz_IJobDetail_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTrigger(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Spi.IOperableTrigger,System.String,Quartz.IJobDetail)">UpdateTrigger(ConnectionAndTransactionHolder, IOperableTrigger, String, IJobDetail)</h4>
+  <div class="markdown level1 summary"><p>Update the base trigger data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateTrigger(ConnectionAndTransactionHolder conn, IOperableTrigger trigger, string state, IJobDetail jobDetail)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>the DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The trigger.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td><p>The job detail.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerGroupStateFromOtherState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerGroupStateFromOtherState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerGroupStateFromOtherState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__System_String_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerGroupStateFromOtherState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey},System.String,System.String)">UpdateTriggerGroupStateFromOtherState(ConnectionAndTransactionHolder, GroupMatcher&lt;TriggerKey&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Update all of the triggers of the given group to the given new state, if
+they are in the given old state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateTriggerGroupStateFromOtherState(ConnectionAndTransactionHolder conn, GroupMatcher&lt;TriggerKey&gt; matcher, string newState, string oldState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">newState</span></td>
+        <td><p>The new state for the trigger group</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldState</span></td>
+        <td><p>The old state the triggers must be in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>int the number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerGroupStateFromOtherStates_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerGroupStateFromOtherStates*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerGroupStateFromOtherStates_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__System_String_System_String_System_String_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerGroupStateFromOtherStates(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey},System.String,System.String,System.String,System.String)">UpdateTriggerGroupStateFromOtherStates(ConnectionAndTransactionHolder, GroupMatcher&lt;TriggerKey&gt;, String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Update all triggers in the given group to the given new state, if they
+are in one of the given old states.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateTriggerGroupStateFromOtherStates(ConnectionAndTransactionHolder conn, GroupMatcher&lt;TriggerKey&gt; matcher, string newState, string oldState1, string oldState2, string oldState3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">newState</span></td>
+        <td><p>The new state for the trigger</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldState1</span></td>
+        <td><p>One of the old state the trigger must be in</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldState2</span></td>
+        <td><p>One of the old state the trigger must be in</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldState3</span></td>
+        <td><p>One of the old state the trigger must be in</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey,System.String)">UpdateTriggerState(ConnectionAndTransactionHolder, TriggerKey, String)</h4>
+  <div class="markdown level1 summary"><p>Update the state for a given trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateTriggerState(ConnectionAndTransactionHolder conn, TriggerKey triggerKey, string state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>The key identifying the trigger.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The new state for the trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerStateFromOtherState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerStateFromOtherState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerStateFromOtherState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_System_String_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerStateFromOtherState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey,System.String,System.String)">UpdateTriggerStateFromOtherState(ConnectionAndTransactionHolder, TriggerKey, String, String)</h4>
+  <div class="markdown level1 summary"><p>Update the given trigger to the given new state, if it is in the given
+old state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateTriggerStateFromOtherState(ConnectionAndTransactionHolder conn, TriggerKey triggerKey, string newState, string oldState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>The key identifying the trigger.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">newState</span></td>
+        <td><p>The new state for the trigger </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldState</span></td>
+        <td><p>The old state the trigger must be in</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>int the number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerStateFromOtherStates_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerStateFromOtherStates*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerStateFromOtherStates_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_System_String_System_String_System_String_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerStateFromOtherStates(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey,System.String,System.String,System.String,System.String)">UpdateTriggerStateFromOtherStates(ConnectionAndTransactionHolder, TriggerKey, String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Update the given trigger to the given new state, if it is one of the
+given old states.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateTriggerStateFromOtherStates(ConnectionAndTransactionHolder conn, TriggerKey triggerKey, string newState, string oldState1, string oldState2, string oldState3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>The key identifying the trigger.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">newState</span></td>
+        <td><p>The new state for the trigger</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldState1</span></td>
+        <td><p>One of the old state the trigger must be in</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldState2</span></td>
+        <td><p>One of the old state the trigger must be in</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldState3</span></td>
+        <td><p>One of the old state the trigger must be in</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>int the number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerStatesForJob_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerStatesForJob*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerStatesForJob_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_JobKey_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerStatesForJob(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.JobKey,System.String)">UpdateTriggerStatesForJob(ConnectionAndTransactionHolder, JobKey, String)</h4>
+  <div class="markdown level1 summary"><p>Update the states of all triggers associated with the given job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateTriggerStatesForJob(ConnectionAndTransactionHolder conn, JobKey jobKey, string state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>The key identifying the job.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The new state for the triggers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerStatesForJobFromOtherState_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerStatesForJobFromOtherState*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerStatesForJobFromOtherState_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_JobKey_System_String_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerStatesForJobFromOtherState(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.JobKey,System.String,System.String)">UpdateTriggerStatesForJobFromOtherState(ConnectionAndTransactionHolder, JobKey, String, String)</h4>
+  <div class="markdown level1 summary"><p>Update the states of any triggers associated with the given job, that
+are the given current state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateTriggerStatesForJobFromOtherState(ConnectionAndTransactionHolder conn, JobKey jobKey, string state, string oldState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>The key identifying the job.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The new state for the triggers</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldState</span></td>
+        <td><p>The old state of the triggers</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerStatesFromOtherStates_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerStatesFromOtherStates*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_IDriverDelegate_UpdateTriggerStatesFromOtherStates_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_System_String_System_String_" data-uid="Quartz.Impl.AdoJobStore.IDriverDelegate.UpdateTriggerStatesFromOtherStates(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,System.String,System.String)">UpdateTriggerStatesFromOtherStates(ConnectionAndTransactionHolder, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Update all triggers having one of the two given states, to the given new
+state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateTriggerStatesFromOtherStates(ConnectionAndTransactionHolder conn, string newState, string oldState1, string oldState2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The DB Connection</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">newState</span></td>
+        <td><p>The new state for the triggers</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldState1</span></td>
+        <td><p>The first old state to update</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">oldState2</span></td>
+        <td><p>The second old state to update</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Number of rows updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

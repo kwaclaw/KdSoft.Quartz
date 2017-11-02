@@ -1,0 +1,1733 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AbstractTrigger
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AbstractTrigger
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.Triggers.AbstractTrigger">
+  
+  
+  <h1 id="Quartz_Impl_Triggers_AbstractTrigger" data-uid="Quartz.Impl.Triggers.AbstractTrigger" class="text-break">Class AbstractTrigger
+  </h1>
+  <div class="markdown level0 summary"><p>The base abstract class to be extended by all triggers.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AbstractTrigger</span></div>
+      <div class="level2"><a class="xref" href="KdSoft.Quartz.RetryTrigger-1.html">RetryTrigger&lt;T&gt;</a></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.Triggers.CalendarIntervalTriggerImpl.html">CalendarIntervalTriggerImpl</a></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html">CronTriggerImpl</a></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.html">DailyTimeIntervalTriggerImpl</a></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.Triggers.SimpleTriggerImpl.html">SimpleTriggerImpl</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></div>
+    <div><a class="xref" href="Quartz.Spi.IMutableTrigger.html">IMutableTrigger</a></div>
+    <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+    <div><span class="xref">System.ICloneable</span></div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html">AbstractTrigger</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.Triggers.html">Quartz.Impl.Triggers</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class AbstractTrigger : IOperableTrigger, IMutableTrigger, ITrigger, ICloneable, IComparable&lt;ITrigger&gt;, IEquatable&lt;AbstractTrigger&gt;</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s have a name and group associated with them, which
+should uniquely identify them within a single <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.
+</p>
+
+<p>
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s are the &apos;mechanism&apos; by which <a class="xref" href="Quartz.IJob.html">IJob</a> s
+are scheduled. Many <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s can point to the same <a class="xref" href="Quartz.IJob.html">IJob</a>,
+but a single <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> can only point to one <a class="xref" href="Quartz.IJob.html">IJob</a>.
+</p>
+
+<p>
+Triggers can &apos;send&apos; parameters/data to <a class="xref" href="Quartz.IJob.html">IJob</a>s by placing contents
+into the <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobDataMap">JobDataMap</a> on the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger__ctor_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger__ctor" data-uid="Quartz.Impl.Triggers.AbstractTrigger.#ctor">AbstractTrigger()</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with no specified name, group, or <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AbstractTrigger()</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger__ctor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note that the <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Name">Name</a>, <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Group">Group</a> and
+the <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobName">JobName</a> and <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobGroup">JobGroup</a> properties
+must be set before the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> can be placed into a
+<a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger__ctor_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger__ctor_System_String_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.#ctor(System.String)">AbstractTrigger(String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given name, and default group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AbstractTrigger(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger__ctor_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note that the <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobName">JobName</a> and <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobGroup">JobGroup</a>
+properties must be set before the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+can be placed into a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger__ctor_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger__ctor_System_String_System_String_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.#ctor(System.String,System.String)">AbstractTrigger(String, String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given name, and group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AbstractTrigger(string name, string group)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>if <span class="xref">null</span>, Scheduler.DefaultGroup will be used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger__ctor_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note that the <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobName">JobName</a> and <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobGroup">JobGroup</a>
+properties must be set before the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+can be placed into a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger__ctor_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger__ctor_System_String_System_String_System_String_System_String_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.#ctor(System.String,System.String,System.String,System.String)">AbstractTrigger(String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given name, and group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AbstractTrigger(string name, string group, string jobName, string jobGroup)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>if <span class="xref">null</span>, Scheduler.DefaultGroup will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobName</span></td>
+        <td><p>Name of the job.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobGroup</span></td>
+        <td><p>The job group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>ArgumentException
+if name is null or empty, or the group is an empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_CalendarName_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.CalendarName*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_CalendarName" data-uid="Quartz.Impl.Triggers.AbstractTrigger.CalendarName">CalendarName</h4>
+  <div class="markdown level1 summary"><p>Get or set  the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> with the given name with
+this Trigger. Use <span class="xref">null</span> when setting to dis-associate a Calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string CalendarName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_Description_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Description*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_Description" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Get or set the description given to the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> instance by
+its creator (if any).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_EndTimeUtc_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.EndTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_EndTimeUtc" data-uid="Quartz.Impl.Triggers.AbstractTrigger.EndTimeUtc">EndTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Gets and sets the date/time on which the trigger must stop firing. This 
+defines the final boundary for trigger firings 舒 the trigger will
+not fire after to this date and time. If this value is null, no end time
+boundary is assumed, and the trigger can continue indefinitely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset? EndTimeUtc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_FinalFireTimeUtc_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.FinalFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_FinalFireTimeUtc" data-uid="Quartz.Impl.Triggers.AbstractTrigger.FinalFireTimeUtc">FinalFireTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Returns the last UTC time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will fire, if
+the Trigger will repeat indefinitely, null will be returned.
+<p>
+Note that the return time <em>may</em> be in the past.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract DateTimeOffset? FinalFireTimeUtc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_FireInstanceId_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.FireInstanceId*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_FireInstanceId" data-uid="Quartz.Impl.Triggers.AbstractTrigger.FireInstanceId">FireInstanceId</h4>
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string FireInstanceId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_FireInstanceId_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Usable by <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>
+implementations, in order to facilitate &apos;recognizing&apos; instances of fired
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s as their jobs complete execution.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_FullJobName_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.FullJobName*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_FullJobName" data-uid="Quartz.Impl.Triggers.AbstractTrigger.FullJobName">FullJobName</h4>
+  <div class="markdown level1 summary"><p>Returns the &apos;full name&apos; of the <a class="xref" href="Quartz.IJob.html">IJob</a> that the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+points to, in the format &quot;group.name&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string FullJobName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_FullName_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.FullName*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_FullName" data-uid="Quartz.Impl.Triggers.AbstractTrigger.FullName">FullName</h4>
+  <div class="markdown level1 summary"><p>Returns the &apos;full name&apos; of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> in the format
+&quot;group.name&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string FullName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_Group_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Group*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_Group" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Group">Group</h4>
+  <div class="markdown level1 summary"><p>Get the group of this <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>. If <span class="xref">null</span>, Scheduler.DefaultGroup will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Group { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>if group is an empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_HasAdditionalProperties_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.HasAdditionalProperties*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_HasAdditionalProperties" data-uid="Quartz.Impl.Triggers.AbstractTrigger.HasAdditionalProperties">HasAdditionalProperties</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance has additional properties
+that should be considered when for example saving to database. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasAdditionalProperties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if this instance has additional properties; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_HasAdditionalProperties_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If trigger implementation has additional properties that need to be saved 
+with base properties you need to make your class override this property with value true.
+Returning true will effectively mean that ADOJobStore needs to serialize 
+this trigger instance to make sure additional properties are also saved.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_HasMillisecondPrecision_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.HasMillisecondPrecision*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_HasMillisecondPrecision" data-uid="Quartz.Impl.Triggers.AbstractTrigger.HasMillisecondPrecision">HasMillisecondPrecision</h4>
+  <div class="markdown level1 summary"><p>Tells whether this Trigger instance can handle events
+in millisecond precision.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool HasMillisecondPrecision { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_JobDataMap_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.JobDataMap*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_JobDataMap" data-uid="Quartz.Impl.Triggers.AbstractTrigger.JobDataMap">JobDataMap</h4>
+  <div class="markdown level1 summary"><p>Get or set the <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobDataMap">JobDataMap</a> that is associated with the 
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.
+<p>
+Changes made to this map during job execution are not re-persisted, and
+in fact typically result in an illegal state.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JobDataMap JobDataMap { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_JobGroup_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.JobGroup*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_JobGroup" data-uid="Quartz.Impl.Triggers.AbstractTrigger.JobGroup">JobGroup</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the name of the associated <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>&apos;s
+group. If set with <span class="xref">null</span>, Scheduler.DefaultGroup will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string JobGroup { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>ArgumentException
+if group is an empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_JobKey_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.JobKey*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_JobKey" data-uid="Quartz.Impl.Triggers.AbstractTrigger.JobKey">JobKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobKey JobKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_JobName_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.JobName*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_JobName" data-uid="Quartz.Impl.Triggers.AbstractTrigger.JobName">JobName</h4>
+  <div class="markdown level1 summary"><p>Get or set the name of the associated <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string JobName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>if jobName is null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_Key_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Key*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_Key" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Key">Key</h4>
+  <div class="markdown level1 summary"><p>Gets the key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TriggerKey Key { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_MisfireInstruction_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.MisfireInstruction*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_MisfireInstruction" data-uid="Quartz.Impl.Triggers.AbstractTrigger.MisfireInstruction">MisfireInstruction</h4>
+  <div class="markdown level1 summary"><p>Get or set the instruction the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> should be given for
+handling misfire situations for this <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>- the
+concrete <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> type that you are using will have
+defined a set of additional MISFIRE_INSTRUCTION_XXX
+constants that may be passed to this method.
+<p>
+If not explicitly set, the default value is <a class="xref" href="Quartz.MisfireInstruction.html#Quartz_MisfireInstruction_InstructionNotSet">InstructionNotSet</a>.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int MisfireInstruction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_MisfireInstruction_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.MisfireInstruction.html#Quartz_MisfireInstruction_InstructionNotSet">InstructionNotSet</a></div>
+      <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_UpdateAfterMisfire_Quartz_ICalendar_">UpdateAfterMisfire(ICalendar)</a></div>
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></div>
+      <div><a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_Name_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Name*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_Name" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Get or sets the name of this <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If name is null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_Priority_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Priority*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_Priority" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Priority">Priority</h4>
+  <div class="markdown level1 summary"><p>The priority of a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> acts as a tie breaker such that if 
+two <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s have the same scheduled fire time, then Quartz
+will do its best to give the one with the higher priority first access 
+to a worker thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int Priority { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_Priority_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is <em>5</em>.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_StartTimeUtc_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.StartTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_StartTimeUtc" data-uid="Quartz.Impl.Triggers.AbstractTrigger.StartTimeUtc">StartTimeUtc</h4>
+  <div class="markdown level1 summary"><p>The time at which the trigger&apos;s scheduling should start.  May or may not
+be the first actual fire time of the trigger, depending upon the type of
+trigger and the settings of the other properties of the trigger.  However
+the first actual first time will not be before this date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset StartTimeUtc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_StartTimeUtc_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Setting a value in the past may cause a new trigger to compute a first
+fire time that is in the past, which may cause an immediate misfire
+of the trigger.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_Clone_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Clone*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_Clone" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Creates a new object that is a copy of the current instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual object Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>A new object that is a copy of this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_CompareTo_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.CompareTo*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_CompareTo_Quartz_ITrigger_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.CompareTo(Quartz.ITrigger)">CompareTo(ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Compare the next fire time of this <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to that of
+another by comparing their keys, or in other words, sorts them
+according to the natural (i.e. alphabetical) order of their keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int CompareTo(ITrigger other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_ComputeFirstFireTimeUtc_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.ComputeFirstFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_ComputeFirstFireTimeUtc_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.ComputeFirstFireTimeUtc(Quartz.ICalendar)">ComputeFirstFireTimeUtc(ICalendar)</h4>
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract DateTimeOffset? ComputeFirstFireTimeUtc(ICalendar cal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>The first time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will be fired
+by the scheduler, which is also the same value <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetNextFireTimeUtc">GetNextFireTimeUtc()</a>
+will return (until after the first firing of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_ComputeFirstFireTimeUtc_Quartz_ICalendar__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Called by the scheduler at the time a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is first
+added to the scheduler, in order to have the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+compute its first fire time, based on any associated calendar.
+</p>
+
+<p>
+After this method has been called, <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetNextFireTimeUtc">GetNextFireTimeUtc()</a>
+should return a valid answer.
+</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_Equals_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Equals*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_Equals_Quartz_Impl_Triggers_AbstractTrigger_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Equals(Quartz.Impl.Triggers.AbstractTrigger)">Equals(AbstractTrigger)</h4>
+  <div class="markdown level1 summary"><p>Trigger equality is based upon the equality of the TriggerKey.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Equals(AbstractTrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html">AbstractTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the key of this Trigger equals that of the given Trigger</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_Equals_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Equals*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_Equals_System_Object_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <span class="xref">System.Object</span> is equal to the current <span class="xref">System.Object</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The <span class="xref">System.Object</span> to compare with the current <span class="xref">System.Object</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the specified <span class="xref">System.Object</span> is equal to the current <span class="xref">System.Object</span>; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_ExecutionComplete_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.ExecutionComplete*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.ExecutionComplete(Quartz.IJobExecutionContext,Quartz.JobExecutionException)">ExecutionComplete(IJobExecutionContext, JobExecutionException)</h4>
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SchedulerInstruction ExecutionComplete(IJobExecutionContext context, JobExecutionException result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>is the <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that was used by the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s<a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_">Execute(IJobExecutionContext)</a> method.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>is the <a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a> thrown by the
+<a class="xref" href="Quartz.IJob.html">IJob</a>, if any (may be null).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></td>
+        <td><p>One of the <a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a> members.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Called after the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> has executed the
+<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> associated with the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+in order to get the final instruction code from the trigger.</p>
+</div>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></div>
+      <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Triggered_Quartz_ICalendar_">Triggered(ICalendar)</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_GetFireTimeAfter_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetFireTimeAfter*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetFireTimeAfter(System.Nullable{System.DateTimeOffset})">GetFireTimeAfter(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will fire,
+after the given time. If the trigger will not fire after the given time,
+<span class="xref">null</span> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract DateTimeOffset? GetFireTimeAfter(DateTimeOffset? afterTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">afterTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_GetHashCode_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetHashCode*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_GetHashCode" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Serves as a hash function for a particular type. <span class="xref">System.Object.GetHashCode()</span> is suitable for use in hashing algorithms and data structures like a hash table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A hash code for the current <span class="xref">System.Object</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_GetMayFireAgain_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetMayFireAgain*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_GetMayFireAgain" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetMayFireAgain">GetMayFireAgain()</h4>
+  <div class="markdown level1 summary"><p>Used by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> to determine whether or not
+it is possible for this <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to fire again.
+<p>
+If the returned value is <span class="xref">false</span> then the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+may remove the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> from the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool GetMayFireAgain()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_GetNextFireTimeUtc_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetNextFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_GetNextFireTimeUtc" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetNextFireTimeUtc">GetNextFireTimeUtc()</h4>
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is scheduled to fire. If
+the trigger will not fire again, <span class="xref">null</span> will be returned.  Note that
+the time returned can possibly be in the past, if the time that was computed
+for the trigger to next fire has already arrived, but the scheduler has not yet
+been able to fire the trigger (which would likely be due to lack of resources
+e.g. threads).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract DateTimeOffset? GetNextFireTimeUtc()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_GetNextFireTimeUtc_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The value returned is not guaranteed to be valid until after the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has been added to the scheduler.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_GetPreviousFireTimeUtc_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetPreviousFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_GetPreviousFireTimeUtc" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetPreviousFireTimeUtc">GetPreviousFireTimeUtc()</h4>
+  <div class="markdown level1 summary"><p>Returns the previous time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> fired.
+If the trigger has not yet fired, <span class="xref">null</span> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract DateTimeOffset? GetPreviousFireTimeUtc()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_GetScheduleBuilder_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetScheduleBuilder*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_GetScheduleBuilder" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetScheduleBuilder">GetScheduleBuilder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IScheduleBuilder GetScheduleBuilder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_GetTriggerBuilder_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetTriggerBuilder*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_GetTriggerBuilder" data-uid="Quartz.Impl.Triggers.AbstractTrigger.GetTriggerBuilder">GetTriggerBuilder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerBuilder GetTriggerBuilder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_SetNextFireTimeUtc_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.SetNextFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_SetNextFireTimeUtc_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.Impl.Triggers.AbstractTrigger.SetNextFireTimeUtc(System.Nullable{System.DateTimeOffset})">SetNextFireTimeUtc(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SetNextFireTimeUtc(DateTimeOffset? nextFireTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">nextFireTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_SetPreviousFireTimeUtc_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.SetPreviousFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_SetPreviousFireTimeUtc_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.Impl.Triggers.AbstractTrigger.SetPreviousFireTimeUtc(System.Nullable{System.DateTimeOffset})">SetPreviousFireTimeUtc(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SetPreviousFireTimeUtc(DateTimeOffset? previousFireTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">previousFireTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_ToString_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.ToString*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_ToString" data-uid="Quartz.Impl.Triggers.AbstractTrigger.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Return a simple string representation of this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_Triggered_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Triggered*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_Triggered_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Triggered(Quartz.ICalendar)">Triggered(ICalendar)</h4>
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Triggered(ICalendar cal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_Triggered_Quartz_ICalendar__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Called when the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> has decided to &apos;fire&apos;
+the trigger (Execute the associated <a class="xref" href="Quartz.IJob.html">IJob</a>), in order to
+give the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> a chance to update itself for its next
+triggering (if any).</p>
+</div>
+  <h5 id="Quartz_Impl_Triggers_AbstractTrigger_Triggered_Quartz_ICalendar__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_UpdateAfterMisfire_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.UpdateAfterMisfire*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_UpdateAfterMisfire_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.UpdateAfterMisfire(Quartz.ICalendar)">UpdateAfterMisfire(ICalendar)</h4>
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.
+<p>
+To be implemented by the concrete classes that extend this class.
+</p>
+<p>
+The implementation should update the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s state
+based on the MISFIRE_INSTRUCTION_XXX that was selected when the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+was created.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void UpdateAfterMisfire(ICalendar cal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_UpdateWithNewCalendar_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.UpdateWithNewCalendar*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_UpdateWithNewCalendar_Quartz_ICalendar_System_TimeSpan_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.UpdateWithNewCalendar(Quartz.ICalendar,System.TimeSpan)">UpdateWithNewCalendar(ICalendar, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.
+<p>
+The implementation should update the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s state
+based on the given new version of the associated <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>
+(the state should be updated so that it&apos;s next fire time is appropriate
+given the Calendar&apos;s new settings). 
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void UpdateWithNewCalendar(ICalendar cal, TimeSpan misfireThreshold)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">misfireThreshold</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_Validate_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Validate*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_Validate" data-uid="Quartz.Impl.Triggers.AbstractTrigger.Validate">Validate()</h4>
+  <div class="markdown level1 summary"><p>Validates whether the properties of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> are
+valid for submission into a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Validate()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_Triggers_AbstractTrigger_ValidateMisfireInstruction_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.ValidateMisfireInstruction*"></a>
+  <h4 id="Quartz_Impl_Triggers_AbstractTrigger_ValidateMisfireInstruction_System_Int32_" data-uid="Quartz.Impl.Triggers.AbstractTrigger.ValidateMisfireInstruction(System.Int32)">ValidateMisfireInstruction(Int32)</h4>
+  <div class="markdown level1 summary"><p>Validates the misfire instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool ValidateMisfireInstruction(int misfireInstruction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">misfireInstruction</span></td>
+        <td><p>The misfire instruction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.Spi.IMutableTrigger.html">IMutableTrigger</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></div>
+      <div><a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a></div>
+      <div><a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a></div>
+      <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobDataMap">JobDataMap</a></div>
+      <div><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

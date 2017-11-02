@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SimpleSemaphore
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SimpleSemaphore
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore">
+  
+  
+  <h1 id="Quartz_Impl_AdoJobStore_SimpleSemaphore" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore" class="text-break">Class SimpleSemaphore
+  </h1>
+  <div class="markdown level0 summary"><p>Internal in-memory lock handler for providing thread/resource locking in 
+order to protect resources from being altered by multiple threads at the 
+same time.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SimpleSemaphore</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.Impl.AdoJobStore.ISemaphore.html">ISemaphore</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.AdoJobStore.html">Quartz.Impl.AdoJobStore</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_AdoJobStore_SimpleSemaphore_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SimpleSemaphore : ISemaphore</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimpleSemaphore__ctor_" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore.#ctor*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimpleSemaphore__ctor" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore.#ctor">SimpleSemaphore()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleSemaphore()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimpleSemaphore_RequiresConnection_" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore.RequiresConnection*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimpleSemaphore_RequiresConnection" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore.RequiresConnection">RequiresConnection</h4>
+  <div class="markdown level1 summary"><p>Whether this Semaphore implementation requires a database connection for
+its lock management operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequiresConnection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_AdoJobStore_SimpleSemaphore_RequiresConnection_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Impl.AdoJobStore.SimpleSemaphore.html#Quartz_Impl_AdoJobStore_SimpleSemaphore_IsLockOwner_System_String_">IsLockOwner(String)</a></div>
+      <div><a class="xref" href="Quartz.Impl.AdoJobStore.SimpleSemaphore.html#Quartz_Impl_AdoJobStore_SimpleSemaphore_ObtainLock_Quartz_Impl_AdoJobStore_Common_DbMetadata_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_">ObtainLock(DbMetadata, ConnectionAndTransactionHolder, String)</a></div>
+      <div><a class="xref" href="Quartz.Impl.AdoJobStore.SimpleSemaphore.html#Quartz_Impl_AdoJobStore_SimpleSemaphore_ReleaseLock_System_String_">ReleaseLock(String)</a></div>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimpleSemaphore_IsLockOwner_" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore.IsLockOwner*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimpleSemaphore_IsLockOwner_System_String_" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore.IsLockOwner(System.String)">IsLockOwner(String)</h4>
+  <div class="markdown level1 summary"><p>Determine whether the calling thread owns a lock on the identified
+resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsLockOwner(string lockName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">lockName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimpleSemaphore_ObtainLock_" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore.ObtainLock*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimpleSemaphore_ObtainLock_Quartz_Impl_AdoJobStore_Common_DbMetadata_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore.ObtainLock(Quartz.Impl.AdoJobStore.Common.DbMetadata,Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String)">ObtainLock(DbMetadata, ConnectionAndTransactionHolder, String)</h4>
+  <div class="markdown level1 summary"><p>Grants a lock on the identified resource to the calling thread (blocking
+until it is available).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool ObtainLock(DbMetadata metadata, ConnectionAndTransactionHolder conn, string lockName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html">DbMetadata</a></td>
+        <td><span class="parametername">metadata</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">lockName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the lock was obtained.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimpleSemaphore_ReleaseLock_" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore.ReleaseLock*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimpleSemaphore_ReleaseLock_System_String_" data-uid="Quartz.Impl.AdoJobStore.SimpleSemaphore.ReleaseLock(System.String)">ReleaseLock(String)</h4>
+  <div class="markdown level1 summary"><p>Release the lock on the identified resource if it is held by the calling
+thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ReleaseLock(string lockName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">lockName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.ISemaphore.html">ISemaphore</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

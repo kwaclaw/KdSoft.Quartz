@@ -1,0 +1,710 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IJobExecutionContext
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IJobExecutionContext
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.IJobExecutionContext">
+  
+  
+  <h1 id="Quartz_IJobExecutionContext" data-uid="Quartz.IJobExecutionContext" class="text-break">Interface IJobExecutionContext
+  </h1>
+  <div class="markdown level0 summary"><p>A context bundle containing handles to various environment information, that
+is given to a <a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_JobDetail">JobDetail</a> instance as it is
+executed, and to a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> instance after the
+execution completes.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_IJobExecutionContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IJobExecutionContext</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_IJobExecutionContext_Calendar_" data-uid="Quartz.IJobExecutionContext.Calendar*"></a>
+  <h4 id="Quartz_IJobExecutionContext_Calendar" data-uid="Quartz.IJobExecutionContext.Calendar">Calendar</h4>
+  <div class="markdown level1 summary"><p>Get a handle to the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> referenced by the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+instance that fired the <a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICalendar Calendar { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobExecutionContext_FireInstanceId_" data-uid="Quartz.IJobExecutionContext.FireInstanceId*"></a>
+  <h4 id="Quartz_IJobExecutionContext_FireInstanceId" data-uid="Quartz.IJobExecutionContext.FireInstanceId">FireInstanceId</h4>
+  <div class="markdown level1 summary"><p>Get the unique Id that identifies this particular firing instance of the
+trigger that triggered this job execution.  It is unique to this 
+JobExecutionContext instance as well.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string FireInstanceId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>the unique fire instance id</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IJobExecutionContext_FireInstanceId_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html#Quartz_IScheduler_Interrupt_System_String_">Interrupt</a>(<span class="xref">System.String</span>)</div>
+  </div>
+  
+  
+  <a id="Quartz_IJobExecutionContext_FireTimeUtc_" data-uid="Quartz.IJobExecutionContext.FireTimeUtc*"></a>
+  <h4 id="Quartz_IJobExecutionContext_FireTimeUtc" data-uid="Quartz.IJobExecutionContext.FireTimeUtc">FireTimeUtc</h4>
+  <div class="markdown level1 summary"><p>The actual time the trigger fired. For instance the scheduled time may
+have been 10:00:00 but the actual fire time may have been 10:00:03 if
+the scheduler was too busy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? FireTimeUtc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>Returns the fireTimeUtc.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IJobExecutionContext_FireTimeUtc_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_ScheduledFireTimeUtc">ScheduledFireTimeUtc</a></div>
+  </div>
+  
+  
+  <a id="Quartz_IJobExecutionContext_JobDetail_" data-uid="Quartz.IJobExecutionContext.JobDetail*"></a>
+  <h4 id="Quartz_IJobExecutionContext_JobDetail" data-uid="Quartz.IJobExecutionContext.JobDetail">JobDetail</h4>
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_JobDetail">JobDetail</a> associated with the <a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobDetail JobDetail { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobExecutionContext_JobInstance_" data-uid="Quartz.IJobExecutionContext.JobInstance*"></a>
+  <h4 id="Quartz_IJobExecutionContext_JobInstance" data-uid="Quartz.IJobExecutionContext.JobInstance">JobInstance</h4>
+  <div class="markdown level1 summary"><p>Get the instance of the <a class="xref" href="Quartz.IJob.html">IJob</a> that was created for this
+execution.
+<p>
+Note: The Job instance is not available through remote scheduler
+interfaces.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJob JobInstance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJob.html">IJob</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobExecutionContext_JobRunTime_" data-uid="Quartz.IJobExecutionContext.JobRunTime*"></a>
+  <h4 id="Quartz_IJobExecutionContext_JobRunTime" data-uid="Quartz.IJobExecutionContext.JobRunTime">JobRunTime</h4>
+  <div class="markdown level1 summary"><p>The amount of time the job ran for.  The returned 
+value will be <span class="xref">System.TimeSpan.MinValue</span> until the job has actually completed (or thrown an 
+exception), and is therefore generally only useful to 
+<a class="xref" href="Quartz.IJobListener.html">IJobListener</a>s and <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TimeSpan JobRunTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobExecutionContext_MergedJobDataMap_" data-uid="Quartz.IJobExecutionContext.MergedJobDataMap*"></a>
+  <h4 id="Quartz_IJobExecutionContext_MergedJobDataMap" data-uid="Quartz.IJobExecutionContext.MergedJobDataMap">MergedJobDataMap</h4>
+  <div class="markdown level1 summary"><p>Get the convenience <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> of this execution context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">JobDataMap MergedJobDataMap { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IJobExecutionContext_MergedJobDataMap_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> found on this object serves as a convenience -
+it is a merge of the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> found on the 
+<a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_JobDetail">JobDetail</a> and the one found on the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>, with 
+the value in the latter overriding any same-named values in the former.
+<em>It is thus considered a &apos;best practice&apos; that the Execute code of a Job
+retrieve data from the JobDataMap found on this object.</em>
+</p>
+<p>
+NOTE: Do not expect value &apos;set&apos; into this JobDataMap to somehow be 
+set back onto a job&apos;s own JobDataMap.
+</p>
+<p>
+Attempts to change the contents of this map typically result in an 
+illegal state.
+</p>
+</div>
+  
+  
+  <a id="Quartz_IJobExecutionContext_NextFireTimeUtc_" data-uid="Quartz.IJobExecutionContext.NextFireTimeUtc*"></a>
+  <h4 id="Quartz_IJobExecutionContext_NextFireTimeUtc" data-uid="Quartz.IJobExecutionContext.NextFireTimeUtc">NextFireTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Gets the next fire time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? NextFireTimeUtc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>The next fire time.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobExecutionContext_PreviousFireTimeUtc_" data-uid="Quartz.IJobExecutionContext.PreviousFireTimeUtc*"></a>
+  <h4 id="Quartz_IJobExecutionContext_PreviousFireTimeUtc" data-uid="Quartz.IJobExecutionContext.PreviousFireTimeUtc">PreviousFireTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Gets the previous fire time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? PreviousFireTimeUtc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>The previous fire time.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobExecutionContext_Recovering_" data-uid="Quartz.IJobExecutionContext.Recovering*"></a>
+  <h4 id="Quartz_IJobExecutionContext_Recovering" data-uid="Quartz.IJobExecutionContext.Recovering">Recovering</h4>
+  <div class="markdown level1 summary"><p>If the <a class="xref" href="Quartz.IJob.html">IJob</a> is being re-executed because of a &apos;recovery&apos;
+situation, this method will return <span class="xref">true</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Recovering { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobExecutionContext_RecoveringTriggerKey_" data-uid="Quartz.IJobExecutionContext.RecoveringTriggerKey*"></a>
+  <h4 id="Quartz_IJobExecutionContext_RecoveringTriggerKey" data-uid="Quartz.IJobExecutionContext.RecoveringTriggerKey">RecoveringTriggerKey</h4>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a> of the originally scheduled and now recovering job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TriggerKey RecoveringTriggerKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IJobExecutionContext_RecoveringTriggerKey_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When recovering a previously failed job execution this property returns the identity
+of the originally firing trigger. This recovering job will have been scheduled for 
+the same firing time as the original job, and so is available via the
+<a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_ScheduledFireTimeUtc">ScheduledFireTimeUtc</a> property. The original firing time of the job can be 
+accessed via the <a class="xref" href="Quartz.SchedulerConstants.html#Quartz_SchedulerConstants_FailedJobOriginalTriggerFiretime">FailedJobOriginalTriggerFiretime</a>
+element of this job&apos;s <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>.</p>
+</div>
+  
+  
+  <a id="Quartz_IJobExecutionContext_RefireCount_" data-uid="Quartz.IJobExecutionContext.RefireCount*"></a>
+  <h4 id="Quartz_IJobExecutionContext_RefireCount" data-uid="Quartz.IJobExecutionContext.RefireCount">RefireCount</h4>
+  <div class="markdown level1 summary"><p>Gets the refire count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int RefireCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The refire count.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobExecutionContext_Result_" data-uid="Quartz.IJobExecutionContext.Result*"></a>
+  <h4 id="Quartz_IJobExecutionContext_Result" data-uid="Quartz.IJobExecutionContext.Result">Result</h4>
+  <div class="markdown level1 summary"><p>Returns the result (if any) that the <a class="xref" href="Quartz.IJob.html">IJob</a> set before its 
+execution completed (the type of object set as the result is entirely up 
+to the particular job).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object Result { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IJobExecutionContext_Result_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The result itself is meaningless to Quartz, but may be informative
+to <a class="xref" href="Quartz.IJobListener.html">IJobListener</a>s or 
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>s that are watching the job&apos;s 
+execution.
+</p> 
+
+<p>Set the result (if any) of the <a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s execution (the type of 
+object set as the result is entirely up to the particular job).</p>
+<p>
+The result itself is meaningless to Quartz, but may be informative
+to <a class="xref" href="Quartz.IJobListener.html">IJobListener</a>s or 
+<a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>s that are watching the job&apos;s 
+execution.
+</p> 
+</div>
+  
+  
+  <a id="Quartz_IJobExecutionContext_ScheduledFireTimeUtc_" data-uid="Quartz.IJobExecutionContext.ScheduledFireTimeUtc*"></a>
+  <h4 id="Quartz_IJobExecutionContext_ScheduledFireTimeUtc" data-uid="Quartz.IJobExecutionContext.ScheduledFireTimeUtc">ScheduledFireTimeUtc</h4>
+  <div class="markdown level1 summary"><p>The scheduled time the trigger fired for. For instance the scheduled
+time may have been 10:00:00 but the actual fire time may have been
+10:00:03 if the scheduler was too busy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? ScheduledFireTimeUtc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>Returns the scheduledFireTimeUtc.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_IJobExecutionContext_ScheduledFireTimeUtc_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_FireTimeUtc">FireTimeUtc</a></div>
+  </div>
+  
+  
+  <a id="Quartz_IJobExecutionContext_Scheduler_" data-uid="Quartz.IJobExecutionContext.Scheduler*"></a>
+  <h4 id="Quartz_IJobExecutionContext_Scheduler" data-uid="Quartz.IJobExecutionContext.Scheduler">Scheduler</h4>
+  <div class="markdown level1 summary"><p>Get a handle to the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> instance that fired the
+<a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IScheduler Scheduler { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobExecutionContext_Trigger_" data-uid="Quartz.IJobExecutionContext.Trigger*"></a>
+  <h4 id="Quartz_IJobExecutionContext_Trigger" data-uid="Quartz.IJobExecutionContext.Trigger">Trigger</h4>
+  <div class="markdown level1 summary"><p>Get a handle to the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> instance that fired the
+<a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITrigger Trigger { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_IJobExecutionContext_Get_" data-uid="Quartz.IJobExecutionContext.Get*"></a>
+  <h4 id="Quartz_IJobExecutionContext_Get_System_Object_" data-uid="Quartz.IJobExecutionContext.Get(System.Object)">Get(Object)</h4>
+  <div class="markdown level1 summary"><p>Get the value with the given key from the context&apos;s data map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object Get(object key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_IJobExecutionContext_Put_" data-uid="Quartz.IJobExecutionContext.Put*"></a>
+  <h4 id="Quartz_IJobExecutionContext_Put_System_Object_System_Object_" data-uid="Quartz.IJobExecutionContext.Put(System.Object,System.Object)">Put(Object, Object)</h4>
+  <div class="markdown level1 summary"><p>Put the specified value into the context&apos;s data map with the given key.
+Possibly useful for sharing data between listeners and jobs.
+<p>
+NOTE: this data is volatile - it is lost after the job execution
+completes, and all TriggerListeners and JobListeners have been 
+notified.
+</p> </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Put(object key, object objectValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">objectValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

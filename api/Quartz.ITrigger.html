@@ -1,0 +1,685 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ITrigger
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ITrigger
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.ITrigger">
+  
+  
+  <h1 id="Quartz_ITrigger" data-uid="Quartz.ITrigger" class="text-break">Interface ITrigger
+  </h1>
+  <div class="markdown level0 summary"><p>The base interface with properties common to all <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s - 
+use <a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a> to instantiate an actual Trigger.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ICloneable.Clone()</span>
+    </div>
+    <div>
+      <span class="xref">System.IComparable&lt;Quartz.ITrigger&gt;.CompareTo(Quartz.ITrigger)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_ITrigger_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITrigger : ICloneable, IComparable&lt;ITrigger&gt;</code></pre>
+  </div>
+  <h5 id="Quartz_ITrigger_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s have a <a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a> associated with them, which
+should uniquely identify them within a single <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.
+</p>
+
+<p>
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s are the &apos;mechanism&apos; by which <a class="xref" href="Quartz.IJob.html">IJob</a> s
+are scheduled. Many <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s can point to the same <a class="xref" href="Quartz.IJob.html">IJob</a>,
+but a single <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> can only point to one <a class="xref" href="Quartz.IJob.html">IJob</a>.
+</p>
+
+<p>
+Triggers can &apos;send&apos; parameters/data to <a class="xref" href="Quartz.IJob.html">IJob</a>s by placing contents
+into the <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobDataMap">JobDataMap</a> on the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.
+</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_ITrigger_CalendarName_" data-uid="Quartz.ITrigger.CalendarName*"></a>
+  <h4 id="Quartz_ITrigger_CalendarName" data-uid="Quartz.ITrigger.CalendarName">CalendarName</h4>
+  <div class="markdown level1 summary"><p>Get or set  the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> with the given name with
+this Trigger. Use <span class="xref">null</span> when setting to dis-associate a Calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string CalendarName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_Description_" data-uid="Quartz.ITrigger.Description*"></a>
+  <h4 id="Quartz_ITrigger_Description" data-uid="Quartz.ITrigger.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Get or set the description given to the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> instance by
+its creator (if any).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_EndTimeUtc_" data-uid="Quartz.ITrigger.EndTimeUtc*"></a>
+  <h4 id="Quartz_ITrigger_EndTimeUtc" data-uid="Quartz.ITrigger.EndTimeUtc">EndTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Gets and sets the date/time on which the trigger must stop firing. This 
+defines the final boundary for trigger firings 舒 the trigger will
+not fire after to this date and time. If this value is null, no end time
+boundary is assumed, and the trigger can continue indefinitely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? EndTimeUtc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_FinalFireTimeUtc_" data-uid="Quartz.ITrigger.FinalFireTimeUtc*"></a>
+  <h4 id="Quartz_ITrigger_FinalFireTimeUtc" data-uid="Quartz.ITrigger.FinalFireTimeUtc">FinalFireTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Returns the last UTC time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will fire, if
+the Trigger will repeat indefinitely, null will be returned.
+<p>
+Note that the return time <em>may</em> be in the past.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? FinalFireTimeUtc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_HasMillisecondPrecision_" data-uid="Quartz.ITrigger.HasMillisecondPrecision*"></a>
+  <h4 id="Quartz_ITrigger_HasMillisecondPrecision" data-uid="Quartz.ITrigger.HasMillisecondPrecision">HasMillisecondPrecision</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HasMillisecondPrecision { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_JobDataMap_" data-uid="Quartz.ITrigger.JobDataMap*"></a>
+  <h4 id="Quartz_ITrigger_JobDataMap" data-uid="Quartz.ITrigger.JobDataMap">JobDataMap</h4>
+  <div class="markdown level1 summary"><p>Get or set the <a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobDataMap">JobDataMap</a> that is associated with the 
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.
+<p>
+Changes made to this map during job execution are not re-persisted, and
+in fact typically result in an illegal state.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">JobDataMap JobDataMap { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_JobKey_" data-uid="Quartz.ITrigger.JobKey*"></a>
+  <h4 id="Quartz_ITrigger_JobKey" data-uid="Quartz.ITrigger.JobKey">JobKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">JobKey JobKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_Key_" data-uid="Quartz.ITrigger.Key*"></a>
+  <h4 id="Quartz_ITrigger_Key" data-uid="Quartz.ITrigger.Key">Key</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TriggerKey Key { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_MisfireInstruction_" data-uid="Quartz.ITrigger.MisfireInstruction*"></a>
+  <h4 id="Quartz_ITrigger_MisfireInstruction" data-uid="Quartz.ITrigger.MisfireInstruction">MisfireInstruction</h4>
+  <div class="markdown level1 summary"><p>Get or set the instruction the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> should be given for
+handling misfire situations for this <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>- the
+concrete <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> type that you are using will have
+defined a set of additional MISFIRE_INSTRUCTION_XXX
+constants that may be set to this property.
+<p>
+If not explicitly set, the default value is <a class="xref" href="Quartz.MisfireInstruction.html#Quartz_MisfireInstruction_InstructionNotSet">InstructionNotSet</a>.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int MisfireInstruction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_ITrigger_MisfireInstruction_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.MisfireInstruction.html#Quartz_MisfireInstruction_InstructionNotSet">InstructionNotSet</a></div>
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></div>
+      <div><a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a></div>
+  </div>
+  
+  
+  <a id="Quartz_ITrigger_Priority_" data-uid="Quartz.ITrigger.Priority*"></a>
+  <h4 id="Quartz_ITrigger_Priority" data-uid="Quartz.ITrigger.Priority">Priority</h4>
+  <div class="markdown level1 summary"><p>The priority of a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> acts as a tie breaker such that if 
+two <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s have the same scheduled fire time, then Quartz
+will do its best to give the one with the higher priority first access 
+to a worker thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Priority { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_ITrigger_Priority_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If not explicitly set, the default value is <em>5</em>.</p>
+</div>
+  
+  
+  <a id="Quartz_ITrigger_StartTimeUtc_" data-uid="Quartz.ITrigger.StartTimeUtc*"></a>
+  <h4 id="Quartz_ITrigger_StartTimeUtc" data-uid="Quartz.ITrigger.StartTimeUtc">StartTimeUtc</h4>
+  <div class="markdown level1 summary"><p>The time at which the trigger&apos;s scheduling should start.  May or may not
+be the first actual fire time of the trigger, depending upon the type of
+trigger and the settings of the other properties of the trigger.  However
+the first actual first time will not be before this date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset StartTimeUtc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_ITrigger_StartTimeUtc_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Setting a value in the past may cause a new trigger to compute a first
+fire time that is in the past, which may cause an immediate misfire
+of the trigger.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_ITrigger_GetFireTimeAfter_" data-uid="Quartz.ITrigger.GetFireTimeAfter*"></a>
+  <h4 id="Quartz_ITrigger_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.ITrigger.GetFireTimeAfter(System.Nullable{System.DateTimeOffset})">GetFireTimeAfter(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will fire,
+after the given time. If the trigger will not fire after the given time,
+<span class="xref">null</span> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? GetFireTimeAfter(DateTimeOffset? afterTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">afterTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_GetMayFireAgain_" data-uid="Quartz.ITrigger.GetMayFireAgain*"></a>
+  <h4 id="Quartz_ITrigger_GetMayFireAgain" data-uid="Quartz.ITrigger.GetMayFireAgain">GetMayFireAgain()</h4>
+  <div class="markdown level1 summary"><p>Used by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> to determine whether or not
+it is possible for this <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to fire again.
+<p>
+If the returned value is <span class="xref">false</span> then the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+may remove the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> from the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool GetMayFireAgain()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_GetNextFireTimeUtc_" data-uid="Quartz.ITrigger.GetNextFireTimeUtc*"></a>
+  <h4 id="Quartz_ITrigger_GetNextFireTimeUtc" data-uid="Quartz.ITrigger.GetNextFireTimeUtc">GetNextFireTimeUtc()</h4>
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is scheduled to fire. If
+the trigger will not fire again, <span class="xref">null</span> will be returned.  Note that
+the time returned can possibly be in the past, if the time that was computed
+for the trigger to next fire has already arrived, but the scheduler has not yet
+been able to fire the trigger (which would likely be due to lack of resources
+e.g. threads).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? GetNextFireTimeUtc()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_ITrigger_GetNextFireTimeUtc_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The value returned is not guaranteed to be valid until after the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has been added to the scheduler.</p>
+</div>
+  
+  
+  <a id="Quartz_ITrigger_GetPreviousFireTimeUtc_" data-uid="Quartz.ITrigger.GetPreviousFireTimeUtc*"></a>
+  <h4 id="Quartz_ITrigger_GetPreviousFireTimeUtc" data-uid="Quartz.ITrigger.GetPreviousFireTimeUtc">GetPreviousFireTimeUtc()</h4>
+  <div class="markdown level1 summary"><p>Returns the previous time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> fired.
+If the trigger has not yet fired, <span class="xref">null</span> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset? GetPreviousFireTimeUtc()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_GetScheduleBuilder_" data-uid="Quartz.ITrigger.GetScheduleBuilder*"></a>
+  <h4 id="Quartz_ITrigger_GetScheduleBuilder" data-uid="Quartz.ITrigger.GetScheduleBuilder">GetScheduleBuilder()</h4>
+  <div class="markdown level1 summary"><p>Get a <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a> that is configured to produce a 
+schedule identical to this trigger&apos;s schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IScheduleBuilder GetScheduleBuilder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_ITrigger_GetTriggerBuilder_" data-uid="Quartz.ITrigger.GetTriggerBuilder*"></a>
+  <h4 id="Quartz_ITrigger_GetTriggerBuilder" data-uid="Quartz.ITrigger.GetTriggerBuilder">GetTriggerBuilder()</h4>
+  <div class="markdown level1 summary"><p>Get a <a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a> that is configured to produce a 
+trigger identical to this one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TriggerBuilder GetTriggerBuilder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_ITrigger_GetTriggerBuilder_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_GetScheduleBuilder">GetScheduleBuilder()</a></div>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.TriggerBuilder.html">TriggerBuilder</a></div>
+      <div><a class="xref" href="Quartz.ICalendarIntervalTrigger.html">ICalendarIntervalTrigger</a></div>
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></div>
+      <div><a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a></div>
+      <div><a class="xref" href="Quartz.IDailyTimeIntervalTrigger.html">IDailyTimeIntervalTrigger</a></div>
+      <div><a class="xref" href="Quartz.ITrigger.html#Quartz_ITrigger_JobDataMap">JobDataMap</a></div>
+      <div><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

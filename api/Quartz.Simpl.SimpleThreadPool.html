@@ -1,0 +1,680 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SimpleThreadPool
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SimpleThreadPool
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Simpl.SimpleThreadPool">
+  
+  
+  <h1 id="Quartz_Simpl_SimpleThreadPool" data-uid="Quartz.Simpl.SimpleThreadPool" class="text-break">Class SimpleThreadPool
+  </h1>
+  <div class="markdown level0 summary"><p>This is class is a simple implementation of a thread pool, based on the
+<a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a> interface.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SimpleThreadPool</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Simpl.html">Quartz.Simpl</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Simpl_SimpleThreadPool_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SimpleThreadPool : IThreadPool</code></pre>
+  </div>
+  <h5 id="Quartz_Simpl_SimpleThreadPool_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p><a class="xref" href="Quartz.IThreadRunnable.html">IThreadRunnable</a> objects are sent to the pool with the <a class="xref" href="Quartz.Simpl.SimpleThreadPool.html#Quartz_Simpl_SimpleThreadPool_RunInThread_Quartz_IThreadRunnable_">RunInThread(IThreadRunnable)</a>
+method, which blocks until a <span class="xref">System.Threading.Thread</span> becomes available.</p>
+<p>The pool has a fixed number of <span class="xref">System.Threading.Thread</span>s, and does not grow or
+shrink based on demand.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool__ctor_" data-uid="Quartz.Simpl.SimpleThreadPool.#ctor*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool__ctor" data-uid="Quartz.Simpl.SimpleThreadPool.#ctor">SimpleThreadPool()</h4>
+  <div class="markdown level1 summary"><p>Create a new (unconfigured) <a class="xref" href="Quartz.Simpl.SimpleThreadPool.html">SimpleThreadPool</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleThreadPool()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool__ctor_" data-uid="Quartz.Simpl.SimpleThreadPool.#ctor*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool__ctor_System_Int32_System_Threading_ThreadPriority_" data-uid="Quartz.Simpl.SimpleThreadPool.#ctor(System.Int32,System.Threading.ThreadPriority)">SimpleThreadPool(Int32, ThreadPriority)</h4>
+  <div class="markdown level1 summary"><p>Create a new <a class="xref" href="Quartz.Simpl.SimpleThreadPool.html">SimpleThreadPool</a> with the specified number
+of <span class="xref">System.Threading.Thread</span> s that have the given priority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleThreadPool(int threadCount, ThreadPriority threadPriority)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">threadCount</span></td>
+        <td><p>the number of worker <span class="xref">System.Threading.Thread</span>s in the pool, must
+be &gt; 0.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.ThreadPriority</span></td>
+        <td><span class="parametername">threadPriority</span></td>
+        <td><p>the thread priority for the worker threads.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_InstanceId_" data-uid="Quartz.Simpl.SimpleThreadPool.InstanceId*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_InstanceId" data-uid="Quartz.Simpl.SimpleThreadPool.InstanceId">InstanceId</h4>
+  <div class="markdown level1 summary"><p>Inform the <a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a> of the Scheduler instance&apos;s Id, 
+prior to initialize being invoked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string InstanceId { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_InstanceName_" data-uid="Quartz.Simpl.SimpleThreadPool.InstanceName*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_InstanceName" data-uid="Quartz.Simpl.SimpleThreadPool.InstanceName">InstanceName</h4>
+  <div class="markdown level1 summary"><p>Inform the <a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a> of the Scheduler instance&apos;s name, 
+prior to initialize being invoked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string InstanceName { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_MakeThreadsDaemons_" data-uid="Quartz.Simpl.SimpleThreadPool.MakeThreadsDaemons*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_MakeThreadsDaemons" data-uid="Quartz.Simpl.SimpleThreadPool.MakeThreadsDaemons">MakeThreadsDaemons</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the value of makeThreadsDaemons.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool MakeThreadsDaemons { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_PoolSize_" data-uid="Quartz.Simpl.SimpleThreadPool.PoolSize*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_PoolSize" data-uid="Quartz.Simpl.SimpleThreadPool.PoolSize">PoolSize</h4>
+  <div class="markdown level1 summary"><p>Gets the size of the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int PoolSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The size of the pool.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_ThreadCount_" data-uid="Quartz.Simpl.SimpleThreadPool.ThreadCount*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_ThreadCount" data-uid="Quartz.Simpl.SimpleThreadPool.ThreadCount">ThreadCount</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the number of worker threads in the pool.
+Set  has no effect after <a class="xref" href="Quartz.Simpl.SimpleThreadPool.html#Quartz_Simpl_SimpleThreadPool_Initialize">Initialize()</a> has been called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ThreadCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_ThreadNamePrefix_" data-uid="Quartz.Simpl.SimpleThreadPool.ThreadNamePrefix*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_ThreadNamePrefix" data-uid="Quartz.Simpl.SimpleThreadPool.ThreadNamePrefix">ThreadNamePrefix</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the thread name prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ThreadNamePrefix { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The thread name prefix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_ThreadPriority_" data-uid="Quartz.Simpl.SimpleThreadPool.ThreadPriority*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_ThreadPriority" data-uid="Quartz.Simpl.SimpleThreadPool.ThreadPriority">ThreadPriority</h4>
+  <div class="markdown level1 summary"><p>Get or set the thread priority of worker threads in the pool.
+Set operation has no effect after <a class="xref" href="Quartz.Simpl.SimpleThreadPool.html#Quartz_Simpl_SimpleThreadPool_Initialize">Initialize()</a> has been called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThreadPriority ThreadPriority { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.ThreadPriority</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_BlockForAvailableThreads_" data-uid="Quartz.Simpl.SimpleThreadPool.BlockForAvailableThreads*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_BlockForAvailableThreads" data-uid="Quartz.Simpl.SimpleThreadPool.BlockForAvailableThreads">BlockForAvailableThreads()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BlockForAvailableThreads()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_ClearFromBusyWorkersList_" data-uid="Quartz.Simpl.SimpleThreadPool.ClearFromBusyWorkersList*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_ClearFromBusyWorkersList_Quartz_Simpl_SimpleThreadPool_WorkerThread_" data-uid="Quartz.Simpl.SimpleThreadPool.ClearFromBusyWorkersList(Quartz.Simpl.SimpleThreadPool.WorkerThread)">ClearFromBusyWorkersList(SimpleThreadPool.WorkerThread)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ClearFromBusyWorkersList(SimpleThreadPool.WorkerThread wt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Simpl.SimpleThreadPool.WorkerThread.html">SimpleThreadPool.WorkerThread</a></td>
+        <td><span class="parametername">wt</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_CreateWorkerThread_" data-uid="Quartz.Simpl.SimpleThreadPool.CreateWorkerThread*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_CreateWorkerThread_System_String_Quartz_IThreadRunnable_" data-uid="Quartz.Simpl.SimpleThreadPool.CreateWorkerThread(System.String,Quartz.IThreadRunnable)">CreateWorkerThread(String, IThreadRunnable)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual SimpleThreadPool.WorkerThread CreateWorkerThread(string name, IThreadRunnable runnable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IThreadRunnable.html">IThreadRunnable</a></td>
+        <td><span class="parametername">runnable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Simpl.SimpleThreadPool.WorkerThread.html">SimpleThreadPool.WorkerThread</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_CreateWorkerThreads_" data-uid="Quartz.Simpl.SimpleThreadPool.CreateWorkerThreads*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_CreateWorkerThreads_System_Int32_" data-uid="Quartz.Simpl.SimpleThreadPool.CreateWorkerThreads(System.Int32)">CreateWorkerThreads(Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates the worker threads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IList&lt;SimpleThreadPool.WorkerThread&gt; CreateWorkerThreads(int threadCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">threadCount</span></td>
+        <td><p>The thread count.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Simpl.SimpleThreadPool.WorkerThread.html">SimpleThreadPool.WorkerThread</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_Initialize_" data-uid="Quartz.Simpl.SimpleThreadPool.Initialize*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_Initialize" data-uid="Quartz.Simpl.SimpleThreadPool.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"><p>Called by the QuartzScheduler before the <span class="xref">System.Threading.ThreadPool</span> is
+used, in order to give the it a chance to Initialize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Initialize()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_MakeAvailable_" data-uid="Quartz.Simpl.SimpleThreadPool.MakeAvailable*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_MakeAvailable_Quartz_Simpl_SimpleThreadPool_WorkerThread_" data-uid="Quartz.Simpl.SimpleThreadPool.MakeAvailable(Quartz.Simpl.SimpleThreadPool.WorkerThread)">MakeAvailable(SimpleThreadPool.WorkerThread)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void MakeAvailable(SimpleThreadPool.WorkerThread wt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Simpl.SimpleThreadPool.WorkerThread.html">SimpleThreadPool.WorkerThread</a></td>
+        <td><span class="parametername">wt</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_RunInThread_" data-uid="Quartz.Simpl.SimpleThreadPool.RunInThread*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_RunInThread_Quartz_IThreadRunnable_" data-uid="Quartz.Simpl.SimpleThreadPool.RunInThread(Quartz.IThreadRunnable)">RunInThread(IThreadRunnable)</h4>
+  <div class="markdown level1 summary"><p>Run the given <a class="xref" href="Quartz.IThreadRunnable.html">IThreadRunnable</a> object in the next available
+<span class="xref">System.Threading.Thread</span>. If while waiting the thread pool is asked to
+shut down, the Runnable is executed immediately within a new additional
+thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool RunInThread(IThreadRunnable runnable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IThreadRunnable.html">IThreadRunnable</a></td>
+        <td><span class="parametername">runnable</span></td>
+        <td><p>The <a class="xref" href="Quartz.IThreadRunnable.html">IThreadRunnable</a> to be added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_Shutdown_" data-uid="Quartz.Simpl.SimpleThreadPool.Shutdown*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_Shutdown" data-uid="Quartz.Simpl.SimpleThreadPool.Shutdown">Shutdown()</h4>
+  <div class="markdown level1 summary"><p>Terminate any worker threads in this thread group.
+Jobs currently in progress will complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Shutdown()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Simpl_SimpleThreadPool_Shutdown_" data-uid="Quartz.Simpl.SimpleThreadPool.Shutdown*"></a>
+  <h4 id="Quartz_Simpl_SimpleThreadPool_Shutdown_System_Boolean_" data-uid="Quartz.Simpl.SimpleThreadPool.Shutdown(System.Boolean)">Shutdown(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Terminate any worker threads in this thread group.
+Jobs currently in progress will complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Shutdown(bool waitForJobsToComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">waitForJobsToComplete</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

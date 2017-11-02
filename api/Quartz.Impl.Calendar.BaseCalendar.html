@@ -1,0 +1,646 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BaseCalendar
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BaseCalendar
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.Calendar.BaseCalendar">
+  
+  
+  <h1 id="Quartz_Impl_Calendar_BaseCalendar" data-uid="Quartz.Impl.Calendar.BaseCalendar" class="text-break">Class BaseCalendar
+  </h1>
+  <div class="markdown level0 summary"><p>This implementation of the Calendar may be used (you don&apos;t have to) as a
+base class for more sophisticated one&apos;s. It merely implements the base
+functionality required by each Calendar.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BaseCalendar</span></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.Calendar.AnnualCalendar.html">AnnualCalendar</a></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.Calendar.CronCalendar.html">CronCalendar</a></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.Calendar.HolidayCalendar.html">HolidayCalendar</a></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.Calendar.MonthlyCalendar.html">MonthlyCalendar</a></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.Calendar.WeeklyCalendar.html">WeeklyCalendar</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></div>
+    <div><span class="xref">System.ICloneable</span></div>
+    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.Calendar.html">Quartz.Impl.Calendar</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_Calendar_BaseCalendar_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BaseCalendar : ICalendar, ICloneable, ISerializable</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_Calendar_BaseCalendar_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Regarded as base functionality is the treatment of base calendars. Base
+calendar allow you to chain (stack) as much calendars as you may need. For
+example to exclude weekends you may use WeeklyCalendar. In order to exclude
+holidays as well you may define a WeeklyCalendar instance to be the base
+calendar for HolidayCalendar instance.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar__ctor_" data-uid="Quartz.Impl.Calendar.BaseCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar__ctor" data-uid="Quartz.Impl.Calendar.BaseCalendar.#ctor">BaseCalendar()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html">BaseCalendar</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseCalendar()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar__ctor_" data-uid="Quartz.Impl.Calendar.BaseCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar__ctor_Quartz_ICalendar_" data-uid="Quartz.Impl.Calendar.BaseCalendar.#ctor(Quartz.ICalendar)">BaseCalendar(ICalendar)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html">BaseCalendar</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseCalendar(ICalendar baseCalendar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">baseCalendar</span></td>
+        <td><p>The base calendar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar__ctor_" data-uid="Quartz.Impl.Calendar.BaseCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar__ctor_Quartz_ICalendar_System_TimeZoneInfo_" data-uid="Quartz.Impl.Calendar.BaseCalendar.#ctor(Quartz.ICalendar,System.TimeZoneInfo)">BaseCalendar(ICalendar, TimeZoneInfo)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html">BaseCalendar</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseCalendar(ICalendar baseCalendar, TimeZoneInfo timeZone)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">baseCalendar</span></td>
+        <td><p>The base calendar.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeZoneInfo</span></td>
+        <td><span class="parametername">timeZone</span></td>
+        <td><p>The time zone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar__ctor_" data-uid="Quartz.Impl.Calendar.BaseCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="Quartz.Impl.Calendar.BaseCalendar.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">BaseCalendar(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"><p>Serialization constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseCalendar(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar__ctor_" data-uid="Quartz.Impl.Calendar.BaseCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar__ctor_System_TimeZoneInfo_" data-uid="Quartz.Impl.Calendar.BaseCalendar.#ctor(System.TimeZoneInfo)">BaseCalendar(TimeZoneInfo)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html">BaseCalendar</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseCalendar(TimeZoneInfo timeZone)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeZoneInfo</span></td>
+        <td><span class="parametername">timeZone</span></td>
+        <td><p>The time zone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar_CalendarBase_" data-uid="Quartz.Impl.Calendar.BaseCalendar.CalendarBase*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar_CalendarBase" data-uid="Quartz.Impl.Calendar.BaseCalendar.CalendarBase">CalendarBase</h4>
+  <div class="markdown level1 summary"><p>Set a new base calendar or remove the existing one</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICalendar CalendarBase { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar_Description_" data-uid="Quartz.Impl.Calendar.BaseCalendar.Description*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar_Description" data-uid="Quartz.Impl.Calendar.BaseCalendar.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the description given to the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> instance by
+its creator (if any).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar_TimeZone_" data-uid="Quartz.Impl.Calendar.BaseCalendar.TimeZone*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar_TimeZone" data-uid="Quartz.Impl.Calendar.BaseCalendar.TimeZone">TimeZone</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the time zone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TimeZoneInfo TimeZone { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeZoneInfo</span></td>
+        <td><p>The time zone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar_ArraysEqualElementsOnEqualPlaces_" data-uid="Quartz.Impl.Calendar.BaseCalendar.ArraysEqualElementsOnEqualPlaces*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar_ArraysEqualElementsOnEqualPlaces_System_Array_System_Array_" data-uid="Quartz.Impl.Calendar.BaseCalendar.ArraysEqualElementsOnEqualPlaces(System.Array,System.Array)">ArraysEqualElementsOnEqualPlaces(Array, Array)</h4>
+  <div class="markdown level1 summary"><p>checks whether two arrays have 
+the same length and 
+for any given place there are equal elements 
+in both arrays</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static bool ArraysEqualElementsOnEqualPlaces(Array array1, Array array2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Array</span></td>
+        <td><span class="parametername">array1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Array</span></td>
+        <td><span class="parametername">array2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar_Clone_" data-uid="Quartz.Impl.Calendar.BaseCalendar.Clone*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar_Clone" data-uid="Quartz.Impl.Calendar.BaseCalendar.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Creates a new object that is a copy of the current instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual object Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>A new object that is a copy of this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar_GetBaseCalendar_" data-uid="Quartz.Impl.Calendar.BaseCalendar.GetBaseCalendar*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar_GetBaseCalendar" data-uid="Quartz.Impl.Calendar.BaseCalendar.GetBaseCalendar">GetBaseCalendar()</h4>
+  <div class="markdown level1 summary"><p>Get the base calendar. Will be null, if not set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICalendar GetBaseCalendar()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar_GetNextIncludedTimeUtc_" data-uid="Quartz.Impl.Calendar.BaseCalendar.GetNextIncludedTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar_GetNextIncludedTimeUtc_System_DateTimeOffset_" data-uid="Quartz.Impl.Calendar.BaseCalendar.GetNextIncludedTimeUtc(System.DateTimeOffset)">GetNextIncludedTimeUtc(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Determine the next UTC time (in milliseconds) that is &apos;included&apos; by the
+Calendar after the given time. Return the original value if timeStamp is
+included. Return 0 if all days are excluded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset GetNextIncludedTimeUtc(DateTimeOffset timeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">timeUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Calendar_BaseCalendar_GetNextIncludedTimeUtc_System_DateTimeOffset__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendar.html#Quartz_ICalendar_GetNextIncludedTimeUtc_System_DateTimeOffset_">GetNextIncludedTimeUtc</a>(<span class="xref">System.DateTimeOffset</span>)</div>
+  </div>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar_GetObjectData_" data-uid="Quartz.Impl.Calendar.BaseCalendar.GetObjectData*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="Quartz.Impl.Calendar.BaseCalendar.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">GetObjectData(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SecurityCritical]
+public virtual void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_BaseCalendar_IsTimeIncluded_" data-uid="Quartz.Impl.Calendar.BaseCalendar.IsTimeIncluded*"></a>
+  <h4 id="Quartz_Impl_Calendar_BaseCalendar_IsTimeIncluded_System_DateTimeOffset_" data-uid="Quartz.Impl.Calendar.BaseCalendar.IsTimeIncluded(System.DateTimeOffset)">IsTimeIncluded(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Check if date/time represented by timeStamp is included. If included
+return true. The implementation of BaseCalendar simply calls the base
+calendars IsTimeIncluded() method if base calendar is set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsTimeIncluded(DateTimeOffset timeStampUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">timeStampUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Calendar_BaseCalendar_IsTimeIncluded_System_DateTimeOffset__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendar.html#Quartz_ICalendar_IsTimeIncluded_System_DateTimeOffset_">IsTimeIncluded</a>(<span class="xref">System.DateTimeOffset</span>)</div>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <div>
+      <span class="xref">System.Runtime.Serialization.ISerializable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

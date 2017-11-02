@@ -1,0 +1,2188 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IJobStore
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IJobStore
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Spi.IJobStore">
+  
+  
+  <h1 id="Quartz_Spi_IJobStore" data-uid="Quartz.Spi.IJobStore" class="text-break">Interface IJobStore
+  </h1>
+  <div class="markdown level0 summary"><p>The interface to be implemented by classes that want to provide a <a class="xref" href="Quartz.IJob.html">IJob</a>
+and <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> storage mechanism for the
+<a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>&apos;s use.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Spi.html">Quartz.Spi</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Spi_IJobStore_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IJobStore</code></pre>
+  </div>
+  <h5 id="Quartz_Spi_IJobStore_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Storage of <a class="xref" href="Quartz.IJob.html">IJob</a> s and <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s should be keyed
+on the combination of their name and group for uniqueness.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Spi_IJobStore_Clustered_" data-uid="Quartz.Spi.IJobStore.Clustered*"></a>
+  <h4 id="Quartz_Spi_IJobStore_Clustered" data-uid="Quartz.Spi.IJobStore.Clustered">Clustered</h4>
+  <div class="markdown level1 summary"><p>Whether or not the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> implementation is clustered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Clustered { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_EstimatedTimeToReleaseAndAcquireTrigger_" data-uid="Quartz.Spi.IJobStore.EstimatedTimeToReleaseAndAcquireTrigger*"></a>
+  <h4 id="Quartz_Spi_IJobStore_EstimatedTimeToReleaseAndAcquireTrigger" data-uid="Quartz.Spi.IJobStore.EstimatedTimeToReleaseAndAcquireTrigger">EstimatedTimeToReleaseAndAcquireTrigger</h4>
+  <div class="markdown level1 summary"><p>How long (in milliseconds) the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> implementation 
+estimates that it will take to release a trigger and acquire a new one. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long EstimatedTimeToReleaseAndAcquireTrigger { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_InstanceId_" data-uid="Quartz.Spi.IJobStore.InstanceId*"></a>
+  <h4 id="Quartz_Spi_IJobStore_InstanceId" data-uid="Quartz.Spi.IJobStore.InstanceId">InstanceId</h4>
+  <div class="markdown level1 summary"><p>Inform the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> of the Scheduler instance&apos;s Id, 
+prior to initialize being invoked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string InstanceId { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_InstanceName_" data-uid="Quartz.Spi.IJobStore.InstanceName*"></a>
+  <h4 id="Quartz_Spi_IJobStore_InstanceName" data-uid="Quartz.Spi.IJobStore.InstanceName">InstanceName</h4>
+  <div class="markdown level1 summary"><p>Inform the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> of the Scheduler instance&apos;s name, 
+prior to initialize being invoked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string InstanceName { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_SupportsPersistence_" data-uid="Quartz.Spi.IJobStore.SupportsPersistence*"></a>
+  <h4 id="Quartz_Spi_IJobStore_SupportsPersistence" data-uid="Quartz.Spi.IJobStore.SupportsPersistence">SupportsPersistence</h4>
+  <div class="markdown level1 summary"><p>Indicates whether job store supports persistence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SupportsPersistence { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_ThreadPoolSize_" data-uid="Quartz.Spi.IJobStore.ThreadPoolSize*"></a>
+  <h4 id="Quartz_Spi_IJobStore_ThreadPoolSize" data-uid="Quartz.Spi.IJobStore.ThreadPoolSize">ThreadPoolSize</h4>
+  <div class="markdown level1 summary"><p>Tells the JobStore the pool size used to execute jobs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ThreadPoolSize { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Spi_IJobStore_AcquireNextTriggers_" data-uid="Quartz.Spi.IJobStore.AcquireNextTriggers*"></a>
+  <h4 id="Quartz_Spi_IJobStore_AcquireNextTriggers_System_DateTimeOffset_System_Int32_System_TimeSpan_" data-uid="Quartz.Spi.IJobStore.AcquireNextTriggers(System.DateTimeOffset,System.Int32,System.TimeSpan)">AcquireNextTriggers(DateTimeOffset, Int32, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Get a handle to the next trigger to be fired, and mark it as &apos;reserved&apos;
+by the calling scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;IOperableTrigger&gt; AcquireNextTriggers(DateTimeOffset noLaterThan, int maxCount, TimeSpan timeWindow)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">noLaterThan</span></td>
+        <td><p>If &gt; 0, the JobStore should only return a Trigger
+that will fire no later than the time represented in this value as
+milliseconds.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeWindow</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Spi_IJobStore_AcquireNextTriggers_System_DateTimeOffset_System_Int32_System_TimeSpan__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_CalendarExists_" data-uid="Quartz.Spi.IJobStore.CalendarExists*"></a>
+  <h4 id="Quartz_Spi_IJobStore_CalendarExists_System_String_" data-uid="Quartz.Spi.IJobStore.CalendarExists(System.String)">CalendarExists(String)</h4>
+  <div class="markdown level1 summary"><p>Determine whether a <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> with the given identifier already
+exists within the scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CalendarExists(string calName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calName</span></td>
+        <td><p>the identifier to check for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if a calendar exists with the given identifier</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_CheckExists_" data-uid="Quartz.Spi.IJobStore.CheckExists*"></a>
+  <h4 id="Quartz_Spi_IJobStore_CheckExists_Quartz_JobKey_" data-uid="Quartz.Spi.IJobStore.CheckExists(Quartz.JobKey)">CheckExists(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Determine whether a <a class="xref" href="Quartz.IJob.html">IJob</a> with the given identifier already
+exists within the scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CheckExists(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td><p>the identifier to check for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if a job exists with the given identifier</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_CheckExists_" data-uid="Quartz.Spi.IJobStore.CheckExists*"></a>
+  <h4 id="Quartz_Spi_IJobStore_CheckExists_Quartz_TriggerKey_" data-uid="Quartz.Spi.IJobStore.CheckExists(Quartz.TriggerKey)">CheckExists(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Determine whether a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given identifier already
+exists within the scheduler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CheckExists(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>the identifier to check for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if a trigger exists with the given identifier</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_ClearAllSchedulingData_" data-uid="Quartz.Spi.IJobStore.ClearAllSchedulingData*"></a>
+  <h4 id="Quartz_Spi_IJobStore_ClearAllSchedulingData" data-uid="Quartz.Spi.IJobStore.ClearAllSchedulingData">ClearAllSchedulingData()</h4>
+  <div class="markdown level1 summary"><p>Clear (delete!) all scheduling data - all <a class="xref" href="Quartz.IJob.html">IJob</a>s, <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s
+<a class="xref" href="Quartz.ICalendar.html">ICalendar</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ClearAllSchedulingData()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_GetCalendarNames_" data-uid="Quartz.Spi.IJobStore.GetCalendarNames*"></a>
+  <h4 id="Quartz_Spi_IJobStore_GetCalendarNames" data-uid="Quartz.Spi.IJobStore.GetCalendarNames">GetCalendarNames()</h4>
+  <div class="markdown level1 summary"><p>Get the names of all of the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> s
+in the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>.</p>
+<p>
+If there are no Calendars in the given group name, the result should be
+a zero-length array (not <span class="xref">null</span>).
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; GetCalendarNames()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_GetJobGroupNames_" data-uid="Quartz.Spi.IJobStore.GetJobGroupNames*"></a>
+  <h4 id="Quartz_Spi_IJobStore_GetJobGroupNames" data-uid="Quartz.Spi.IJobStore.GetJobGroupNames">GetJobGroupNames()</h4>
+  <div class="markdown level1 summary"><p>Get the names of all of the <a class="xref" href="Quartz.IJob.html">IJob</a>
+groups.
+<p>
+If there are no known group names, the result should be a zero-length
+array (not <span class="xref">null</span>).
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; GetJobGroupNames()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_GetJobKeys_" data-uid="Quartz.Spi.IJobStore.GetJobKeys*"></a>
+  <h4 id="Quartz_Spi_IJobStore_GetJobKeys_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__" data-uid="Quartz.Spi.IJobStore.GetJobKeys(Quartz.Impl.Matchers.GroupMatcher{Quartz.JobKey})">GetJobKeys(GroupMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get the names of all of the <a class="xref" href="Quartz.IJob.html">IJob</a> s that
+have the given group name.
+<p>
+If there are no jobs in the given group name, the result should be a
+zero-length array (not <span class="xref">null</span>).
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISet&lt;JobKey&gt; GetJobKeys(GroupMatcher&lt;JobKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_GetNumberOfCalendars_" data-uid="Quartz.Spi.IJobStore.GetNumberOfCalendars*"></a>
+  <h4 id="Quartz_Spi_IJobStore_GetNumberOfCalendars" data-uid="Quartz.Spi.IJobStore.GetNumberOfCalendars">GetNumberOfCalendars()</h4>
+  <div class="markdown level1 summary"><p>Get the number of <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> s that are
+stored in the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetNumberOfCalendars()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_GetNumberOfJobs_" data-uid="Quartz.Spi.IJobStore.GetNumberOfJobs*"></a>
+  <h4 id="Quartz_Spi_IJobStore_GetNumberOfJobs" data-uid="Quartz.Spi.IJobStore.GetNumberOfJobs">GetNumberOfJobs()</h4>
+  <div class="markdown level1 summary"><p>Get the number of <a class="xref" href="Quartz.IJob.html">IJob</a>s that are
+stored in the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetNumberOfJobs()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_GetNumberOfTriggers_" data-uid="Quartz.Spi.IJobStore.GetNumberOfTriggers*"></a>
+  <h4 id="Quartz_Spi_IJobStore_GetNumberOfTriggers" data-uid="Quartz.Spi.IJobStore.GetNumberOfTriggers">GetNumberOfTriggers()</h4>
+  <div class="markdown level1 summary"><p>Get the number of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s that are
+stored in the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetNumberOfTriggers()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_GetPausedTriggerGroups_" data-uid="Quartz.Spi.IJobStore.GetPausedTriggerGroups*"></a>
+  <h4 id="Quartz_Spi_IJobStore_GetPausedTriggerGroups" data-uid="Quartz.Spi.IJobStore.GetPausedTriggerGroups">GetPausedTriggerGroups()</h4>
+  <div class="markdown level1 summary"><p>Gets the paused trigger groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISet&lt;string&gt; GetPausedTriggerGroups()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_GetTriggerGroupNames_" data-uid="Quartz.Spi.IJobStore.GetTriggerGroupNames*"></a>
+  <h4 id="Quartz_Spi_IJobStore_GetTriggerGroupNames" data-uid="Quartz.Spi.IJobStore.GetTriggerGroupNames">GetTriggerGroupNames()</h4>
+  <div class="markdown level1 summary"><p>Get the names of all of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+groups.
+<p>
+If there are no known group names, the result should be a zero-length
+array (not <span class="xref">null</span>).
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; GetTriggerGroupNames()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_GetTriggerKeys_" data-uid="Quartz.Spi.IJobStore.GetTriggerKeys*"></a>
+  <h4 id="Quartz_Spi_IJobStore_GetTriggerKeys_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Spi.IJobStore.GetTriggerKeys(Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">GetTriggerKeys(GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get the names of all of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s
+that have the given group name.
+<p>
+If there are no triggers in the given group name, the result should be a
+zero-length array (not <span class="xref">null</span>).
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISet&lt;TriggerKey&gt; GetTriggerKeys(GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_GetTriggersForJob_" data-uid="Quartz.Spi.IJobStore.GetTriggersForJob*"></a>
+  <h4 id="Quartz_Spi_IJobStore_GetTriggersForJob_Quartz_JobKey_" data-uid="Quartz.Spi.IJobStore.GetTriggersForJob(Quartz.JobKey)">GetTriggersForJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Get all of the Triggers that are associated to the given Job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;IOperableTrigger&gt; GetTriggersForJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Spi_IJobStore_GetTriggersForJob_Quartz_JobKey__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If there are no matches, a zero-length array should be returned.</p>
+</div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_GetTriggerState_" data-uid="Quartz.Spi.IJobStore.GetTriggerState*"></a>
+  <h4 id="Quartz_Spi_IJobStore_GetTriggerState_Quartz_TriggerKey_" data-uid="Quartz.Spi.IJobStore.GetTriggerState(Quartz.TriggerKey)">GetTriggerState(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Get the current state of the identified <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TriggerState GetTriggerState(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerState.html">TriggerState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Spi_IJobStore_GetTriggerState_Quartz_TriggerKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.TriggerState.html">TriggerState</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_Initialize_" data-uid="Quartz.Spi.IJobStore.Initialize*"></a>
+  <h4 id="Quartz_Spi_IJobStore_Initialize_Quartz_Spi_ITypeLoadHelper_Quartz_Spi_ISchedulerSignaler_" data-uid="Quartz.Spi.IJobStore.Initialize(Quartz.Spi.ITypeLoadHelper,Quartz.Spi.ISchedulerSignaler)">Initialize(ITypeLoadHelper, ISchedulerSignaler)</h4>
+  <div class="markdown level1 summary"><p>Called by the QuartzScheduler before the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> is
+used, in order to give the it a chance to Initialize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Initialize(ITypeLoadHelper loadHelper, ISchedulerSignaler signaler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.ITypeLoadHelper.html">ITypeLoadHelper</a></td>
+        <td><span class="parametername">loadHelper</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.ISchedulerSignaler.html">ISchedulerSignaler</a></td>
+        <td><span class="parametername">signaler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_IsJobGroupPaused_" data-uid="Quartz.Spi.IJobStore.IsJobGroupPaused*"></a>
+  <h4 id="Quartz_Spi_IJobStore_IsJobGroupPaused_System_String_" data-uid="Quartz.Spi.IJobStore.IsJobGroupPaused(System.String)">IsJobGroupPaused(String)</h4>
+  <div class="markdown level1 summary"><p>returns true if the given JobGroup is paused</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsJobGroupPaused(string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_IsTriggerGroupPaused_" data-uid="Quartz.Spi.IJobStore.IsTriggerGroupPaused*"></a>
+  <h4 id="Quartz_Spi_IJobStore_IsTriggerGroupPaused_System_String_" data-uid="Quartz.Spi.IJobStore.IsTriggerGroupPaused(System.String)">IsTriggerGroupPaused(String)</h4>
+  <div class="markdown level1 summary"><p>returns true if the given TriggerGroup
+is paused</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsTriggerGroupPaused(string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_PauseAll_" data-uid="Quartz.Spi.IJobStore.PauseAll*"></a>
+  <h4 id="Quartz_Spi_IJobStore_PauseAll" data-uid="Quartz.Spi.IJobStore.PauseAll">PauseAll()</h4>
+  <div class="markdown level1 summary"><p>Pause all triggers - equivalent of calling <a class="xref" href="Quartz.Spi.IJobStore.html#Quartz_Spi_IJobStore_PauseTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__">PauseTriggers(GroupMatcher&lt;TriggerKey&gt;)</a>
+on every group.
+<p>
+When <a class="xref" href="Quartz.Spi.IJobStore.html#Quartz_Spi_IJobStore_ResumeAll">ResumeAll()</a> is called (to un-pause), trigger misfire
+instructions WILL be applied.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void PauseAll()</code></pre>
+  </div>
+  <h5 id="Quartz_Spi_IJobStore_PauseAll_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Spi.IJobStore.html#Quartz_Spi_IJobStore_ResumeAll">ResumeAll()</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_PauseJob_" data-uid="Quartz.Spi.IJobStore.PauseJob*"></a>
+  <h4 id="Quartz_Spi_IJobStore_PauseJob_Quartz_JobKey_" data-uid="Quartz.Spi.IJobStore.PauseJob(Quartz.JobKey)">PauseJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Pause the <a class="xref" href="Quartz.IJob.html">IJob</a> with the given key - by
+pausing all of its current <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void PauseJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_PauseJobs_" data-uid="Quartz.Spi.IJobStore.PauseJobs*"></a>
+  <h4 id="Quartz_Spi_IJobStore_PauseJobs_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__" data-uid="Quartz.Spi.IJobStore.PauseJobs(Quartz.Impl.Matchers.GroupMatcher{Quartz.JobKey})">PauseJobs(GroupMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Pause all of the <a class="xref" href="Quartz.IJob.html">IJob</a>s in the given
+group - by pausing all of their <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s.
+<p>
+The JobStore should &quot;remember&quot; that the group is paused, and impose the
+pause on any new jobs that are added to the group while the group is
+paused.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; PauseJobs(GroupMatcher&lt;JobKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Spi_IJobStore_PauseJobs_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey___seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">System.String</span></div>
+  </div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_PauseTrigger_" data-uid="Quartz.Spi.IJobStore.PauseTrigger*"></a>
+  <h4 id="Quartz_Spi_IJobStore_PauseTrigger_Quartz_TriggerKey_" data-uid="Quartz.Spi.IJobStore.PauseTrigger(Quartz.TriggerKey)">PauseTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Pause the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void PauseTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_PauseTriggers_" data-uid="Quartz.Spi.IJobStore.PauseTriggers*"></a>
+  <h4 id="Quartz_Spi_IJobStore_PauseTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Spi.IJobStore.PauseTriggers(Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">PauseTriggers(GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Pause all of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s in the
+given group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISet&lt;string&gt; PauseTriggers(GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Spi_IJobStore_PauseTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The JobStore should &quot;remember&quot; that the group is paused, and impose the
+pause on any new triggers that are added to the group while the group is
+paused.</p>
+</div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_ReleaseAcquiredTrigger_" data-uid="Quartz.Spi.IJobStore.ReleaseAcquiredTrigger*"></a>
+  <h4 id="Quartz_Spi_IJobStore_ReleaseAcquiredTrigger_Quartz_Spi_IOperableTrigger_" data-uid="Quartz.Spi.IJobStore.ReleaseAcquiredTrigger(Quartz.Spi.IOperableTrigger)">ReleaseAcquiredTrigger(IOperableTrigger)</h4>
+  <div class="markdown level1 summary"><p>Inform the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> that the scheduler no longer plans to
+fire the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>, that it had previously acquired
+(reserved).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ReleaseAcquiredTrigger(IOperableTrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_RemoveCalendar_" data-uid="Quartz.Spi.IJobStore.RemoveCalendar*"></a>
+  <h4 id="Quartz_Spi_IJobStore_RemoveCalendar_System_String_" data-uid="Quartz.Spi.IJobStore.RemoveCalendar(System.String)">RemoveCalendar(String)</h4>
+  <div class="markdown level1 summary"><p>Remove (delete) the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> with the
+given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveCalendar(string calName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calName</span></td>
+        <td><p>The name of the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> to be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if a <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> with the given name
+was found and removed from the store.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Spi_IJobStore_RemoveCalendar_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If removal of the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> would result in
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s pointing to non-existent calendars, then a
+<a class="xref" href="Quartz.JobPersistenceException.html">JobPersistenceException</a> will be thrown.</p>
+</div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_RemoveJob_" data-uid="Quartz.Spi.IJobStore.RemoveJob*"></a>
+  <h4 id="Quartz_Spi_IJobStore_RemoveJob_Quartz_JobKey_" data-uid="Quartz.Spi.IJobStore.RemoveJob(Quartz.JobKey)">RemoveJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Remove (delete) the <a class="xref" href="Quartz.IJob.html">IJob</a> with the given
+key, and any <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s that reference
+it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if a <a class="xref" href="Quartz.IJob.html">IJob</a> with the given name and
+group was found and removed from the store.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Spi_IJobStore_RemoveJob_Quartz_JobKey__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If removal of the <a class="xref" href="Quartz.IJob.html">IJob</a> results in an empty group, the
+group should be removed from the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>&apos;s list of
+known group names.</p>
+</div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_RemoveJobs_" data-uid="Quartz.Spi.IJobStore.RemoveJobs*"></a>
+  <h4 id="Quartz_Spi_IJobStore_RemoveJobs_System_Collections_Generic_IList_Quartz_JobKey__" data-uid="Quartz.Spi.IJobStore.RemoveJobs(System.Collections.Generic.IList{Quartz.JobKey})">RemoveJobs(IList&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveJobs(IList&lt;JobKey&gt; jobKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">jobKeys</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_RemoveTrigger_" data-uid="Quartz.Spi.IJobStore.RemoveTrigger*"></a>
+  <h4 id="Quartz_Spi_IJobStore_RemoveTrigger_Quartz_TriggerKey_" data-uid="Quartz.Spi.IJobStore.RemoveTrigger(Quartz.TriggerKey)">RemoveTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Remove (delete) the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given
+name and group was found and removed from the store.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Spi_IJobStore_RemoveTrigger_Quartz_TriggerKey__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+If removal of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> results in an empty group, the
+group should be removed from the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>&apos;s list of
+known group names.
+</p>
+<p>
+If removal of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> results in an &apos;orphaned&apos; <a class="xref" href="Quartz.IJob.html">IJob</a>
+that is not &apos;durable&apos;, then the <a class="xref" href="Quartz.IJob.html">IJob</a> should be deleted
+also.
+</p>
+</div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_RemoveTriggers_" data-uid="Quartz.Spi.IJobStore.RemoveTriggers*"></a>
+  <h4 id="Quartz_Spi_IJobStore_RemoveTriggers_System_Collections_Generic_IList_Quartz_TriggerKey__" data-uid="Quartz.Spi.IJobStore.RemoveTriggers(System.Collections.Generic.IList{Quartz.TriggerKey})">RemoveTriggers(IList&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveTriggers(IList&lt;TriggerKey&gt; triggerKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">triggerKeys</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_ReplaceTrigger_" data-uid="Quartz.Spi.IJobStore.ReplaceTrigger*"></a>
+  <h4 id="Quartz_Spi_IJobStore_ReplaceTrigger_Quartz_TriggerKey_Quartz_Spi_IOperableTrigger_" data-uid="Quartz.Spi.IJobStore.ReplaceTrigger(Quartz.TriggerKey,Quartz.Spi.IOperableTrigger)">ReplaceTrigger(TriggerKey, IOperableTrigger)</h4>
+  <div class="markdown level1 summary"><p>Remove (delete) the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the
+given name, and store the new given one - which must be associated
+with the same job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ReplaceTrigger(TriggerKey triggerKey, IOperableTrigger newTrigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to be replaced.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">newTrigger</span></td>
+        <td><p>The new <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to be stored.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the given
+name and group was found and removed from the store.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_ResumeAll_" data-uid="Quartz.Spi.IJobStore.ResumeAll*"></a>
+  <h4 id="Quartz_Spi_IJobStore_ResumeAll" data-uid="Quartz.Spi.IJobStore.ResumeAll">ResumeAll()</h4>
+  <div class="markdown level1 summary"><p>Resume (un-pause) all triggers - equivalent of calling <a class="xref" href="Quartz.Spi.IJobStore.html#Quartz_Spi_IJobStore_ResumeTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__">ResumeTriggers(GroupMatcher&lt;TriggerKey&gt;)</a>
+on every group.
+<p>
+If any <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> missed one or more fire-times, then the
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s misfire instruction will be applied.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ResumeAll()</code></pre>
+  </div>
+  <h5 id="Quartz_Spi_IJobStore_ResumeAll_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Spi.IJobStore.html#Quartz_Spi_IJobStore_PauseAll">PauseAll()</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_ResumeJob_" data-uid="Quartz.Spi.IJobStore.ResumeJob*"></a>
+  <h4 id="Quartz_Spi_IJobStore_ResumeJob_Quartz_JobKey_" data-uid="Quartz.Spi.IJobStore.ResumeJob(Quartz.JobKey)">ResumeJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Resume (un-pause) the <a class="xref" href="Quartz.IJob.html">IJob</a> with the
+given key.
+<p>
+If any of the <a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s missed one
+or more fire-times, then the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s misfire
+instruction will be applied.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ResumeJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_ResumeJobs_" data-uid="Quartz.Spi.IJobStore.ResumeJobs*"></a>
+  <h4 id="Quartz_Spi_IJobStore_ResumeJobs_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__" data-uid="Quartz.Spi.IJobStore.ResumeJobs(Quartz.Impl.Matchers.GroupMatcher{Quartz.JobKey})">ResumeJobs(GroupMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Resume (un-pause) all of the <a class="xref" href="Quartz.IJob.html">IJob</a>s in
+the given group.
+<p>
+If any of the <a class="xref" href="Quartz.IJob.html">IJob</a> s had <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s that
+missed one or more fire-times, then the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s
+misfire instruction will be applied.
+</p> </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISet&lt;string&gt; ResumeJobs(GroupMatcher&lt;JobKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_ResumeTrigger_" data-uid="Quartz.Spi.IJobStore.ResumeTrigger*"></a>
+  <h4 id="Quartz_Spi_IJobStore_ResumeTrigger_Quartz_TriggerKey_" data-uid="Quartz.Spi.IJobStore.ResumeTrigger(Quartz.TriggerKey)">ResumeTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Resume (un-pause) the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the
+given key.</p>
+<p>
+If the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> missed one or more fire-times, then the
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s misfire instruction will be applied.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ResumeTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Spi_IJobStore_ResumeTrigger_Quartz_TriggerKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">System.String</span></div>
+  </div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_ResumeTriggers_" data-uid="Quartz.Spi.IJobStore.ResumeTriggers*"></a>
+  <h4 id="Quartz_Spi_IJobStore_ResumeTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Spi.IJobStore.ResumeTriggers(Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">ResumeTriggers(GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Resume (un-pause) all of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s
+in the given group.
+<p>
+If any <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> missed one or more fire-times, then the
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s misfire instruction will be applied.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; ResumeTriggers(GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_RetrieveCalendar_" data-uid="Quartz.Spi.IJobStore.RetrieveCalendar*"></a>
+  <h4 id="Quartz_Spi_IJobStore_RetrieveCalendar_System_String_" data-uid="Quartz.Spi.IJobStore.RetrieveCalendar(System.String)">RetrieveCalendar(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICalendar RetrieveCalendar(string calName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calName</span></td>
+        <td><p>The name of the <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> to be retrieved.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><p>The desired <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>, or null if there is no
+match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_RetrieveJob_" data-uid="Quartz.Spi.IJobStore.RetrieveJob*"></a>
+  <h4 id="Quartz_Spi_IJobStore_RetrieveJob_Quartz_JobKey_" data-uid="Quartz.Spi.IJobStore.RetrieveJob(Quartz.JobKey)">RetrieveJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> for the given
+<a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IJobDetail RetrieveJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><p>The desired <a class="xref" href="Quartz.IJob.html">IJob</a>, or null if there is no match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_RetrieveTrigger_" data-uid="Quartz.Spi.IJobStore.RetrieveTrigger*"></a>
+  <h4 id="Quartz_Spi_IJobStore_RetrieveTrigger_Quartz_TriggerKey_" data-uid="Quartz.Spi.IJobStore.RetrieveTrigger(Quartz.TriggerKey)">RetrieveTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IOperableTrigger RetrieveTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><p>The desired <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>, or null if there is no
+match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_SchedulerPaused_" data-uid="Quartz.Spi.IJobStore.SchedulerPaused*"></a>
+  <h4 id="Quartz_Spi_IJobStore_SchedulerPaused" data-uid="Quartz.Spi.IJobStore.SchedulerPaused">SchedulerPaused()</h4>
+  <div class="markdown level1 summary"><p>Called by the QuartzScheduler to inform the JobStore that
+the scheduler has been paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SchedulerPaused()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_SchedulerResumed_" data-uid="Quartz.Spi.IJobStore.SchedulerResumed*"></a>
+  <h4 id="Quartz_Spi_IJobStore_SchedulerResumed" data-uid="Quartz.Spi.IJobStore.SchedulerResumed">SchedulerResumed()</h4>
+  <div class="markdown level1 summary"><p>Called by the QuartzScheduler to inform the JobStore that
+the scheduler has resumed after being paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SchedulerResumed()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_SchedulerStarted_" data-uid="Quartz.Spi.IJobStore.SchedulerStarted*"></a>
+  <h4 id="Quartz_Spi_IJobStore_SchedulerStarted" data-uid="Quartz.Spi.IJobStore.SchedulerStarted">SchedulerStarted()</h4>
+  <div class="markdown level1 summary"><p>Called by the QuartzScheduler to inform the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> that
+the scheduler has started.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SchedulerStarted()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_Shutdown_" data-uid="Quartz.Spi.IJobStore.Shutdown*"></a>
+  <h4 id="Quartz_Spi_IJobStore_Shutdown" data-uid="Quartz.Spi.IJobStore.Shutdown">Shutdown()</h4>
+  <div class="markdown level1 summary"><p>Called by the QuartzScheduler to inform the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> that
+it should free up all of it&apos;s resources because the scheduler is
+shutting down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Shutdown()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Spi_IJobStore_StoreCalendar_" data-uid="Quartz.Spi.IJobStore.StoreCalendar*"></a>
+  <h4 id="Quartz_Spi_IJobStore_StoreCalendar_System_String_Quartz_ICalendar_System_Boolean_System_Boolean_" data-uid="Quartz.Spi.IJobStore.StoreCalendar(System.String,Quartz.ICalendar,System.Boolean,System.Boolean)">StoreCalendar(String, ICalendar, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Store the given <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StoreCalendar(string name, ICalendar calendar, bool replaceExisting, bool updateTriggers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">calendar</span></td>
+        <td><p>The <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> to be stored.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replaceExisting</span></td>
+        <td><p>If <span class="xref">true</span>, any <a class="xref" href="Quartz.ICalendar.html">ICalendar</a> existing
+in the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> with the same name and group
+should be over-written.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">updateTriggers</span></td>
+        <td><p>If <span class="xref">true</span>, any <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s existing
+in the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> that reference an existing
+Calendar with the same name with have their next fire time
+re-computed with the new <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_StoreJob_" data-uid="Quartz.Spi.IJobStore.StoreJob*"></a>
+  <h4 id="Quartz_Spi_IJobStore_StoreJob_Quartz_IJobDetail_System_Boolean_" data-uid="Quartz.Spi.IJobStore.StoreJob(Quartz.IJobDetail,System.Boolean)">StoreJob(IJobDetail, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Store the given <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StoreJob(IJobDetail newJob, bool replaceExisting)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">newJob</span></td>
+        <td><p>The <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> to be stored.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replaceExisting</span></td>
+        <td><p>If <span class="xref">true</span>, any <a class="xref" href="Quartz.IJob.html">IJob</a> existing in the
+<a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> with the same name and group should be
+over-written.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_StoreJobAndTrigger_" data-uid="Quartz.Spi.IJobStore.StoreJobAndTrigger*"></a>
+  <h4 id="Quartz_Spi_IJobStore_StoreJobAndTrigger_Quartz_IJobDetail_Quartz_Spi_IOperableTrigger_" data-uid="Quartz.Spi.IJobStore.StoreJobAndTrigger(Quartz.IJobDetail,Quartz.Spi.IOperableTrigger)">StoreJobAndTrigger(IJobDetail, IOperableTrigger)</h4>
+  <div class="markdown level1 summary"><p>Store the given <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> and <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StoreJobAndTrigger(IJobDetail newJob, IOperableTrigger newTrigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">newJob</span></td>
+        <td><p>The <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> to be stored.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">newTrigger</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to be stored.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_StoreJobsAndTriggers_" data-uid="Quartz.Spi.IJobStore.StoreJobsAndTriggers*"></a>
+  <h4 id="Quartz_Spi_IJobStore_StoreJobsAndTriggers_System_Collections_Generic_IDictionary_Quartz_IJobDetail_Quartz_Collection_ISet_Quartz_ITrigger___System_Boolean_" data-uid="Quartz.Spi.IJobStore.StoreJobsAndTriggers(System.Collections.Generic.IDictionary{Quartz.IJobDetail,Quartz.Collection.ISet{Quartz.ITrigger}},System.Boolean)">StoreJobsAndTriggers(IDictionary&lt;IJobDetail, ISet&lt;ITrigger&gt;&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StoreJobsAndTriggers(IDictionary&lt;IJobDetail, ISet&lt;ITrigger&gt;&gt; triggersAndJobs, bool replace)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>, <a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;&gt;</td>
+        <td><span class="parametername">triggersAndJobs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_StoreTrigger_" data-uid="Quartz.Spi.IJobStore.StoreTrigger*"></a>
+  <h4 id="Quartz_Spi_IJobStore_StoreTrigger_Quartz_Spi_IOperableTrigger_System_Boolean_" data-uid="Quartz.Spi.IJobStore.StoreTrigger(Quartz.Spi.IOperableTrigger,System.Boolean)">StoreTrigger(IOperableTrigger, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Store the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StoreTrigger(IOperableTrigger newTrigger, bool replaceExisting)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">newTrigger</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to be stored.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replaceExisting</span></td>
+        <td><p>If <span class="xref">true</span>, any <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> existing in
+the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> with the same name and group should
+be over-written.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_TriggeredJobComplete_" data-uid="Quartz.Spi.IJobStore.TriggeredJobComplete*"></a>
+  <h4 id="Quartz_Spi_IJobStore_TriggeredJobComplete_Quartz_Spi_IOperableTrigger_Quartz_IJobDetail_Quartz_SchedulerInstruction_" data-uid="Quartz.Spi.IJobStore.TriggeredJobComplete(Quartz.Spi.IOperableTrigger,Quartz.IJobDetail,Quartz.SchedulerInstruction)">TriggeredJobComplete(IOperableTrigger, IJobDetail, SchedulerInstruction)</h4>
+  <div class="markdown level1 summary"><p>Inform the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> that the scheduler has completed the
+firing of the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> (and the execution its
+associated <a class="xref" href="Quartz.IJob.html">IJob</a>), and that the <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a>
+in the given <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> should be updated if the <a class="xref" href="Quartz.IJob.html">IJob</a>
+is stateful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TriggeredJobComplete(IOperableTrigger trigger, IJobDetail jobDetail, SchedulerInstruction triggerInstCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></td>
+        <td><span class="parametername">triggerInstCode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Spi_IJobStore_TriggersFired_" data-uid="Quartz.Spi.IJobStore.TriggersFired*"></a>
+  <h4 id="Quartz_Spi_IJobStore_TriggersFired_System_Collections_Generic_IList_Quartz_Spi_IOperableTrigger__" data-uid="Quartz.Spi.IJobStore.TriggersFired(System.Collections.Generic.IList{Quartz.Spi.IOperableTrigger})">TriggersFired(IList&lt;IOperableTrigger&gt;)</h4>
+  <div class="markdown level1 summary"><p>Inform the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> that the scheduler is now firing the
+given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> (executing its associated <a class="xref" href="Quartz.IJob.html">IJob</a>),
+that it had previously acquired (reserved).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;TriggerFiredResult&gt; TriggersFired(IList&lt;IOperableTrigger&gt; triggers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a>&gt;</td>
+        <td><span class="parametername">triggers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Spi.TriggerFiredResult.html">TriggerFiredResult</a>&gt;</td>
+        <td><p>May return null if all the triggers or their calendars no longer exist, or
+if the trigger was not successfully put into the &apos;executing&apos;
+state.  Preference is to return an empty list if none of the triggers
+could be fired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a></div>
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+      <div><a class="xref" href="Quartz.IJob.html">IJob</a></div>
+      <div><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></div>
+      <div><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></div>
+      <div><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

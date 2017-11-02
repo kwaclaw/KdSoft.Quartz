@@ -1,0 +1,835 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UpdateLockRowSemaphore
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UpdateLockRowSemaphore
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.AdoJobStore.UpdateLockRowSemaphore">
+  
+  
+  <h1 id="Quartz_Impl_AdoJobStore_UpdateLockRowSemaphore" data-uid="Quartz.Impl.AdoJobStore.UpdateLockRowSemaphore" class="text-break">Class UpdateLockRowSemaphore
+  </h1>
+  <div class="markdown level0 summary"><p>Provide thread/resource locking in order to protect
+resources from being altered by multiple threads at the same time using
+a db row update.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html">AdoConstants</a></div>
+    <div class="level2"><a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html">StdAdoConstants</a></div>
+    <div class="level3"><a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html">DBSemaphore</a></div>
+    <div class="level4"><span class="xref">UpdateLockRowSemaphore</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.Impl.AdoJobStore.ISemaphore.html">ISemaphore</a></div>
+    <div><a class="xref" href="Quartz.Impl.AdoJobStore.ITablePrefixAware.html">ITablePrefixAware</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_ObtainLock_Quartz_Impl_AdoJobStore_Common_DbMetadata_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_">DBSemaphore.ObtainLock(DbMetadata, ConnectionAndTransactionHolder, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_ReleaseLock_System_String_">DBSemaphore.ReleaseLock(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_IsLockOwner_System_String_">DBSemaphore.IsLockOwner(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_Log">DBSemaphore.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_RequiresConnection">DBSemaphore.RequiresConnection</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_SQL">DBSemaphore.SQL</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_InsertSQL">DBSemaphore.InsertSQL</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_SchedulerNameLiteral">DBSemaphore.SchedulerNameLiteral</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_SchedName">DBSemaphore.SchedName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_TablePrefix">DBSemaphore.TablePrefix</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_AdoUtil">DBSemaphore.AdoUtil</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_TablePrefixSubst">StdAdoConstants.TablePrefixSubst</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SchedulerNameSubst">StdAdoConstants.SchedulerNameSubst</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteBlobTrigger">StdAdoConstants.SqlDeleteBlobTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteCalendar">StdAdoConstants.SqlDeleteCalendar</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteCronTrigger">StdAdoConstants.SqlDeleteCronTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteFiredTrigger">StdAdoConstants.SqlDeleteFiredTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteFiredTriggers">StdAdoConstants.SqlDeleteFiredTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteInstancesFiredTriggers">StdAdoConstants.SqlDeleteInstancesFiredTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteJobDetail">StdAdoConstants.SqlDeleteJobDetail</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteNoRecoveryFiredTriggers">StdAdoConstants.SqlDeleteNoRecoveryFiredTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeletePausedTriggerGroup">StdAdoConstants.SqlDeletePausedTriggerGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeletePausedTriggerGroups">StdAdoConstants.SqlDeletePausedTriggerGroups</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteSchedulerState">StdAdoConstants.SqlDeleteSchedulerState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteSimpleTrigger">StdAdoConstants.SqlDeleteSimpleTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteTrigger">StdAdoConstants.SqlDeleteTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteAllSimpleTriggers">StdAdoConstants.SqlDeleteAllSimpleTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteAllSimpropTriggers">StdAdoConstants.SqlDeleteAllSimpropTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteAllCronTriggers">StdAdoConstants.SqlDeleteAllCronTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteAllBlobTriggers">StdAdoConstants.SqlDeleteAllBlobTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteAllTriggers">StdAdoConstants.SqlDeleteAllTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteAllJobDetails">StdAdoConstants.SqlDeleteAllJobDetails</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteAllCalendars">StdAdoConstants.SqlDeleteAllCalendars</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlDeleteAllPausedTriggerGrps">StdAdoConstants.SqlDeleteAllPausedTriggerGrps</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlInsertBlobTrigger">StdAdoConstants.SqlInsertBlobTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlInsertCalendar">StdAdoConstants.SqlInsertCalendar</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlInsertCronTrigger">StdAdoConstants.SqlInsertCronTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlInsertFiredTrigger">StdAdoConstants.SqlInsertFiredTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlInsertJobDetail">StdAdoConstants.SqlInsertJobDetail</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlInsertPausedTriggerGroup">StdAdoConstants.SqlInsertPausedTriggerGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlInsertSchedulerState">StdAdoConstants.SqlInsertSchedulerState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlInsertSimpleTrigger">StdAdoConstants.SqlInsertSimpleTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlInsertTrigger">StdAdoConstants.SqlInsertTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectBlobTrigger">StdAdoConstants.SqlSelectBlobTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectCalendar">StdAdoConstants.SqlSelectCalendar</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectCalendarExistence">StdAdoConstants.SqlSelectCalendarExistence</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectCalendars">StdAdoConstants.SqlSelectCalendars</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectCronTriggers">StdAdoConstants.SqlSelectCronTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectFiredTrigger">StdAdoConstants.SqlSelectFiredTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectFiredTriggerGroup">StdAdoConstants.SqlSelectFiredTriggerGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectFiredTriggers">StdAdoConstants.SqlSelectFiredTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectFiredTriggerInstanceNames">StdAdoConstants.SqlSelectFiredTriggerInstanceNames</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectFiredTriggersOfJob">StdAdoConstants.SqlSelectFiredTriggersOfJob</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectFiredTriggersOfJobGroup">StdAdoConstants.SqlSelectFiredTriggersOfJobGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectInstancesFiredTriggers">StdAdoConstants.SqlSelectInstancesFiredTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectInstancesRecoverableFiredTriggers">StdAdoConstants.SqlSelectInstancesRecoverableFiredTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectJobDetail">StdAdoConstants.SqlSelectJobDetail</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectJobExecutionCount">StdAdoConstants.SqlSelectJobExecutionCount</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectJobExistence">StdAdoConstants.SqlSelectJobExistence</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectJobForTrigger">StdAdoConstants.SqlSelectJobForTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectJobGroups">StdAdoConstants.SqlSelectJobGroups</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectJobNonConcurrent">StdAdoConstants.SqlSelectJobNonConcurrent</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectJobsInGroupLike">StdAdoConstants.SqlSelectJobsInGroupLike</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectJobsInGroup">StdAdoConstants.SqlSelectJobsInGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectMisfiredTriggers">StdAdoConstants.SqlSelectMisfiredTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectMisfiredTriggersInGroupInState">StdAdoConstants.SqlSelectMisfiredTriggersInGroupInState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectMisfiredTriggersInState">StdAdoConstants.SqlSelectMisfiredTriggersInState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlCountMisfiredTriggersInStates">StdAdoConstants.SqlCountMisfiredTriggersInStates</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectHasMisfiredTriggersInState">StdAdoConstants.SqlSelectHasMisfiredTriggersInState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectNextTriggerToAcquire">StdAdoConstants.SqlSelectNextTriggerToAcquire</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectNumCalendars">StdAdoConstants.SqlSelectNumCalendars</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectNumJobs">StdAdoConstants.SqlSelectNumJobs</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectNumTriggers">StdAdoConstants.SqlSelectNumTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectNumTriggersForJob">StdAdoConstants.SqlSelectNumTriggersForJob</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectNumTriggersInGroup">StdAdoConstants.SqlSelectNumTriggersInGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectPausedTriggerGroup">StdAdoConstants.SqlSelectPausedTriggerGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectPausedTriggerGroups">StdAdoConstants.SqlSelectPausedTriggerGroups</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectReferencedCalendar">StdAdoConstants.SqlSelectReferencedCalendar</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectSchedulerState">StdAdoConstants.SqlSelectSchedulerState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectSchedulerStates">StdAdoConstants.SqlSelectSchedulerStates</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectSimpleTrigger">StdAdoConstants.SqlSelectSimpleTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTrigger">StdAdoConstants.SqlSelectTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggerData">StdAdoConstants.SqlSelectTriggerData</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggerExistence">StdAdoConstants.SqlSelectTriggerExistence</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggerForFireTime">StdAdoConstants.SqlSelectTriggerForFireTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggerGroups">StdAdoConstants.SqlSelectTriggerGroups</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggerGroupsFiltered">StdAdoConstants.SqlSelectTriggerGroupsFiltered</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggerState">StdAdoConstants.SqlSelectTriggerState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggerStatus">StdAdoConstants.SqlSelectTriggerStatus</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggersForCalendar">StdAdoConstants.SqlSelectTriggersForCalendar</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggersForJob">StdAdoConstants.SqlSelectTriggersForJob</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggersInGroupLike">StdAdoConstants.SqlSelectTriggersInGroupLike</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggersInGroup">StdAdoConstants.SqlSelectTriggersInGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlSelectTriggersInState">StdAdoConstants.SqlSelectTriggersInState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateBlobTrigger">StdAdoConstants.SqlUpdateBlobTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateCalendar">StdAdoConstants.SqlUpdateCalendar</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateCronTrigger">StdAdoConstants.SqlUpdateCronTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateJobData">StdAdoConstants.SqlUpdateJobData</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateJobDetail">StdAdoConstants.SqlUpdateJobDetail</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateJobTriggerStates">StdAdoConstants.SqlUpdateJobTriggerStates</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateJobTriggerStatesFromOtherState">StdAdoConstants.SqlUpdateJobTriggerStatesFromOtherState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateSchedulerState">StdAdoConstants.SqlUpdateSchedulerState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateSimpleTrigger">StdAdoConstants.SqlUpdateSimpleTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateTrigger">StdAdoConstants.SqlUpdateTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateFiredTrigger">StdAdoConstants.SqlUpdateFiredTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateTriggerGroupStateFromState">StdAdoConstants.SqlUpdateTriggerGroupStateFromState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateTriggerGroupStateFromStates">StdAdoConstants.SqlUpdateTriggerGroupStateFromStates</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateTriggerSkipData">StdAdoConstants.SqlUpdateTriggerSkipData</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateTriggerState">StdAdoConstants.SqlUpdateTriggerState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateTriggerStateFromState">StdAdoConstants.SqlUpdateTriggerStateFromState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateTriggerStateFromStates">StdAdoConstants.SqlUpdateTriggerStateFromStates</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.StdAdoConstants.html#Quartz_Impl_AdoJobStore_StdAdoConstants_SqlUpdateTriggerStatesFromOtherStates">StdAdoConstants.SqlUpdateTriggerStatesFromOtherStates</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableJobDetails">AdoConstants.TableJobDetails</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableTriggers">AdoConstants.TableTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableSimpleTriggers">AdoConstants.TableSimpleTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableCronTriggers">AdoConstants.TableCronTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableBlobTriggers">AdoConstants.TableBlobTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableFiredTriggers">AdoConstants.TableFiredTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableCalendars">AdoConstants.TableCalendars</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TablePausedTriggers">AdoConstants.TablePausedTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableLocks">AdoConstants.TableLocks</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TableSchedulerState">AdoConstants.TableSchedulerState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnSchedulerName">AdoConstants.ColumnSchedulerName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnJobName">AdoConstants.ColumnJobName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnJobGroup">AdoConstants.ColumnJobGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnIsDurable">AdoConstants.ColumnIsDurable</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnIsVolatile">AdoConstants.ColumnIsVolatile</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnIsNonConcurrent">AdoConstants.ColumnIsNonConcurrent</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnIsUpdateData">AdoConstants.ColumnIsUpdateData</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnRequestsRecovery">AdoConstants.ColumnRequestsRecovery</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnJobDataMap">AdoConstants.ColumnJobDataMap</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnJobClass">AdoConstants.ColumnJobClass</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnDescription">AdoConstants.ColumnDescription</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnTriggerName">AdoConstants.ColumnTriggerName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnTriggerGroup">AdoConstants.ColumnTriggerGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnNextFireTime">AdoConstants.ColumnNextFireTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnPreviousFireTime">AdoConstants.ColumnPreviousFireTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnTriggerState">AdoConstants.ColumnTriggerState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnTriggerType">AdoConstants.ColumnTriggerType</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnStartTime">AdoConstants.ColumnStartTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnEndTime">AdoConstants.ColumnEndTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnMifireInstruction">AdoConstants.ColumnMifireInstruction</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnPriority">AdoConstants.ColumnPriority</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_AliasColumnNextFireTime">AdoConstants.AliasColumnNextFireTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnRepeatCount">AdoConstants.ColumnRepeatCount</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnRepeatInterval">AdoConstants.ColumnRepeatInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnTimesTriggered">AdoConstants.ColumnTimesTriggered</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnCronExpression">AdoConstants.ColumnCronExpression</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnBlob">AdoConstants.ColumnBlob</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnTimeZoneId">AdoConstants.ColumnTimeZoneId</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnInstanceName">AdoConstants.ColumnInstanceName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnFiredTime">AdoConstants.ColumnFiredTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnScheduledTime">AdoConstants.ColumnScheduledTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnEntryId">AdoConstants.ColumnEntryId</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnEntryState">AdoConstants.ColumnEntryState</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnCalendarName">AdoConstants.ColumnCalendarName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnCalendar">AdoConstants.ColumnCalendar</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnLockName">AdoConstants.ColumnLockName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnLastCheckinTime">AdoConstants.ColumnLastCheckinTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_ColumnCheckinInterval">AdoConstants.ColumnCheckinInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_DefaultTablePrefix">AdoConstants.DefaultTablePrefix</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_StateWaiting">AdoConstants.StateWaiting</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_StateAcquired">AdoConstants.StateAcquired</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_StateExecuting">AdoConstants.StateExecuting</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_StateComplete">AdoConstants.StateComplete</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_StateBlocked">AdoConstants.StateBlocked</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_StateError">AdoConstants.StateError</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_StatePaused">AdoConstants.StatePaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_StatePausedBlocked">AdoConstants.StatePausedBlocked</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_StateDeleted">AdoConstants.StateDeleted</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_AllGroupsPaused">AdoConstants.AllGroupsPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TriggerTypeSimple">AdoConstants.TriggerTypeSimple</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TriggerTypeCron">AdoConstants.TriggerTypeCron</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TriggerTypeCalendarInterval">AdoConstants.TriggerTypeCalendarInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TriggerTypeDailyTimeInterval">AdoConstants.TriggerTypeDailyTimeInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.AdoConstants.html#Quartz_Impl_AdoJobStore_AdoConstants_TriggerTypeBlob">AdoConstants.TriggerTypeBlob</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.AdoJobStore.html">Quartz.Impl.AdoJobStore</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_AdoJobStore_UpdateLockRowSemaphore_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UpdateLockRowSemaphore : DBSemaphore, ISemaphore, ITablePrefixAware</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_AdoJobStore_UpdateLockRowSemaphore_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+<strong>Note:</strong> This Semaphore implementation is useful for databases that do
+not support row locking via &quot;SELECT FOR UPDATE&quot; or SQL Server&apos;s type syntax.
+</p>
+<p>
+As of Quartz.NET 2.0 version there is no need to use this implementation for 
+SQL Server databases.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_UpdateLockRowSemaphore__ctor_" data-uid="Quartz.Impl.AdoJobStore.UpdateLockRowSemaphore.#ctor*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_UpdateLockRowSemaphore__ctor_Quartz_Impl_AdoJobStore_Common_IDbProvider_" data-uid="Quartz.Impl.AdoJobStore.UpdateLockRowSemaphore.#ctor(Quartz.Impl.AdoJobStore.Common.IDbProvider)">UpdateLockRowSemaphore(IDbProvider)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Impl.AdoJobStore.UpdateLockRowSemaphore.html">UpdateLockRowSemaphore</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdateLockRowSemaphore(IDbProvider provider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.Common.IDbProvider.html">IDbProvider</a></td>
+        <td><span class="parametername">provider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_UpdateLockRowSemaphore_SqlInsertLock" data-uid="Quartz.Impl.AdoJobStore.UpdateLockRowSemaphore.SqlInsertLock">SqlInsertLock</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string SqlInsertLock</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_UpdateLockRowSemaphore_SqlUpdateForLock" data-uid="Quartz.Impl.AdoJobStore.UpdateLockRowSemaphore.SqlUpdateForLock">SqlUpdateForLock</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string SqlUpdateForLock</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_UpdateLockRowSemaphore_ExecuteSQL_" data-uid="Quartz.Impl.AdoJobStore.UpdateLockRowSemaphore.ExecuteSQL*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_UpdateLockRowSemaphore_ExecuteSQL_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_System_String_System_String_" data-uid="Quartz.Impl.AdoJobStore.UpdateLockRowSemaphore.ExecuteSQL(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,System.String,System.String,System.String)">ExecuteSQL(ConnectionAndTransactionHolder, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Execute the SQL that will lock the proper database row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void ExecuteSQL(ConnectionAndTransactionHolder conn, string lockName, string expandedSQL, string expandedInsertSQL)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">lockName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expandedSQL</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expandedInsertSQL</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.AdoJobStore.DBSemaphore.html#Quartz_Impl_AdoJobStore_DBSemaphore_ExecuteSQL_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_System_String_System_String_System_String_">DBSemaphore.ExecuteSQL(ConnectionAndTransactionHolder, String, String, String)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.ISemaphore.html">ISemaphore</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.ITablePrefixAware.html">ITablePrefixAware</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,725 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LoggingTriggerHistoryPlugin
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LoggingTriggerHistoryPlugin
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin">
+  
+  
+  <h1 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin" class="text-break">Class LoggingTriggerHistoryPlugin
+  </h1>
+  <div class="markdown level0 summary"><p>Logs a history of all trigger firings via the Jakarta Commons-Logging
+framework.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LoggingTriggerHistoryPlugin</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.Spi.ISchedulerPlugin.html">ISchedulerPlugin</a></div>
+    <div><a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Plugin.History.html">Quartz.Plugin.History</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LoggingTriggerHistoryPlugin : ISchedulerPlugin, ITriggerListener</code></pre>
+  </div>
+  <h5 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+The logged message is customizable by setting one of the following message
+properties to a string that conforms to the syntax of <span class="xref">System.String.Format(System.String,System.Object[])</span>.
+</p>
+
+<p>
+TriggerFiredMessage - available message data are: <table>
+<tr>
+<th>Element</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>0</td>
+<td>String</td>
+<td>The Trigger&apos;s Name.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>String</td>
+<td>The Trigger&apos;s Group.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Date</td>
+<td>The scheduled fire time.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Date</td>
+<td>The next scheduled fire time.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Date</td>
+<td>The actual fire time.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>String</td>
+<td>The Job&apos;s name.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>String</td>
+<td>The Job&apos;s group.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Integer</td>
+<td>The re-fire count from the JobExecutionContext.</td>
+</tr>
+</table>
+
+The default message text is <em>&quot;Trigger {1}.{0} fired job {6}.{5} at: {4,
+date, HH:mm:ss MM/dd/yyyy}&quot;</em>
+</p>
+
+<p>
+TriggerMisfiredMessage - available message data are: <table>
+<tr>
+<th>Element</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>0</td>
+<td>String</td>
+<td>The Trigger&apos;s Name.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>String</td>
+<td>The Trigger&apos;s Group.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Date</td>
+<td>The scheduled fire time.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Date</td>
+<td>The next scheduled fire time.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Date</td>
+<td>The actual fire time. (the time the misfire was detected/handled)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>String</td>
+<td>The Job&apos;s name.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>String</td>
+<td>The Job&apos;s group.</td>
+</tr>
+</table>
+
+The default message text is <em>&quot;Trigger {1}.{0} misfired job {6}.{5} at:
+{4, date, HH:mm:ss MM/dd/yyyy}. Should have fired at: {3, date, HH:mm:ss
+MM/dd/yyyy}&quot;</em>
+</p>
+
+<p>
+TriggerCompleteMessage - available message data are: <table>
+<tr>
+<th>Element</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>0</td>
+<td>String</td>
+<td>The Trigger&apos;s Name.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>String</td>
+<td>The Trigger&apos;s Group.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Date</td>
+<td>The scheduled fire time.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Date</td>
+<td>The next scheduled fire time.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Date</td>
+<td>The job completion time.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>String</td>
+<td>The Job&apos;s name.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>String</td>
+<td>The Job&apos;s group.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Integer</td>
+<td>The re-fire count from the JobExecutionContext.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Integer</td>
+<td>The trigger&apos;s resulting instruction code.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>String</td>
+<td>A human-readable translation of the trigger&apos;s resulting instruction
+code.</td>
+</tr>
+</table>
+
+The default message text is <em>&quot;Trigger {1}.{0} completed firing job
+{6}.{5} at {4, date, HH:mm:ss MM/dd/yyyy} with resulting trigger instruction
+code: {9}&quot;</em>
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin__ctor_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.#ctor*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin__ctor" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.#ctor">LoggingTriggerHistoryPlugin()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoggingTriggerHistoryPlugin()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_Log_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.Log*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_Log" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.Log">Log</h4>
+  <div class="markdown level1 summary"><p>Logger instance to use. Defaults to common logging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILog Log { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Common.Logging.ILog</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_Name_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.Name*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_Name" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Get the name of the <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerCompleteMessage_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerCompleteMessage*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerCompleteMessage" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerCompleteMessage">TriggerCompleteMessage</h4>
+  <div class="markdown level1 summary"><p>Get or set the message that is printed upon the completion of a trigger&apos;s
+firing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string TriggerCompleteMessage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerFiredMessage_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerFiredMessage*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerFiredMessage" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerFiredMessage">TriggerFiredMessage</h4>
+  <div class="markdown level1 summary"><p>Get or set the message that is printed upon a trigger&apos;s firing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string TriggerFiredMessage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerMisfiredMessage_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerMisfiredMessage*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerMisfiredMessage" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerMisfiredMessage">TriggerMisfiredMessage</h4>
+  <div class="markdown level1 summary"><p>Get or set the message that is printed upon a trigger&apos;s mis-firing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string TriggerMisfiredMessage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_Initialize_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.Initialize*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_Initialize_System_String_Quartz_IScheduler_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.Initialize(System.String,Quartz.IScheduler)">Initialize(String, IScheduler)</h4>
+  <div class="markdown level1 summary"><p>Called during creation of the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> in order to give
+the <a class="xref" href="Quartz.Spi.ISchedulerPlugin.html">ISchedulerPlugin</a> a chance to Initialize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Initialize(string pluginName, IScheduler sched)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pluginName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td><span class="parametername">sched</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_Shutdown_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.Shutdown*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_Shutdown" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.Shutdown">Shutdown()</h4>
+  <div class="markdown level1 summary"><p>Called in order to inform the <a class="xref" href="Quartz.Spi.ISchedulerPlugin.html">ISchedulerPlugin</a> that it
+should free up all of it&apos;s resources because the scheduler is shutting
+down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Shutdown()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_Start_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.Start*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_Start" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.Start">Start()</h4>
+  <div class="markdown level1 summary"><p>Called when the associated <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> is started, in order
+to let the plug-in know it can now make calls into the scheduler if it
+needs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Start()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerComplete_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerComplete*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerComplete_Quartz_ITrigger_Quartz_IJobExecutionContext_Quartz_SchedulerInstruction_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerComplete(Quartz.ITrigger,Quartz.IJobExecutionContext,Quartz.SchedulerInstruction)">TriggerComplete(ITrigger, IJobExecutionContext, SchedulerInstruction)</h4>
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has fired, it&apos;s associated <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+has been executed, and it&apos;s <a class="xref" href="Quartz.Spi.IOperableTrigger.html#Quartz_Spi_IOperableTrigger_Triggered_Quartz_ICalendar_">Triggered(ICalendar)</a> method has been
+called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void TriggerComplete(ITrigger trigger, IJobExecutionContext context, SchedulerInstruction triggerInstructionCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that was fired.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that was passed to the
+<a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s <a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_">Execute(IJobExecutionContext)</a> method.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerInstruction.html">SchedulerInstruction</a></td>
+        <td><span class="parametername">triggerInstructionCode</span></td>
+        <td><p>The result of the call on the <a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a>&apos;s <a class="xref" href="Quartz.Spi.IOperableTrigger.html#Quartz_Spi_IOperableTrigger_Triggered_Quartz_ICalendar_">Triggered(ICalendar)</a>  method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerFired_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerFired*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerFired_Quartz_ITrigger_Quartz_IJobExecutionContext_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerFired(Quartz.ITrigger,Quartz.IJobExecutionContext)">TriggerFired(ITrigger, IJobExecutionContext)</h4>
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has fired, and it&apos;s associated <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+is about to be executed.
+<p>
+It is called before the <a class="xref" href="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.html#Quartz_Plugin_History_LoggingTriggerHistoryPlugin_VetoJobExecution_Quartz_ITrigger_Quartz_IJobExecutionContext_">VetoJobExecution(ITrigger, IJobExecutionContext)</a> method of this
+interface.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void TriggerFired(ITrigger trigger, IJobExecutionContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that has fired.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that will be passed to the <a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s <a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_">Execute(IJobExecutionContext)</a> method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerMisfired_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerMisfired*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerMisfired_Quartz_ITrigger_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.TriggerMisfired(Quartz.ITrigger)">TriggerMisfired(ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has misfired.
+<p>
+Consideration should be given to how much time is spent in this method,
+as it will affect all triggers that are misfiring.  If you have lots
+of triggers misfiring at once, it could be an issue it this method
+does a lot.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void TriggerMisfired(ITrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that has misfired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_VetoJobExecution_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.VetoJobExecution*"></a>
+  <h4 id="Quartz_Plugin_History_LoggingTriggerHistoryPlugin_VetoJobExecution_Quartz_ITrigger_Quartz_IJobExecutionContext_" data-uid="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.VetoJobExecution(Quartz.ITrigger,Quartz.IJobExecutionContext)">VetoJobExecution(ITrigger, IJobExecutionContext)</h4>
+  <div class="markdown level1 summary"><p>Called by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> when a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has fired, and it&apos;s associated <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+is about to be executed.
+<p>
+It is called after the <a class="xref" href="Quartz.Plugin.History.LoggingTriggerHistoryPlugin.html#Quartz_Plugin_History_LoggingTriggerHistoryPlugin_TriggerFired_Quartz_ITrigger_Quartz_IJobExecutionContext_">TriggerFired(ITrigger, IJobExecutionContext)</a> method of this
+interface.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool VetoJobExecution(ITrigger trigger, IJobExecutionContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that has fired.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> that will be passed to
+the <a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s <a class="xref" href="Quartz.IJob.html#Quartz_IJob_Execute_Quartz_IJobExecutionContext_">Execute(IJobExecutionContext)</a> method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.Spi.ISchedulerPlugin.html">ISchedulerPlugin</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.ITriggerListener.html">ITriggerListener</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

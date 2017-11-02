@@ -1,0 +1,2266 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RemoteScheduler
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RemoteScheduler
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.RemoteScheduler">
+  
+  
+  <h1 id="Quartz_Impl_RemoteScheduler" data-uid="Quartz.Impl.RemoteScheduler" class="text-break">Class RemoteScheduler
+  </h1>
+  <div class="markdown level0 summary"><p>An implementation of the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> interface that remotely
+proxies all method calls to the equivalent call on a given <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>
+instance, via remoting or similar technology.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">RemoteScheduler</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.html">Quartz.Impl</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_RemoteScheduler_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RemoteScheduler : IScheduler</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler__ctor_" data-uid="Quartz.Impl.RemoteScheduler.#ctor*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler__ctor_System_String_Quartz_Spi_IRemotableSchedulerProxyFactory_" data-uid="Quartz.Impl.RemoteScheduler.#ctor(System.String,Quartz.Spi.IRemotableSchedulerProxyFactory)">RemoteScheduler(String, IRemotableSchedulerProxyFactory)</h4>
+  <div class="markdown level1 summary"><p>Construct a <a class="xref" href="Quartz.Impl.RemoteScheduler.html">RemoteScheduler</a> instance to proxy the given
+RemoteableQuartzScheduler instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RemoteScheduler(string schedId, IRemotableSchedulerProxyFactory proxyFactory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">schedId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IRemotableSchedulerProxyFactory.html">IRemotableSchedulerProxyFactory</a></td>
+        <td><span class="parametername">proxyFactory</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_Context_" data-uid="Quartz.Impl.RemoteScheduler.Context*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_Context" data-uid="Quartz.Impl.RemoteScheduler.Context">Context</h4>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Quartz.SchedulerContext.html">SchedulerContext</a> of the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SchedulerContext Context { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerContext.html">SchedulerContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_InStandbyMode_" data-uid="Quartz.Impl.RemoteScheduler.InStandbyMode*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_InStandbyMode" data-uid="Quartz.Impl.RemoteScheduler.InStandbyMode">InStandbyMode</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool InStandbyMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_IsShutdown_" data-uid="Quartz.Impl.RemoteScheduler.IsShutdown*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_IsShutdown" data-uid="Quartz.Impl.RemoteScheduler.IsShutdown">IsShutdown</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsShutdown { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_IsStarted_" data-uid="Quartz.Impl.RemoteScheduler.IsStarted*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_IsStarted" data-uid="Quartz.Impl.RemoteScheduler.IsStarted">IsStarted</h4>
+  <div class="markdown level1 summary"><p>Whether the scheduler has been started.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsStarted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_RemoteScheduler_IsStarted_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note: This only reflects whether <a class="xref" href="Quartz.Impl.RemoteScheduler.html#Quartz_Impl_RemoteScheduler_Start">Start()</a> has ever
+been called on this Scheduler, so it will return <span class="xref">true</span> even
+if the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> is currently in standby mode or has been
+since shutdown.</p>
+</div>
+  <h5 id="Quartz_Impl_RemoteScheduler_IsStarted_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Impl.RemoteScheduler.html#Quartz_Impl_RemoteScheduler_Start">Start()</a></div>
+      <div><a class="xref" href="Quartz.Impl.RemoteScheduler.html#Quartz_Impl_RemoteScheduler_IsShutdown">IsShutdown</a></div>
+      <div><a class="xref" href="Quartz.Impl.RemoteScheduler.html#Quartz_Impl_RemoteScheduler_InStandbyMode">InStandbyMode</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_JobFactory_" data-uid="Quartz.Impl.RemoteScheduler.JobFactory*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_JobFactory" data-uid="Quartz.Impl.RemoteScheduler.JobFactory">JobFactory</h4>
+  <div class="markdown level1 summary"><p>Set the <a class="xref" href="Quartz.Impl.RemoteScheduler.html#Quartz_Impl_RemoteScheduler_JobFactory">JobFactory</a> that will be responsible for producing
+instances of <a class="xref" href="Quartz.IJob.html">IJob</a> classes.
+<p>
+JobFactories may be of use to those wishing to have their application
+produce <a class="xref" href="Quartz.IJob.html">IJob</a> instances via some special mechanism, such as to
+give the opportunity for dependency injection.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IJobFactory JobFactory { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IJobFactory.html">IJobFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_RemoteScheduler_JobFactory_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Spi.IJobFactory.html">IJobFactory</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_ListenerManager_" data-uid="Quartz.Impl.RemoteScheduler.ListenerManager*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_ListenerManager" data-uid="Quartz.Impl.RemoteScheduler.ListenerManager">ListenerManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IListenerManager ListenerManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IListenerManager.html">IListenerManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_SchedulerInstanceId_" data-uid="Quartz.Impl.RemoteScheduler.SchedulerInstanceId*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_SchedulerInstanceId" data-uid="Quartz.Impl.RemoteScheduler.SchedulerInstanceId">SchedulerInstanceId</h4>
+  <div class="markdown level1 summary"><p>Returns the instance Id of the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string SchedulerInstanceId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_SchedulerName_" data-uid="Quartz.Impl.RemoteScheduler.SchedulerName*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_SchedulerName" data-uid="Quartz.Impl.RemoteScheduler.SchedulerName">SchedulerName</h4>
+  <div class="markdown level1 summary"><p>Returns the name of the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string SchedulerName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_AddCalendar_" data-uid="Quartz.Impl.RemoteScheduler.AddCalendar*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_AddCalendar_System_String_Quartz_ICalendar_System_Boolean_System_Boolean_" data-uid="Quartz.Impl.RemoteScheduler.AddCalendar(System.String,Quartz.ICalendar,System.Boolean,System.Boolean)">AddCalendar(String, ICalendar, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AddCalendar(string calName, ICalendar calendar, bool replace, bool updateTriggers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">calendar</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">updateTriggers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_AddJob_" data-uid="Quartz.Impl.RemoteScheduler.AddJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_AddJob_Quartz_IJobDetail_System_Boolean_" data-uid="Quartz.Impl.RemoteScheduler.AddJob(Quartz.IJobDetail,System.Boolean)">AddJob(IJobDetail, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AddJob(IJobDetail jobDetail, bool replace)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_AddJob_" data-uid="Quartz.Impl.RemoteScheduler.AddJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_AddJob_Quartz_IJobDetail_System_Boolean_System_Boolean_" data-uid="Quartz.Impl.RemoteScheduler.AddJob(Quartz.IJobDetail,System.Boolean,System.Boolean)">AddJob(IJobDetail, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AddJob(IJobDetail jobDetail, bool replace, bool storeNonDurableWhileAwaitingScheduling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">storeNonDurableWhileAwaitingScheduling</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_CallInGuard_" data-uid="Quartz.Impl.RemoteScheduler.CallInGuard*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_CallInGuard_System_Action_Quartz_Simpl_IRemotableQuartzScheduler__" data-uid="Quartz.Impl.RemoteScheduler.CallInGuard(System.Action{Quartz.Simpl.IRemotableQuartzScheduler})">CallInGuard(Action&lt;IRemotableQuartzScheduler&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void CallInGuard(Action&lt;IRemotableQuartzScheduler&gt; action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Quartz.Simpl.IRemotableQuartzScheduler.html">IRemotableQuartzScheduler</a>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_CallInGuard_" data-uid="Quartz.Impl.RemoteScheduler.CallInGuard*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_CallInGuard__1_System_Func_Quartz_Simpl_IRemotableQuartzScheduler___0__" data-uid="Quartz.Impl.RemoteScheduler.CallInGuard``1(System.Func{Quartz.Simpl.IRemotableQuartzScheduler,``0})">CallInGuard&lt;T&gt;(Func&lt;IRemotableQuartzScheduler, T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual T CallInGuard&lt;T&gt;(Func&lt;IRemotableQuartzScheduler, T&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Quartz.Simpl.IRemotableQuartzScheduler.html">IRemotableQuartzScheduler</a>, T&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_CheckExists_" data-uid="Quartz.Impl.RemoteScheduler.CheckExists*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_CheckExists_Quartz_JobKey_" data-uid="Quartz.Impl.RemoteScheduler.CheckExists(Quartz.JobKey)">CheckExists(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CheckExists(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_CheckExists_" data-uid="Quartz.Impl.RemoteScheduler.CheckExists*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_CheckExists_Quartz_TriggerKey_" data-uid="Quartz.Impl.RemoteScheduler.CheckExists(Quartz.TriggerKey)">CheckExists(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CheckExists(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_Clear_" data-uid="Quartz.Impl.RemoteScheduler.Clear*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_Clear" data-uid="Quartz.Impl.RemoteScheduler.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Clear()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_DeleteCalendar_" data-uid="Quartz.Impl.RemoteScheduler.DeleteCalendar*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_DeleteCalendar_System_String_" data-uid="Quartz.Impl.RemoteScheduler.DeleteCalendar(System.String)">DeleteCalendar(String)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool DeleteCalendar(string calName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_DeleteJob_" data-uid="Quartz.Impl.RemoteScheduler.DeleteJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_DeleteJob_Quartz_JobKey_" data-uid="Quartz.Impl.RemoteScheduler.DeleteJob(Quartz.JobKey)">DeleteJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool DeleteJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_DeleteJobs_" data-uid="Quartz.Impl.RemoteScheduler.DeleteJobs*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_DeleteJobs_System_Collections_Generic_IList_Quartz_JobKey__" data-uid="Quartz.Impl.RemoteScheduler.DeleteJobs(System.Collections.Generic.IList{Quartz.JobKey})">DeleteJobs(IList&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool DeleteJobs(IList&lt;JobKey&gt; jobKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">jobKeys</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_Dispose_" data-uid="Quartz.Impl.RemoteScheduler.Dispose*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_Dispose" data-uid="Quartz.Impl.RemoteScheduler.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetCalendar_" data-uid="Quartz.Impl.RemoteScheduler.GetCalendar*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetCalendar_System_String_" data-uid="Quartz.Impl.RemoteScheduler.GetCalendar(System.String)">GetCalendar(String)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICalendar GetCalendar(string calName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">calName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetCalendarNames_" data-uid="Quartz.Impl.RemoteScheduler.GetCalendarNames*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetCalendarNames" data-uid="Quartz.Impl.RemoteScheduler.GetCalendarNames">GetCalendarNames()</h4>
+  <div class="markdown level1 summary"><p>Get the names of all registered <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;string&gt; GetCalendarNames()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetCurrentlyExecutingJobs_" data-uid="Quartz.Impl.RemoteScheduler.GetCurrentlyExecutingJobs*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetCurrentlyExecutingJobs" data-uid="Quartz.Impl.RemoteScheduler.GetCurrentlyExecutingJobs">GetCurrentlyExecutingJobs()</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;IJobExecutionContext&gt; GetCurrentlyExecutingJobs()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetJobDetail_" data-uid="Quartz.Impl.RemoteScheduler.GetJobDetail*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetJobDetail_Quartz_JobKey_" data-uid="Quartz.Impl.RemoteScheduler.GetJobDetail(Quartz.JobKey)">GetJobDetail(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IJobDetail GetJobDetail(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetJobGroupNames_" data-uid="Quartz.Impl.RemoteScheduler.GetJobGroupNames*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetJobGroupNames" data-uid="Quartz.Impl.RemoteScheduler.GetJobGroupNames">GetJobGroupNames()</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;string&gt; GetJobGroupNames()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetJobKeys_" data-uid="Quartz.Impl.RemoteScheduler.GetJobKeys*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetJobKeys_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__" data-uid="Quartz.Impl.RemoteScheduler.GetJobKeys(Quartz.Impl.Matchers.GroupMatcher{Quartz.JobKey})">GetJobKeys(GroupMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ISet&lt;JobKey&gt; GetJobKeys(GroupMatcher&lt;JobKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetMetaData_" data-uid="Quartz.Impl.RemoteScheduler.GetMetaData*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetMetaData" data-uid="Quartz.Impl.RemoteScheduler.GetMetaData">GetMetaData()</h4>
+  <div class="markdown level1 summary"><p>Get a <a class="xref" href="Quartz.SchedulerMetaData.html">SchedulerMetaData</a> object describing the settings
+and capabilities of the scheduler instance.
+<p>
+Note that the data returned is an &apos;instantaneous&apos; snap-shot, and that as
+soon as it&apos;s returned, the meta data values may be different.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SchedulerMetaData GetMetaData()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerMetaData.html">SchedulerMetaData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetPausedTriggerGroups_" data-uid="Quartz.Impl.RemoteScheduler.GetPausedTriggerGroups*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetPausedTriggerGroups" data-uid="Quartz.Impl.RemoteScheduler.GetPausedTriggerGroups">GetPausedTriggerGroups()</h4>
+  <div class="markdown level1 summary"><p>Get the names of all <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> groups that are paused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ISet&lt;string&gt; GetPausedTriggerGroups()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetRemoteScheduler_" data-uid="Quartz.Impl.RemoteScheduler.GetRemoteScheduler*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetRemoteScheduler" data-uid="Quartz.Impl.RemoteScheduler.GetRemoteScheduler">GetRemoteScheduler()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IRemotableQuartzScheduler GetRemoteScheduler()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Simpl.IRemotableQuartzScheduler.html">IRemotableQuartzScheduler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetTrigger_" data-uid="Quartz.Impl.RemoteScheduler.GetTrigger*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetTrigger_Quartz_TriggerKey_" data-uid="Quartz.Impl.RemoteScheduler.GetTrigger(Quartz.TriggerKey)">GetTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ITrigger GetTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetTriggerGroupNames_" data-uid="Quartz.Impl.RemoteScheduler.GetTriggerGroupNames*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetTriggerGroupNames" data-uid="Quartz.Impl.RemoteScheduler.GetTriggerGroupNames">GetTriggerGroupNames()</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;string&gt; GetTriggerGroupNames()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetTriggerKeys_" data-uid="Quartz.Impl.RemoteScheduler.GetTriggerKeys*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetTriggerKeys_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Impl.RemoteScheduler.GetTriggerKeys(Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">GetTriggerKeys(GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ISet&lt;TriggerKey&gt; GetTriggerKeys(GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetTriggersOfJob_" data-uid="Quartz.Impl.RemoteScheduler.GetTriggersOfJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetTriggersOfJob_Quartz_JobKey_" data-uid="Quartz.Impl.RemoteScheduler.GetTriggersOfJob(Quartz.JobKey)">GetTriggersOfJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;ITrigger&gt; GetTriggersOfJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_GetTriggerState_" data-uid="Quartz.Impl.RemoteScheduler.GetTriggerState*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_GetTriggerState_Quartz_TriggerKey_" data-uid="Quartz.Impl.RemoteScheduler.GetTriggerState(Quartz.TriggerKey)">GetTriggerState(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TriggerState GetTriggerState(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerState.html">TriggerState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_Interrupt_" data-uid="Quartz.Impl.RemoteScheduler.Interrupt*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_Interrupt_Quartz_JobKey_" data-uid="Quartz.Impl.RemoteScheduler.Interrupt(Quartz.JobKey)">Interrupt(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Interrupt(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_Interrupt_" data-uid="Quartz.Impl.RemoteScheduler.Interrupt*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_Interrupt_System_String_" data-uid="Quartz.Impl.RemoteScheduler.Interrupt(System.String)">Interrupt(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Interrupt(string fireInstanceId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fireInstanceId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_InvalidateHandleCreateException_" data-uid="Quartz.Impl.RemoteScheduler.InvalidateHandleCreateException*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_InvalidateHandleCreateException_System_String_System_Exception_" data-uid="Quartz.Impl.RemoteScheduler.InvalidateHandleCreateException(System.String,System.Exception)">InvalidateHandleCreateException(String, Exception)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual SchedulerException InvalidateHandleCreateException(string msg, Exception cause)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">msg</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">cause</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_IsJobGroupPaused_" data-uid="Quartz.Impl.RemoteScheduler.IsJobGroupPaused*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_IsJobGroupPaused_System_String_" data-uid="Quartz.Impl.RemoteScheduler.IsJobGroupPaused(System.String)">IsJobGroupPaused(String)</h4>
+  <div class="markdown level1 summary"><p>returns true if the given JobGroup
+is paused</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsJobGroupPaused(string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_IsTriggerGroupPaused_" data-uid="Quartz.Impl.RemoteScheduler.IsTriggerGroupPaused*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_IsTriggerGroupPaused_System_String_" data-uid="Quartz.Impl.RemoteScheduler.IsTriggerGroupPaused(System.String)">IsTriggerGroupPaused(String)</h4>
+  <div class="markdown level1 summary"><p>returns true if the given TriggerGroup
+is paused</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsTriggerGroupPaused(string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_PauseAll_" data-uid="Quartz.Impl.RemoteScheduler.PauseAll*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_PauseAll" data-uid="Quartz.Impl.RemoteScheduler.PauseAll">PauseAll()</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PauseAll()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_PauseJob_" data-uid="Quartz.Impl.RemoteScheduler.PauseJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_PauseJob_Quartz_JobKey_" data-uid="Quartz.Impl.RemoteScheduler.PauseJob(Quartz.JobKey)">PauseJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PauseJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_PauseJobs_" data-uid="Quartz.Impl.RemoteScheduler.PauseJobs*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_PauseJobs_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__" data-uid="Quartz.Impl.RemoteScheduler.PauseJobs(Quartz.Impl.Matchers.GroupMatcher{Quartz.JobKey})">PauseJobs(GroupMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PauseJobs(GroupMatcher&lt;JobKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_PauseTrigger_" data-uid="Quartz.Impl.RemoteScheduler.PauseTrigger*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_PauseTrigger_Quartz_TriggerKey_" data-uid="Quartz.Impl.RemoteScheduler.PauseTrigger(Quartz.TriggerKey)">PauseTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PauseTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_PauseTriggers_" data-uid="Quartz.Impl.RemoteScheduler.PauseTriggers*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_PauseTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Impl.RemoteScheduler.PauseTriggers(Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">PauseTriggers(GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PauseTriggers(GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_RescheduleJob_" data-uid="Quartz.Impl.RemoteScheduler.RescheduleJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_RescheduleJob_Quartz_TriggerKey_Quartz_ITrigger_" data-uid="Quartz.Impl.RemoteScheduler.RescheduleJob(Quartz.TriggerKey,Quartz.ITrigger)">RescheduleJob(TriggerKey, ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset? RescheduleJob(TriggerKey triggerKey, ITrigger newTrigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">newTrigger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_ResumeAll_" data-uid="Quartz.Impl.RemoteScheduler.ResumeAll*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_ResumeAll" data-uid="Quartz.Impl.RemoteScheduler.ResumeAll">ResumeAll()</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResumeAll()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_ResumeJob_" data-uid="Quartz.Impl.RemoteScheduler.ResumeJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_ResumeJob_Quartz_JobKey_" data-uid="Quartz.Impl.RemoteScheduler.ResumeJob(Quartz.JobKey)">ResumeJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResumeJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_ResumeJobs_" data-uid="Quartz.Impl.RemoteScheduler.ResumeJobs*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_ResumeJobs_Quartz_Impl_Matchers_GroupMatcher_Quartz_JobKey__" data-uid="Quartz.Impl.RemoteScheduler.ResumeJobs(Quartz.Impl.Matchers.GroupMatcher{Quartz.JobKey})">ResumeJobs(GroupMatcher&lt;JobKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResumeJobs(GroupMatcher&lt;JobKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_ResumeTrigger_" data-uid="Quartz.Impl.RemoteScheduler.ResumeTrigger*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_ResumeTrigger_Quartz_TriggerKey_" data-uid="Quartz.Impl.RemoteScheduler.ResumeTrigger(Quartz.TriggerKey)">ResumeTrigger(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResumeTrigger(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_ResumeTriggers_" data-uid="Quartz.Impl.RemoteScheduler.ResumeTriggers*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_ResumeTriggers_Quartz_Impl_Matchers_GroupMatcher_Quartz_TriggerKey__" data-uid="Quartz.Impl.RemoteScheduler.ResumeTriggers(Quartz.Impl.Matchers.GroupMatcher{Quartz.TriggerKey})">ResumeTriggers(GroupMatcher&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResumeTriggers(GroupMatcher&lt;TriggerKey&gt; matcher)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Matchers.GroupMatcher-1.html">GroupMatcher</a>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">matcher</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_ScheduleJob_" data-uid="Quartz.Impl.RemoteScheduler.ScheduleJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_ScheduleJob_Quartz_IJobDetail_Quartz_Collection_ISet_Quartz_ITrigger__System_Boolean_" data-uid="Quartz.Impl.RemoteScheduler.ScheduleJob(Quartz.IJobDetail,Quartz.Collection.ISet{Quartz.ITrigger},System.Boolean)">ScheduleJob(IJobDetail, ISet&lt;ITrigger&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScheduleJob(IJobDetail jobDetail, ISet&lt;ITrigger&gt; triggersForJob, bool replace)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;</td>
+        <td><span class="parametername">triggersForJob</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_ScheduleJob_" data-uid="Quartz.Impl.RemoteScheduler.ScheduleJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_ScheduleJob_Quartz_IJobDetail_Quartz_ITrigger_" data-uid="Quartz.Impl.RemoteScheduler.ScheduleJob(Quartz.IJobDetail,Quartz.ITrigger)">ScheduleJob(IJobDetail, ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset ScheduleJob(IJobDetail jobDetail, ITrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_ScheduleJob_" data-uid="Quartz.Impl.RemoteScheduler.ScheduleJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_ScheduleJob_Quartz_ITrigger_" data-uid="Quartz.Impl.RemoteScheduler.ScheduleJob(Quartz.ITrigger)">ScheduleJob(ITrigger)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DateTimeOffset ScheduleJob(ITrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_ScheduleJobs_" data-uid="Quartz.Impl.RemoteScheduler.ScheduleJobs*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_ScheduleJobs_System_Collections_Generic_IDictionary_Quartz_IJobDetail_Quartz_Collection_ISet_Quartz_ITrigger___System_Boolean_" data-uid="Quartz.Impl.RemoteScheduler.ScheduleJobs(System.Collections.Generic.IDictionary{Quartz.IJobDetail,Quartz.Collection.ISet{Quartz.ITrigger}},System.Boolean)">ScheduleJobs(IDictionary&lt;IJobDetail, ISet&lt;ITrigger&gt;&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ScheduleJobs(IDictionary&lt;IJobDetail, ISet&lt;ITrigger&gt;&gt; triggersAndJobs, bool replace)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>, <a class="xref" href="Quartz.Collection.ISet-1.html">ISet</a>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;&gt;</td>
+        <td><span class="parametername">triggersAndJobs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">replace</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_Shutdown_" data-uid="Quartz.Impl.RemoteScheduler.Shutdown*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_Shutdown" data-uid="Quartz.Impl.RemoteScheduler.Shutdown">Shutdown()</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Shutdown()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_Shutdown_" data-uid="Quartz.Impl.RemoteScheduler.Shutdown*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_Shutdown_System_Boolean_" data-uid="Quartz.Impl.RemoteScheduler.Shutdown(System.Boolean)">Shutdown(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Shutdown(bool waitForJobsToComplete)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">waitForJobsToComplete</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_Standby_" data-uid="Quartz.Impl.RemoteScheduler.Standby*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_Standby" data-uid="Quartz.Impl.RemoteScheduler.Standby">Standby()</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Standby()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_Start_" data-uid="Quartz.Impl.RemoteScheduler.Start*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_Start" data-uid="Quartz.Impl.RemoteScheduler.Start">Start()</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Start()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_StartDelayed_" data-uid="Quartz.Impl.RemoteScheduler.StartDelayed*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_StartDelayed_System_TimeSpan_" data-uid="Quartz.Impl.RemoteScheduler.StartDelayed(System.TimeSpan)">StartDelayed(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartDelayed(TimeSpan delay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">delay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_TriggerJob_" data-uid="Quartz.Impl.RemoteScheduler.TriggerJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_TriggerJob_Quartz_JobKey_" data-uid="Quartz.Impl.RemoteScheduler.TriggerJob(Quartz.JobKey)">TriggerJob(JobKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void TriggerJob(JobKey jobKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_TriggerJob_" data-uid="Quartz.Impl.RemoteScheduler.TriggerJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_TriggerJob_Quartz_JobKey_Quartz_JobDataMap_" data-uid="Quartz.Impl.RemoteScheduler.TriggerJob(Quartz.JobKey,Quartz.JobDataMap)">TriggerJob(JobKey, JobDataMap)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void TriggerJob(JobKey jobKey, JobDataMap data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><span class="parametername">jobKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_UnscheduleJob_" data-uid="Quartz.Impl.RemoteScheduler.UnscheduleJob*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_UnscheduleJob_Quartz_TriggerKey_" data-uid="Quartz.Impl.RemoteScheduler.UnscheduleJob(Quartz.TriggerKey)">UnscheduleJob(TriggerKey)</h4>
+  <div class="markdown level1 summary"><p>Calls the equivalent method on the &apos;proxied&apos; <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool UnscheduleJob(TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_RemoteScheduler_UnscheduleJobs_" data-uid="Quartz.Impl.RemoteScheduler.UnscheduleJobs*"></a>
+  <h4 id="Quartz_Impl_RemoteScheduler_UnscheduleJobs_System_Collections_Generic_IList_Quartz_TriggerKey__" data-uid="Quartz.Impl.RemoteScheduler.UnscheduleJobs(System.Collections.Generic.IList{Quartz.TriggerKey})">UnscheduleJobs(IList&lt;TriggerKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool UnscheduleJobs(IList&lt;TriggerKey&gt; triggerKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a>&gt;</td>
+        <td><span class="parametername">triggerKeys</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></div>
+      <div><a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Quartz.Core
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Quartz.Core
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Core">
+  
+  <h1 id="Quartz_Core" data-uid="Quartz.Core" class="text-break">Namespace Quartz.Core
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Quartz.Core.JobRunShell.html">JobRunShell</a></h4>
+      <section><p>JobRunShell instances are responsible for providing the &apos;safe&apos; environment
+for <a class="xref" href="Quartz.IJob.html">IJob</a> s to run in, and for performing all of the work of
+executing the <a class="xref" href="Quartz.IJob.html">IJob</a>, catching ANY thrown exceptions, updating
+the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the <a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s completion code,
+etc.
+<p>
+A <a class="xref" href="Quartz.Core.JobRunShell.html">JobRunShell</a> instance is created by a <a class="xref" href="Quartz.Core.IJobRunShellFactory.html">IJobRunShellFactory</a>
+on behalf of the <a class="xref" href="Quartz.Core.QuartzSchedulerThread.html">QuartzSchedulerThread</a> which then runs the
+shell in a thread from the configured <span class="xref">System.Threading.ThreadPool</span> when the
+scheduler determines that a <a class="xref" href="Quartz.IJob.html">IJob</a> has been triggered.
+</p></p>
+</section>
+      <h4><a class="xref" href="Quartz.Core.ListenerManagerImpl.html">ListenerManagerImpl</a></h4>
+      <section><p>Default concrete implementation of <a class="xref" href="Quartz.IListenerManager.html">IListenerManager</a>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a></h4>
+      <section><p>This is the heart of Quartz, an indirect implementation of the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+interface, containing methods to schedule <a class="xref" href="Quartz.IJob.html">IJob</a>s,
+register <a class="xref" href="Quartz.IJobListener.html">IJobListener</a> instances, etc.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Core.QuartzSchedulerResources.html">QuartzSchedulerResources</a></h4>
+      <section><p>Contains all of the resources (<a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>,<a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a>,
+etc.) necessary to create a <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a> instance.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Core.QuartzSchedulerThread.html">QuartzSchedulerThread</a></h4>
+      <section><p>The thread responsible for performing the work of firing <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+s that are registered with the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Core.SchedulerSignalerImpl.html">SchedulerSignalerImpl</a></h4>
+      <section><p>An interface to be used by <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> instances in order to
+communicate signals back to the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Quartz.Core.IJobRunShellFactory.html">IJobRunShellFactory</a></h4>
+      <section><p>Responsible for creating the instances of <a class="xref" href="Quartz.Core.JobRunShell.html">JobRunShell</a>
+to be used within the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a> instance.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

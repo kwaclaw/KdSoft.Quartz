@@ -1,0 +1,1367 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DailyCalendar
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DailyCalendar
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.Calendar.DailyCalendar">
+  
+  
+  <h1 id="Quartz_Impl_Calendar_DailyCalendar" data-uid="Quartz.Impl.Calendar.DailyCalendar" class="text-break">Class DailyCalendar
+  </h1>
+  <div class="markdown level0 summary"><p>This implementation of the Calendar excludes (or includes - see below) a
+specified time range each day. </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html">BaseCalendar</a></div>
+    <div class="level2"><span class="xref">DailyCalendar</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></div>
+    <div><span class="xref">System.ICloneable</span></div>
+    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_ArraysEqualElementsOnEqualPlaces_System_Array_System_Array_">BaseCalendar.ArraysEqualElementsOnEqualPlaces(Array, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_GetBaseCalendar">BaseCalendar.GetBaseCalendar()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_TimeZone">BaseCalendar.TimeZone</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_Description">BaseCalendar.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_CalendarBase">BaseCalendar.CalendarBase</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.Calendar.html">Quartz.Impl.Calendar</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_Calendar_DailyCalendar_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DailyCalendar : BaseCalendar, ICalendar, ICloneable, ISerializable</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_Calendar_DailyCalendar_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>For example, you could use this calendar to
+exclude business hours (8AM - 5PM) every day. Each <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a>
+only allows a single time range to be specified, and that time range may not</p>
+<ul>
+<li>cross daily boundaries (i.e. you cannot specify a time range from 8PM - 5AM).
+If the property <span class="xref">Quartz.Impl.Calendar.DailyCalendar.invertTimeRange</span> is <span class="xref">false</span> (default),
+the time range defines a range of times in which triggers are not allowed to</li>
+<li>fire. If <span class="xref">Quartz.Impl.Calendar.DailyCalendar.invertTimeRange</span> is <span class="xref">true</span>, the time range
+is inverted: that is, all times <em>outside</em> the defined time range
+are excluded.
+<p>
+Note when using <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a>, it behaves on the same principals
+as, for example, WeeklyCalendar defines a set of days that are
+excluded <em>every week</em>. Likewise, <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> defines a
+set of times that are excluded <em>every day</em>.
+</p></li>
+</ul>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar__ctor_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar__ctor_Quartz_ICalendar_System_DateTime_System_DateTime_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor(Quartz.ICalendar,System.DateTime,System.DateTime)">DailyCalendar(ICalendar, DateTime, DateTime)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> with a time range defined by the
+specified <span class="xref">System.DateTime</span>s and the specified
+<code data-dev-comment-type="paramref" class="paramref">baseCalendar</code>. The Calendars are subject to the following
+considerations:
+<ul>
+<li>
+Only the time-of-day fields of the specified Calendars will be
+used (the date fields will be ignored)
+</li>
+<li>
+The starting time must be before the ending time of the defined
+time range. Note this means that a time range may not cross
+daily boundaries (10PM - 2AM). <em>(because only time fields are
+are used, it is possible for two Calendars to represent a valid
+time range and
+<code>rangeStartingCalendarUtc &gt; rangeEndingCalendarUtc == true</code>)</em>
+</li>
+</ul></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DailyCalendar(ICalendar baseCalendar, DateTime rangeStartingCalendarUtc, DateTime rangeEndingCalendarUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">baseCalendar</span></td>
+        <td><p>The base calendar for this calendar instance see BaseCalendar for more
+information on base calendar functionality.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">rangeStartingCalendarUtc</span></td>
+        <td><p>The range starting calendar.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">rangeEndingCalendarUtc</span></td>
+        <td><p>The range ending calendar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar__ctor_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar__ctor_Quartz_ICalendar_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor(Quartz.ICalendar,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">DailyCalendar(ICalendar, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> with a time range defined by the
+specified values and the specified <code data-dev-comment-type="paramref" class="paramref">baseCalendar</code>. Values are
+subject to the following validations:
+<ul>
+<li>
+Hours must be in the range 0-23 and are expressed using military
+(24-hour) time.
+</li>
+<li>Minutes must be in the range 0-59</li>
+<li>Seconds must be in the range 0-59</li>
+<li>Milliseconds must be in the range 0-999</li>
+<li>
+The time range starting time must be before the time range ending
+time. Note this means that a time range may not cross daily
+boundaries (10PM - 2AM)
+</li>
+</ul></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DailyCalendar(ICalendar baseCalendar, int rangeStartingHourOfDay, int rangeStartingMinute, int rangeStartingSecond, int rangeStartingMillis, int rangeEndingHourOfDay, int rangeEndingMinute, int rangeEndingSecond, int rangeEndingMillis)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">baseCalendar</span></td>
+        <td><p>The base calendar for this calendar instance see BaseCalendar for more
+information on base calendar functionality.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingHourOfDay</span></td>
+        <td><p>The range starting hour of day.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingMinute</span></td>
+        <td><p>The range starting minute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingSecond</span></td>
+        <td><p>The range starting second.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingMillis</span></td>
+        <td><p>The range starting millis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingHourOfDay</span></td>
+        <td><p>The range ending hour of day.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingMinute</span></td>
+        <td><p>The range ending minute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingSecond</span></td>
+        <td><p>The range ending second.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingMillis</span></td>
+        <td><p>The range ending millis.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar__ctor_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar__ctor_Quartz_ICalendar_System_Int64_System_Int64_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor(Quartz.ICalendar,System.Int64,System.Int64)">DailyCalendar(ICalendar, Int64, Int64)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> with a time range defined by the
+specified values and the specified <code data-dev-comment-type="paramref" class="paramref">baseCalendar</code>. The values
+are subject to the following considerations:
+<ul>
+<li>
+Only the time-of-day portion of the specified values will be
+used
+</li>
+<li>
+The starting time must be before the ending time of the defined
+time range. Note this means that a time range may not cross
+daily boundaries (10PM - 2AM). <em>(because only time value are
+are used, it is possible for the two values to represent a valid
+time range and <code>rangeStartingTime &gt; rangeEndingTime</code>)</em>
+</li>
+</ul></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DailyCalendar(ICalendar baseCalendar, long rangeStartingTimeInMillis, long rangeEndingTimeInMillis)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">baseCalendar</span></td>
+        <td><p>The base calendar for this calendar instance see BaseCalendar for more
+information on base calendar functionality.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">rangeStartingTimeInMillis</span></td>
+        <td><p>The range starting time in millis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">rangeEndingTimeInMillis</span></td>
+        <td><p>The range ending time in millis.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar__ctor_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar__ctor_Quartz_ICalendar_System_String_System_String_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor(Quartz.ICalendar,System.String,System.String)">DailyCalendar(ICalendar, String, String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> with a time range defined by the
+specified strings and the specified baseCalendar.
+<code data-dev-comment-type="paramref" class="paramref">rangeStartingTime</code> and <code data-dev-comment-type="paramref" class="paramref">rangeEndingTime</code>
+must be in the format &quot;HH:MM[:SS[:mmm]]&quot; where:
+<ul>
+<li>
+HH is the hour of the specified time. The hour should be
+specified using military (24-hour) time and must be in the range
+0 to 23.
+</li>
+<li>
+MM is the minute of the specified time and must be in the range
+0 to 59.
+</li>
+<li>
+SS is the second of the specified time and must be in the range
+0 to 59.
+</li>
+<li>
+mmm is the millisecond of the specified time and must be in the
+range 0 to 999.
+</li>
+<li>
+items enclosed in brackets (&apos;[&apos;, &apos;]&apos;) are optional.
+</li>
+<li>
+The time range starting time must be before the time range ending
+time. Note this means that a time range may not cross daily
+boundaries (10PM - 2AM)
+</li>
+</ul></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DailyCalendar(ICalendar baseCalendar, string rangeStartingTime, string rangeEndingTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">baseCalendar</span></td>
+        <td><p>The base calendar for this calendar instance see BaseCalendar for more
+information on base calendar functionality.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">rangeStartingTime</span></td>
+        <td><p>The range starting time in millis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">rangeEndingTime</span></td>
+        <td><p>The range ending time in millis.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar__ctor_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar__ctor_System_DateTime_System_DateTime_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor(System.DateTime,System.DateTime)">DailyCalendar(DateTime, DateTime)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> with a time range defined by the
+specified <span class="xref">System.DateTime</span>s and no 
+baseCalendar. The Calendars are subject to the following
+considerations:
+<ul>
+<li>
+    Only the time-of-day fields of the specified Calendars will be
+ used (the date fields will be ignored)
+</li>
+<li>
+       The starting time must be before the ending time of the defined
+    time range. Note this means that a time range may not cross
+    daily boundaries (10PM - 2AM). <em>(because only time fields are
+    are used, it is possible for two Calendars to represent a valid
+    time range and 
+<code>rangeStartingCalendar.after(rangeEndingCalendar) ==  true</code>)
+</em>
+</li><br></ul> </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DailyCalendar(DateTime rangeStartingCalendarUtc, DateTime rangeEndingCalendarUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">rangeStartingCalendarUtc</span></td>
+        <td><p>The range starting calendar.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">rangeEndingCalendarUtc</span></td>
+        <td><p>The range ending calendar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar__ctor_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar__ctor_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">DailyCalendar(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> with a time range defined by the
+specified values and no baseCalendar. Values are subject to
+the following validations:
+<ul>
+<li>
+    Hours must be in the range 0-23 and are expressed using military
+ (24-hour) time.
+</li>
+<li>Minutes must be in the range 0-59</li>
+<li>Seconds must be in the range 0-59</li>
+<li>Milliseconds must be in the range 0-999</li>
+<li>
+       The time range starting time must be before the time range ending
+    time. Note this means that a time range may not cross daily 
+    boundaries (10PM - 2AM)
+</li><br></ul></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DailyCalendar(int rangeStartingHourOfDay, int rangeStartingMinute, int rangeStartingSecond, int rangeStartingMillis, int rangeEndingHourOfDay, int rangeEndingMinute, int rangeEndingSecond, int rangeEndingMillis)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingHourOfDay</span></td>
+        <td><p>The range starting hour of day.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingMinute</span></td>
+        <td><p>The range starting minute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingSecond</span></td>
+        <td><p>The range starting second.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingMillis</span></td>
+        <td><p>The range starting millis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingHourOfDay</span></td>
+        <td><p>The range ending hour of day.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingMinute</span></td>
+        <td><p>The range ending minute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingSecond</span></td>
+        <td><p>The range ending second.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingMillis</span></td>
+        <td><p>The range ending millis.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar__ctor_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar__ctor_System_Int64_System_Int64_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor(System.Int64,System.Int64)">DailyCalendar(Int64, Int64)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> with a time range defined by the
+specified values and no baseCalendar. The values are 
+subject to the following considerations:
+<ul>
+<li>
+    Only the time-of-day portion of the specified values will be
+ used
+</li>
+<li>
+       The starting time must be before the ending time of the defined
+    time range. Note this means that a time range may not cross
+    daily boundaries (10PM - 2AM). <em>(because only time value are
+    are used, it is possible for the two values to represent a valid
+    time range and <code>rangeStartingTime &gt; rangeEndingTime</code>)</em>
+</li><br></ul> </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DailyCalendar(long rangeStartingTimeInMillis, long rangeEndingTimeInMillis)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">rangeStartingTimeInMillis</span></td>
+        <td><p>The range starting time in millis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">rangeEndingTimeInMillis</span></td>
+        <td><p>The range ending time in millis.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar__ctor_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">DailyCalendar(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"><p>Serialization constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DailyCalendar(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar__ctor_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar__ctor_System_String_System_String_" data-uid="Quartz.Impl.Calendar.DailyCalendar.#ctor(System.String,System.String)">DailyCalendar(String, String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> with a time range defined by the
+specified strings and no baseCalendar. 
+<code data-dev-comment-type="paramref" class="paramref">rangeStartingTime</code> and <code data-dev-comment-type="paramref" class="paramref">rangeEndingTime</code>
+must be in the format &quot;HH:MM[:SS[:mmm]]&quot; where:
+<ul>
+<li>
+    HH is the hour of the specified time. The hour should be
+     specified using military (24-hour) time and must be in the range
+     0 to 23.
+</li>
+<li>
+    MM is the minute of the specified time and must be in the range
+    0 to 59.
+</li>
+<li>
+    SS is the second of the specified time and must be in the range
+    0 to 59.
+</li>
+<li>
+    mmm is the millisecond of the specified time and must be in the
+    range 0 to 999.
+</li>
+<li>items enclosed in brackets (&apos;[&apos;, &apos;]&apos;) are optional.</li>
+<li>
+    The time range starting time must be before the time range ending
+    time. Note this means that a time range may not cross daily 
+    boundaries (10PM - 2AM)
+</li><br></ul></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DailyCalendar(string rangeStartingTime, string rangeEndingTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">rangeStartingTime</span></td>
+        <td><p>The range starting time in millis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">rangeEndingTime</span></td>
+        <td><p>The range ending time in millis.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_InvertTimeRange_" data-uid="Quartz.Impl.Calendar.DailyCalendar.InvertTimeRange*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_InvertTimeRange" data-uid="Quartz.Impl.Calendar.DailyCalendar.InvertTimeRange">InvertTimeRange</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the time range represents an inverted time range (see
+class description).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InvertTimeRange { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if invert time range; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_Clone_" data-uid="Quartz.Impl.Calendar.DailyCalendar.Clone*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_Clone" data-uid="Quartz.Impl.Calendar.DailyCalendar.Clone">Clone()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_Clone">BaseCalendar.Clone()</a></div>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_Equals_" data-uid="Quartz.Impl.Calendar.DailyCalendar.Equals*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_Equals_Quartz_Impl_Calendar_DailyCalendar_" data-uid="Quartz.Impl.Calendar.DailyCalendar.Equals(Quartz.Impl.Calendar.DailyCalendar)">Equals(DailyCalendar)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(DailyCalendar obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_Equals_" data-uid="Quartz.Impl.Calendar.DailyCalendar.Equals*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_Equals_System_Object_" data-uid="Quartz.Impl.Calendar.DailyCalendar.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_GetHashCode_" data-uid="Quartz.Impl.Calendar.DailyCalendar.GetHashCode*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_GetHashCode" data-uid="Quartz.Impl.Calendar.DailyCalendar.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_GetNextIncludedTimeUtc_" data-uid="Quartz.Impl.Calendar.DailyCalendar.GetNextIncludedTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_GetNextIncludedTimeUtc_System_DateTimeOffset_" data-uid="Quartz.Impl.Calendar.DailyCalendar.GetNextIncludedTimeUtc(System.DateTimeOffset)">GetNextIncludedTimeUtc(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Determine the next time (in milliseconds) that is &apos;included&apos; by the
+Calendar after the given time. Return the original value if timeStamp is
+included. Return 0 if all days are excluded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset GetNextIncludedTimeUtc(DateTimeOffset timeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">timeUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_GetNextIncludedTimeUtc_System_DateTimeOffset_">BaseCalendar.GetNextIncludedTimeUtc(DateTimeOffset)</a></div>
+  <h5 id="Quartz_Impl_Calendar_DailyCalendar_GetNextIncludedTimeUtc_System_DateTimeOffset__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICalendar.html#Quartz_ICalendar_GetNextIncludedTimeUtc_System_DateTimeOffset_">GetNextIncludedTimeUtc</a>(<span class="xref">System.DateTimeOffset</span>)</div>
+  </div>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_GetObjectData_" data-uid="Quartz.Impl.Calendar.DailyCalendar.GetObjectData*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="Quartz.Impl.Calendar.DailyCalendar.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">GetObjectData(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SecurityCritical]
+public override void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">BaseCalendar.GetObjectData(SerializationInfo, StreamingContext)</a></div>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_GetTimeRangeEndingTimeUtc_" data-uid="Quartz.Impl.Calendar.DailyCalendar.GetTimeRangeEndingTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_GetTimeRangeEndingTimeUtc_System_DateTimeOffset_" data-uid="Quartz.Impl.Calendar.DailyCalendar.GetTimeRangeEndingTimeUtc(System.DateTimeOffset)">GetTimeRangeEndingTimeUtc(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Returns the end time of the time range of the day
+specified in <code data-dev-comment-type="paramref" class="paramref">timeUtc</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset GetTimeRangeEndingTimeUtc(DateTimeOffset timeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">timeUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><p>A DateTime representing the end time of the
+time range for the specified date.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_GetTimeRangeStartingTimeUtc_" data-uid="Quartz.Impl.Calendar.DailyCalendar.GetTimeRangeStartingTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_GetTimeRangeStartingTimeUtc_System_DateTimeOffset_" data-uid="Quartz.Impl.Calendar.DailyCalendar.GetTimeRangeStartingTimeUtc(System.DateTimeOffset)">GetTimeRangeStartingTimeUtc(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Returns the start time of the time range of the day 
+specified in <code data-dev-comment-type="paramref" class="paramref">timeUtc</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset GetTimeRangeStartingTimeUtc(DateTimeOffset timeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">timeUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><p>a DateTime representing the start time of the
+time range for the specified date.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_IsTimeIncluded_" data-uid="Quartz.Impl.Calendar.DailyCalendar.IsTimeIncluded*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_IsTimeIncluded_System_DateTimeOffset_" data-uid="Quartz.Impl.Calendar.DailyCalendar.IsTimeIncluded(System.DateTimeOffset)">IsTimeIncluded(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Determine whether the given time  is &apos;included&apos; by the
+Calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsTimeIncluded(DateTimeOffset timeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">timeUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_IsTimeIncluded_System_DateTimeOffset_">BaseCalendar.IsTimeIncluded(DateTimeOffset)</a></div>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_SetTimeRange_" data-uid="Quartz.Impl.Calendar.DailyCalendar.SetTimeRange*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_SetTimeRange_System_DateTime_System_DateTime_" data-uid="Quartz.Impl.Calendar.DailyCalendar.SetTimeRange(System.DateTime,System.DateTime)">SetTimeRange(DateTime, DateTime)</h4>
+  <div class="markdown level1 summary"><p>Sets the time range for the <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> to the times
+represented in the specified <span class="xref">System.DateTime</span>s. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTimeRange(DateTime rangeStartingCalendarUtc, DateTime rangeEndingCalendarUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">rangeStartingCalendarUtc</span></td>
+        <td><p>The range starting calendar.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">rangeEndingCalendarUtc</span></td>
+        <td><p>The range ending calendar.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_SetTimeRange_" data-uid="Quartz.Impl.Calendar.DailyCalendar.SetTimeRange*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_SetTimeRange_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Quartz.Impl.Calendar.DailyCalendar.SetTimeRange(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">SetTimeRange(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the time range for the <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> to the times
+represented in the specified values. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTimeRange(int rangeStartingHourOfDay, int rangeStartingMinute, int rangeStartingSecond, int rangeStartingMillis, int rangeEndingHourOfDay, int rangeEndingMinute, int rangeEndingSecond, int rangeEndingMillis)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingHourOfDay</span></td>
+        <td><p>The range starting hour of day.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingMinute</span></td>
+        <td><p>The range starting minute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingSecond</span></td>
+        <td><p>The range starting second.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeStartingMillis</span></td>
+        <td><p>The range starting millis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingHourOfDay</span></td>
+        <td><p>The range ending hour of day.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingMinute</span></td>
+        <td><p>The range ending minute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingSecond</span></td>
+        <td><p>The range ending second.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">rangeEndingMillis</span></td>
+        <td><p>The range ending millis.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_SetTimeRange_" data-uid="Quartz.Impl.Calendar.DailyCalendar.SetTimeRange*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_SetTimeRange_System_Int64_System_Int64_" data-uid="Quartz.Impl.Calendar.DailyCalendar.SetTimeRange(System.Int64,System.Int64)">SetTimeRange(Int64, Int64)</h4>
+  <div class="markdown level1 summary"><p>Sets the time range for the <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> to the times
+represented in the specified values. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTimeRange(long rangeStartingTime, long rangeEndingTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">rangeStartingTime</span></td>
+        <td><p>The range starting time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">rangeEndingTime</span></td>
+        <td><p>The range ending time.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_SetTimeRange_" data-uid="Quartz.Impl.Calendar.DailyCalendar.SetTimeRange*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_SetTimeRange_System_String_System_String_" data-uid="Quartz.Impl.Calendar.DailyCalendar.SetTimeRange(System.String,System.String)">SetTimeRange(String, String)</h4>
+  <div class="markdown level1 summary"><p>Sets the time range for the <a class="xref" href="Quartz.Impl.Calendar.DailyCalendar.html">DailyCalendar</a> to the times 
+represented in the specified Strings. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTimeRange(string rangeStartingTimeString, string rangeEndingTimeString)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">rangeStartingTimeString</span></td>
+        <td><p>The range starting time string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">rangeEndingTimeString</span></td>
+        <td><p>The range ending time string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_DailyCalendar_ToString_" data-uid="Quartz.Impl.Calendar.DailyCalendar.ToString*"></a>
+  <h4 id="Quartz_Impl_Calendar_DailyCalendar_ToString" data-uid="Quartz.Impl.Calendar.DailyCalendar.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.String</span> that represents the current <span class="xref">System.Object</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A <span class="xref">System.String</span> that represents the current <span class="xref">System.Object</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <div>
+      <span class="xref">System.Runtime.Serialization.ISerializable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

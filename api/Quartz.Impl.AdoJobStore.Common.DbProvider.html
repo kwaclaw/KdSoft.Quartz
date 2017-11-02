@@ -1,0 +1,566 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DbProvider
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DbProvider
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider">
+  
+  
+  <h1 id="Quartz_Impl_AdoJobStore_Common_DbProvider" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider" class="text-break">Class DbProvider
+  </h1>
+  <div class="markdown level0 summary"><p>Concrete implementation of <a class="xref" href="Quartz.Impl.AdoJobStore.Common.IDbProvider.html">IDbProvider</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DbProvider</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.Impl.AdoJobStore.Common.IDbProvider.html">IDbProvider</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.AdoJobStore.Common.html">Quartz.Impl.AdoJobStore.Common</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_AdoJobStore_Common_DbProvider_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DbProvider : IDbProvider</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider__ctor_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.#ctor*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider__ctor_System_String_System_String_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.#ctor(System.String,System.String)">DbProvider(String, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbProvider.html">DbProvider</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbProvider(string dbProviderName, string connectionString)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dbProviderName</span></td>
+        <td><p>Name of the db provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionString</span></td>
+        <td><p>The connection string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_DbProviderResourceName" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.DbProviderResourceName">DbProviderResourceName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string DbProviderResourceName = &quot;Quartz.Impl.AdoJobStore.Common.dbproviders.properties&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_DbProviderSectionName" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.DbProviderSectionName">DbProviderSectionName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string DbProviderSectionName = &quot;quartz&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_PropertyDbProvider" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.PropertyDbProvider">PropertyDbProvider</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string PropertyDbProvider = &quot;quartz.dbprovider&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider_ConnectionString_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.ConnectionString*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_ConnectionString" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.ConnectionString">ConnectionString</h4>
+  <div class="markdown level1 summary"><p>Connection string used to create connections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConnectionString { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider_Metadata_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.Metadata*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_Metadata" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.Metadata">Metadata</h4>
+  <div class="markdown level1 summary"><p>Gets the metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbMetadata Metadata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html">DbMetadata</a></td>
+        <td><p>The metadata.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider_CreateCommand_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.CreateCommand*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_CreateCommand" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.CreateCommand">CreateCommand()</h4>
+  <div class="markdown level1 summary"><p>Returns a new command object for executing SQL statements/Stored Procedures
+against the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IDbCommand CreateCommand()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><p>An new <span class="xref">System.Data.IDbCommand</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider_CreateCommandBuilder_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.CreateCommandBuilder*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_CreateCommandBuilder" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.CreateCommandBuilder">CreateCommandBuilder()</h4>
+  <div class="markdown level1 summary"><p>Returns a new instance of the providers CommandBuilder class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual object CreateCommandBuilder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>A new Command Builder</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_AdoJobStore_Common_DbProvider_CreateCommandBuilder_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>In .NET 1.1 there was no common base class or interface
+for command builders, hence the return signature is object to
+be portable (but more loosely typed) across .NET 1.1/2.0</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider_CreateConnection_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.CreateConnection*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_CreateConnection" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.CreateConnection">CreateConnection()</h4>
+  <div class="markdown level1 summary"><p>Returns a new connection object to communicate with the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IDbConnection CreateConnection()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbConnection</span></td>
+        <td><p>A new <span class="xref">System.Data.IDbConnection</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider_CreateParameter_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.CreateParameter*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_CreateParameter" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.CreateParameter">CreateParameter()</h4>
+  <div class="markdown level1 summary"><p>Returns a new parameter object for binding values to parameter
+placeholders in SQL statements or Stored Procedure variables.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IDbDataParameter CreateParameter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbDataParameter</span></td>
+        <td><p>A new <span class="xref">System.Data.IDbDataParameter</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider_GenerateValidProviderNamesInfo_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.GenerateValidProviderNamesInfo*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_GenerateValidProviderNamesInfo" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.GenerateValidProviderNamesInfo">GenerateValidProviderNamesInfo()</h4>
+  <div class="markdown level1 summary"><p>Generates the valid provider names information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static string GenerateValidProviderNamesInfo()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider_GetDbMetadata_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.GetDbMetadata*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_GetDbMetadata_System_String_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.GetDbMetadata(System.String)">GetDbMetadata(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual DbMetadata GetDbMetadata(string providerName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">providerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html">DbMetadata</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider_Initialize_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.Initialize*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_Initialize" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider_RegisterDbMetadata_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.RegisterDbMetadata*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_RegisterDbMetadata_System_String_Quartz_Impl_AdoJobStore_Common_DbMetadata_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.RegisterDbMetadata(System.String,Quartz.Impl.AdoJobStore.Common.DbMetadata)">RegisterDbMetadata(String, DbMetadata)</h4>
+  <div class="markdown level1 summary"><p>Registers DB metadata information for given provider name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterDbMetadata(string dbProviderName, DbMetadata metadata)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dbProviderName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.Common.DbMetadata.html">DbMetadata</a></td>
+        <td><span class="parametername">metadata</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_Common_DbProvider_Shutdown_" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.Shutdown*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_Common_DbProvider_Shutdown" data-uid="Quartz.Impl.AdoJobStore.Common.DbProvider.Shutdown">Shutdown()</h4>
+  <div class="markdown level1 summary"><p>Shutdowns this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Shutdown()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.Common.IDbProvider.html">IDbProvider</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

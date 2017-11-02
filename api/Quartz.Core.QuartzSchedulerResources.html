@@ -1,0 +1,744 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class QuartzSchedulerResources
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class QuartzSchedulerResources
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Core.QuartzSchedulerResources">
+  
+  
+  <h1 id="Quartz_Core_QuartzSchedulerResources" data-uid="Quartz.Core.QuartzSchedulerResources" class="text-break">Class QuartzSchedulerResources
+  </h1>
+  <div class="markdown level0 summary"><p>Contains all of the resources (<a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>,<a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a>,
+etc.) necessary to create a <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a> instance.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">QuartzSchedulerResources</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Core.html">Quartz.Core</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Core_QuartzSchedulerResources_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class QuartzSchedulerResources</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources__ctor_" data-uid="Quartz.Core.QuartzSchedulerResources.#ctor*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources__ctor" data-uid="Quartz.Core.QuartzSchedulerResources.#ctor">QuartzSchedulerResources()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuartzSchedulerResources()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_BatchTimeWindow_" data-uid="Quartz.Core.QuartzSchedulerResources.BatchTimeWindow*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_BatchTimeWindow" data-uid="Quartz.Core.QuartzSchedulerResources.BatchTimeWindow">BatchTimeWindow</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the batch time window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan BatchTimeWindow { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_InstanceId_" data-uid="Quartz.Core.QuartzSchedulerResources.InstanceId*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_InstanceId" data-uid="Quartz.Core.QuartzSchedulerResources.InstanceId">InstanceId</h4>
+  <div class="markdown level1 summary"><p>Get or set the instance Id for the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string InstanceId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>if name is null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_InterruptJobsOnShutdown_" data-uid="Quartz.Core.QuartzSchedulerResources.InterruptJobsOnShutdown*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_InterruptJobsOnShutdown" data-uid="Quartz.Core.QuartzSchedulerResources.InterruptJobsOnShutdown">InterruptJobsOnShutdown</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InterruptJobsOnShutdown { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_InterruptJobsOnShutdownWithWait_" data-uid="Quartz.Core.QuartzSchedulerResources.InterruptJobsOnShutdownWithWait*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_InterruptJobsOnShutdownWithWait" data-uid="Quartz.Core.QuartzSchedulerResources.InterruptJobsOnShutdownWithWait">InterruptJobsOnShutdownWithWait</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InterruptJobsOnShutdownWithWait { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_JobRunShellFactory_" data-uid="Quartz.Core.QuartzSchedulerResources.JobRunShellFactory*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_JobRunShellFactory" data-uid="Quartz.Core.QuartzSchedulerResources.JobRunShellFactory">JobRunShellFactory</h4>
+  <div class="markdown level1 summary"><p>Get or set the <a class="xref" href="Quartz.Core.QuartzSchedulerResources.html#Quartz_Core_QuartzSchedulerResources_JobRunShellFactory">JobRunShellFactory</a> for the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>
+to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IJobRunShellFactory JobRunShellFactory { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Core.IJobRunShellFactory.html">IJobRunShellFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>if jobRunShellFactory is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_JobStore_" data-uid="Quartz.Core.QuartzSchedulerResources.JobStore*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_JobStore" data-uid="Quartz.Core.QuartzSchedulerResources.JobStore">JobStore</h4>
+  <div class="markdown level1 summary"><p>Get or set the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> for the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>
+to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IJobStore JobStore { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>if jobStore is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_MakeSchedulerThreadDaemon_" data-uid="Quartz.Core.QuartzSchedulerResources.MakeSchedulerThreadDaemon*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_MakeSchedulerThreadDaemon" data-uid="Quartz.Core.QuartzSchedulerResources.MakeSchedulerThreadDaemon">MakeSchedulerThreadDaemon</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to make scheduler thread daemon.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MakeSchedulerThreadDaemon { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if scheduler should be thread daemon; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_MaxBatchSize_" data-uid="Quartz.Core.QuartzSchedulerResources.MaxBatchSize*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_MaxBatchSize" data-uid="Quartz.Core.QuartzSchedulerResources.MaxBatchSize">MaxBatchSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxBatchSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_Name_" data-uid="Quartz.Core.QuartzSchedulerResources.Name*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_Name" data-uid="Quartz.Core.QuartzSchedulerResources.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Get or set the name for the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>if name is null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_SchedulerExporter_" data-uid="Quartz.Core.QuartzSchedulerResources.SchedulerExporter*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_SchedulerExporter" data-uid="Quartz.Core.QuartzSchedulerResources.SchedulerExporter">SchedulerExporter</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the scheduler exporter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISchedulerExporter SchedulerExporter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.ISchedulerExporter.html">ISchedulerExporter</a></td>
+        <td><p>The scheduler exporter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_SchedulerPlugins_" data-uid="Quartz.Core.QuartzSchedulerResources.SchedulerPlugins*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_SchedulerPlugins" data-uid="Quartz.Core.QuartzSchedulerResources.SchedulerPlugins">SchedulerPlugins</h4>
+  <div class="markdown level1 summary"><p>Get the <span class="xref">System.Collections.Generic.IList&lt;T&gt;</span> of all  <a class="xref" href="Quartz.Spi.ISchedulerPlugin.html">ISchedulerPlugin</a>s for the 
+<a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a> to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ISchedulerPlugin&gt; SchedulerPlugins { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.Spi.ISchedulerPlugin.html">ISchedulerPlugin</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_ThreadExecutor_" data-uid="Quartz.Core.QuartzSchedulerResources.ThreadExecutor*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_ThreadExecutor" data-uid="Quartz.Core.QuartzSchedulerResources.ThreadExecutor">ThreadExecutor</h4>
+  <div class="markdown level1 summary"><p>The ThreadExecutor which runs the QuartzSchedulerThread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IThreadExecutor ThreadExecutor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IThreadExecutor.html">IThreadExecutor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_ThreadName_" data-uid="Quartz.Core.QuartzSchedulerResources.ThreadName*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_ThreadName" data-uid="Quartz.Core.QuartzSchedulerResources.ThreadName">ThreadName</h4>
+  <div class="markdown level1 summary"><p>Get or set the name for the <a class="xref" href="Quartz.Core.QuartzSchedulerThread.html">QuartzSchedulerThread</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ThreadName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>if name is null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_ThreadPool_" data-uid="Quartz.Core.QuartzSchedulerResources.ThreadPool*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_ThreadPool" data-uid="Quartz.Core.QuartzSchedulerResources.ThreadPool">ThreadPool</h4>
+  <div class="markdown level1 summary"><p>Get or set the <a class="xref" href="Quartz.Core.QuartzSchedulerResources.html#Quartz_Core_QuartzSchedulerResources_ThreadPool">ThreadPool</a> for the <a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a>
+to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IThreadPool ThreadPool { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>if threadPool is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_AddSchedulerPlugin_" data-uid="Quartz.Core.QuartzSchedulerResources.AddSchedulerPlugin*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_AddSchedulerPlugin_Quartz_Spi_ISchedulerPlugin_" data-uid="Quartz.Core.QuartzSchedulerResources.AddSchedulerPlugin(Quartz.Spi.ISchedulerPlugin)">AddSchedulerPlugin(ISchedulerPlugin)</h4>
+  <div class="markdown level1 summary"><p>Add the given <a class="xref" href="Quartz.Spi.ISchedulerPlugin.html">ISchedulerPlugin</a> for the 
+<a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a> to use. This method expects the plugin&apos;s
+&quot;initialize&quot; method to be invoked externally (either before or after
+this method is called).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddSchedulerPlugin(ISchedulerPlugin plugin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.ISchedulerPlugin.html">ISchedulerPlugin</a></td>
+        <td><span class="parametername">plugin</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_GetUniqueIdentifier_" data-uid="Quartz.Core.QuartzSchedulerResources.GetUniqueIdentifier*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_GetUniqueIdentifier" data-uid="Quartz.Core.QuartzSchedulerResources.GetUniqueIdentifier">GetUniqueIdentifier()</h4>
+  <div class="markdown level1 summary"><p>Gets the unique identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string GetUniqueIdentifier()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_QuartzSchedulerResources_GetUniqueIdentifier_" data-uid="Quartz.Core.QuartzSchedulerResources.GetUniqueIdentifier*"></a>
+  <h4 id="Quartz_Core_QuartzSchedulerResources_GetUniqueIdentifier_System_String_System_String_" data-uid="Quartz.Core.QuartzSchedulerResources.GetUniqueIdentifier(System.String,System.String)">GetUniqueIdentifier(String, String)</h4>
+  <div class="markdown level1 summary"><p>Gets the unique identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetUniqueIdentifier(string schedName, string schedInstId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">schedName</span></td>
+        <td><p>Name of the scheduler.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">schedInstId</span></td>
+        <td><p>The scheduler instance id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

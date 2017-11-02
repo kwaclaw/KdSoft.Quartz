@@ -1,0 +1,1787 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CronTriggerImpl
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CronTriggerImpl
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.Triggers.CronTriggerImpl">
+  
+  
+  <h1 id="Quartz_Impl_Triggers_CronTriggerImpl" data-uid="Quartz.Impl.Triggers.CronTriggerImpl" class="text-break">Class CronTriggerImpl
+  </h1>
+  <div class="markdown level0 summary"><p>A concrete <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> that is used to fire a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+at given moments in time, defined with Unix &apos;cron-like&apos; definitions.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html">AbstractTrigger</a></div>
+    <div class="level2"><span class="xref">CronTriggerImpl</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></div>
+    <div><a class="xref" href="Quartz.Spi.IMutableTrigger.html">IMutableTrigger</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html">AbstractTrigger</a>&gt;</div>
+    <div><a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a></div>
+    <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+    <div><span class="xref">System.ICloneable</span></div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetTriggerBuilder">AbstractTrigger.GetTriggerBuilder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_ExecutionComplete_Quartz_IJobExecutionContext_Quartz_JobExecutionException_">AbstractTrigger.ExecutionComplete(IJobExecutionContext, JobExecutionException)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Validate">AbstractTrigger.Validate()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_ToString">AbstractTrigger.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_CompareTo_Quartz_ITrigger_">AbstractTrigger.CompareTo(ITrigger)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Equals_System_Object_">AbstractTrigger.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Equals_Quartz_Impl_Triggers_AbstractTrigger_">AbstractTrigger.Equals(AbstractTrigger)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetHashCode">AbstractTrigger.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Name">AbstractTrigger.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Group">AbstractTrigger.Group</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobName">AbstractTrigger.JobName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobGroup">AbstractTrigger.JobGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_FullName">AbstractTrigger.FullName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Key">AbstractTrigger.Key</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobKey">AbstractTrigger.JobKey</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_FullJobName">AbstractTrigger.FullJobName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Description">AbstractTrigger.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_CalendarName">AbstractTrigger.CalendarName</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_JobDataMap">AbstractTrigger.JobDataMap</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_MisfireInstruction">AbstractTrigger.MisfireInstruction</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_FireInstanceId">AbstractTrigger.FireInstanceId</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Priority">AbstractTrigger.Priority</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_HasAdditionalProperties">AbstractTrigger.HasAdditionalProperties</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.Triggers.html">Quartz.Impl.Triggers</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_Triggers_CronTriggerImpl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CronTriggerImpl : AbstractTrigger, IOperableTrigger, IMutableTrigger, IEquatable&lt;AbstractTrigger&gt;, ICronTrigger, ITrigger, ICloneable, IComparable&lt;ITrigger&gt;</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_Triggers_CronTriggerImpl_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+For those unfamiliar with &quot;cron&quot;, this means being able to create a firing
+schedule such as: &quot;At 8:00am every Monday through Friday&quot; or &quot;At 1:30am
+every last Friday of the month&quot;.
+</p>
+
+<p>
+The format of a &quot;Cron-Expression&quot; string is documented on the 
+<a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html#Quartz_Impl_Triggers_CronTriggerImpl_CronExpression">CronExpression</a> class.
+</p>
+
+<p>
+Here are some full examples: <br>
+<table cellspacing="8">
+<tr>
+<th align="left">Expression</th>
+<th align="left"> </th>
+<th align="left">Meaning</th>
+</tr>
+<tr>
+<td align="left">&quot;0 0 12 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 12pm (noon) every day&quot; /&gt;</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * *&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am every day&quot; /&gt;</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am every day&quot; /&gt;</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 * * ? *&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am every day&quot; /&gt;</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 * * ? 2005&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am every day during the year 2005&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 * 14 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire every minute starting at 2pm and ending at 2:59pm, every day&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 0/5 14 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire every 5 minutes starting at 2pm and ending at 2:55pm, every day&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 0/5 14,18 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire every 5 minutes starting at 2pm and ending at 2:55pm, AND fire every 5 minutes starting at 6pm and ending at 6:55pm, every day&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 0-5 14 * * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire every minute starting at 2pm and ending at 2:05pm, every day&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 10,44 14 ? 3 WED&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 2:10pm and at 2:44pm every Wednesday in the month of March.&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * MON-FRI&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am every Monday, Tuesday, Wednesday, Thursday and Friday&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 15 * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on the 15th day of every month&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 L * ?&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on the last day of every month&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * 6L&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on the last Friday of every month&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * 6L&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on the last Friday of every month&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * 6L 2002-2005&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on every last Friday of every month during the years 2002, 2003, 2004 and 2005&quot; /&gt;
+</td>
+</tr>
+<tr>
+<td align="left">&quot;0 15 10 ? * 6#3&quot;&quot; /&gt;</td>
+<td align="left"> </td>
+<td align="left">Fire at 10:15am on the third Friday of every month&quot; /&gt;
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+Pay attention to the effects of &apos;?&apos; and &apos;*&apos; in the day-of-week and
+day-of-month fields!
+</p>
+
+<p>
+<strong>NOTES:</strong>
+<ul>
+<li>Support for specifying both a day-of-week and a day-of-month value is
+not complete (you&apos;ll need to use the &apos;?&apos; character in on of these fields).
+</li>
+<li>Be careful when setting fire times between mid-night and 1:00 AM -
+&quot;daylight savings&quot; can cause a skip or a repeat depending on whether the
+time moves back or jumps forward.</li>
+</ul>
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor">CronTriggerImpl()</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html">CronTriggerImpl</a> with no settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronTriggerImpl()</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The start-time will also be set to the current time, and the time zone
+will be set to the system&apos;s default time zone.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor(System.String)">CronTriggerImpl(String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html">CronTriggerImpl</a> with the given name and default group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronTriggerImpl(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The start-time will also be set to the current time, and the time zone
+will be set to the system&apos;s default time zone.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_System_String_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor(System.String,System.String)">CronTriggerImpl(String, String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html">CronTriggerImpl</a> with the given name and group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronTriggerImpl(string name, string group)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The start-time will also be set to the current time, and the time zone
+will be set to the system&apos;s default time zone.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_System_String_System_String_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor(System.String,System.String,System.String)">CronTriggerImpl(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html">CronTriggerImpl</a> with the given name, group and
+expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronTriggerImpl(string name, string group, string cronExpression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cronExpression</span></td>
+        <td><p>A cron expression dictating the firing sequence of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The start-time will also be set to the current time, and the time zone
+will be set to the system&apos;s default time zone.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_System_String_System_String_System_String_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor(System.String,System.String,System.String,System.String)">CronTriggerImpl(String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html">CronTriggerImpl</a> with the given name and group, and
+associated with the identified <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronTriggerImpl(string name, string group, string jobName, string jobGroup)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobName</span></td>
+        <td><p>name of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> executed on firetime</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobGroup</span></td>
+        <td><p>Group of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> executed on firetime</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_System_String_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The start-time will also be set to the current time, and the time zone
+will be set to the system&apos;s default time zone.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_System_String_System_String_System_String_System_DateTimeOffset_System_Nullable_System_DateTimeOffset__System_String_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor(System.String,System.String,System.String,System.String,System.DateTimeOffset,System.Nullable{System.DateTimeOffset},System.String)">CronTriggerImpl(String, String, String, String, DateTimeOffset, Nullable&lt;DateTimeOffset&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a> that will occur at the given time,
+until the given end time.
+<p>
+If null, the start-time will also be set to the current time, the time
+zone will be set to the system&apos;s default.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronTriggerImpl(string name, string group, string jobName, string jobGroup, DateTimeOffset startTimeUtc, DateTimeOffset? endTime, string cronExpression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobName</span></td>
+        <td><p>name of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> executed on firetime</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobGroup</span></td>
+        <td><p>Group of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> executed on firetime</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">startTimeUtc</span></td>
+        <td><p>A <span class="xref">System.DateTimeOffset</span> set to the earliest time for the  <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to start firing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">endTime</span></td>
+        <td><p>A <span class="xref">System.DateTimeOffset</span> set to the time for the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to quit repeat firing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cronExpression</span></td>
+        <td><p>A cron expression dictating the firing sequence of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_System_String_System_String_System_String_System_DateTimeOffset_System_Nullable_System_DateTimeOffset__System_String_System_TimeZoneInfo_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor(System.String,System.String,System.String,System.String,System.DateTimeOffset,System.Nullable{System.DateTimeOffset},System.String,System.TimeZoneInfo)">CronTriggerImpl(String, String, String, String, DateTimeOffset, Nullable&lt;DateTimeOffset&gt;, String, TimeZoneInfo)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html">CronTriggerImpl</a> with fire time dictated by the
+<code data-dev-comment-type="paramref" class="paramref">cronExpression</code> resolved with respect to the specified
+<code data-dev-comment-type="paramref" class="paramref">timeZone</code> occurring from the <span class="xref">Quartz.Impl.Triggers.CronTriggerImpl.startTimeUtc</span> until
+the given <code data-dev-comment-type="paramref" class="paramref">endTime</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronTriggerImpl(string name, string group, string jobName, string jobGroup, DateTimeOffset startTimeUtc, DateTimeOffset? endTime, string cronExpression, TimeZoneInfo timeZone)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobName</span></td>
+        <td><p>name of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> executed on firetime</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobGroup</span></td>
+        <td><p>Group of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> executed on firetime</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">startTimeUtc</span></td>
+        <td><p>A <span class="xref">System.DateTimeOffset</span> set to the earliest time for the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to start firing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">endTime</span></td>
+        <td><p>A <span class="xref">System.DateTimeOffset</span> set to the time for the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to quit repeat firing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cronExpression</span></td>
+        <td><p>A cron expression dictating the firing sequence of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeZoneInfo</span></td>
+        <td><span class="parametername">timeZone</span></td>
+        <td><p>Specifies for which time zone the cronExpression should be interpreted, 
+i.e. the expression 0 0 10 * * ?, is resolved to 10:00 am in this time zone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_System_String_System_String_System_String_System_String_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor(System.String,System.String,System.String,System.String,System.String)">CronTriggerImpl(String, String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a> with the given name and group,
+associated with the identified <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>,
+and with the given &quot;cron&quot; expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronTriggerImpl(string name, string group, string jobName, string jobGroup, string cronExpression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobName</span></td>
+        <td><p>name of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> executed on firetime</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobGroup</span></td>
+        <td><p>Group of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> executed on firetime</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cronExpression</span></td>
+        <td><p>A cron expression dictating the firing sequence of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_System_String_System_String_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The start-time will also be set to the current time, and the time zone
+will be set to the system&apos;s default time zone.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl__ctor_System_String_System_String_System_String_System_String_System_String_System_TimeZoneInfo_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.#ctor(System.String,System.String,System.String,System.String,System.String,System.TimeZoneInfo)">CronTriggerImpl(String, String, String, String, String, TimeZoneInfo)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a> with the given name and group,
+associated with the identified <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>,
+and with the given &quot;cron&quot; expression resolved with respect to the <a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html#Quartz_Impl_Triggers_CronTriggerImpl_TimeZone">TimeZone</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronTriggerImpl(string name, string group, string jobName, string jobGroup, string cronExpression, TimeZoneInfo timeZone)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobName</span></td>
+        <td><p>name of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> executed on firetime</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobGroup</span></td>
+        <td><p>Group of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> executed on firetime</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cronExpression</span></td>
+        <td><p>A cron expression dictating the firing sequence of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeZoneInfo</span></td>
+        <td><span class="parametername">timeZone</span></td>
+        <td><p>Specifies for which time zone the cronExpression should be interpreted, 
+i.e. the expression 0 0 10 * * ?, is resolved to 10:00 am in this time zone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_YearToGiveupSchedulingAt" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.YearToGiveupSchedulingAt">YearToGiveupSchedulingAt</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int YearToGiveupSchedulingAt = 2299</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_CronExpression_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.CronExpression*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_CronExpression" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.CronExpression">CronExpression</h4>
+  <div class="markdown level1 summary"><p>Set the CronExpression to the given one.  The TimeZone on the passed-in
+CronExpression over-rides any that was already set on the Trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpression CronExpression { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></td>
+        <td><p>The cron expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_CronExpressionString_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.CronExpressionString*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_CronExpressionString" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.CronExpressionString">CronExpressionString</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the cron expression string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CronExpressionString { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The cron expression string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_EndTimeUtc_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.EndTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_EndTimeUtc" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.EndTimeUtc">EndTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Get or sets the time at which the <code>CronTrigger</code> should quit
+repeating - even if repeatCount isn&apos;t yet satisfied. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? EndTimeUtc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_EndTimeUtc">AbstractTrigger.EndTimeUtc</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_FinalFireTimeUtc_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.FinalFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_FinalFireTimeUtc" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.FinalFireTimeUtc">FinalFireTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Returns the last UTC time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will fire, if
+the Trigger will repeat indefinitely, null will be returned.
+<p>
+Note that the return time <em>may</em> be in the past.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? FinalFireTimeUtc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_FinalFireTimeUtc">AbstractTrigger.FinalFireTimeUtc</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_HasMillisecondPrecision_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.HasMillisecondPrecision*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_HasMillisecondPrecision" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.HasMillisecondPrecision">HasMillisecondPrecision</h4>
+  <div class="markdown level1 summary"><p>Tells whether this Trigger instance can handle events
+in millisecond precision.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool HasMillisecondPrecision { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_HasMillisecondPrecision">AbstractTrigger.HasMillisecondPrecision</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_StartTimeUtc_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.StartTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_StartTimeUtc" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.StartTimeUtc">StartTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Returns the date/time on which the trigger may begin firing. This
+defines the initial boundary for trigger firings the trigger
+will not fire prior to this date and time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset StartTimeUtc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_StartTimeUtc">AbstractTrigger.StartTimeUtc</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_TimeZone_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.TimeZone*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_TimeZone" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.TimeZone">TimeZone</h4>
+  <div class="markdown level1 summary"><p>Sets the time zone for which the <a class="xref" href="Quartz.ICronTrigger.html#Quartz_ICronTrigger_CronExpressionString">CronExpressionString</a> of this
+<a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a> will be resolved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeZoneInfo TimeZone { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeZoneInfo</span></td>
+        <td><p>The time zone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_Triggers_CronTriggerImpl_TimeZone_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Quartz.ICronTrigger.html#Quartz_ICronTrigger_CronExpressionString">CronExpressionString</a> is set after this
+property, the TimeZone setting on the CronExpression will &quot;win&quot;.  However
+if <a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html#Quartz_Impl_Triggers_CronTriggerImpl_CronExpressionString">CronExpressionString</a> is set after this property, the
+time zone applied by this method will remain in effect, since the 
+string cron expression does not carry a time zone!</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_Clone_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.Clone*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_Clone" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Clones this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Clone">AbstractTrigger.Clone()</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_ComputeFirstFireTimeUtc_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.ComputeFirstFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_ComputeFirstFireTimeUtc_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.ComputeFirstFireTimeUtc(Quartz.ICalendar)">ComputeFirstFireTimeUtc(ICalendar)</h4>
+  <div class="markdown level1 summary"><p>Called by the scheduler at the time a <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is first
+added to the scheduler, in order to have the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+compute its first fire time, based on any associated calendar.
+<p>
+After this method has been called, <a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html#Quartz_Impl_Triggers_CronTriggerImpl_GetNextFireTimeUtc">GetNextFireTimeUtc()</a>
+should return a valid answer.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? ComputeFirstFireTimeUtc(ICalendar cal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>the first time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will be fired
+by the scheduler, which is also the same value <a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html#Quartz_Impl_Triggers_CronTriggerImpl_GetNextFireTimeUtc">GetNextFireTimeUtc()</a>
+will return (until after the first firing of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_ComputeFirstFireTimeUtc_Quartz_ICalendar_">AbstractTrigger.ComputeFirstFireTimeUtc(ICalendar)</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_GetExpressionSummary_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetExpressionSummary*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_GetExpressionSummary" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetExpressionSummary">GetExpressionSummary()</h4>
+  <div class="markdown level1 summary"><p>Gets the expression summary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetExpressionSummary()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_GetFireTimeAfter_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetFireTimeAfter*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetFireTimeAfter(System.Nullable{System.DateTimeOffset})">GetFireTimeAfter(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> will fire,
+after the given time. If the trigger will not fire after the given time,
+<span class="xref">null</span> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? GetFireTimeAfter(DateTimeOffset? afterTimeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">afterTimeUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetFireTimeAfter_System_Nullable_System_DateTimeOffset__">AbstractTrigger.GetFireTimeAfter(Nullable&lt;DateTimeOffset&gt;)</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_GetMayFireAgain_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetMayFireAgain*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_GetMayFireAgain" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetMayFireAgain">GetMayFireAgain()</h4>
+  <div class="markdown level1 summary"><p>Used by the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> to determine whether or not
+it is possible for this <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> to fire again.
+<p>
+If the returned value is <span class="xref">false</span> then the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>
+may remove the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> from the <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool GetMayFireAgain()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetMayFireAgain">AbstractTrigger.GetMayFireAgain()</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_GetNextFireTimeUtc_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetNextFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_GetNextFireTimeUtc" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetNextFireTimeUtc">GetNextFireTimeUtc()</h4>
+  <div class="markdown level1 summary"><p>Returns the next time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> is scheduled to fire. If
+the trigger will not fire again, <span class="xref">null</span> will be returned.  Note that
+the time returned can possibly be in the past, if the time that was computed
+for the trigger to next fire has already arrived, but the scheduler has not yet
+been able to fire the trigger (which would likely be due to lack of resources
+e.g. threads).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? GetNextFireTimeUtc()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetNextFireTimeUtc">AbstractTrigger.GetNextFireTimeUtc()</a></div>
+  <h5 id="Quartz_Impl_Triggers_CronTriggerImpl_GetNextFireTimeUtc_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The value returned is not guaranteed to be valid until after the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+has been added to the scheduler.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_GetPreviousFireTimeUtc_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetPreviousFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_GetPreviousFireTimeUtc" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetPreviousFireTimeUtc">GetPreviousFireTimeUtc()</h4>
+  <div class="markdown level1 summary"><p>Returns the previous time at which the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> fired.
+If the trigger has not yet fired, <span class="xref">null</span> will be returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset? GetPreviousFireTimeUtc()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetPreviousFireTimeUtc">AbstractTrigger.GetPreviousFireTimeUtc()</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_GetScheduleBuilder_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetScheduleBuilder*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_GetScheduleBuilder" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetScheduleBuilder">GetScheduleBuilder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IScheduleBuilder GetScheduleBuilder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_GetScheduleBuilder">AbstractTrigger.GetScheduleBuilder()</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_GetTimeAfter_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetTimeAfter*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_GetTimeAfter_System_DateTimeOffset_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetTimeAfter(System.DateTimeOffset)">GetTimeAfter(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Gets the next time to fire after the given time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DateTimeOffset? GetTimeAfter(DateTimeOffset afterTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">afterTime</span></td>
+        <td><p>The time to compute from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_GetTimeBefore_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetTimeBefore*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_GetTimeBefore_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.GetTimeBefore(System.Nullable{System.DateTimeOffset})">GetTimeBefore(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"><p>NOT YET IMPLEMENTED: Returns the time before the given time
+that this <a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a> will fire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DateTimeOffset? GetTimeBefore(DateTimeOffset? date)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">date</span></td>
+        <td><p>The date.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_SetNextFireTimeUtc_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.SetNextFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_SetNextFireTimeUtc_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.SetNextFireTimeUtc(System.Nullable{System.DateTimeOffset})">SetNextFireTimeUtc(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets the next fire time.
+<p>
+<strong>This method should not be invoked by client code.</strong>
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetNextFireTimeUtc(DateTimeOffset? fireTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">fireTime</span></td>
+        <td><p>The fire time.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_SetNextFireTimeUtc_System_Nullable_System_DateTimeOffset__">AbstractTrigger.SetNextFireTimeUtc(Nullable&lt;DateTimeOffset&gt;)</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_SetPreviousFireTimeUtc_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.SetPreviousFireTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_SetPreviousFireTimeUtc_System_Nullable_System_DateTimeOffset__" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.SetPreviousFireTimeUtc(System.Nullable{System.DateTimeOffset})">SetPreviousFireTimeUtc(Nullable&lt;DateTimeOffset&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets the previous fire time.
+<p>
+<strong>This method should not be invoked by client code.</strong>
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetPreviousFireTimeUtc(DateTimeOffset? fireTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">fireTime</span></td>
+        <td><p>The fire time.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_SetPreviousFireTimeUtc_System_Nullable_System_DateTimeOffset__">AbstractTrigger.SetPreviousFireTimeUtc(Nullable&lt;DateTimeOffset&gt;)</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_Triggered_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.Triggered*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_Triggered_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.Triggered(Quartz.ICalendar)">Triggered(ICalendar)</h4>
+  <div class="markdown level1 summary"><p>Called when the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> has decided to &apos;fire&apos;
+the trigger (Execute the associated <a class="xref" href="Quartz.IJob.html">IJob</a>), in order to
+give the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> a chance to update itself for its next
+triggering (if any).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Triggered(ICalendar cal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_Triggered_Quartz_ICalendar_">AbstractTrigger.Triggered(ICalendar)</a></div>
+  <h5 id="Quartz_Impl_Triggers_CronTriggerImpl_Triggered_Quartz_ICalendar__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.JobExecutionException.html">JobExecutionException</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_UpdateAfterMisfire_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.UpdateAfterMisfire*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_UpdateAfterMisfire_Quartz_ICalendar_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.UpdateAfterMisfire(Quartz.ICalendar)">UpdateAfterMisfire(ICalendar)</h4>
+  <div class="markdown level1 summary"><p>This method should not be used by the Quartz client.
+<p>
+To be implemented by the concrete classes that extend this class.
+</p>
+<p>
+The implementation should update the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&apos;s state
+based on the MISFIRE_INSTRUCTION_XXX that was selected when the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+was created.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UpdateAfterMisfire(ICalendar cal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_UpdateAfterMisfire_Quartz_ICalendar_">AbstractTrigger.UpdateAfterMisfire(ICalendar)</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_UpdateWithNewCalendar_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.UpdateWithNewCalendar*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_UpdateWithNewCalendar_Quartz_ICalendar_System_TimeSpan_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.UpdateWithNewCalendar(Quartz.ICalendar,System.TimeSpan)">UpdateWithNewCalendar(ICalendar, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Updates the trigger with new calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UpdateWithNewCalendar(ICalendar calendar, TimeSpan misfireThreshold)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">calendar</span></td>
+        <td><p>The calendar to update with.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">misfireThreshold</span></td>
+        <td><p>The misfire threshold.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_UpdateWithNewCalendar_Quartz_ICalendar_System_TimeSpan_">AbstractTrigger.UpdateWithNewCalendar(ICalendar, TimeSpan)</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_ValidateMisfireInstruction_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.ValidateMisfireInstruction*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_ValidateMisfireInstruction_System_Int32_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.ValidateMisfireInstruction(System.Int32)">ValidateMisfireInstruction(Int32)</h4>
+  <div class="markdown level1 summary"><p>Validates the misfire instruction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool ValidateMisfireInstruction(int misfireInstruction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">misfireInstruction</span></td>
+        <td><p>The misfire instruction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Triggers.AbstractTrigger.html#Quartz_Impl_Triggers_AbstractTrigger_ValidateMisfireInstruction_System_Int32_">AbstractTrigger.ValidateMisfireInstruction(Int32)</a></div>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_WillFireOn_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.WillFireOn*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_WillFireOn_System_DateTimeOffset_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.WillFireOn(System.DateTimeOffset)">WillFireOn(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>
+Determines whether the date and (optionally) time of the given Calendar 
+instance falls on a scheduled fire-time of this trigger.
+</p>
+
+<p>
+Equivalent to calling <a class="xref" href="Quartz.Impl.Triggers.CronTriggerImpl.html#Quartz_Impl_Triggers_CronTriggerImpl_WillFireOn_System_DateTimeOffset_System_Boolean_">WillFireOn(DateTimeOffset, Boolean)</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WillFireOn(DateTimeOffset test)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">test</span></td>
+        <td><p>The date to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Triggers_CronTriggerImpl_WillFireOn_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.WillFireOn*"></a>
+  <h4 id="Quartz_Impl_Triggers_CronTriggerImpl_WillFireOn_System_DateTimeOffset_System_Boolean_" data-uid="Quartz.Impl.Triggers.CronTriggerImpl.WillFireOn(System.DateTimeOffset,System.Boolean)">WillFireOn(DateTimeOffset, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the date and (optionally) time of the given Calendar 
+instance falls on a scheduled fire-time of this trigger.
+<p>
+Note that the value returned is NOT validated against the related
+ICalendar (if any).
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WillFireOn(DateTimeOffset test, bool dayOnly)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">test</span></td>
+        <td><p>The date to compare</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">dayOnly</span></td>
+        <td><p>If set to true, the method will only determine if the
+trigger will fire during the day represented by the given Calendar
+(hours, minutes and seconds will be ignored).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.Spi.IMutableTrigger.html">IMutableTrigger</a>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

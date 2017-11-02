@@ -1,0 +1,993 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class JobDetailImpl
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class JobDetailImpl
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.JobDetailImpl">
+  
+  
+  <h1 id="Quartz_Impl_JobDetailImpl" data-uid="Quartz.Impl.JobDetailImpl" class="text-break">Class JobDetailImpl
+  </h1>
+  <div class="markdown level0 summary"><p>Conveys the detail properties of a given job instance. </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">JobDetailImpl</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></div>
+    <div><span class="xref">System.ICloneable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.html">Quartz.Impl</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_JobDetailImpl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class JobDetailImpl : IJobDetail, ICloneable</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_JobDetailImpl_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Quartz does not store an actual instance of a <a class="xref" href="Quartz.IJob.html">IJob</a> type, but
+instead allows you to define an instance of one, through the use of a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>.
+<p>
+<a class="xref" href="Quartz.IJob.html">IJob</a>s have a name and group associated with them, which
+should uniquely identify them within a single <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.
+</p>
+<p>
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s are the &apos;mechanism&apos; by which <a class="xref" href="Quartz.IJob.html">IJob</a> s
+are scheduled. Many <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> s can point to the same <a class="xref" href="Quartz.IJob.html">IJob</a>,
+but a single <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> can only point to one <a class="xref" href="Quartz.IJob.html">IJob</a>.
+</p></p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl__ctor_" data-uid="Quartz.Impl.JobDetailImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl__ctor" data-uid="Quartz.Impl.JobDetailImpl.#ctor">JobDetailImpl()</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> with no specified name or group, and
+the default settings of all the other properties.
+<p>
+Note that the <a class="xref" href="Quartz.Impl.JobDetailImpl.html#Quartz_Impl_JobDetailImpl_Name">Name</a>,<a class="xref" href="Quartz.Impl.JobDetailImpl.html#Quartz_Impl_JobDetailImpl_Group">Group</a> and
+<a class="xref" href="Quartz.Impl.JobDetailImpl.html#Quartz_Impl_JobDetailImpl_JobType">JobType</a> properties must be set before the job can be
+placed into a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobDetailImpl()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl__ctor_" data-uid="Quartz.Impl.JobDetailImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl__ctor_System_String_System_String_System_Type_" data-uid="Quartz.Impl.JobDetailImpl.#ctor(System.String,System.String,System.Type)">JobDetailImpl(String, String, Type)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> with the given name, and group, and
+the default settings of all the other properties.
+If <span class="xref">null</span>, SchedulerConstants.DefaultGroup will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobDetailImpl(string name, string group, Type jobType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">jobType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If name is null or empty, or the group is an empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl__ctor_" data-uid="Quartz.Impl.JobDetailImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl__ctor_System_String_System_String_System_Type_System_Boolean_System_Boolean_" data-uid="Quartz.Impl.JobDetailImpl.#ctor(System.String,System.String,System.Type,System.Boolean,System.Boolean)">JobDetailImpl(String, String, Type, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> with the given name, and group, and
+the given settings of all the other properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobDetailImpl(string name, string group, Type jobType, bool isDurable, bool requestsRecovery)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>if <span class="xref">null</span>, SchedulerConstants.DefaultGroup will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">jobType</span></td>
+        <td><p>Type of the job.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isDurable</span></td>
+        <td><p>if set to <code>true</code>, job will be durable.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">requestsRecovery</span></td>
+        <td><p>if set to <code>true</code>, job will request recovery.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>ArgumentException if name is null or empty, or the group is an empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl__ctor_" data-uid="Quartz.Impl.JobDetailImpl.#ctor*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl__ctor_System_String_System_Type_" data-uid="Quartz.Impl.JobDetailImpl.#ctor(System.String,System.Type)">JobDetailImpl(String, Type)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> with the given name, default group, and
+the default settings of all the other properties.
+If <span class="xref">null</span>, SchedulerConstants.DefaultGroup will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobDetailImpl(string name, Type jobType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">jobType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If name is null or empty, or the group is an empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_ConcurrentExecutionDisallowed_" data-uid="Quartz.Impl.JobDetailImpl.ConcurrentExecutionDisallowed*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_ConcurrentExecutionDisallowed" data-uid="Quartz.Impl.JobDetailImpl.ConcurrentExecutionDisallowed">ConcurrentExecutionDisallowed</h4>
+  <div class="markdown level1 summary"><p>Whether the associated Job class carries the <a class="xref" href="Quartz.DisallowConcurrentExecutionAttribute.html">DisallowConcurrentExecutionAttribute</a> attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool ConcurrentExecutionDisallowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_Description_" data-uid="Quartz.Impl.JobDetailImpl.Description*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_Description" data-uid="Quartz.Impl.JobDetailImpl.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Get or set the description given to the <a class="xref" href="Quartz.IJob.html">IJob</a> instance by its
+creator (if any).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_JobDetailImpl_Description_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>May be useful for remembering/displaying the purpose of the job, though the
+description has no meaning to Quartz.</p>
+</div>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_Durable_" data-uid="Quartz.Impl.JobDetailImpl.Durable*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_Durable" data-uid="Quartz.Impl.JobDetailImpl.Durable">Durable</h4>
+  <div class="markdown level1 summary"><p>Whether or not the <a class="xref" href="Quartz.IJob.html">IJob</a> should remain stored after it is
+orphaned (no <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s point to it).
+<p>
+If not explicitly set, the default value is <span class="xref">false</span>.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Durable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the Job should remain persisted after
+being orphaned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_FullName_" data-uid="Quartz.Impl.JobDetailImpl.FullName*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_FullName" data-uid="Quartz.Impl.JobDetailImpl.FullName">FullName</h4>
+  <div class="markdown level1 summary"><p>Returns the &apos;full name&apos; of the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> in the format
+&quot;group.name&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string FullName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_Group_" data-uid="Quartz.Impl.JobDetailImpl.Group*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_Group" data-uid="Quartz.Impl.JobDetailImpl.Group">Group</h4>
+  <div class="markdown level1 summary"><p>Get or sets the group of this <a class="xref" href="Quartz.IJob.html">IJob</a>. 
+If <span class="xref">null</span>, <a class="xref" href="Quartz.SchedulerConstants.html#Quartz_SchedulerConstants_DefaultGroup">DefaultGroup</a> will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Group { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If the group is an empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_JobDataMap_" data-uid="Quartz.Impl.JobDetailImpl.JobDataMap*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_JobDataMap" data-uid="Quartz.Impl.JobDetailImpl.JobDataMap">JobDataMap</h4>
+  <div class="markdown level1 summary"><p>Get or set the <a class="xref" href="Quartz.Impl.JobDetailImpl.html#Quartz_Impl_JobDetailImpl_JobDataMap">JobDataMap</a> that is associated with the <a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JobDataMap JobDataMap { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_JobType_" data-uid="Quartz.Impl.JobDetailImpl.JobType*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_JobType" data-uid="Quartz.Impl.JobDetailImpl.JobType">JobType</h4>
+  <div class="markdown level1 summary"><p>Get or sets the instance of <a class="xref" href="Quartz.IJob.html">IJob</a> that will be executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Type JobType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>if jobType is null or the class is not a <a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_Key_" data-uid="Quartz.Impl.JobDetailImpl.Key*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_Key" data-uid="Quartz.Impl.JobDetailImpl.Key">Key</h4>
+  <div class="markdown level1 summary"><p>Gets the key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JobKey Key { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobKey.html">JobKey</a></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_Name_" data-uid="Quartz.Impl.JobDetailImpl.Name*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_Name" data-uid="Quartz.Impl.JobDetailImpl.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Get or sets the name of this <a class="xref" href="Quartz.IJob.html">IJob</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>if name is null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_PersistJobDataAfterExecution_" data-uid="Quartz.Impl.JobDetailImpl.PersistJobDataAfterExecution*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_PersistJobDataAfterExecution" data-uid="Quartz.Impl.JobDetailImpl.PersistJobDataAfterExecution">PersistJobDataAfterExecution</h4>
+  <div class="markdown level1 summary"><p>Whether the associated Job class carries the <a class="xref" href="Quartz.Impl.JobDetailImpl.html#Quartz_Impl_JobDetailImpl_PersistJobDataAfterExecution">PersistJobDataAfterExecution</a> attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool PersistJobDataAfterExecution { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_RequestsRecovery_" data-uid="Quartz.Impl.JobDetailImpl.RequestsRecovery*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_RequestsRecovery" data-uid="Quartz.Impl.JobDetailImpl.RequestsRecovery">RequestsRecovery</h4>
+  <div class="markdown level1 summary"><p>Set whether or not the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> should re-Execute
+the <a class="xref" href="Quartz.IJob.html">IJob</a> if a &apos;recovery&apos; or &apos;fail-over&apos; situation is
+encountered.
+<p>
+If not explicitly set, the default value is <span class="xref">false</span>.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool RequestsRecovery { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Impl_JobDetailImpl_RequestsRecovery_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJobExecutionContext.html#Quartz_IJobExecutionContext_Recovering">Recovering</a></div>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_Clone_" data-uid="Quartz.Impl.JobDetailImpl.Clone*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_Clone" data-uid="Quartz.Impl.JobDetailImpl.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Creates a new object that is a copy of the current instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual object Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>A new object that is a copy of this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_Equals_" data-uid="Quartz.Impl.JobDetailImpl.Equals*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_Equals_Quartz_Impl_JobDetailImpl_" data-uid="Quartz.Impl.JobDetailImpl.Equals(Quartz.Impl.JobDetailImpl)">Equals(JobDetailImpl)</h4>
+  <div class="markdown level1 summary"><p>Checks equality between given job detail and this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Equals(JobDetailImpl detail)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.JobDetailImpl.html">JobDetailImpl</a></td>
+        <td><span class="parametername">detail</span></td>
+        <td><p>The detail to compare this instance with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_Equals_" data-uid="Quartz.Impl.JobDetailImpl.Equals*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_Equals_System_Object_" data-uid="Quartz.Impl.JobDetailImpl.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <span class="xref">System.Object</span> is equal to the current <span class="xref">System.Object</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The <span class="xref">System.Object</span> to compare with the current <span class="xref">System.Object</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the specified <span class="xref">System.Object</span> is equal to the
+current <span class="xref">System.Object</span>; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_GetHashCode_" data-uid="Quartz.Impl.JobDetailImpl.GetHashCode*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_GetHashCode" data-uid="Quartz.Impl.JobDetailImpl.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Serves as a hash function for a particular type, suitable
+for use in hashing algorithms and data structures like a hash table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A hash code for the current <span class="xref">System.Object</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_GetJobBuilder_" data-uid="Quartz.Impl.JobDetailImpl.GetJobBuilder*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_GetJobBuilder" data-uid="Quartz.Impl.JobDetailImpl.GetJobBuilder">GetJobBuilder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JobBuilder GetJobBuilder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.JobBuilder.html">JobBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_IsEqual_" data-uid="Quartz.Impl.JobDetailImpl.IsEqual*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_IsEqual_Quartz_Impl_JobDetailImpl_" data-uid="Quartz.Impl.JobDetailImpl.IsEqual(Quartz.Impl.JobDetailImpl)">IsEqual(JobDetailImpl)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified detail is equal to this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool IsEqual(JobDetailImpl detail)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.JobDetailImpl.html">JobDetailImpl</a></td>
+        <td><span class="parametername">detail</span></td>
+        <td><p>The detail to examine.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the specified detail is equal; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_ToString_" data-uid="Quartz.Impl.JobDetailImpl.ToString*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_ToString" data-uid="Quartz.Impl.JobDetailImpl.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Return a simple string representation of this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  
+  
+  <a id="Quartz_Impl_JobDetailImpl_Validate_" data-uid="Quartz.Impl.JobDetailImpl.Validate*"></a>
+  <h4 id="Quartz_Impl_JobDetailImpl_Validate" data-uid="Quartz.Impl.JobDetailImpl.Validate">Validate()</h4>
+  <div class="markdown level1 summary"><p>Validates whether the properties of the <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a> are
+valid for submission into a <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Validate()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.IJob.html">IJob</a></div>
+      <div><a class="xref" href="Quartz.DisallowConcurrentExecutionAttribute.html">DisallowConcurrentExecutionAttribute</a></div>
+      <div><a class="xref" href="Quartz.PersistJobDataAfterExecutionAttribute.html">PersistJobDataAfterExecutionAttribute</a></div>
+      <div><a class="xref" href="Quartz.Impl.JobDetailImpl.html#Quartz_Impl_JobDetailImpl_JobDataMap">JobDataMap</a></div>
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

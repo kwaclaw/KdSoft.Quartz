@@ -1,0 +1,1070 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SimplePropertiesTriggerPersistenceDelegateSupport
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SimplePropertiesTriggerPersistenceDelegateSupport
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport">
+  
+  
+  <h1 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport" class="text-break">Class SimplePropertiesTriggerPersistenceDelegateSupport
+  </h1>
+  <div class="markdown level0 summary"><p>A base implementation of <a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html">ITriggerPersistenceDelegate</a> that persists
+trigger fields in the &quot;QRTZ_SIMPROP_TRIGGERS&quot; table.  This allows extending
+concrete classes to simply implement a couple methods that do the work of
+getting/setting the trigger&apos;s fields, and creating the <a class="xref" href="Quartz.IScheduleBuilder.html">IScheduleBuilder</a>
+for the particular type of trigger.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SimplePropertiesTriggerPersistenceDelegateSupport</span></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.AdoJobStore.CalendarIntervalTriggerPersistenceDelegate.html">CalendarIntervalTriggerPersistenceDelegate</a></div>
+      <div class="level2"><a class="xref" href="Quartz.Impl.AdoJobStore.DailyTimeIntervalTriggerPersistenceDelegate.html">DailyTimeIntervalTriggerPersistenceDelegate</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html">ITriggerPersistenceDelegate</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.AdoJobStore.html">Quartz.Impl.AdoJobStore</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class SimplePropertiesTriggerPersistenceDelegateSupport : ITriggerPersistenceDelegate</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport__ctor_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.#ctor*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport__ctor" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.#ctor">SimplePropertiesTriggerPersistenceDelegateSupport()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SimplePropertiesTriggerPersistenceDelegateSupport()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnBoolProp1" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnBoolProp1">ColumnBoolProp1</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnBoolProp1 = &quot;BOOL_PROP_1&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnBoolProp2" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnBoolProp2">ColumnBoolProp2</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnBoolProp2 = &quot;BOOL_PROP_2&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnDecProp1" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnDecProp1">ColumnDecProp1</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnDecProp1 = &quot;DEC_PROP_1&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnDecProp2" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnDecProp2">ColumnDecProp2</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnDecProp2 = &quot;DEC_PROP_2&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnIntProp1" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnIntProp1">ColumnIntProp1</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnIntProp1 = &quot;INT_PROP_1&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnIntProp2" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnIntProp2">ColumnIntProp2</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnIntProp2 = &quot;INT_PROP_2&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnLongProp1" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnLongProp1">ColumnLongProp1</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnLongProp1 = &quot;LONG_PROP_1&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnLongProp2" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnLongProp2">ColumnLongProp2</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnLongProp2 = &quot;LONG_PROP_2&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnStrProp1" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnStrProp1">ColumnStrProp1</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnStrProp1 = &quot;STR_PROP_1&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnStrProp2" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnStrProp2">ColumnStrProp2</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnStrProp2 = &quot;STR_PROP_2&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnStrProp3" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnStrProp3">ColumnStrProp3</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnStrProp3 = &quot;STR_PROP_3&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_ColumnTimeZoneId" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.ColumnTimeZoneId">ColumnTimeZoneId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ColumnTimeZoneId = &quot;TIME_ZONE_ID&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_DeleteSimplePropsTrigger" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.DeleteSimplePropsTrigger">DeleteSimplePropsTrigger</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string DeleteSimplePropsTrigger = &quot;DELETE FROM {0}SIMPROP_TRIGGERS WHERE SCHED_NAME = {1} AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_InsertSimplePropsTrigger" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.InsertSimplePropsTrigger">InsertSimplePropsTrigger</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string InsertSimplePropsTrigger = &quot;INSERT INTO {0}SIMPROP_TRIGGERS (SCHED_NAME, TRIGGER_NAME, TRIGGER_GROUP, STR_PROP_1, STR_PROP_2, STR_PROP_3, INT_PROP_1, INT_PROP_2, LONG_PROP_1, LONG_PROP_2, DEC_PROP_1, DEC_PROP_2, BOOL_PROP_1, BOOL_PROP_2, TIME_ZONE_ID)  VALUES({1}, @triggerName, @triggerGroup, @string1, @string2, @string3, @int1, @int2, @long1, @long2, @decimal1, @decimal2, @boolean1, @boolean2, @timeZoneId)&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_SelectSimplePropsTrigger" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.SelectSimplePropsTrigger">SelectSimplePropsTrigger</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string SelectSimplePropsTrigger = &quot;SELECT * FROM {0}SIMPROP_TRIGGERS WHERE SCHED_NAME = {1} AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_TableSimplePropertiesTriggers" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.TableSimplePropertiesTriggers">TableSimplePropertiesTriggers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string TableSimplePropertiesTriggers = &quot;SIMPROP_TRIGGERS&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_UpdateSimplePropsTrigger" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.UpdateSimplePropsTrigger">UpdateSimplePropsTrigger</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string UpdateSimplePropsTrigger = &quot;UPDATE {0}SIMPROP_TRIGGERS SET STR_PROP_1 = @string1, STR_PROP_2 = @string2, STR_PROP_3 = @string3, INT_PROP_1 = @int1, INT_PROP_2 = @int2, LONG_PROP_1 = @long1, LONG_PROP_2 = @long2, DEC_PROP_1 = @decimal1, DEC_PROP_2 = @decimal2, BOOL_PROP_1 = @boolean1, BOOL_PROP_2 = @boolean2, TIME_ZONE_ID = @timeZoneId WHERE SCHED_NAME = {1} AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_DbAccessor_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.DbAccessor*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_DbAccessor" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.DbAccessor">DbAccessor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IDbAccessor DbAccessor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.IDbAccessor.html">IDbAccessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_SchedNameLiteral_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.SchedNameLiteral*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_SchedNameLiteral" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.SchedNameLiteral">SchedNameLiteral</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string SchedNameLiteral { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_TablePrefix_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.TablePrefix*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_TablePrefix" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.TablePrefix">TablePrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string TablePrefix { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_CanHandleTriggerType_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.CanHandleTriggerType*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_CanHandleTriggerType_Quartz_Spi_IOperableTrigger_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.CanHandleTriggerType(Quartz.Spi.IOperableTrigger)">CanHandleTriggerType(IOperableTrigger)</h4>
+  <div class="markdown level1 summary"><p>Returns whether the trigger type can be handled by delegate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool CanHandleTriggerType(IOperableTrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_DeleteExtendedTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.DeleteExtendedTriggerProperties*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_DeleteExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.DeleteExtendedTriggerProperties(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey)">DeleteExtendedTriggerProperties(ConnectionAndTransactionHolder, TriggerKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DeleteExtendedTriggerProperties(ConnectionAndTransactionHolder conn, TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_GetHandledTriggerTypeDiscriminator_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.GetHandledTriggerTypeDiscriminator*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_GetHandledTriggerTypeDiscriminator" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.GetHandledTriggerTypeDiscriminator">GetHandledTriggerTypeDiscriminator()</h4>
+  <div class="markdown level1 summary"><p>Returns database discriminator value for trigger type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract string GetHandledTriggerTypeDiscriminator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_GetTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.GetTriggerProperties*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_GetTriggerProperties_Quartz_Spi_IOperableTrigger_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.GetTriggerProperties(Quartz.Spi.IOperableTrigger)">GetTriggerProperties(IOperableTrigger)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract SimplePropertiesTriggerProperties GetTriggerProperties(IOperableTrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerProperties.html">SimplePropertiesTriggerProperties</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_GetTriggerPropertyBundle_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.GetTriggerPropertyBundle*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_GetTriggerPropertyBundle_Quartz_Impl_AdoJobStore_SimplePropertiesTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.GetTriggerPropertyBundle(Quartz.Impl.AdoJobStore.SimplePropertiesTriggerProperties)">GetTriggerPropertyBundle(SimplePropertiesTriggerProperties)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract TriggerPropertyBundle GetTriggerPropertyBundle(SimplePropertiesTriggerProperties properties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerProperties.html">SimplePropertiesTriggerProperties</a></td>
+        <td><span class="parametername">properties</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerPropertyBundle.html">TriggerPropertyBundle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_Initialize_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.Initialize*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_Initialize_System_String_System_String_Quartz_Impl_AdoJobStore_IDbAccessor_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.Initialize(System.String,System.String,Quartz.Impl.AdoJobStore.IDbAccessor)">Initialize(String, String, IDbAccessor)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize(string tablePrefix, string schedName, IDbAccessor dbAccessor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tablePrefix</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">schedName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.IDbAccessor.html">IDbAccessor</a></td>
+        <td><span class="parametername">dbAccessor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_InsertExtendedTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.InsertExtendedTriggerProperties*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_InsertExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Spi_IOperableTrigger_System_String_Quartz_IJobDetail_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.InsertExtendedTriggerProperties(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Spi.IOperableTrigger,System.String,Quartz.IJobDetail)">InsertExtendedTriggerProperties(ConnectionAndTransactionHolder, IOperableTrigger, String, IJobDetail)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int InsertExtendedTriggerProperties(ConnectionAndTransactionHolder conn, IOperableTrigger trigger, string state, IJobDetail jobDetail)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_LoadExtendedTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.LoadExtendedTriggerProperties*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_LoadExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_TriggerKey_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.LoadExtendedTriggerProperties(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.TriggerKey)">LoadExtendedTriggerProperties(ConnectionAndTransactionHolder, TriggerKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TriggerPropertyBundle LoadExtendedTriggerProperties(ConnectionAndTransactionHolder conn, TriggerKey triggerKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.TriggerKey.html">TriggerKey</a></td>
+        <td><span class="parametername">triggerKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.TriggerPropertyBundle.html">TriggerPropertyBundle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_UpdateExtendedTriggerProperties_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.UpdateExtendedTriggerProperties*"></a>
+  <h4 id="Quartz_Impl_AdoJobStore_SimplePropertiesTriggerPersistenceDelegateSupport_UpdateExtendedTriggerProperties_Quartz_Impl_AdoJobStore_ConnectionAndTransactionHolder_Quartz_Spi_IOperableTrigger_System_String_Quartz_IJobDetail_" data-uid="Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.UpdateExtendedTriggerProperties(Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder,Quartz.Spi.IOperableTrigger,System.String,Quartz.IJobDetail)">UpdateExtendedTriggerProperties(ConnectionAndTransactionHolder, IOperableTrigger, String, IJobDetail)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int UpdateExtendedTriggerProperties(ConnectionAndTransactionHolder conn, IOperableTrigger trigger, string state, IJobDetail jobDetail)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html">ConnectionAndTransactionHolder</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">jobDetail</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html">ITriggerPersistenceDelegate</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Impl.AdoJobStore.CalendarIntervalTriggerPersistenceDelegate.html">CalendarIntervalTriggerPersistenceDelegate</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

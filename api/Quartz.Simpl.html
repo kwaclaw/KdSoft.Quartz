@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Quartz.Simpl
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Quartz.Simpl
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Simpl">
+  
+  <h1 id="Quartz_Simpl" data-uid="Quartz.Simpl" class="text-break">Namespace Quartz.Simpl
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Quartz.Simpl.DefaultObjectSerializer.html">DefaultObjectSerializer</a></h4>
+      <section><p>Default object serialization strategy that uses <span class="xref">System.Runtime.Serialization.Formatters.Binary.BinaryFormatter</span> 
+under the hood.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.HostNameBasedIdGenerator.html">HostNameBasedIdGenerator</a></h4>
+      <section><p>Helper base class for host name lookup requiring instance id generators.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.HostnameInstanceIdGenerator.html">HostnameInstanceIdGenerator</a></h4>
+      <section><p><a class="xref" href="Quartz.Spi.IInstanceIdGenerator.html">IInstanceIdGenerator</a> that names the scheduler instance using 
+just the machine hostname.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.PropertySettingJobFactory.html">PropertySettingJobFactory</a></h4>
+      <section><p>A JobFactory that instantiates the Job instance (using the default no-arg
+constructor, or more specifically: <a class="xref" href="Quartz.Util.ObjectUtils.html#Quartz_Util_ObjectUtils_InstantiateType__1_System_Type_">InstantiateType&lt;T&gt;(Type)</a>), and
+then attempts to set all values from the <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a> and
+the <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a>&apos;s merged <a class="xref" href="Quartz.JobDataMap.html">JobDataMap</a> onto 
+properties of the job.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.RAMJobStore.html">RAMJobStore</a></h4>
+      <section><p>This class implements a <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a> that
+utilizes RAM as its storage device.
+<p>
+As you should know, the ramification of this is that access is extremely
+fast, but the data is completely volatile - therefore this <a class="xref" href="Quartz.Spi.IJobStore.html">IJobStore</a>
+should not be used if true persistence between program shutdowns is
+required.
+</p></p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.RemotingSchedulerExporter.html">RemotingSchedulerExporter</a></h4>
+      <section><p>Scheduler exporter that exports scheduler to remoting context.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.RemotingSchedulerProxyFactory.html">RemotingSchedulerProxyFactory</a></h4>
+      <section><p>A <a class="xref" href="Quartz.Spi.IRemotableSchedulerProxyFactory.html">IRemotableSchedulerProxyFactory</a> implementation that creates
+connection to remote scheduler using remoting.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.SimpleInstanceIdGenerator.html">SimpleInstanceIdGenerator</a></h4>
+      <section><p>The default InstanceIdGenerator used by Quartz when instance id is to be
+automatically generated.  Instance id is of the form HOSTNAME + CURRENT_TIME.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.SimpleJobFactory.html">SimpleJobFactory</a></h4>
+      <section><p>The default JobFactory used by Quartz - simply calls 
+<a class="xref" href="Quartz.Util.ObjectUtils.html#Quartz_Util_ObjectUtils_InstantiateType__1_System_Type_">InstantiateType&lt;T&gt;(Type)</a> on the job class.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.SimpleThreadPool.html">SimpleThreadPool</a></h4>
+      <section><p>This is class is a simple implementation of a thread pool, based on the
+<a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a> interface.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.SimpleThreadPool.WorkerThread.html">SimpleThreadPool.WorkerThread</a></h4>
+      <section><p>A Worker loops, waiting to Execute tasks.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.SimpleTypeLoadHelper.html">SimpleTypeLoadHelper</a></h4>
+      <section><p>A <a class="xref" href="Quartz.Spi.ITypeLoadHelper.html">ITypeLoadHelper</a> that simply calls <span class="xref">System.Type.GetType(System.String)</span>.</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.SystemPropertyInstanceIdGenerator.html">SystemPropertyInstanceIdGenerator</a></h4>
+      <section><p>InstanceIdGenerator that will use a <a class="xref" href="Quartz.Simpl.SystemPropertyInstanceIdGenerator.html#Quartz_Simpl_SystemPropertyInstanceIdGenerator_SystemProperty">SystemProperty</a> to configure the scheduler.
+If no value set for the property, a <a class="xref" href="Quartz.SchedulerException.html">SchedulerException</a> is thrown.
+<author>Alex Snaps</author></p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.TriggerWrapper.html">TriggerWrapper</a></h4>
+      <section><p>Helper wrapper class</p>
+</section>
+      <h4><a class="xref" href="Quartz.Simpl.ZeroSizeThreadPool.html">ZeroSizeThreadPool</a></h4>
+      <section><p>This is class is a simple implementation of a zero size thread pool, based on the
+<a class="xref" href="Quartz.Spi.IThreadPool.html">IThreadPool</a> interface.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Quartz.Simpl.IRemotableQuartzScheduler.html">IRemotableQuartzScheduler</a></h4>
+      <section><p>Remote scheduler service interface.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Quartz.Simpl.InternalTriggerState.html">InternalTriggerState</a></h4>
+      <section><p>Possible internal trigger states 
+in RAMJobStore</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

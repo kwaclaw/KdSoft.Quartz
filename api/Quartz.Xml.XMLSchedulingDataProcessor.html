@@ -1,0 +1,1319 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class XMLSchedulingDataProcessor
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class XMLSchedulingDataProcessor
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Xml.XMLSchedulingDataProcessor">
+  
+  
+  <h1 id="Quartz_Xml_XMLSchedulingDataProcessor" data-uid="Quartz.Xml.XMLSchedulingDataProcessor" class="text-break">Class XMLSchedulingDataProcessor
+  </h1>
+  <div class="markdown level0 summary"><p>Parses an XML file that declares Jobs and their schedules (Triggers).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">XMLSchedulingDataProcessor</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Xml.html">Quartz.Xml</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Xml_XMLSchedulingDataProcessor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class XMLSchedulingDataProcessor</code></pre>
+  </div>
+  <h5 id="Quartz_Xml_XMLSchedulingDataProcessor_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+The xml document must conform to the format defined in &quot;job_scheduling_data_2_0.xsd&quot;
+</p>
+
+<p>
+After creating an instance of this class, you should call one of the <a class="xref" href="Quartz.Xml.XMLSchedulingDataProcessor.html#Quartz_Xml_XMLSchedulingDataProcessor_ProcessFile">ProcessFile()</a>
+functions, after which you may call the ScheduledJobs()
+function to get a handle to the defined Jobs and Triggers, which can then be
+scheduled with the <a class="xref" href="Quartz.IScheduler.html">IScheduler</a>. Alternatively, you could call
+the <a class="xref" href="Quartz.Xml.XMLSchedulingDataProcessor.html#Quartz_Xml_XMLSchedulingDataProcessor_ProcessFileAndScheduleJobs_Quartz_IScheduler_">ProcessFileAndScheduleJobs(IScheduler)</a> function to do all of this
+in one step.
+</p>
+
+<p>
+The same instance can be used again and again, with the list of defined Jobs
+being cleared each time you call a <a class="xref" href="Quartz.Xml.XMLSchedulingDataProcessor.html#Quartz_Xml_XMLSchedulingDataProcessor_ProcessFile">ProcessFile()</a> method,
+however a single instance is not thread-safe.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor__ctor_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.#ctor*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor__ctor_Quartz_Spi_ITypeLoadHelper_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.#ctor(Quartz.Spi.ITypeLoadHelper)">XMLSchedulingDataProcessor(ITypeLoadHelper)</h4>
+  <div class="markdown level1 summary"><p>Constructor for XMLSchedulingDataProcessor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XMLSchedulingDataProcessor(ITypeLoadHelper typeLoadHelper)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.ITypeLoadHelper.html">ITypeLoadHelper</a></td>
+        <td><span class="parametername">typeLoadHelper</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_PropertyQuartzSystemIdDir" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.PropertyQuartzSystemIdDir">PropertyQuartzSystemIdDir</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PropertyQuartzSystemIdDir = &quot;quartz.system.id.dir&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_QuartzSchema" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.QuartzSchema">QuartzSchema</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string QuartzSchema = &quot;http://quartznet.sourceforge.net/xml/job_scheduling_data_2_0.xsd&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_QuartzXmlFileName" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.QuartzXmlFileName">QuartzXmlFileName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string QuartzXmlFileName = &quot;quartz_jobs.xml&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_QuartzXsdResourceName" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.QuartzXsdResourceName">QuartzXsdResourceName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string QuartzXsdResourceName = &quot;Quartz.Xml.job_scheduling_data_2_0.xsd&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ThreadLocalKeyScheduler" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ThreadLocalKeyScheduler">ThreadLocalKeyScheduler</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const string ThreadLocalKeyScheduler = &quot;quartz_scheduler&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_typeLoadHelper" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.typeLoadHelper">typeLoadHelper</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ITypeLoadHelper typeLoadHelper</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.ITypeLoadHelper.html">ITypeLoadHelper</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_IgnoreDuplicates_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.IgnoreDuplicates*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_IgnoreDuplicates" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.IgnoreDuplicates">IgnoreDuplicates</h4>
+  <div class="markdown level1 summary"><p>If true (and <a class="xref" href="Quartz.Xml.XMLSchedulingDataProcessor.html#Quartz_Xml_XMLSchedulingDataProcessor_OverWriteExistingData">OverWriteExistingData</a> is false) then any 
+job/triggers encountered in this file that have names that already exist 
+in the scheduler will be ignored, and no error will be produced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IgnoreDuplicates { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Xml_XMLSchedulingDataProcessor_IgnoreDuplicates_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Xml.XMLSchedulingDataProcessor.html#Quartz_Xml_XMLSchedulingDataProcessor_OverWriteExistingData">OverWriteExistingData</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_LoadedJobs_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.LoadedJobs*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_LoadedJobs" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.LoadedJobs">LoadedJobs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IList&lt;IJobDetail&gt; LoadedJobs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_LoadedTriggers_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.LoadedTriggers*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_LoadedTriggers" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.LoadedTriggers">LoadedTriggers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IList&lt;ITrigger&gt; LoadedTriggers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_Log_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.Log*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_Log" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.Log">Log</h4>
+  <div class="markdown level1 summary"><p>Gets the log.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ILog Log { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Common.Logging.ILog</span></td>
+        <td><p>The log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_OverWriteExistingData_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.OverWriteExistingData*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_OverWriteExistingData" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.OverWriteExistingData">OverWriteExistingData</h4>
+  <div class="markdown level1 summary"><p>Whether the existing scheduling data (with same identifiers) will be 
+overwritten. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverWriteExistingData { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Xml_XMLSchedulingDataProcessor_OverWriteExistingData_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If false, and <a class="xref" href="Quartz.Xml.XMLSchedulingDataProcessor.html#Quartz_Xml_XMLSchedulingDataProcessor_IgnoreDuplicates">IgnoreDuplicates</a> is not false, and jobs or 
+triggers with the same names already exist as those in the file, an 
+error will occur.</p>
+</div>
+  <h5 id="Quartz_Xml_XMLSchedulingDataProcessor_OverWriteExistingData_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Xml.XMLSchedulingDataProcessor.html#Quartz_Xml_XMLSchedulingDataProcessor_IgnoreDuplicates">IgnoreDuplicates</a></div>
+  </div>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ScheduleTriggerRelativeToReplacedTrigger_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ScheduleTriggerRelativeToReplacedTrigger*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ScheduleTriggerRelativeToReplacedTrigger" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ScheduleTriggerRelativeToReplacedTrigger">ScheduleTriggerRelativeToReplacedTrigger</h4>
+  <div class="markdown level1 summary"><p>If true (and <a class="xref" href="Quartz.Xml.XMLSchedulingDataProcessor.html#Quartz_Xml_XMLSchedulingDataProcessor_OverWriteExistingData">OverWriteExistingData</a> is true) then any 
+job/triggers encountered in this file that already exist is scheduler
+will be updated with start time relative to old trigger. Effectively
+new trigger&apos;s last fire time will be updated to old trigger&apos;s last fire time
+and trigger&apos;s next fire time will updated to be next from this last fire time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ScheduleTriggerRelativeToReplacedTrigger { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_AddJobGroupToNeverDelete_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.AddJobGroupToNeverDelete*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_AddJobGroupToNeverDelete_System_String_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.AddJobGroupToNeverDelete(System.String)">AddJobGroupToNeverDelete(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddJobGroupToNeverDelete(string jobGroupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jobGroupName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_AddJobToSchedule_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.AddJobToSchedule*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_AddJobToSchedule_Quartz_IJobDetail_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.AddJobToSchedule(Quartz.IJobDetail)">AddJobToSchedule(IJobDetail)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddJobToSchedule(IJobDetail job)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IJobDetail.html">IJobDetail</a></td>
+        <td><span class="parametername">job</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_AddTriggerGroupToNeverDelete_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.AddTriggerGroupToNeverDelete*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_AddTriggerGroupToNeverDelete_System_String_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.AddTriggerGroupToNeverDelete(System.String)">AddTriggerGroupToNeverDelete(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriggerGroupToNeverDelete(string triggerGroupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">triggerGroupName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_AddTriggerToSchedule_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.AddTriggerToSchedule*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_AddTriggerToSchedule_Quartz_Spi_IMutableTrigger_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.AddTriggerToSchedule(Quartz.Spi.IMutableTrigger)">AddTriggerToSchedule(IMutableTrigger)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddTriggerToSchedule(IMutableTrigger trigger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IMutableTrigger.html">IMutableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_AddValidationException_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.AddValidationException*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_AddValidationException_System_Xml_XmlException_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.AddValidationException(System.Xml.XmlException)">AddValidationException(XmlException)</h4>
+  <div class="markdown level1 summary"><p>Adds a detected validation exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddValidationException(XmlException e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.XmlException</span></td>
+        <td><span class="parametername">e</span></td>
+        <td><p>The exception.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_BuildTriggersByFQJobNameMap_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.BuildTriggersByFQJobNameMap*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_BuildTriggersByFQJobNameMap_System_Collections_Generic_List_Quartz_ITrigger__" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.BuildTriggersByFQJobNameMap(System.Collections.Generic.List{Quartz.ITrigger})">BuildTriggersByFQJobNameMap(List&lt;ITrigger&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IDictionary&lt;JobKey, List&lt;IMutableTrigger&gt;&gt; BuildTriggersByFQJobNameMap(List&lt;ITrigger&gt; triggers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>&gt;</td>
+        <td><span class="parametername">triggers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<a class="xref" href="Quartz.JobKey.html">JobKey</a>, <span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Quartz.Spi.IMutableTrigger.html">IMutableTrigger</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ClearValidationExceptions_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ClearValidationExceptions*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ClearValidationExceptions" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ClearValidationExceptions">ClearValidationExceptions()</h4>
+  <div class="markdown level1 summary"><p>Resets the number of detected validation exceptions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ClearValidationExceptions()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ExecutePreProcessCommands_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ExecutePreProcessCommands*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ExecutePreProcessCommands_Quartz_IScheduler_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ExecutePreProcessCommands(Quartz.IScheduler)">ExecutePreProcessCommands(IScheduler)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecutePreProcessCommands(IScheduler scheduler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td><span class="parametername">scheduler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_MaybeThrowValidationException_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.MaybeThrowValidationException*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_MaybeThrowValidationException" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.MaybeThrowValidationException">MaybeThrowValidationException()</h4>
+  <div class="markdown level1 summary"><p>Throws a ValidationException if the number of validationExceptions
+detected is greater than zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void MaybeThrowValidationException()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Xml.ValidationException.html">ValidationException</a></td>
+        <td><p>DTD validation exception.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ParseDateIntervalTriggerIntervalUnit_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ParseDateIntervalTriggerIntervalUnit*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ParseDateIntervalTriggerIntervalUnit_System_String_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ParseDateIntervalTriggerIntervalUnit(System.String)">ParseDateIntervalTriggerIntervalUnit(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IntervalUnit ParseDateIntervalTriggerIntervalUnit(string intervalUnit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">intervalUnit</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IntervalUnit.html">IntervalUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ParseSimpleTriggerRepeatCount_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ParseSimpleTriggerRepeatCount*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ParseSimpleTriggerRepeatCount_System_String_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ParseSimpleTriggerRepeatCount(System.String)">ParseSimpleTriggerRepeatCount(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int ParseSimpleTriggerRepeatCount(string repeatcount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">repeatcount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_PrepForProcessing_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.PrepForProcessing*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_PrepForProcessing" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.PrepForProcessing">PrepForProcessing()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PrepForProcessing()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFile_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFile*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFile" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFile">ProcessFile()</h4>
+  <div class="markdown level1 summary"><p>Process the xml file in the default location (a file named
+&quot;quartz_jobs.xml&quot; in the current working directory).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ProcessFile()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFile_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFile*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFile_System_String_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFile(System.String)">ProcessFile(String)</h4>
+  <div class="markdown level1 summary"><p>Process the xml file named <see param="fileName"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ProcessFile(string fileName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
+        <td><p>meta data file name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFile_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFile*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFile_System_String_System_String_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFile(System.String,System.String)">ProcessFile(String, String)</h4>
+  <div class="markdown level1 summary"><p>Process the xmlfile named <see param="fileName"></see> with the given system
+ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ProcessFile(string fileName, string systemId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
+        <td><p>Name of the file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">systemId</span></td>
+        <td><p>The system id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFileAndScheduleJobs_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFileAndScheduleJobs*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFileAndScheduleJobs_Quartz_IScheduler_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFileAndScheduleJobs(Quartz.IScheduler)">ProcessFileAndScheduleJobs(IScheduler)</h4>
+  <div class="markdown level1 summary"><p>Process the xml file in the default location, and schedule all of the
+jobs defined within it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ProcessFileAndScheduleJobs(IScheduler sched)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td><span class="parametername">sched</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFileAndScheduleJobs_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFileAndScheduleJobs*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFileAndScheduleJobs_Quartz_IScheduler_System_Boolean_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFileAndScheduleJobs(Quartz.IScheduler,System.Boolean)">ProcessFileAndScheduleJobs(IScheduler, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Process the xml file in the default location, and schedule all of the jobs defined within it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ProcessFileAndScheduleJobs(IScheduler sched, bool overWriteExistingJobs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td><span class="parametername">sched</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">overWriteExistingJobs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFileAndScheduleJobs_Quartz_IScheduler_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note that we will set overWriteExistingJobs after the default xml is parsed.</p>
+</div>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFileAndScheduleJobs_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFileAndScheduleJobs*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFileAndScheduleJobs_System_String_Quartz_IScheduler_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFileAndScheduleJobs(System.String,Quartz.IScheduler)">ProcessFileAndScheduleJobs(String, IScheduler)</h4>
+  <div class="markdown level1 summary"><p>Process the xml file in the given location, and schedule all of the
+jobs defined within it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ProcessFileAndScheduleJobs(string fileName, IScheduler sched)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
+        <td><p>meta data file name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td><span class="parametername">sched</span></td>
+        <td><p>The scheduler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFileAndScheduleJobs_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFileAndScheduleJobs*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessFileAndScheduleJobs_System_String_System_String_Quartz_IScheduler_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessFileAndScheduleJobs(System.String,System.String,Quartz.IScheduler)">ProcessFileAndScheduleJobs(String, String, IScheduler)</h4>
+  <div class="markdown level1 summary"><p>Process the xml file in the given location, and schedule all of the
+jobs defined within it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ProcessFileAndScheduleJobs(string fileName, string systemId, IScheduler sched)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
+        <td><p>Name of the file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">systemId</span></td>
+        <td><p>The system id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td><span class="parametername">sched</span></td>
+        <td><p>The sched.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessInternal_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessInternal*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessInternal_System_String_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessInternal(System.String)">ProcessInternal(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ProcessInternal(string xml)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">xml</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessStream_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessStream*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessStream_System_IO_Stream_System_String_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessStream(System.IO.Stream,System.String)">ProcessStream(Stream, String)</h4>
+  <div class="markdown level1 summary"><p>Process the xmlfile named <see param="fileName"></see> with the given system
+ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ProcessStream(Stream stream, string systemId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">systemId</span></td>
+        <td><p>The system id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessStreamAndScheduleJobs_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessStreamAndScheduleJobs*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ProcessStreamAndScheduleJobs_System_IO_Stream_Quartz_IScheduler_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ProcessStreamAndScheduleJobs(System.IO.Stream,Quartz.IScheduler)">ProcessStreamAndScheduleJobs(Stream, IScheduler)</h4>
+  <div class="markdown level1 summary"><p>Process the xml file in the given location, and schedule all of the
+jobs defined within it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ProcessStreamAndScheduleJobs(Stream stream, IScheduler sched)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>stream to read XML data from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td><span class="parametername">sched</span></td>
+        <td><p>The sched.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ReadMisfireInstructionFromString_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ReadMisfireInstructionFromString*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ReadMisfireInstructionFromString_System_String_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ReadMisfireInstructionFromString(System.String)">ReadMisfireInstructionFromString(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int ReadMisfireInstructionFromString(string misfireinstruction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">misfireinstruction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_ScheduleJobs_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ScheduleJobs*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_ScheduleJobs_Quartz_IScheduler_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.ScheduleJobs(Quartz.IScheduler)">ScheduleJobs(IScheduler)</h4>
+  <div class="markdown level1 summary"><p>Schedules the given sets of jobs and triggers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ScheduleJobs(IScheduler sched)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td><span class="parametername">sched</span></td>
+        <td><p>The sched.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Xml_XMLSchedulingDataProcessor_TryParseEnum_" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.TryParseEnum*"></a>
+  <h4 id="Quartz_Xml_XMLSchedulingDataProcessor_TryParseEnum__1_System_String___0__" data-uid="Quartz.Xml.XMLSchedulingDataProcessor.TryParseEnum``1(System.String,``0@)">TryParseEnum&lt;T&gt;(String, out T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool TryParseEnum&lt;T&gt;(string str, out T value)where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

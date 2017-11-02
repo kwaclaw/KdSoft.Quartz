@@ -1,0 +1,720 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CronCalendar
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CronCalendar
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Impl.Calendar.CronCalendar">
+  
+  
+  <h1 id="Quartz_Impl_Calendar_CronCalendar" data-uid="Quartz.Impl.Calendar.CronCalendar" class="text-break">Class CronCalendar
+  </h1>
+  <div class="markdown level0 summary"><p>This implementation of the Calendar excludes the set of times expressed by a
+given CronExpression. </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html">BaseCalendar</a></div>
+    <div class="level2"><span class="xref">CronCalendar</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></div>
+    <div><span class="xref">System.ICloneable</span></div>
+    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_ArraysEqualElementsOnEqualPlaces_System_Array_System_Array_">BaseCalendar.ArraysEqualElementsOnEqualPlaces(Array, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_GetBaseCalendar">BaseCalendar.GetBaseCalendar()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_Description">BaseCalendar.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_CalendarBase">BaseCalendar.CalendarBase</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Impl.Calendar.html">Quartz.Impl.Calendar</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Impl_Calendar_CronCalendar_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CronCalendar : BaseCalendar, ICalendar, ICloneable, ISerializable</code></pre>
+  </div>
+  <h5 id="Quartz_Impl_Calendar_CronCalendar_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>For example, you could use this calendar to exclude all but business hours (8AM - 5PM) every 
+day using the expression &quot;* * 0-7,18-23 ? * *&quot;. 
+<p>
+It is important to remember that the cron expression here describes a set of
+times to be <em>excluded</em> from firing. Whereas the cron expression in 
+CronTrigger describes a set of times that can
+be <em>included</em> for firing. Thus, if a <a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a> has a 
+given cron expression and is associated with a <a class="xref" href="Quartz.Impl.Calendar.CronCalendar.html">CronCalendar</a> with
+the <em>same</em> expression, the calendar will exclude all the times the 
+trigger includes, and they will cancel each other out.
+</p></p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar__ctor_" data-uid="Quartz.Impl.Calendar.CronCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar__ctor_Quartz_ICalendar_System_String_" data-uid="Quartz.Impl.Calendar.CronCalendar.#ctor(Quartz.ICalendar,System.String)">CronCalendar(ICalendar, String)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Calendar.CronCalendar.html">CronCalendar</a> with the given cron expression and 
+<a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html">BaseCalendar</a>. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronCalendar(ICalendar baseCalendar, string expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">baseCalendar</span></td>
+        <td><p>the base calendar for this calendar instance 
+see BaseCalendar for more information on base
+calendar functionality</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>a string representation of the desired cron expression</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar__ctor_" data-uid="Quartz.Impl.Calendar.CronCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar__ctor_Quartz_ICalendar_System_String_System_TimeZoneInfo_" data-uid="Quartz.Impl.Calendar.CronCalendar.#ctor(Quartz.ICalendar,System.String,System.TimeZoneInfo)">CronCalendar(ICalendar, String, TimeZoneInfo)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Quartz.Impl.Calendar.CronCalendar.html">CronCalendar</a> with the given cron expression and 
+<a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html">BaseCalendar</a>. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronCalendar(ICalendar baseCalendar, string expression, TimeZoneInfo timeZone)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">baseCalendar</span></td>
+        <td><p>the base calendar for this calendar instance 
+see BaseCalendar for more information on base
+calendar functionality</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>a string representation of the desired cron expression</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeZoneInfo</span></td>
+        <td><span class="parametername">timeZone</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar__ctor_" data-uid="Quartz.Impl.Calendar.CronCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="Quartz.Impl.Calendar.CronCalendar.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">CronCalendar(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"><p>Serialization constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CronCalendar(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar__ctor_" data-uid="Quartz.Impl.Calendar.CronCalendar.#ctor*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar__ctor_System_String_" data-uid="Quartz.Impl.Calendar.CronCalendar.#ctor(System.String)">CronCalendar(String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Quartz.Impl.Calendar.CronCalendar.html">CronCalendar</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronCalendar(string expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>a string representation of the desired cron expression</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar_CronExpression_" data-uid="Quartz.Impl.Calendar.CronCalendar.CronExpression*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar_CronExpression" data-uid="Quartz.Impl.Calendar.CronCalendar.CronExpression">CronExpression</h4>
+  <div class="markdown level1 summary"><p>Returns the object representation of the cron expression that defines the
+dates and times this calendar excludes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CronExpression CronExpression { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.CronExpression.html">CronExpression</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar_TimeZone_" data-uid="Quartz.Impl.Calendar.CronCalendar.TimeZone*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar_TimeZone" data-uid="Quartz.Impl.Calendar.CronCalendar.TimeZone">TimeZone</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TimeZoneInfo TimeZone { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeZoneInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_TimeZone">BaseCalendar.TimeZone</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar_Clone_" data-uid="Quartz.Impl.Calendar.CronCalendar.Clone*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar_Clone" data-uid="Quartz.Impl.Calendar.CronCalendar.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Creates a new object that is a copy of the current instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>A new object that is a copy of this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_Clone">BaseCalendar.Clone()</a></div>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar_Equals_" data-uid="Quartz.Impl.Calendar.CronCalendar.Equals*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar_Equals_Quartz_Impl_Calendar_CronCalendar_" data-uid="Quartz.Impl.Calendar.CronCalendar.Equals(Quartz.Impl.Calendar.CronCalendar)">Equals(CronCalendar)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(CronCalendar obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Impl.Calendar.CronCalendar.html">CronCalendar</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar_Equals_" data-uid="Quartz.Impl.Calendar.CronCalendar.Equals*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar_Equals_System_Object_" data-uid="Quartz.Impl.Calendar.CronCalendar.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar_GetHashCode_" data-uid="Quartz.Impl.Calendar.CronCalendar.GetHashCode*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar_GetHashCode" data-uid="Quartz.Impl.Calendar.CronCalendar.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar_GetNextIncludedTimeUtc_" data-uid="Quartz.Impl.Calendar.CronCalendar.GetNextIncludedTimeUtc*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar_GetNextIncludedTimeUtc_System_DateTimeOffset_" data-uid="Quartz.Impl.Calendar.CronCalendar.GetNextIncludedTimeUtc(System.DateTimeOffset)">GetNextIncludedTimeUtc(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Determine the next time that is &apos;included&apos; by the
+Calendar after the given time. Return the original value if timeStamp is
+included. Return 0 if all days are excluded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DateTimeOffset GetNextIncludedTimeUtc(DateTimeOffset timeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">timeUtc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_GetNextIncludedTimeUtc_System_DateTimeOffset_">BaseCalendar.GetNextIncludedTimeUtc(DateTimeOffset)</a></div>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar_GetObjectData_" data-uid="Quartz.Impl.Calendar.CronCalendar.GetObjectData*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="Quartz.Impl.Calendar.CronCalendar.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">GetObjectData(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SecurityCritical]
+public override void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">BaseCalendar.GetObjectData(SerializationInfo, StreamingContext)</a></div>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar_IsTimeIncluded_" data-uid="Quartz.Impl.Calendar.CronCalendar.IsTimeIncluded*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar_IsTimeIncluded_System_DateTimeOffset_" data-uid="Quartz.Impl.Calendar.CronCalendar.IsTimeIncluded(System.DateTimeOffset)">IsTimeIncluded(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Determine whether the given time  is &apos;included&apos; by the
+Calendar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsTimeIncluded(DateTimeOffset timeUtc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">timeUtc</span></td>
+        <td><p>the time to test</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>a boolean indicating whether the specified time is &apos;included&apos; by the CronCalendar</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Impl.Calendar.BaseCalendar.html#Quartz_Impl_Calendar_BaseCalendar_IsTimeIncluded_System_DateTimeOffset_">BaseCalendar.IsTimeIncluded(DateTimeOffset)</a></div>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar_SetCronExpressionString_" data-uid="Quartz.Impl.Calendar.CronCalendar.SetCronExpressionString*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar_SetCronExpressionString_System_String_" data-uid="Quartz.Impl.Calendar.CronCalendar.SetCronExpressionString(System.String)">SetCronExpressionString(String)</h4>
+  <div class="markdown level1 summary"><p>Sets the cron expression for the calendar to a new value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCronExpressionString(string expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>The expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Impl_Calendar_CronCalendar_ToString_" data-uid="Quartz.Impl.Calendar.CronCalendar.ToString*"></a>
+  <h4 id="Quartz_Impl_Calendar_CronCalendar_ToString" data-uid="Quartz.Impl.Calendar.CronCalendar.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.String</span> that represents the current <span class="xref">System.Object</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A <span class="xref">System.String</span> that represents the current <span class="xref">System.Object</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.ICalendar.html">ICalendar</a>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <div>
+      <span class="xref">System.Runtime.Serialization.ISerializable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

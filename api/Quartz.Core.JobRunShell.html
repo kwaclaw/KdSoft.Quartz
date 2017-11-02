@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class JobRunShell
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class JobRunShell
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.Core.JobRunShell">
+  
+  
+  <h1 id="Quartz_Core_JobRunShell" data-uid="Quartz.Core.JobRunShell" class="text-break">Class JobRunShell
+  </h1>
+  <div class="markdown level0 summary"><p>JobRunShell instances are responsible for providing the &apos;safe&apos; environment
+for <a class="xref" href="Quartz.IJob.html">IJob</a> s to run in, and for performing all of the work of
+executing the <a class="xref" href="Quartz.IJob.html">IJob</a>, catching ANY thrown exceptions, updating
+the <a class="xref" href="Quartz.ITrigger.html">ITrigger</a> with the <a class="xref" href="Quartz.IJob.html">IJob</a>&apos;s completion code,
+etc.
+<p>
+A <a class="xref" href="Quartz.Core.JobRunShell.html">JobRunShell</a> instance is created by a <a class="xref" href="Quartz.Core.IJobRunShellFactory.html">IJobRunShellFactory</a>
+on behalf of the <a class="xref" href="Quartz.Core.QuartzSchedulerThread.html">QuartzSchedulerThread</a> which then runs the
+shell in a thread from the configured <span class="xref">System.Threading.ThreadPool</span> when the
+scheduler determines that a <a class="xref" href="Quartz.IJob.html">IJob</a> has been triggered.
+</p></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html">SchedulerListenerSupport</a></div>
+    <div class="level2"><span class="xref">JobRunShell</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a></div>
+    <div><a class="xref" href="Quartz.IThreadRunnable.html">IThreadRunnable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_JobScheduled_Quartz_ITrigger_">SchedulerListenerSupport.JobScheduled(ITrigger)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_JobUnscheduled_Quartz_TriggerKey_">SchedulerListenerSupport.JobUnscheduled(TriggerKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_TriggerFinalized_Quartz_ITrigger_">SchedulerListenerSupport.TriggerFinalized(ITrigger)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_TriggersPaused_System_String_">SchedulerListenerSupport.TriggersPaused(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_TriggerPaused_Quartz_TriggerKey_">SchedulerListenerSupport.TriggerPaused(TriggerKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_TriggersResumed_System_String_">SchedulerListenerSupport.TriggersResumed(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_TriggerResumed_Quartz_TriggerKey_">SchedulerListenerSupport.TriggerResumed(TriggerKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_JobAdded_Quartz_IJobDetail_">SchedulerListenerSupport.JobAdded(IJobDetail)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_JobDeleted_Quartz_JobKey_">SchedulerListenerSupport.JobDeleted(JobKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_JobsPaused_System_String_">SchedulerListenerSupport.JobsPaused(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_JobPaused_Quartz_JobKey_">SchedulerListenerSupport.JobPaused(JobKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_JobsResumed_System_String_">SchedulerListenerSupport.JobsResumed(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_JobResumed_Quartz_JobKey_">SchedulerListenerSupport.JobResumed(JobKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_SchedulerError_System_String_Quartz_SchedulerException_">SchedulerListenerSupport.SchedulerError(String, SchedulerException)</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_SchedulerInStandbyMode">SchedulerListenerSupport.SchedulerInStandbyMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_SchedulerStarted">SchedulerListenerSupport.SchedulerStarted()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_SchedulerStarting">SchedulerListenerSupport.SchedulerStarting()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_SchedulerShutdown">SchedulerListenerSupport.SchedulerShutdown()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_SchedulingDataCleared">SchedulerListenerSupport.SchedulingDataCleared()</a>
+    </div>
+    <div>
+      <a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_Log">SchedulerListenerSupport.Log</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.Core.html">Quartz.Core</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_Core_JobRunShell_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class JobRunShell : SchedulerListenerSupport, ISchedulerListener, IThreadRunnable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Quartz_Core_JobRunShell__ctor_" data-uid="Quartz.Core.JobRunShell.#ctor*"></a>
+  <h4 id="Quartz_Core_JobRunShell__ctor_Quartz_IScheduler_Quartz_Spi_TriggerFiredBundle_" data-uid="Quartz.Core.JobRunShell.#ctor(Quartz.IScheduler,Quartz.Spi.TriggerFiredBundle)">JobRunShell(IScheduler, TriggerFiredBundle)</h4>
+  <div class="markdown level1 summary"><p>Create a JobRunShell instance with the given settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobRunShell(IScheduler scheduler, TriggerFiredBundle bundle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.IScheduler.html">IScheduler</a></td>
+        <td><span class="parametername">scheduler</span></td>
+        <td><p>The <a class="xref" href="Quartz.IScheduler.html">IScheduler</a> instance that should be made
+available within the <a class="xref" href="Quartz.IJobExecutionContext.html">IJobExecutionContext</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.TriggerFiredBundle.html">TriggerFiredBundle</a></td>
+        <td><span class="parametername">bundle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_Core_JobRunShell_Begin_" data-uid="Quartz.Core.JobRunShell.Begin*"></a>
+  <h4 id="Quartz_Core_JobRunShell_Begin" data-uid="Quartz.Core.JobRunShell.Begin">Begin()</h4>
+  <div class="markdown level1 summary"><p>Runs begin procedures on this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Begin()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_JobRunShell_Complete_" data-uid="Quartz.Core.JobRunShell.Complete*"></a>
+  <h4 id="Quartz_Core_JobRunShell_Complete_System_Boolean_" data-uid="Quartz.Core.JobRunShell.Complete(System.Boolean)">Complete(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Completes the execution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Complete(bool successfulExecution)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">successfulExecution</span></td>
+        <td><p>if set to <code>true</code> [successful execution].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_JobRunShell_Initialize_" data-uid="Quartz.Core.JobRunShell.Initialize*"></a>
+  <h4 id="Quartz_Core_JobRunShell_Initialize_Quartz_Core_QuartzScheduler_" data-uid="Quartz.Core.JobRunShell.Initialize(Quartz.Core.QuartzScheduler)">Initialize(QuartzScheduler)</h4>
+  <div class="markdown level1 summary"><p>Initializes the job execution context with given scheduler and bundle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Initialize(QuartzScheduler sched)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Core.QuartzScheduler.html">QuartzScheduler</a></td>
+        <td><span class="parametername">sched</span></td>
+        <td><p>The scheduler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_Core_JobRunShell_Passivate_" data-uid="Quartz.Core.JobRunShell.Passivate*"></a>
+  <h4 id="Quartz_Core_JobRunShell_Passivate" data-uid="Quartz.Core.JobRunShell.Passivate">Passivate()</h4>
+  <div class="markdown level1 summary"><p>Passivates this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Passivate()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_JobRunShell_RequestShutdown_" data-uid="Quartz.Core.JobRunShell.RequestShutdown*"></a>
+  <h4 id="Quartz_Core_JobRunShell_RequestShutdown" data-uid="Quartz.Core.JobRunShell.RequestShutdown">RequestShutdown()</h4>
+  <div class="markdown level1 summary"><p>Requests the Shutdown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RequestShutdown()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_JobRunShell_Run_" data-uid="Quartz.Core.JobRunShell.Run*"></a>
+  <h4 id="Quartz_Core_JobRunShell_Run" data-uid="Quartz.Core.JobRunShell.Run">Run()</h4>
+  <div class="markdown level1 summary"><p>This method has to be implemented in order that starting of the thread causes the object&apos;s
+run method to be called in that separately executing thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Run()</code></pre>
+  </div>
+  
+  
+  <a id="Quartz_Core_JobRunShell_SchedulerShuttingdown_" data-uid="Quartz.Core.JobRunShell.SchedulerShuttingdown*"></a>
+  <h4 id="Quartz_Core_JobRunShell_SchedulerShuttingdown" data-uid="Quartz.Core.JobRunShell.SchedulerShuttingdown">SchedulerShuttingdown()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SchedulerShuttingdown()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Quartz.Listener.SchedulerListenerSupport.html#Quartz_Listener_SchedulerListenerSupport_SchedulerShuttingdown">SchedulerListenerSupport.SchedulerShuttingdown()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Quartz.ISchedulerListener.html">ISchedulerListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Quartz.IThreadRunnable.html">IThreadRunnable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Quartz.Util.ObjectExtensions.html#Quartz_Util_ObjectExtensions_DeepClone__1___0_">ObjectExtensions.DeepClone&lt;T&gt;(T)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.Core.IJobRunShellFactory.html">IJobRunShellFactory</a></div>
+      <div><a class="xref" href="Quartz.Core.QuartzSchedulerThread.html">QuartzSchedulerThread</a></div>
+      <div><a class="xref" href="Quartz.IJob.html">IJob</a></div>
+      <div><a class="xref" href="Quartz.ITrigger.html">ITrigger</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

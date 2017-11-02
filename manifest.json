@@ -1,0 +1,3618 @@
+{
+  "homepages": [],
+  "source_base_path": "F:/Work/Private/KdSoft.Quartz/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.AspNet.AspNetLoggerFactoryAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.AspNet.AspNetLoggerFactoryAdapter.html",
+          "hash": "Kf3XMG1VQNO3ZKNkazSsbw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.AspNet.AspNetLoggerWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.AspNet.AspNetLoggerWrapper.html",
+          "hash": "anx4nzZUSaYOSdYq39fGsQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.AspNet.QuartzKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.AspNet.QuartzKeys.html",
+          "hash": "FptveIJisjhiG3XBzSl1Yg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.AspNet.SchedulerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.AspNet.SchedulerService.html",
+          "hash": "kWD0CQ8WY+aBYNcuDh1+Lw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.AspNet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.AspNet.html",
+          "hash": "lakstbM2NbP0o3exJUlnrw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.CronTriggerInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.CronTriggerInfo.html",
+          "hash": "GJ2TAHsrZzy6S5XaZHJtFg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.CronTriggerUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.CronTriggerUpdate.html",
+          "hash": "BEHHIfd5HsMaKnL3SPLFhw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.ExpBackoffRetrySettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.ExpBackoffRetrySettings.html",
+          "hash": "+Jvos5dCqqVJWIk1Nl7KEA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.ExpBackoffRetryTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.ExpBackoffRetryTrigger.html",
+          "hash": "rzO/yzVMpwkAmc5L4sSJhw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.GroupMatchTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.GroupMatchTypes.html",
+          "hash": "MDYJRY4SeXi+FrCxGMkDtA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.IJobDataDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.IJobDataDictionary.html",
+          "hash": "kXtgKk5vFG38HnfCUJrD6A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.IRetryTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.IRetryTrigger.html",
+          "hash": "ic30y+e+g/Xf3At/Suz7bw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.JobDataDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.JobDataDictionary.html",
+          "hash": "qeFJoAaLwGIpRU8jjeAQ/Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.JobDataMapExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.JobDataMapExtensions.html",
+          "hash": "+szA60r8a2ccF7ibg70gBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.JobInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.JobInfo.html",
+          "hash": "ENbV50UqMuETay+sLvF0WA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.JobUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.JobUpdate.html",
+          "hash": "3KPr6fqlb3Enohhn65fCOA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.Jobs.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.Jobs.Constants.html",
+          "hash": "yfpa7+n6htZytDKc7aIxbA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.Jobs.JobLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.Jobs.JobLoader.html",
+          "hash": "3bOHEyK77K9Ox7qG98nB7A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.Jobs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.Jobs.html",
+          "hash": "tYFCSlQZ78Wsv3RoR3E2LQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.MisfireInstruction.CalendarIntervalTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.MisfireInstruction.CalendarIntervalTrigger.html",
+          "hash": "tB+YerIHdt9/pfWPPLCKLg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.MisfireInstruction.CronTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.MisfireInstruction.CronTrigger.html",
+          "hash": "RPW8pJZsbUGtE5udXj1Imw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.MisfireInstruction.DailyTimeIntervalTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.MisfireInstruction.DailyTimeIntervalTrigger.html",
+          "hash": "QAw/D91dsn7U55AleBg0Ug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.MisfireInstruction.SimpleTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.MisfireInstruction.SimpleTrigger.html",
+          "hash": "0C5WuctQXQDF8q2XbaCY+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.MisfireInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.MisfireInstruction.html",
+          "hash": "qRReGrTStxnuTvO7fvo41Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.QuartzKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.QuartzKey.html",
+          "hash": "F+fi1r/KYGPz7ao9jNVsGg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.QuartzKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.QuartzKeys.html",
+          "hash": "RMLsPlRuupo15teQyKOrfw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.RescheduleResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.RescheduleResult.html",
+          "hash": "5OL+p30wyFhrlRYKo7EnFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.RetryJobListener-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.RetryJobListener-1.html",
+          "hash": "b4/XSrxcHqazRHOAZpIGug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.RetryScheduleBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.RetryScheduleBuilder-1.html",
+          "hash": "2eRJ1fZYiuEYBDLgQuLWKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.RetryTrigger-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.RetryTrigger-1.html",
+          "hash": "HSX6ghb2GOg4rDMt3/Ihzw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.ScheduleJobError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.ScheduleJobError.html",
+          "hash": "1FQGFqhF4krXE2zEg08qpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.ScheduleJobResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.ScheduleJobResult.html",
+          "hash": "opIUVDZrZWsJ1oiH64GkmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.ScheduleJobsRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.ScheduleJobsRequest.html",
+          "hash": "18yaApylXNMYlWBbmMbVgA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.ScheduleJobsResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.ScheduleJobsResult.html",
+          "hash": "P7sKxoBczKPOKKtUcYwYIw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.SchedulerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.SchedulerExtensions.html",
+          "hash": "p8B2fc5zTKaK9khDgyzd0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.TriggerBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.TriggerBuilderExtensions.html",
+          "hash": "nplBOBOK49DvZlz5Zlb32A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KdSoft.Quartz.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KdSoft.Quartz.html",
+          "hash": "XHnUKOS/KF7t70FT6Rhesw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.CalendarIntervalScheduleBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.CalendarIntervalScheduleBuilder.html",
+          "hash": "AycZPymH1hH487m3i9MHIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.CalendarIntervalTriggerBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.CalendarIntervalTriggerBuilderExtensions.html",
+          "hash": "7jS0YefFM6pQxiRb0OPWMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Collection.HashSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Collection.HashSet-1.html",
+          "hash": "UaSuaQ1mEnJSN2qYkupQTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Collection.ISet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Collection.ISet-1.html",
+          "hash": "vFuPcv9Y6+zIpNZRr0C7Hw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Collection.ISortedSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Collection.ISortedSet-1.html",
+          "hash": "Zvjw8QQnZjJBuOLx5zqAYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Collection.ReadOnlySet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Collection.ReadOnlySet-1.html",
+          "hash": "7HVRnZ2oX4mQ27P6k+CblQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Collection.TreeSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Collection.TreeSet-1.html",
+          "hash": "vnTCQXbp0paBlFY9OyfMvg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Collection.TreeSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Collection.TreeSet.html",
+          "hash": "vJySzPWUsfhjqlLJhw80Dw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Collection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Collection.html",
+          "hash": "0zW49gFD2UsYRaHHnE18Dw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Core.IJobRunShellFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Core.IJobRunShellFactory.html",
+          "hash": "BLKRSbnOp/2IHcg1d20L0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Core.JobRunShell.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Core.JobRunShell.html",
+          "hash": "2v5jlsIPmPV1naIoOBYEzQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Core.ListenerManagerImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Core.ListenerManagerImpl.html",
+          "hash": "Q8bUnu0Krw+zMrecCWwEcg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Core.QuartzScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Core.QuartzScheduler.html",
+          "hash": "Wcv3L/gTkHGReXWO3nIE1g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Core.QuartzSchedulerResources.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Core.QuartzSchedulerResources.html",
+          "hash": "MhB3Ih9EeNpZJt/smDgLQQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Core.QuartzSchedulerThread.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Core.QuartzSchedulerThread.html",
+          "hash": "RxDOGeletYljZh7D8ag2Vw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Core.SchedulerSignalerImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Core.SchedulerSignalerImpl.html",
+          "hash": "mOmqIIYM+oVJCau+dSwo1A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Core.html",
+          "hash": "R6EFecDgqQj3wnVVsbmoxg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.CronExpression.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.CronExpression.html",
+          "hash": "8smwyQ8UKaI/LJyJnYbKug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.CronScheduleBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.CronScheduleBuilder.html",
+          "hash": "dMkXRprk4dm4JvuPiUtv3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.CronScheduleTriggerBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.CronScheduleTriggerBuilderExtensions.html",
+          "hash": "HHp0dWu3bLSMQWAyJCHUBQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.DailyTimeIntervalScheduleBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.DailyTimeIntervalScheduleBuilder.html",
+          "hash": "d6rKSSnbMqI4T/cRP6w/lg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.DailyTimeIntervalTriggerBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.DailyTimeIntervalTriggerBuilderExtensions.html",
+          "hash": "/JbgG/LtO9VGaabWdaOpgQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.DateBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.DateBuilder.html",
+          "hash": "g8WutmghgSstSh7Crzegcg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.DisallowConcurrentExecutionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.DisallowConcurrentExecutionAttribute.html",
+          "hash": "OlQaDoNTX+64VSZhQodL1g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.ICalendar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.ICalendar.html",
+          "hash": "aSB4/RJKsNgwX08b5sL+QA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.ICalendarIntervalTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.ICalendarIntervalTrigger.html",
+          "hash": "j7flSLPIXk4BEpZ2SEu5sQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.ICronTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.ICronTrigger.html",
+          "hash": "F9S/r+gHixj73/gGvbSegA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IDailyTimeIntervalTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IDailyTimeIntervalTrigger.html",
+          "hash": "EPVDXrgexnttMHDl86WtDA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IInterruptableJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IInterruptableJob.html",
+          "hash": "+BOLSc06XihXrqtmK37wAg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IJob.html",
+          "hash": "EYkAoPklKv/zoC9LKcKB1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IJobDetail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IJobDetail.html",
+          "hash": "BU8RYLRKgiDnyrCiJM8WXg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IJobExecutionContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IJobExecutionContext.html",
+          "hash": "X8hVQ1nRN9yLnGVxUJTSkA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IJobListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IJobListener.html",
+          "hash": "UndZCD1sI1Lssh28lcw6MQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IListenerManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IListenerManager.html",
+          "hash": "jQffZmmNMZU/6/akxlZIWw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IMatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IMatcher-1.html",
+          "hash": "wAgrsimjN0+Ai/AhMeB1ng=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IScheduleBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IScheduleBuilder.html",
+          "hash": "W2srZ+HbvnNRBvs+LrbiNg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IScheduler.html",
+          "hash": "UjQRaIvXEZ36wQP5w6KExg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.ISchedulerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.ISchedulerFactory.html",
+          "hash": "Xr6PEpMZwiPzuA1ecqfGYg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.ISchedulerListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.ISchedulerListener.html",
+          "hash": "PIg1h+ONSsCMMgoTOmUPcQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.ISimpleTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.ISimpleTrigger.html",
+          "hash": "NVgB1Xqj2AhGrAs80/D7Tg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IStatefulJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IStatefulJob.html",
+          "hash": "bPYP6IMqY3QdTxlhDz4vmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IThreadRunnable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IThreadRunnable.html",
+          "hash": "+eh/g6gvOCZae3itXnd99w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.ITrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.ITrigger.html",
+          "hash": "qIRpToC6t/xKsT+e1cyBJg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.ITriggerListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.ITriggerListener.html",
+          "hash": "OMT6DjgW9LdQzQOsc+l3gQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.AdoConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.AdoConstants.html",
+          "hash": "V4zRyk1sdn1iajMWJ7L8WA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.AdoJobStoreUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.AdoJobStoreUtil.html",
+          "hash": "ZdWx9mnSXr1GjTtrJSfspg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.AdoUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.AdoUtil.html",
+          "hash": "oSzMZLdYY+MgUdSQHVjmCA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.CalendarIntervalTriggerPersistenceDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.CalendarIntervalTriggerPersistenceDelegate.html",
+          "hash": "Ly/5G9N9V3l11/hsRpwKDQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.Common.ConfigurationBasedDbMetadataFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.Common.ConfigurationBasedDbMetadataFactory.html",
+          "hash": "VUqC0J3mYd6qe+0Ywkz5Xw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.Common.DbMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.Common.DbMetadata.html",
+          "hash": "lreu61EsihnfBWjLxHhPSQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.Common.DbMetadataFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.Common.DbMetadataFactory.html",
+          "hash": "7eOxMuygc+brhD6mAnZ9Lg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.Common.DbProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.Common.DbProvider.html",
+          "hash": "V7sswnPgE2rmeU+uAkID+g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.Common.EmbeddedAssemblyResourceDbMetadataFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.Common.EmbeddedAssemblyResourceDbMetadataFactory.html",
+          "hash": "Lpej/jOGswiH6eKebl3kVw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.Common.IDbProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.Common.IDbProvider.html",
+          "hash": "yTZVgItbyi6RigffsQYLKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.Common.html",
+          "hash": "biBR1l6r+lQt0FyaXkSAnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.ConnectionAndTransactionHolder.html",
+          "hash": "Zjq3zzlFZuLIDTBDt7jgMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.CronTriggerPersistenceDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.CronTriggerPersistenceDelegate.html",
+          "hash": "emsITfAAs5NC92mObUOGbQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.DBSemaphore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.DBSemaphore.html",
+          "hash": "5lX7JV609hxjIxBcVpL1nw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.DailyTimeIntervalTriggerPersistenceDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.DailyTimeIntervalTriggerPersistenceDelegate.html",
+          "hash": "gPb83Vb0im8qOJDpfAj09w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.DelegateInitializationArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.DelegateInitializationArgs.html",
+          "hash": "d+NHi2GgQxxlPT3tRKj+Dw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.FirebirdDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.FirebirdDelegate.html",
+          "hash": "xmbvYHsIcieeT6vGkR0oUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.FiredTriggerRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.FiredTriggerRecord.html",
+          "hash": "dzB38uIFSWjzkdPiRYqpGg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.IDbAccessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.IDbAccessor.html",
+          "hash": "tiH+SwvH5PM6S5J20H5TOg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.IDriverDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.IDriverDelegate.html",
+          "hash": "AoDWEFJj2hfc26IOHaLZ6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.ISemaphore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.ISemaphore.html",
+          "hash": "i3wdsij1lz5Wab/VrXh5tw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.ITablePrefixAware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.ITablePrefixAware.html",
+          "hash": "/WjRm+CuggoUPV8BGjV8rQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.ITriggerPersistenceDelegate.html",
+          "hash": "b9TtCwejz1jqdDsh3af8pQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.InvalidConfigurationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.InvalidConfigurationException.html",
+          "hash": "Lqi8dEk3hANyoaMKs/qf5w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.JobStoreCMT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.JobStoreCMT.html",
+          "hash": "T2lFpN5DB/JvzrvBiuO8lQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.JobStoreSupport.RecoverMisfiredJobsResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.JobStoreSupport.RecoverMisfiredJobsResult.html",
+          "hash": "g7djwHw4O67yvsE8ecZONA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.JobStoreSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.JobStoreSupport.html",
+          "hash": "dvhkTyC2QHjZuRfFt2RWUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.JobStoreTX.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.JobStoreTX.html",
+          "hash": "1Q+9x6EmBfrFJ8rdvASLzw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.LockException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.LockException.html",
+          "hash": "xrF6J4ylkZBWIQB+LJnEbA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.MySQLDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.MySQLDelegate.html",
+          "hash": "ebwsSQpQutHiLV3/iFf8/Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.NoSuchDelegateException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.NoSuchDelegateException.html",
+          "hash": "hfG8BPnQ1yGVQ4sFNoLBUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.OracleDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.OracleDelegate.html",
+          "hash": "YYXlKOPP6WGRUh+I2nmr3Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.PostgreSQLDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.PostgreSQLDelegate.html",
+          "hash": "6VW6WhGRKquvaOGmXqhmNA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.SQLiteDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.SQLiteDelegate.html",
+          "hash": "XKQXcQw7iPJgP9aGCIOsNg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.SchedulerStateRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.SchedulerStateRecord.html",
+          "hash": "MwO6UDFFQlZe4wvMjIVItw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.SimplePropertiesTriggerPersistenceDelegateSupport.html",
+          "hash": "IEo0+lrGqXxK7LWqfHLFuA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.SimplePropertiesTriggerProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.SimplePropertiesTriggerProperties.html",
+          "hash": "cGBmOrHSsqmuR5AyGpMlMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.SimpleSemaphore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.SimpleSemaphore.html",
+          "hash": "XbVH2zfSF0Xeq7+ZP0uMBA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.SimpleTriggerPersistenceDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.SimpleTriggerPersistenceDelegate.html",
+          "hash": "3CE/9Sy58AJESoZ48cBPTQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.SqlServerDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.SqlServerDelegate.html",
+          "hash": "RnveJTq+Wxpnz8GeK/Ll0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.StdAdoConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.StdAdoConstants.html",
+          "hash": "eag5ktWDcxy00Zf7e3UX1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.StdAdoDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.StdAdoDelegate.html",
+          "hash": "+5t7jxqprtg8AX5TyozMOg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.StdRowLockSemaphore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.StdRowLockSemaphore.html",
+          "hash": "pKlbNkivDpldGUFo0jd+OQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.TriggerPropertyBundle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.TriggerPropertyBundle.html",
+          "hash": "1KYedzpiCf+j1CkYnhbI7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.TriggerStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.TriggerStatus.html",
+          "hash": "AVglJ3sREmaUlwbdfKn59A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.UpdateLockRowSemaphore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.UpdateLockRowSemaphore.html",
+          "hash": "CJbFRa0uHUxvGudfTLuNvQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.AdoJobStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.AdoJobStore.html",
+          "hash": "WAx4HKYHEjaeBqbQcqjR0Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Calendar.AnnualCalendar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Calendar.AnnualCalendar.html",
+          "hash": "BguXj/uGGo1BJU0GThGCIA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Calendar.BaseCalendar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Calendar.BaseCalendar.html",
+          "hash": "Pn9NC+I78WT4CX8ecIeDmg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Calendar.CronCalendar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Calendar.CronCalendar.html",
+          "hash": "t3LDIQOYvH23L9PL82Vm9A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Calendar.DailyCalendar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Calendar.DailyCalendar.html",
+          "hash": "r/4nO5ozH7Q6Sol9iscr3Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Calendar.HolidayCalendar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Calendar.HolidayCalendar.html",
+          "hash": "0MiXpH3w5lTW/6++ju8fVg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Calendar.MonthlyCalendar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Calendar.MonthlyCalendar.html",
+          "hash": "5k/dSpVNgpe4rsaTFtLQjw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Calendar.WeeklyCalendar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Calendar.WeeklyCalendar.html",
+          "hash": "NjJswieLztQC1myR5Wy+mA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Calendar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Calendar.html",
+          "hash": "SXglw0nan752UjAYxxPs8A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.DefaultThreadExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.DefaultThreadExecutor.html",
+          "hash": "qP6btmbCRrrFSGDxFeaPxA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.DirectSchedulerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.DirectSchedulerFactory.html",
+          "hash": "j3fAgi9i9Yik1dtHBvvisQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.JobDetailImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.JobDetailImpl.html",
+          "hash": "ihipFaisCnVi8PdsL1KD2Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.JobExecutionContextImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.JobExecutionContextImpl.html",
+          "hash": "g9FdD/0PHl/FSpj0m89Bdw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Matchers.AndMatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Matchers.AndMatcher-1.html",
+          "hash": "fgW3BseKCDQGYI/tqRg9OA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Matchers.EverythingMatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Matchers.EverythingMatcher-1.html",
+          "hash": "g079emQ3umi4lhzJvh54ow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Matchers.GroupMatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Matchers.GroupMatcher-1.html",
+          "hash": "lyQtYrLqe5jm+zjT26q84Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Matchers.KeyMatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Matchers.KeyMatcher-1.html",
+          "hash": "Z2a22QS6q2dVoZ2XCUnnVw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Matchers.NameMatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Matchers.NameMatcher-1.html",
+          "hash": "Bz1asEl7XucglmVV80hHhw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Matchers.NotMatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Matchers.NotMatcher-1.html",
+          "hash": "UO/S5lfpYYE0mX99gMo2iA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Matchers.OrMatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Matchers.OrMatcher-1.html",
+          "hash": "iFDYc5AT7XO67BTWQCFo7A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Matchers.StringMatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Matchers.StringMatcher-1.html",
+          "hash": "kI0faeCGZjvYgvuwnRsiqA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Matchers.StringOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Matchers.StringOperator.html",
+          "hash": "DuCe+fQ3Q0PwanszGQmD+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Matchers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Matchers.html",
+          "hash": "QoDYY8/O6GcDshVRf+oZ4w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.RemoteScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.RemoteScheduler.html",
+          "hash": "eQa7R+sAgaUymYgRUn5jWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.SchedulerRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.SchedulerRepository.html",
+          "hash": "hg/4dZvux5J8BWywzikUUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.StdJobRunShellFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.StdJobRunShellFactory.html",
+          "hash": "4Kzdhrlfh+wqHy4TZkzLZQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.StdScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.StdScheduler.html",
+          "hash": "ofmeCTg7YmTApMIyVVqjxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.StdSchedulerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.StdSchedulerFactory.html",
+          "hash": "XeFQc6KFm54wb36q0bTrRg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Triggers.AbstractTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Triggers.AbstractTrigger.html",
+          "hash": "L20n7/8M1YADxUDsCSocxA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Triggers.CalendarIntervalTriggerImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Triggers.CalendarIntervalTriggerImpl.html",
+          "hash": "Ke1w5M4k5XJ+nZJ88Sh9OA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Triggers.CronTriggerImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Triggers.CronTriggerImpl.html",
+          "hash": "QLR/dOhlMwZ4fmY2odhUhA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Triggers.DailyTimeIntervalTriggerImpl.html",
+          "hash": "bkERwP+qxwOLbGdMufLEuA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Triggers.SimpleTriggerImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Triggers.SimpleTriggerImpl.html",
+          "hash": "W3edzg2eIPNiQbPT8hj8kA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.Triggers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.Triggers.html",
+          "hash": "hh5Dc3/tAjxLW9KWa+j8lw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Impl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Impl.html",
+          "hash": "j381ZSxnBXe/ZMKOe97oIw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.IntervalUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.IntervalUnit.html",
+          "hash": "bono/xI0wp7Y01IJV9OWeA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Job.DirectoryScanJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Job.DirectoryScanJob.html",
+          "hash": "VY0bG5ArLB417JnGTnKhpw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Job.FileScanJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Job.FileScanJob.html",
+          "hash": "3EHJE1GUfAudky/FhDIvHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Job.IDirectoryScanListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Job.IDirectoryScanListener.html",
+          "hash": "WnD6HeZ+TEs+vZai13bVxg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Job.IFileScanListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Job.IFileScanListener.html",
+          "hash": "Q8/+InVVpOJ4J9jllowxtg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Job.NativeJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Job.NativeJob.html",
+          "hash": "Chon25oAlnZ/GC5pfMqkTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Job.NoOpJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Job.NoOpJob.html",
+          "hash": "viObkdy4hwA7bb0Wu1WQiQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Job.SendMailJob.MailInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Job.SendMailJob.MailInfo.html",
+          "hash": "K9NQ44rZ9eUBpj/q9d5WRQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Job.SendMailJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Job.SendMailJob.html",
+          "hash": "lPch2ReJflKEYcoYulTKvA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Job.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Job.html",
+          "hash": "rFhqhe89bkg+4FHBH0D15Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.JobBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.JobBuilder.html",
+          "hash": "NC91LKmgsQy/mvBXTcjEsw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.JobDataMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.JobDataMap.html",
+          "hash": "CI9Y4wx9vHj6PjKAxfGhJw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.JobExecutionException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.JobExecutionException.html",
+          "hash": "Z31XEwZpof4V+fgOfzskUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.JobKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.JobKey.html",
+          "hash": "I/3fl/FQg1jNWQhl84884A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.JobPersistenceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.JobPersistenceException.html",
+          "hash": "o6nXcc/UPN7YSub4YHk5qA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Listener.BroadcastJobListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Listener.BroadcastJobListener.html",
+          "hash": "QJUKtxQRVJT9ErhXvGnHmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Listener.BroadcastSchedulerListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Listener.BroadcastSchedulerListener.html",
+          "hash": "+NInFwiBegymjK43ZEXUaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Listener.BroadcastTriggerListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Listener.BroadcastTriggerListener.html",
+          "hash": "Uf4O7674hlTwWPjcM5fGVQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Listener.JobChainingJobListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Listener.JobChainingJobListener.html",
+          "hash": "W+j065IzKRpLHwfMEICfKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Listener.JobListenerSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Listener.JobListenerSupport.html",
+          "hash": "Tn4G7VZnaNpLbqu8zz59NQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Listener.SchedulerListenerSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Listener.SchedulerListenerSupport.html",
+          "hash": "vSFQYdGZXBqzkQRE/9R2xg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Listener.TriggerListenerSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Listener.TriggerListenerSupport.html",
+          "hash": "1oj3F6toQHxr3y9i8PF9yw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Listener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Listener.html",
+          "hash": "PiBKCfksEYXJnRS3dXcWaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.MisfireInstruction.CalendarIntervalTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.MisfireInstruction.CalendarIntervalTrigger.html",
+          "hash": "Ql3ygBk6fi1KI5vcDUzp7A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.MisfireInstruction.CronTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.MisfireInstruction.CronTrigger.html",
+          "hash": "y4uRfpbBUVWTQUL2cpmnLQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.MisfireInstruction.DailyTimeIntervalTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.MisfireInstruction.DailyTimeIntervalTrigger.html",
+          "hash": "84w6PwQLsUnYXzvhQ3pUsQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.MisfireInstruction.SimpleTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.MisfireInstruction.SimpleTrigger.html",
+          "hash": "Gc5yX1USC/1RazNQxpV6ig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.MisfireInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.MisfireInstruction.html",
+          "hash": "GhOxEjjY8RVSJ49bjdwI6g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.ObjectAlreadyExistsException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.ObjectAlreadyExistsException.html",
+          "hash": "ekx8WlBiy8pXIrnAI2CUZQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.PersistJobDataAfterExecutionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.PersistJobDataAfterExecutionAttribute.html",
+          "hash": "qljP/gMKw8mZAuDCVUXCuA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Plugin.History.LoggingJobHistoryPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Plugin.History.LoggingJobHistoryPlugin.html",
+          "hash": "UfNiGnFqGiVxqAJhd5jYVQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Plugin.History.LoggingTriggerHistoryPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Plugin.History.LoggingTriggerHistoryPlugin.html",
+          "hash": "1rpmDWutjvQK9rSx3ZcAkw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Plugin.History.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Plugin.History.html",
+          "hash": "Hc+eTN6ki57Bg8VcjGpf3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Plugin.Management.ShutdownHookPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Plugin.Management.ShutdownHookPlugin.html",
+          "hash": "v0mvm5nfQdR+lOe6xI33sA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Plugin.Management.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Plugin.Management.html",
+          "hash": "Pw+ydydYGgrRp9eLJy18cg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Plugin.Xml.XMLSchedulingDataProcessorPlugin.JobFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Plugin.Xml.XMLSchedulingDataProcessorPlugin.JobFile.html",
+          "hash": "qEo9tssJ1lwDy977ZBqYwQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Plugin.Xml.XMLSchedulingDataProcessorPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Plugin.Xml.XMLSchedulingDataProcessorPlugin.html",
+          "hash": "ZrD56F4Sbx9KcOfLFOoarg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Plugin.Xml.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Plugin.Xml.html",
+          "hash": "q1bsXnwPS1G6ZKb2QwYUOg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.QuartzThread.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.QuartzThread.html",
+          "hash": "PsiP2VVC3zBiOJzfixJ7eg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.ScheduleBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.ScheduleBuilder-1.html",
+          "hash": "XP/PEhNji+mv59a7urg3Bw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.SchedulerConfigException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.SchedulerConfigException.html",
+          "hash": "/gmv3t52UZKHXoUmM4eM6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.SchedulerConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.SchedulerConstants.html",
+          "hash": "SN9dfD/ML2R4CoWDq0IfRA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.SchedulerContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.SchedulerContext.html",
+          "hash": "7XU5qeEudrpAeGsqKeFzRA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.SchedulerException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.SchedulerException.html",
+          "hash": "cf0RYGk7CrMFKL5/gbUsJw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.SchedulerInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.SchedulerInstruction.html",
+          "hash": "rECiFmNWELfalRBjAKMRTw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.SchedulerMetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.SchedulerMetaData.html",
+          "hash": "8pSfw0/FXRK3xzJvVJHoRg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.DefaultObjectSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.DefaultObjectSerializer.html",
+          "hash": "u31k2OsUoLIhPQQ8HbCx7g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.HostNameBasedIdGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.HostNameBasedIdGenerator.html",
+          "hash": "4fc+dT8drGN5FHJmp1lKvQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.HostnameInstanceIdGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.HostnameInstanceIdGenerator.html",
+          "hash": "COqRSL/ulFQe6lGcVGEmYw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.IRemotableQuartzScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.IRemotableQuartzScheduler.html",
+          "hash": "xHeP9k5TuGIM1sQSJIShhw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.InternalTriggerState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.InternalTriggerState.html",
+          "hash": "ya1TxI7V4Pby/5UReNUnUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.PropertySettingJobFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.PropertySettingJobFactory.html",
+          "hash": "8Hwk9Nu46sEmQT0QZncdGQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.RAMJobStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.RAMJobStore.html",
+          "hash": "nUTRlApuic9OM/VA9xY+vA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.RemotingSchedulerExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.RemotingSchedulerExporter.html",
+          "hash": "U+x9mMGWBDDWfRG8lvPCWQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.RemotingSchedulerProxyFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.RemotingSchedulerProxyFactory.html",
+          "hash": "w8wooUqbIqrhYl218u9kNA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.SimpleInstanceIdGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.SimpleInstanceIdGenerator.html",
+          "hash": "JeLQEkqO5ZYomkc7Urrfkw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.SimpleJobFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.SimpleJobFactory.html",
+          "hash": "O1rYLPTyKpVztWTVdUq9qA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.SimpleThreadPool.WorkerThread.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.SimpleThreadPool.WorkerThread.html",
+          "hash": "FrW8ftpC20+i9oBzBx+nvA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.SimpleThreadPool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.SimpleThreadPool.html",
+          "hash": "B+2Dxlbr9DuHxNS8jQLMaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.SimpleTypeLoadHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.SimpleTypeLoadHelper.html",
+          "hash": "DExwhWHiW8YmeuAArueC3g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.SystemPropertyInstanceIdGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.SystemPropertyInstanceIdGenerator.html",
+          "hash": "ODKLO1iA/aZtmveXPPb4Fw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.TriggerWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.TriggerWrapper.html",
+          "hash": "Ie73DzRfEPiqmp1Y1JnNlg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.ZeroSizeThreadPool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.ZeroSizeThreadPool.html",
+          "hash": "v+BZXtRIBXD3JST/1XD6fQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Simpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Simpl.html",
+          "hash": "9bVtWt0I48MkrPUXNLzlrg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.SimpleScheduleBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.SimpleScheduleBuilder.html",
+          "hash": "gPMpR7aKOkL1z5HvHlPing=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.SimpleScheduleTriggerBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.SimpleScheduleTriggerBuilderExtensions.html",
+          "hash": "Bjcjiv7ClceeGj9cN6QKXg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.IInstanceIdGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.IInstanceIdGenerator.html",
+          "hash": "cuUnVwH4uOFdh6cdTtaK0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.IJobFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.IJobFactory.html",
+          "hash": "JaM3Fs7Qb6HqdSTHYlEtJg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.IJobStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.IJobStore.html",
+          "hash": "bMwgy8lNz/u4MGymtOVciw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.IMutableTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.IMutableTrigger.html",
+          "hash": "m39oJdo29qmWmvIkPojERA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.IObjectSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.IObjectSerializer.html",
+          "hash": "GSZ2WgHHXRWsIMi8oRS8uA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.IOperableTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.IOperableTrigger.html",
+          "hash": "SeDicOCWn0fA7HGdlI1+Fw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.IRemotableSchedulerProxyFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.IRemotableSchedulerProxyFactory.html",
+          "hash": "2AkdoY38lRFG+YlRu7EvHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.ISchedulerExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.ISchedulerExporter.html",
+          "hash": "WGQNKlzsszM1D4qlaXwmnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.ISchedulerPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.ISchedulerPlugin.html",
+          "hash": "uSjQYi5RZNucAxGy9HcBMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.ISchedulerSignaler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.ISchedulerSignaler.html",
+          "hash": "nCxqc9QhPtzZzcn64adfDw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.IThreadExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.IThreadExecutor.html",
+          "hash": "aFj633AlnQpNu0cyJeC+tg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.IThreadPool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.IThreadPool.html",
+          "hash": "M4Pc5VD1jUgQRKXC+iH2Vw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.ITypeLoadHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.ITypeLoadHelper.html",
+          "hash": "XcF8UImuBo4bzwEcxXa6Xg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.TriggerFiredBundle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.TriggerFiredBundle.html",
+          "hash": "d5UrmSo/xZ971qrEnOTokQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.TriggerFiredResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.TriggerFiredResult.html",
+          "hash": "9fszCE5XEI5Y1BZodlDMKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Spi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Spi.html",
+          "hash": "FBM+T8IW4M5jGIGv8GO1Ig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.SystemTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.SystemTime.html",
+          "hash": "M9jokjRUjeCHTppppIF+0Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.TimeOfDay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.TimeOfDay.html",
+          "hash": "hq2GG06hw7lhjU88qHucsQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.TimeSpanParseRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.TimeSpanParseRule.html",
+          "hash": "AVjB6k127trqCj8jnFDCIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.TimeSpanParseRuleAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.TimeSpanParseRuleAttribute.html",
+          "hash": "ZHboypJOzy9gN7tk955HDA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.TriggerBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.TriggerBuilder.html",
+          "hash": "twbpeYCG5DsmbtaE2rwKHg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.TriggerConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.TriggerConstants.html",
+          "hash": "NdQ3bT5Ck/c2m23SpdmSxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.TriggerKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.TriggerKey.html",
+          "hash": "LQAIRPwyvb2qTa7ij+PPkA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.TriggerState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.TriggerState.html",
+          "hash": "pi6jVf0X9i+NWzta7IIyKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.TriggerTimeComparator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.TriggerTimeComparator.html",
+          "hash": "NQ3BjjyRR8+dPTsXXGXaTg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.TriggerUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.TriggerUtils.html",
+          "hash": "NXM8zy2T13MXFliiGammlQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.UnableToInterruptJobException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.UnableToInterruptJobException.html",
+          "hash": "Ab2FogrotLWlpkKfimyg6A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.DBConnectionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.DBConnectionManager.html",
+          "hash": "SGxe2Qn4b6silSdkJTjbyA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.DataReaderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.DataReaderExtensions.html",
+          "hash": "ntOZMg3eW43KCnk+ycdZmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.DictionaryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.DictionaryExtensions.html",
+          "hash": "6QroAzbi6nt2hMzGEkuG1A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.DirtyFlagMap-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.DirtyFlagMap-2.html",
+          "hash": "/pT0s9OGpNd7esC9Y4ncnw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.FileUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.FileUtil.html",
+          "hash": "7IHn1xb5GAbMBtuohXLvRQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.IDbConnectionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.IDbConnectionManager.html",
+          "hash": "h+/xEnU3HvvkwFcaQC7V6A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.Key-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.Key-1.html",
+          "hash": "LTvPix+kaGSqNdbhA6b2aA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.LogicalThreadContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.LogicalThreadContext.html",
+          "hash": "BaLGIEH+cFWHoOSeFAI0TQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.ObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.ObjectExtensions.html",
+          "hash": "jVY5rHeaeSsiNysCsTcSCA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.ObjectUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.ObjectUtils.html",
+          "hash": "5LgYUhQKMd/w1ThaL/zQRA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.PropertiesParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.PropertiesParser.html",
+          "hash": "cJMV6SmZMJve+z+EW708mg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.QuartzEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.QuartzEnvironment.html",
+          "hash": "DpACCjPtQz5kcwkLa1WSYA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.StringExtensions.html",
+          "hash": "CNu161qHHSSERRhL7F4//A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.StringKeyDirtyFlagMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.StringKeyDirtyFlagMap.html",
+          "hash": "FfvWjH5wDa2kXE4lD1RRoA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.TimeZoneUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.TimeZoneUtil.html",
+          "hash": "MvXCbqF7OBsR85EA2UyIEQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Util.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Util.html",
+          "hash": "6kwCNB5tRd0KW1gu/8iFDg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.ValueSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.ValueSet.html",
+          "hash": "vp+veKh4Hgfcz8x5HEhvBA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.QuartzXmlConfiguration20.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.QuartzXmlConfiguration20.html",
+          "hash": "yxJQ77Yr/M4o73zWAURRtw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.abstractTriggerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.abstractTriggerType.html",
+          "hash": "4Rg1jS3vDJShiW2XlbG9eg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.calendarIntervalTriggerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.calendarIntervalTriggerType.html",
+          "hash": "5DxRv5pecb8TBXwE5//e5w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.cronTriggerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.cronTriggerType.html",
+          "hash": "6rQx8W10IxKUM+BUUiBcng=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.entryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.entryType.html",
+          "hash": "R/jEug0mu5To0FCIB6cm5A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.jobdatamapType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.jobdatamapType.html",
+          "hash": "Dc17+yUMeuQasGAga1v3kQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.jobdetailType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.jobdetailType.html",
+          "hash": "erP41AiyJ9xb5yY5VmWC7w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.jobschedulingdataSchedule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.jobschedulingdataSchedule.html",
+          "hash": "OJKxERKnw0tLTWVoelkyjQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.preprocessingcommandsType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.preprocessingcommandsType.html",
+          "hash": "J/YBG/popJ/pqO77ijO4lQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.preprocessingcommandsTypeDeletejob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.preprocessingcommandsTypeDeletejob.html",
+          "hash": "t3o9cEo8B/2gZQCmweyNFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.preprocessingcommandsTypeDeletetrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.preprocessingcommandsTypeDeletetrigger.html",
+          "hash": "205u+rCW2A+4udcCokFZTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.processingdirectivesType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.processingdirectivesType.html",
+          "hash": "c0SV8U85ZHCc0zYSauWATA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.simpleTriggerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.simpleTriggerType.html",
+          "hash": "VjQJ2WA7i9xNsE5or3v16w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.triggerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.triggerType.html",
+          "hash": "LquieVhxGgMcwjv7j/VZUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.JobSchedulingData20.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.JobSchedulingData20.html",
+          "hash": "D2tLejmzzUgsPlv1DnUp8g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.ValidationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.ValidationException.html",
+          "hash": "ZO2+L0nvtW+rGNaKRrP7zQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.XMLSchedulingDataProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.XMLSchedulingDataProcessor.html",
+          "hash": "L+UIAu8oI+u6KsReHEQAnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.Xml.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.Xml.html",
+          "hash": "BsBnBYiD7SawtnrO8fGYCw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Quartz.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Quartz.html",
+          "hash": "3Fmb6Up08Da3iQVG5kasRA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "GZHtjeS1+mqSaiHC7gt2pw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "bmh++lUzIf/9p9It+YY98g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/builddocs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/builddocs.html",
+          "hash": "gCKCYbWSd0gYOeuFowIdzg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "p/ulkod7g0jnTCtp2MT2mA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "0pwr6Uauf/Im6yMV+Z044g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "PVzVqw2uQjIuFzToGdc/rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

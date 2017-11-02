@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TriggerUtils
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TriggerUtils
+   ">
+    <meta name="generator" content="docfx 2.26.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Quartz.TriggerUtils">
+  
+  
+  <h1 id="Quartz_TriggerUtils" data-uid="Quartz.TriggerUtils" class="text-break">Class TriggerUtils
+  </h1>
+  <div class="markdown level0 summary"><p>Convenience and utility methods for simplifying the construction and
+configuration of <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>s and DateTimeOffsetOffsets.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TriggerUtils</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Quartz.html">Quartz</a></h6>
+  <h6><strong>Assembly</strong>: Quartz.dll</h6>
+  <h5 id="Quartz_TriggerUtils_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class TriggerUtils</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Quartz_TriggerUtils_ComputeEndTimeToAllowParticularNumberOfFirings_" data-uid="Quartz.TriggerUtils.ComputeEndTimeToAllowParticularNumberOfFirings*"></a>
+  <h4 id="Quartz_TriggerUtils_ComputeEndTimeToAllowParticularNumberOfFirings_Quartz_Spi_IOperableTrigger_Quartz_ICalendar_System_Int32_" data-uid="Quartz.TriggerUtils.ComputeEndTimeToAllowParticularNumberOfFirings(Quartz.Spi.IOperableTrigger,Quartz.ICalendar,System.Int32)">ComputeEndTimeToAllowParticularNumberOfFirings(IOperableTrigger, ICalendar, Int32)</h4>
+  <div class="markdown level1 summary"><p>Compute the <span class="xref">System.DateTimeOffset</span> that is 1 second after the Nth firing of 
+the given <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>, taking the trigger&apos;s associated 
+<a class="xref" href="Quartz.ICalendar.html">ICalendar</a> into consideration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DateTimeOffset? ComputeEndTimeToAllowParticularNumberOfFirings(IOperableTrigger trigger, ICalendar calendar, int numberOfTimes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigger</span></td>
+        <td><p>The trigger upon which to do the work</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">calendar</span></td>
+        <td><p>The calendar to apply to the trigger&apos;s schedule</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">numberOfTimes</span></td>
+        <td><p>The number of next fire times to produce</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>the computed Date, or null if the trigger (as configured) will not fire that many times</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Quartz_TriggerUtils_ComputeEndTimeToAllowParticularNumberOfFirings_Quartz_Spi_IOperableTrigger_Quartz_ICalendar_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The input trigger will be cloned before any work is done, so you need
+not worry about its state being altered by this method.</p>
+</div>
+  
+  
+  <a id="Quartz_TriggerUtils_ComputeFireTimes_" data-uid="Quartz.TriggerUtils.ComputeFireTimes*"></a>
+  <h4 id="Quartz_TriggerUtils_ComputeFireTimes_Quartz_Spi_IOperableTrigger_Quartz_ICalendar_System_Int32_" data-uid="Quartz.TriggerUtils.ComputeFireTimes(Quartz.Spi.IOperableTrigger,Quartz.ICalendar,System.Int32)">ComputeFireTimes(IOperableTrigger, ICalendar, Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns a list of Dates that are the next fire times of a
+<a class="xref" href="Quartz.ITrigger.html">ITrigger</a>.
+The input trigger will be cloned before any work is done, so you need
+not worry about its state being altered by this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IList&lt;DateTimeOffset&gt; ComputeFireTimes(IOperableTrigger trigg, ICalendar cal, int numTimes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigg</span></td>
+        <td><p>The trigger upon which to do the work</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td><p>The calendar to apply to the trigger&apos;s schedule</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">numTimes</span></td>
+        <td><p>The number of next fire times to produce</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>List of java.util.Date objects</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Quartz_TriggerUtils_ComputeFireTimesBetween_" data-uid="Quartz.TriggerUtils.ComputeFireTimesBetween*"></a>
+  <h4 id="Quartz_TriggerUtils_ComputeFireTimesBetween_Quartz_Spi_IOperableTrigger_Quartz_ICalendar_System_DateTimeOffset_System_DateTimeOffset_" data-uid="Quartz.TriggerUtils.ComputeFireTimesBetween(Quartz.Spi.IOperableTrigger,Quartz.ICalendar,System.DateTimeOffset,System.DateTimeOffset)">ComputeFireTimesBetween(IOperableTrigger, ICalendar, DateTimeOffset, DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Returns a list of Dates that are the next fire times of a  <a class="xref" href="Quartz.ITrigger.html">ITrigger</a>
+that fall within the given date range. The input trigger will be cloned
+before any work is done, so you need not worry about its state being
+altered by this method.
+<p>
+NOTE: if this is a trigger that has previously fired within the given
+date range, then firings which have already occurred will not be listed
+in the output List.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IList&lt;DateTimeOffset&gt; ComputeFireTimesBetween(IOperableTrigger trigg, ICalendar cal, DateTimeOffset from, DateTimeOffset to)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Quartz.Spi.IOperableTrigger.html">IOperableTrigger</a></td>
+        <td><span class="parametername">trigg</span></td>
+        <td><p>The trigger upon which to do the work</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Quartz.ICalendar.html">ICalendar</a></td>
+        <td><span class="parametername">cal</span></td>
+        <td><p>The calendar to apply to the trigger&apos;s schedule</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The starting date at which to find fire times</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>The ending date at which to stop finding fire times</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><p>List of java.util.Date objects</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Quartz.ICronTrigger.html">ICronTrigger</a></div>
+      <div><a class="xref" href="Quartz.ISimpleTrigger.html">ISimpleTrigger</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
