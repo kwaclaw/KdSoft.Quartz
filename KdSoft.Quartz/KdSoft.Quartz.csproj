@@ -1,19 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <Import Project="$(SolutionDir)common.props" />
+
   <PropertyGroup>
-    <Description>KdSoft Quartz Class Library</Description>
+    <Title>KdSoft Quartz</Title>
+    <Description>Enhancements to Quartz.NET.</Description>
     <VersionPrefix>2.0.0</VersionPrefix>
-    <Authors>Karl Waclawek</Authors>
     <TargetFramework>net461</TargetFramework>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <IncludeSymbols>True</IncludeSymbols>
-    <CodeAnalysisRuleSet>..\Solution.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
